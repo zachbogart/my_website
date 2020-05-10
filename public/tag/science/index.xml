@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Science | Zach Bogart</title>
+    <link>/tag/science/</link>
+      <atom:link href="/tag/science/index.xml" rel="self" type="application/rss+xml" />
+    <description>Science</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 12 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/happy_nerd02.png</url>
+      <title>Science</title>
+      <link>/tag/science/</link>
+    </image>
+    
+    <item>
+      <title>BU Directed Study</title>
+      <link>/project/dstudy/</link>
+      <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
+      <guid>/project/dstudy/</guid>
+      <description>&lt;p&gt;In my junior year of college I did a two-semester-long directed study in the 
+&lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/research/laboratories/lmn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Laboratory of Molecular Neurobiology&lt;/a&gt; within the 
+&lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Department of Experimental Therapeutics&lt;/a&gt; at Boston University’s School of Medicine. Under the supervision of Dr. Marcia H. Ratner and Dr. David H. Farb, I studied how endogenous neurosteroids like pregnenolone sulfate affect learning and memory and how they may be used as cognitive enhancers. I learned how electrophysiological methods could be used to record from the CA1 region of the hippocampus in rats and allow neural activity data to be extracted in response to effects of cognitive enhancers. I manufactured custom-made neural recording devices, performed several surgeries on the animals to attach the implants, and gained a basic understanding of how the neural activity data can be interpreted and analyzed. In addition, I used the 
+&lt;a href=&#34;https://www.bu.edu/eng/current-students/epic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BU Engineering Product Innovation Center&lt;/a&gt; to explore how the neural implants could be made more efficiently using 3D-printing technology, which resulted in adoption of a unibody core designed by Dr. Matthew Wilson at the Department of Brain and Cognitive Sciences at Massachusetts Institute of Technology and produced using stereolithography.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

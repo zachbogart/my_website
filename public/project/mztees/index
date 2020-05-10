@@ -1,0 +1,17 @@
+---
+title: MZ Tees
+summary: Fun shirt designs
+tags:
+- Design
+date: "2019-01-02T00:00:00Z"
+
+image:
+  placement: 1
+  focal_point: Smart
+
+links:
+- icon: external-link-alt
+  icon_pack: fas
+  name: Exploration and Drafting Notes
+  url: koji-font-notes.pdf
+---

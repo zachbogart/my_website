@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Zach Bogart</title>
+    <link>/project/</link>
+      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/happy_nerd02.png</url>
+      <title>Projects</title>
+      <link>/project/</link>
+    </image>
+    
+    <item>
+      <title>Ninja, 24 Elim Solo</title>
+      <link>/project/ninja/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/project/ninja/</guid>
+      <description>&lt;p&gt;This is a visualization of one of 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Ninja_%28streamer%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ninja&lt;/a&gt;&amp;lsquo;s Fortnite runs. I plotted his eliminations with a game map overlay and connected them with smooth curves, creating an approximate movement path you can follow from start to finish. Accented with audio blurb annotations, you can get a good sense of his progression through the run.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve wanted to do something with 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Fortnite&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fortnite&lt;/a&gt; for a while now, so this serves as a toe in the water. This was a manual creation, but it has got me thinking how it would be lovely to auto-generate these kinds of plots for streamers in the future. Someday.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-progression-of-one-of-ninjas-fornite-runs&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/project/ninja/ninja-fortnite-yt-viz_hua3cb12df4a02083955e112131888676f_401226_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Progression of one of Ninja&amp;rsquo;s Fornite runs&#34;&gt;
+
+
+  &lt;img data-src=&#34;/project/ninja/ninja-fortnite-yt-viz_hua3cb12df4a02083955e112131888676f_401226_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2881&#34; height=&#34;2881&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Progression of one of Ninja&amp;rsquo;s Fornite runs
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;visualization-notes&#34;&gt;Visualization Notes&lt;/h2&gt;
+&lt;p&gt;The yellow dots represent the approximate locations of the eliminated players. The locations were found by watching Ninja&amp;rsquo;s YouTube video, &amp;ldquo;
+&lt;a href=&#34;https://youtu.be/2m4pQYAIGL4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ninja Destroys The Entire Lobby!! 24 Elim Solo&lt;/a&gt;&amp;quot;, and taking screenshots when eliminations were made. The mini map in each screenshot was then used to place a point on the visualization.&lt;/p&gt;
+&lt;p&gt;The light blue path is created by drawing a line between the twenty-four yellow elimination points and applying smooth curves. Because of this, the light blue path is only an approximation of Ninja&amp;rsquo;s movements and is taking liberties at certain spots, particularly with sniper eliminations. For example, the top-most yellow dot in the visualization is far from the preceding elims, implying Ninja walked over to that player to get the elimination. In actuality, Ninj
+&lt;a href=&#34;https://youtu.be/2m4pQYAIGL4?t=587&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a sniped that player from far away&lt;/a&gt; rather than going up a large mountain to attack at close range. It would be interesting in the future to try a more accurate recreation of player movement, but I think this approximation tells a compelling story.&lt;/p&gt;
+&lt;p&gt;The dotted-line portion of the path approximates the initial descent from the bus. The video does not include the bus&amp;rsquo;s transit path, so it is omitted (it would have made things a little crowded, anyway).&lt;/p&gt;
+&lt;p&gt;The blue dots signify when Ninja started using a mech and when he transitioned into a new mech (where &amp;ldquo;mech&amp;rdquo; is the 
+&lt;a href=&#34;https://gamewith.net/fortnite/article/show/10401&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;B.R.U.T.E. vehicle&lt;/a&gt;). Not all eliminations after those points were made in mechs. For example, up at Salty Springs, he 
+&lt;a href=&#34;https://youtu.be/2m4pQYAIGL4?t=555&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;exits the mech&lt;/a&gt; to acquire four eliminations before 
+&lt;a href=&#34;https://youtu.be/2m4pQYAIGL4?t=600&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reentering&lt;/a&gt; to cover more ground. In general, it would be interesting to further explore how the type of elimination could be better displayed without overloading the viewer (color by weapon used, use of vehicle, etc.).&lt;/p&gt;
+&lt;p&gt;The annotations were taken from Ninja&amp;rsquo;s stream audio after the elimination occurred. They are lightly edited.&lt;/p&gt;
+&lt;p&gt;The dark blue squiggly line defines the border of the southwest corner of the game map. Initially I was going to include the entire outline of the map, but it served no purpose. The location names are placed where they appear on the game map. This causes some overlap of paths, points, and text (particularly at Salty Springs and Fatal Fields), but the intention was to go for accuracy with regards to the game map placement.&lt;/p&gt;
+&lt;p&gt;The text was typeset in Arial; apologies, type-lovers.&lt;/p&gt;
+&lt;p&gt;The color palette was chosen to compliment 
+&lt;a href=&#34;https://www.youtube.com/channel/UCAW-NpUFkMyCNrvRSSGIvDQ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ninja&amp;rsquo;s logo identity&lt;/a&gt; as of September 2019.&lt;/p&gt;
+&lt;h3 id=&#34;fortnite-context&#34;&gt;Fortnite Context&lt;/h3&gt;
+&lt;p&gt;This run&amp;rsquo;s landing site was Pandora, a 
+&lt;a href=&#34;https://www.epicgames.com/fortnite/en-US/news/mayhem-comes-to-fortnite&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;crossover event with Borderlands&lt;/a&gt; (termed &amp;ldquo;Mayhem&amp;rdquo; in-game). This limited-time rift zone gave players regenerative shields.&lt;/p&gt;
+&lt;p&gt;This run was recorded shortly after 
+&lt;a href=&#34;https://www.epicgames.com/fortnite/en-US/patch-notes/v10-20-patch-notes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;changes were made to the turbo build feature&lt;/a&gt;, which were later 
+&lt;a href=&#34;https://www.epicgames.com/fortnite/en-US/news/turbo-build-delay-update&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reverted&lt;/a&gt;. More info on changes to the game can be found in the 
+&lt;a href=&#34;https://www.epicgames.com/fortnite/en-US/news&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fortnite patch notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ribaldry in Stand-Up</title>
+      <link>/project/comedy/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/project/comedy/</guid>
+      <description>&lt;p&gt;I love stand-up comedy and have watched many specials over the years. I thought a collection of comedy specials would be an interesting dataset to explore, which led me to create this project showing selected stand-up specials plotted in terms of their 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Ribaldry#Blue_comedy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ribaldry&lt;/a&gt;, or use of swearing. When looking into analyzing comedy specials, I found practically every comedian used some collection of swear words in their act. The interesting finding was how varied its use was across different comedians and even across different specials from the same comedian. Some comedians rely heavily on them, while others rarely use them at all. Some used them often in their earlier specials, but less so in their later ones. It is interesting to see how a specific comedian uses these words to their advantage as well as when they choose to use specific types of words. By plotting the use of swearing across a comedy special, you can get a sense of a comedian’s style of comedy, how it has changed over the years, and how it differs from other comedians’ styles.&lt;/p&gt;
+&lt;p&gt;For data collection, I created a CSV that contained every timestamp and type of swear word used across several comedy stand-up specials. This CSV was fed through a 
+&lt;a href=&#34;https://processing.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Processing&lt;/a&gt; script that plotted the individual words for each special. The result is a graphic that succinctly orders and displays the relative ribaldry of selected stand-up specials. I am particularly proud of the amount of information that is contained in each plot, including the titles, the release dates, the set lengths (both numerically and visually), the individual word counts, the total word count, the relative severity of words, and the timestamps themselves.&lt;/p&gt;
+&lt;p&gt;This project involved watching a bunch of comedy specials, which was a lot of fun. I enjoyed collecting the data and hope that this project’s collection of stand-up specials will continue to grow. I encourage you to explore the current visualization and check back here periodically for new updates to the dataset.&lt;/p&gt;
+&lt;p&gt;An interactive version of the dataset is now available on my Tableau Public profile.&lt;/p&gt;
+&lt;p&gt;This version includes a word cluster map, plots of swearing timestamps, a heat table, and a plot based on gender. In addition, every page has filters allowing for custom views of the dataset. Enjoy.&lt;/p&gt;
+&lt;p&gt;Note: The Tableau version currently has data up to, and including, the specials added on January 18, 2017.&lt;/p&gt;
+&lt;h2 id=&#34;dataset&#34;&gt;Dataset&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;123 Specials&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;63 Comedians&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;7,830 Minutes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All Words: 13,002 Times&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;F-Word Only: 5,981 Times&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Source: netflix.com, louisck.net, spotify.com&lt;/p&gt;
+&lt;h3 id=&#34;a-note-on-ordering-and-word-choice&#34;&gt;A Note on Ordering and Word Choice&lt;/h3&gt;
+&lt;p&gt;In this visualization, I define &amp;ldquo;relative ribaldry&amp;rdquo; to be the severity of selected curse words in a comedy special, meaning the curse words classified as more severe are placed higher up the axis. Derivatives of the displayed words are not differentiated between (For example, “D*MMIT is counted as “D*MN” &amp;amp; “BULLSH*T” is counted as “SH*T”). The y-axis shows the different kinds of curse words used in the special and is identical across all comedy specials. However, the collection of words displayed on the y-axis does not necessarily represent every recorded type of curse word for a given special. In addition, other suggestive themes may be present in individual specials that these graphics cannot accurately differentiate between. The collection of words on the y-axis was selected based on use across all specials as well as a desire to include a variety of words that varied in levels of severity. The collection may change over time due to new comedy specials being added. In addition, the ordering of the words based on severity is not intended to be an absolute ranking. Your personal preferences may rank the collection differently, but the current order hopefully provides a relative placing of the words that gives a sense of differences between comedy specials in terms of swearing.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Koji Typeface</title>
+      <link>/project/koji/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/project/koji/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been sketching out font ideas in the margins of college notebooks for years, so I thought it might be time to formalize one of them. The result is Koji, a typeface based off of a simple jig I would draw in my workbooks during class.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_koji&#34; href=&#34;/project/koji/images_koji/koji_alpha_numerals.png&#34; &gt;
+  &lt;img data-src=&#34;/project/koji/images_koji/koji_alpha_numerals_hua0aeed18e879f0f4ecb4170aa1339690_166170_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_koji&#34; href=&#34;/project/koji/images_koji/koji_examples.png&#34; &gt;
+  &lt;img data-src=&#34;/project/koji/images_koji/koji_examples_hu476c5b48e77f707c64c24d0da703d554_751339_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;118&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_koji&#34; href=&#34;/project/koji/images_koji/koji_jig.png&#34; &gt;
+  &lt;img data-src=&#34;/project/koji/images_koji/koji_jig_hu741cd1bea51995d33a30b7b25514f419_39593_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;281&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_koji&#34; href=&#34;/project/koji/images_koji/koji_name.png&#34; &gt;
+  &lt;img data-src=&#34;/project/koji/images_koji/koji_name_huaf9d58f78fb1c8a972ed3eecdf54a1e4_54949_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_koji&#34; href=&#34;/project/koji/images_koji/koji_secondary_alphabet.png&#34; &gt;
+  &lt;img data-src=&#34;/project/koji/images_koji/koji_secondary_alphabet_huc7afa3fcbfdd51e03efb84a36eec1d81_191581_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_koji&#34; href=&#34;/project/koji/images_koji/koji_symbols_etc_supplement_1.png&#34; &gt;
+  &lt;img data-src=&#34;/project/koji/images_koji/koji_symbols_etc_supplement_1_hu04f4e8feb15e8b82a3885a2e8ce0f6e3_139948_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;
+&lt;p&gt;The main idea of Koji was to base all of the characters off of a simple template. But, as I began formally defining the font, it of course came down to some aesthetic choices. Creating this font was an incredible experience and I hope to improve it more and more, adding new characters to support more languages and tightening up each letter to improve usability.&lt;/p&gt;
+&lt;h2 id=&#34;why-koji&#34;&gt;Why Koji?&lt;/h2&gt;
+&lt;p&gt;Naming a font is arguably as hard as creating one. I could say it was chosen because 
+&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Aspergillus_oryzae.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Koji fungal blooms&lt;/a&gt; are sort of round like this font. Or I could say it&amp;rsquo;s a principal ingredient in fermenting 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Soy_sauce&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;soy sauce&lt;/a&gt;, a condiment that is simple yet complex, just like this font. But the truth is far less poetic: it came from an 
+&lt;a href=&#34;https://word.tips/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online word finder&lt;/a&gt;. I wanted a name that used an uppercase &amp;ldquo;K&amp;rdquo; and a lowercase &amp;ldquo;j&amp;rdquo; because those are two of my favorite letters in this typeface. So I searched for a word that fit the bill and came across &amp;ldquo;Koji&amp;rdquo; and it just grew on me. It&amp;rsquo;s easy to say, it has a cool but as you now know somewhat tacked-on backstory, and it looks good when written in the font, which is always a plus. Overall, a simple and catchy name for what I hope is your new favorite font.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>edav.info/</title>
+      <link>/project/edav/</link>
+      <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/project/edav/</guid>
+      <description>&lt;p&gt;Over the summer, I worked with 
+&lt;a href=&#34;http://www.joyce-robbins.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Joyce Robbins&lt;/a&gt; on an online resource for a course at Columbia University called &amp;ldquo;Exploratory Data Analysis and Visualization&amp;rdquo;, or EDAV for short. The course covers how to visualize/work with data using R. We wanted to make a resource for students that had all the information about how to get started as well as examples to learn by doing.&lt;/p&gt;
+&lt;p&gt;The result is 
+&lt;a href=&#34;https://edav.info/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;edav.info/&lt;/a&gt;, a resource combining examples, advice, and other things to help students start visualizing/working with R. There are several pages on the basics, pretty examples of different plot types, and helpful discussions on how to get the most out of the course and of R itself. Also, we ensured the resource was easy to modify so students could propose changes and help the quality continuously improve. As an added touch, we created a custom logo for the resource and custom icons for each chapter. We are very excited with the result and hope students enjoy exploring the resource and its examples.&lt;/p&gt;
+&lt;p&gt;If you want to show off your love for EDAV or R in the form of a cool shirt, checkout the 
+&lt;a href=&#34;https://teespring.com/stores/edav&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EDAV Teespring Store&lt;/a&gt;. Interested in contributing to the resource? Read 
+&lt;a href=&#34;https://edav.info/contribute.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;our page on contributing&lt;/a&gt; or checkout 
+&lt;a href=&#34;https://github.com/jtr13/EDAV&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;our github repo&lt;/a&gt;. This resource was published using 
+&lt;a href=&#34;https://bookdown.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bookdown&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;⭐ We are excited to say that edav.info/ 
+&lt;a href=&#34;https://community.rstudio.com/t/announcing-winners-of-the-1st-bookdown-contest/16394&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;received an honorable mention prize&lt;/a&gt; in the 
+&lt;a href=&#34;https://blog.rstudio.com/2018/07/27/first-bookdown-contest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1st Bookdown Contest&lt;/a&gt; hosted by the package&amp;rsquo;s author, 
+&lt;a href=&#34;https://twitter.com/xieyihui&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yihui Xie&lt;/a&gt;, and RStudio. Feel free to checkout 
+&lt;a href=&#34;https://community.rstudio.com/t/bookdown-contest-submission-creating-a-course-companion-website-with-bookdown/15168&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;our submission&lt;/a&gt; for a more formal explanation of the resource.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Noun Project Icon Design</title>
+      <link>/project/nouns/</link>
+      <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/project/nouns/</guid>
+      <description>&lt;p&gt;Noun Project is a site that provides icons for everything. I have 
+&lt;a href=&#34;https://thenounproject.com/zachbogart/uploads/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a collection of my own icon designs on Noun Project&lt;/a&gt; that you can choose from to spice up your own projects. I add new designs often, so check back to see what&amp;rsquo;s available.&lt;/p&gt;
+&lt;p&gt;Checkout all of my icon designs over at 
+&lt;a href=&#34;https://thenounproject.com/zachbogart/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my Noun Project profile page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Noun Project supports creators when people download their icons. Whether you choose to buy one of my designs individually (fully customizable), sign up to 
+&lt;a href=&#34;https://thenounproject.com/accounts/upgrade/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;their NounPro subscription service&lt;/a&gt; (full-access, in-app integration, and more), or just do a free basic download of my designs in black (with attribution), you directly support my work and allow me to continue creating great icons. I appreciate it immensely and hope you enjoy my designs.&lt;/p&gt;
+&lt;p&gt;For more information about how Noun Project works, checkout 
+&lt;a href=&#34;https://thenounproject.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;their About page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;🖤&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MZ Tees</title>
+      <link>/project/mztees/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/project/mztees/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://mztees.cool/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MZ Tees&lt;/a&gt; is a t-shirt shop where I post fun little designs I have created in my spare time. This was born out of a desire to keep making things, however small, as often as I can. If you enjoy any of the designs, please consider sharing this shop with friends or purchasing an item that piques your interest. Hope you enjoy the results!&lt;/p&gt;
+&lt;p&gt;Checkout all of the designs over at 
+&lt;a href=&#34;https://mztees.cool/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mztees.cool&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can click any of the images on the 
+&lt;a href=&#34;https://mztees.cool/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;main page&lt;/a&gt; and you will be directed to the designated Teespring page for purchase.&lt;/p&gt;
+&lt;p&gt;Consider following 
+&lt;a href=&#34;https://twitter.com/mzteesdotcool&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my Twitter account @mzteesdotcool&lt;/a&gt; to know when a new design of mine becomes available.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Podcast Postcard</title>
+      <link>/project/postcard/</link>
+      <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>/project/postcard/</guid>
+      <description>&lt;p&gt;I was listening to an episode of 
+&lt;a href=&#34;https://fivethirtyeight.com/tag/whats-the-point/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;What’s The Point?&lt;/a&gt;, a podcast about data from 
+&lt;a href=&#34;https://fivethirtyeight.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FiveThirtyEight&lt;/a&gt;, and getting excited. 
+&lt;a href=&#34;http://giorgialupi.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Giorgia Lupi&lt;/a&gt; and 
+&lt;a href=&#34;http://www.stefanieposavec.co.uk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stefanie Posavec&lt;/a&gt; were on the show talking about 
+&lt;a href=&#34;http://www.dear-data.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DearData&lt;/a&gt;, their yearlong exploration of data visualization through personal correspondence. For fifty-two weeks, the pair of data visualization experts sent postcards to each other, but these were not your average Hallmark cards. Every postcard was a hand-made figure concerning something they tracked in their lives for that week. Themes ranged from 
+&lt;a href=&#34;http://www.dear-data.com/by-week/#/week-01/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;clocks&lt;/a&gt; to 
+&lt;a href=&#34;http://www.dear-data.com/week-37-a-week-of-swearing/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;swearing&lt;/a&gt; to 
+&lt;a href=&#34;http://www.dear-data.com/week-51-a-week-of-privacy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;privacy&lt;/a&gt; and the resulting postcards embodied their personal style of telling stories with data. I loved listening to their project and was intrigued when the podcast ended with a challenge: 
+&lt;a href=&#34;https://fivethirtyeight.com/features/dear-data-and-fivethirtyeight-want-you-to-visualize-your-podcast-habits/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;try it for yourself, dear listener&lt;/a&gt;. The podcast asked its audience to have a go and make their own postcard with the theme of &amp;lsquo;podcasts&amp;rsquo; and send it in. I had been interested in data visualization for some time and here was a great excuse to play around with data and inject some creative flair. So I gave it a try.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_postcard&#34; href=&#34;/project/postcard/images_postcard/postcard1.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/postcard/images_postcard/postcard1_huc8037d2df9461648f85365b539fc841f_136823_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_postcard&#34; href=&#34;/project/postcard/images_postcard/postcard2.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/postcard/images_postcard/postcard2_hu82293af37d94346a374bfd089bae1a37_134803_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_postcard&#34; href=&#34;/project/postcard/images_postcard/postcard3.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/postcard/images_postcard/postcard3_hu9ebb80e0148b89545c20a66b357f49f7_145752_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;
+&lt;p&gt;I decided to track WHEN and HOW I listened to podcasts. I recorded the time of day, my listening position (standing, sitting, etc.), and whether I used speakers or headphones. After a week, I had a collection of data points that described my week in podcasts. I made a simple grid and used a light table to fill in the correct cells. The result was an eye-catching postcard that has a lot of hidden data if you look closely.&lt;/p&gt;
+&lt;p&gt;It was a lot of fun tracking my behavior and making the postcard. I encourage you to check out 
+&lt;a href=&#34;http://www.dear-data.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DearData&lt;/a&gt;. Also, if you have the desire to track things but aren’t sure how to keep it organized, check out 
+&lt;a href=&#34;http://feltron.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Feltron&lt;/a&gt;&amp;lsquo;s apps, 
+&lt;a href=&#34;http://feltron.com/Daytum.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Daytum&lt;/a&gt; and 
+&lt;a href=&#34;http://feltron.com/Reporter.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Reporter&lt;/a&gt;, which make it easy to record anything you want to track. Have fun!&lt;/p&gt;
+&lt;p&gt;⭐ FiveThirtyEight has posted the 
+&lt;a href=&#34;https://fivethirtyeight.com/features/we-asked-you-to-visualize-your-podcast-listening-and-wow-did-you-deliver/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;collection of postcards they received&lt;/a&gt;, totaling seventy-seven. I was excited to see my entry was among their five favorites. I encourage you to explore them all. It’s incredible to see what people can do with data when you let them loose.&lt;/p&gt;
+&lt;h3 id=&#34;dataset--findings&#34;&gt;Dataset &amp;amp; Findings&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;20 Podcasts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;15 Hours&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Date Range: March 14–20, 2016&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Most Popular Position: Standing Up&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Standing Up: 43.96%&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sitting: 25.27%&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Driving: 16.48%&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lying Down: 14.29%&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Most Popular Delivery: Speakers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Speakers: 52.75%&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Headphones: 47.25%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BU Directed Study</title>
+      <link>/project/dstudy/</link>
+      <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
+      <guid>/project/dstudy/</guid>
+      <description>&lt;p&gt;In my junior year of college I did a two-semester-long directed study in the 
+&lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/research/laboratories/lmn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Laboratory of Molecular Neurobiology&lt;/a&gt; within the 
+&lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Department of Experimental Therapeutics&lt;/a&gt; at Boston University’s School of Medicine. Under the supervision of Dr. Marcia H. Ratner and Dr. David H. Farb, I studied how endogenous neurosteroids like pregnenolone sulfate affect learning and memory and how they may be used as cognitive enhancers. I learned how electrophysiological methods could be used to record from the CA1 region of the hippocampus in rats and allow neural activity data to be extracted in response to effects of cognitive enhancers. I manufactured custom-made neural recording devices, performed several surgeries on the animals to attach the implants, and gained a basic understanding of how the neural activity data can be interpreted and analyzed. In addition, I used the 
+&lt;a href=&#34;https://www.bu.edu/eng/current-students/epic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BU Engineering Product Innovation Center&lt;/a&gt; to explore how the neural implants could be made more efficiently using 3D-printing technology, which resulted in adoption of a unibody core designed by Dr. Matthew Wilson at the Department of Brain and Cognitive Sciences at Massachusetts Institute of Technology and produced using stereolithography.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recycled Origami</title>
+      <link>/project/origami/</link>
+      <pubDate>Mon, 05 Sep 2011 00:00:00 +0000</pubDate>
+      <guid>/project/origami/</guid>
+      <description>&lt;p&gt;Unit origami is beautiful. You can make dozens of simple modules and turn them into stunning 3D creations. I thought it would be hard to fold anything at college till I found that every print job released through the university gave you a cover sheet. People would recycle these sheets (easily a hundred a day) and I would collect some and use them to make the pieces pictured above. It became a nice way to spend an afternoon over the summer or during some downtime. It is quite meditative to make the units and I would leave the completed pieces around the library on campus as well as various other places.&lt;/p&gt;
+&lt;p&gt;I easily did this with several hundred cover sheets over the years. I would leave them and in a day or two they would disappear. There is only one that is still in the library: in the IT Center on the 1st floor of Mugar Library, on top of a cabinet, sits a Sonobe piece, occasionally sharing the space with a Jack O’Lantern. Whatever happened to the rest, I hope people enjoyed them. It is certainly prettier than a lump of sheets in a recycling bin.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_origami&#34; href=&#34;/project/origami/images_origami/origami1.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/origami/images_origami/origami1_hu7a20341563498f96830249e89d55af21_128714_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_origami&#34; href=&#34;/project/origami/images_origami/origami2.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/origami/images_origami/origami2_hu004236ec84fcc8ede198b9e5e9d325b5_95357_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_origami&#34; href=&#34;/project/origami/images_origami/origami3.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/origami/images_origami/origami3_huac525beefb7c66d041e7b2c194958dbd_108516_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_origami&#34; href=&#34;/project/origami/images_origami/origami4.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/origami/images_origami/origami4_hu4842cb6f4d8b42dddac9e1d5eb86ab40_100199_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_origami&#34; href=&#34;/project/origami/images_origami/origami5.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/origami/images_origami/origami5_hu1c989aae542b07f86298ff9a7c363528_182971_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_origami&#34; href=&#34;/project/origami/images_origami/origami6.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/origami/images_origami/origami6_hu75538ff25b916661111d6a48609a71cf_167887_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_origami&#34; href=&#34;/project/origami/images_origami/origami7.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/origami/images_origami/origami7_hue7ed1da68cc765d27aee954a5aa76d07_143708_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_origami&#34; href=&#34;/project/origami/images_origami/origami8.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/origami/images_origami/origami8_hu123ddf7d3f0c1dcddf92a1db16cdf042_103642_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;
+&lt;h3 id=&#34;helpful-directions&#34;&gt;Helpful Directions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.instructables.com/id/Dodecahedron-Modular-Origami-Ornament/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dodecahedron&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.origaminut.com/174/six-intersecting-squares&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Six Intersecting Squares&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.instructables.com/id/How-to-fold-a-Five-Intersecting-Tetrahedra-Dodecah/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Five Intersecting Tetrahedra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.origami-instructions.com/modular-sonobe-unit.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sonobe Unit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

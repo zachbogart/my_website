@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Art | Zach Bogart</title>
+    <link>/tag/art/</link>
+      <atom:link href="/tag/art/index.xml" rel="self" type="application/rss+xml" />
+    <description>Art</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sat, 18 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/happy_nerd02.png</url>
+      <title>Art</title>
+      <link>/tag/art/</link>
+    </image>
+    
+    <item>
+      <title>Noun Project Icon Design</title>
+      <link>/project/nouns/</link>
+      <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/project/nouns/</guid>
+      <description>&lt;p&gt;Noun Project is a site that provides icons for everything. I have 
+&lt;a href=&#34;https://thenounproject.com/zachbogart/uploads/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a collection of my own icon designs on Noun Project&lt;/a&gt; that you can choose from to spice up your own projects. I add new designs often, so check back to see what&amp;rsquo;s available.&lt;/p&gt;
+&lt;p&gt;Checkout all of my icon designs over at 
+&lt;a href=&#34;https://thenounproject.com/zachbogart/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my Noun Project profile page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Noun Project supports creators when people download their icons. Whether you choose to buy one of my designs individually (fully customizable), sign up to 
+&lt;a href=&#34;https://thenounproject.com/accounts/upgrade/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;their NounPro subscription service&lt;/a&gt; (full-access, in-app integration, and more), or just do a free basic download of my designs in black (with attribution), you directly support my work and allow me to continue creating great icons. I appreciate it immensely and hope you enjoy my designs.&lt;/p&gt;
+&lt;p&gt;For more information about how Noun Project works, checkout 
+&lt;a href=&#34;https://thenounproject.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;their About page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;🖤&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
