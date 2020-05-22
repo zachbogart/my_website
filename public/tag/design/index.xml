@@ -18,7 +18,7 @@
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       <guid>/project/koji/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been sketching out font ideas in the margins of college notebooks for years, so I thought it might be time to formalize one of them. The result is Koji, a typeface based off of a simple jig I would draw in my workbooks during class.&lt;/p&gt;
-
+&lt;div align=&#34;center&#34;&gt;
 
 
 
@@ -92,13 +92,31 @@
   
 
   
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;The main idea of Koji was to base all of the characters off of a simple template. But, as I began formally defining the font, it of course came down to some aesthetic choices. Creating this font was an incredible experience and I hope to improve it more and more, adding new characters to support more languages and tightening up each letter to improve usability.&lt;/p&gt;
+&lt;h2 id=&#34;included-unicode-blocks&#34;&gt;Included Unicode Blocks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Basic_Latin_%28Unicode_block%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Basic Latin (U+0020-U+007E)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Latin-1_Supplement_%28Unicode_block%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Latin-1 Supplement (U+00A0-U+00FF)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;why-koji&#34;&gt;Why Koji?&lt;/h2&gt;
 &lt;p&gt;Naming a font is arguably as hard as creating one. I could say it was chosen because 
 &lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Aspergillus_oryzae.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Koji fungal blooms&lt;/a&gt; are sort of round like this font. Or I could say it&amp;rsquo;s a principal ingredient in fermenting 
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Soy_sauce&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;soy sauce&lt;/a&gt;, a condiment that is simple yet complex, just like this font. But the truth is far less poetic: it came from an 
 &lt;a href=&#34;https://word.tips/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online word finder&lt;/a&gt;. I wanted a name that used an uppercase &amp;ldquo;K&amp;rdquo; and a lowercase &amp;ldquo;j&amp;rdquo; because those are two of my favorite letters in this typeface. So I searched for a word that fit the bill and came across &amp;ldquo;Koji&amp;rdquo; and it just grew on me. It&amp;rsquo;s easy to say, it has a cool but as you now know somewhat tacked-on backstory, and it looks good when written in the font, which is always a plus. Overall, a simple and catchy name for what I hope is your new favorite font.&lt;/p&gt;
+&lt;h2 id=&#34;try-it-out&#34;&gt;Try it out!&lt;/h2&gt;
+&lt;p&gt;If you try out the Koji typeface, consider 
+&lt;a href=&#34;https://ko-fi.com/zachbogart&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;throwing a digital coffee my way&lt;/a&gt; ☕. Much appreciated. ❤️&lt;/p&gt;
+&lt;p&gt;Hope you enjoy the Koji typeface.&lt;/p&gt;
+&lt;h3 id=&#34;version-log&#34;&gt;Version Log&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Jan 2019&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release (1.000)&lt;/li&gt;
+&lt;li&gt;Basic Latin (U+0020-U+007E)&lt;/li&gt;
+&lt;li&gt;Latin-1 Supplement (U+00A0-U+00FF)&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -116,7 +134,146 @@
 &lt;p&gt;For more information about how Noun Project works, checkout 
 &lt;a href=&#34;https://thenounproject.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;their About page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;🖤&lt;/p&gt;
-</description>
+&lt;p&gt;Here&amp;rsquo;s a look at some of 
+&lt;a href=&#34;https://thenounproject.com/zachbogart/kit/favorites/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my favorite creations&lt;/a&gt;:&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites01.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites01_hu8d5b0646064dc265b4ee4ada274d7fcf_180151_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;230&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites02.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites02_hud7cd104e1a40f883e7ab1d7cd2a78690_187317_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;229&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites03.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites03_hu9832975c010cf8a0187e437a5df02a27_190509_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;225&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites04.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites04_hud9156b82e1d93b4f30002c70b0b27174_174513_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;220&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites05.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites05_hu80eea7682d0c0485e4081142b64dd499_164479_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;225&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites06.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites06_hu87c0e941b38ddc6342737b003f7b4694_238539_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;228&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites07.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites07_hueeba308787f4e8dfab445ca5b3e799d1_211634_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;230&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites08.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites08_huda0870e56eb32f44791bbaec2049c9d3_234865_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;235&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites09.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites09_hu20e5083668746da80cece4fb88f48a8b_236213_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;227&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites10.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites10_hu8e583dd456ea99e0637bd01e463f7d6a_218938_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;224&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites11.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites11_hue8617617bf8cd7bab5b057e4ad6c0d5f_218580_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;229&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites12.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites12_hu328834f977f241845c0eb6fb2c167089_209721_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;227&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites13.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites13_hufdb82658f48f524453170e899191cfe1_239485_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;202&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;&lt;/div&gt;</description>
     </item>
     
     <item>

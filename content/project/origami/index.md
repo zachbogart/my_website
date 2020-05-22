@@ -14,7 +14,7 @@ Unit origami is beautiful. You can make dozens of simple modules and turn them i
 
 I easily did this with several hundred cover sheets over the years. I would leave them and in a day or two they would disappear. There is only one that is still in the library: in the IT Center on the 1st floor of Mugar Library, on top of a cabinet, sits a Sonobe piece, occasionally sharing the space with a Jack O’Lantern. Whatever happened to the rest, I hope people enjoyed them. It is certainly prettier than a lump of sheets in a recycling bin.
 
-{{< gallery album="images_origami" >}}
+<div align="center">{{< gallery album="images_origami" >}}</div>
 
 ### Helpful Directions
 

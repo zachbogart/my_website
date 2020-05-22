@@ -1,5 +1,6 @@
 ---
 title: edav.info/
+subtitle: College course resource built by students, for students.
 summary: Online resource for Columbia University course on data visualization
 tags:
 - Featured

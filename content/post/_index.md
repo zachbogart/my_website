@@ -2,6 +2,9 @@
 header: 
   caption: ""
   image: ""
-title: Data Posts
+title: Data Workings
 view: 2
+
+aliases: [/blog/]
 ---
+

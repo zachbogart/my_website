@@ -13,11 +13,119 @@
     </image>
     
     <item>
+      <title>Checking Python Functionality</title>
+      <link>/blog/checking-python-functionality/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      <guid>/blog/checking-python-functionality/</guid>
+      <description>&lt;h2 id=&#34;wondering-if-this-works-for-setup&#34;&gt;Wondering if this Works for Setup&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def foo():
+    for item in [1,2,3]:
+        print(item)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;foo()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;1
+2
+3
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello, World!</title>
+      <link>/blog/hello-world/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      <guid>/blog/hello-world/</guid>
+      <description>
+
+
+&lt;div id=&#34;look-a-coding-website&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Look, a coding website!&lt;/h2&gt;
+&lt;p&gt;I got this website up and running! Looking forward to being able to work on honing my skills and making is easy to post progress on that fact.&lt;/p&gt;
+&lt;p&gt;I am sort of torn between Python and R at this point.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/about/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Neat Tweet: M&amp;Ms CandyViz</title>
+      <link>/project/candyviz-mandms/</link>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/project/candyviz-mandms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Factorio Recipe Network</title>
+      <link>/project/factorio/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/project/factorio/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/vis/vis.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/vis/vis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/visNetwork-binding/visNetwork.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;jump-in&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Jump In!&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;(give it a sec to load)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Click a node to explore its nearest neighbors. Arrows point toward &lt;a href=&#34;#how-to-understand-the-network&#34;&gt;increasing complexity&lt;/a&gt;. Happy building!&lt;/p&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:960px;height:576px;&#34; class=&#34;visNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;nodes&#34;:{&#34;id&#34;:[&#34;Accumulator&#34;,&#34;Active_provider_chest&#34;,&#34;Advanced_circuit&#34;,&#34;Arithmetic_combinator&#34;,&#34;Artillery_shell&#34;,&#34;Artillery_targeting_remote&#34;,&#34;Artillery_turret&#34;,&#34;Artillery_wagon&#34;,&#34;Assembling_machine_1&#34;,&#34;Assembling_machine_2&#34;,&#34;Assembling_machine_3&#34;,&#34;Atomic_bomb&#34;,&#34;Automation_science_pack&#34;,&#34;Battery&#34;,&#34;Beacon&#34;,&#34;Belt_immunity_equipment&#34;,&#34;Big_electric_pole&#34;,&#34;Boiler&#34;,&#34;Buffer_chest&#34;,&#34;Burner_inserter&#34;,&#34;Burner_mining_drill&#34;,&#34;Cannon_shell&#34;,&#34;Car&#34;,&#34;Cargo_wagon&#34;,&#34;Centrifuge&#34;,&#34;Chemical_plant&#34;,&#34;Chemical_science_pack&#34;,&#34;Cliff_explosives&#34;,&#34;Cluster_grenade&#34;,&#34;Coal&#34;,&#34;Combat_shotgun&#34;,&#34;Concrete&#34;,&#34;Constant_combinator&#34;,&#34;Construction_robot&#34;,&#34;Copper_cable&#34;,&#34;Copper_ore&#34;,&#34;Copper_plate&#34;,&#34;Decider_combinator&#34;,&#34;Defender_capsule&#34;,&#34;Destroyer_capsule&#34;,&#34;Discharge_defense&#34;,&#34;Discharge_defense_remote&#34;,&#34;Distractor_capsule&#34;,&#34;Efficiency_module&#34;,&#34;Efficiency_module_2&#34;,&#34;Efficiency_module_3&#34;,&#34;Electric_engine_unit&#34;,&#34;Electric_furnace&#34;,&#34;Electric_mining_drill&#34;,&#34;Electronic_circuit&#34;,&#34;Empty_barrel&#34;,&#34;Energy_shield&#34;,&#34;Energy_shield_MK2&#34;,&#34;Engine_unit&#34;,&#34;Exoskeleton&#34;,&#34;Explosive_cannon_shell&#34;,&#34;Explosive_rocket&#34;,&#34;Explosive_uranium_cannon_shell&#34;,&#34;Explosives&#34;,&#34;Express_splitter&#34;,&#34;Express_transport_belt&#34;,&#34;Express_underground_belt&#34;,&#34;Fast_inserter&#34;,&#34;Fast_splitter&#34;,&#34;Fast_transport_belt&#34;,&#34;Fast_underground_belt&#34;,&#34;Filter_inserter&#34;,&#34;Firearm_magazine&#34;,&#34;Flamethrower&#34;,&#34;Flamethrower_ammo&#34;,&#34;Flamethrower_turret&#34;,&#34;Fluid_wagon&#34;,&#34;Flying_robot_frame&#34;,&#34;Gate&#34;,&#34;Green_wire&#34;,&#34;Grenade&#34;,&#34;Gun_turret&#34;,&#34;Hazard_concrete&#34;,&#34;Heat_exchanger&#34;,&#34;Heat_pipe&#34;,&#34;Heavy_armor&#34;,&#34;Heavy_oil&#34;,&#34;Inserter&#34;,&#34;Iron_chest&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_ore&#34;,&#34;Iron_plate&#34;,&#34;Iron_stick&#34;,&#34;Kovarex_enrichment_process&#34;,&#34;Lab&#34;,&#34;Lamp&#34;,&#34;Land_mine&#34;,&#34;Landfill&#34;,&#34;Laser_turret&#34;,&#34;Light_armor&#34;,&#34;Light_oil&#34;,&#34;Locomotive&#34;,&#34;Logistic_robot&#34;,&#34;Logistic_science_pack&#34;,&#34;Long_handed_inserter&#34;,&#34;Low_density_structure&#34;,&#34;Lubricant&#34;,&#34;Medium_electric_pole&#34;,&#34;Military_science_pack&#34;,&#34;Modular_armor&#34;,&#34;Nightvision&#34;,&#34;Nuclear_fuel&#34;,&#34;Nuclear_fuel_reprocessing&#34;,&#34;Nuclear_reactor&#34;,&#34;Offshore_pump&#34;,&#34;Oil_refinery&#34;,&#34;Passive_provider_chest&#34;,&#34;Personal_battery&#34;,&#34;Personal_battery_MK2&#34;,&#34;Personal_laser_defense&#34;,&#34;Personal_roboport&#34;,&#34;Personal_roboport_MK2&#34;,&#34;Petroleum_gas&#34;,&#34;Piercing_rounds_magazine&#34;,&#34;Piercing_shotgun_shells&#34;,&#34;Pipe&#34;,&#34;Pipe_to_ground&#34;,&#34;Pistol&#34;,&#34;Plastic_bar&#34;,&#34;Poison_capsule&#34;,&#34;Portable_fusion_reactor&#34;,&#34;Portable_solar_panel&#34;,&#34;Power_armor&#34;,&#34;Power_armor_MK2&#34;,&#34;Power_switch&#34;,&#34;Processing_unit&#34;,&#34;Production_science_pack&#34;,&#34;Productivity_module&#34;,&#34;Productivity_module_2&#34;,&#34;Productivity_module_3&#34;,&#34;Programmable_speaker&#34;,&#34;Pump&#34;,&#34;Pumpjack&#34;,&#34;Radar&#34;,&#34;Rail&#34;,&#34;Rail_chain_signal&#34;,&#34;Rail_signal&#34;,&#34;Red_wire&#34;,&#34;Refined_concrete&#34;,&#34;Refined_hazard_concrete&#34;,&#34;Repair_pack&#34;,&#34;Requester_chest&#34;,&#34;Roboport&#34;,&#34;Rocket&#34;,&#34;Rocket_control_unit&#34;,&#34;Rocket_fuel&#34;,&#34;Rocket_launcher&#34;,&#34;Rocket_part&#34;,&#34;Rocket_silo&#34;,&#34;Satellite&#34;,&#34;Shotgun&#34;,&#34;Shotgun_shells&#34;,&#34;Slowdown_capsule&#34;,&#34;Small_electric_pole&#34;,&#34;Solar_panel&#34;,&#34;Solid_fuel&#34;,&#34;Speed_module&#34;,&#34;Speed_module_2&#34;,&#34;Speed_module_3&#34;,&#34;Splitter&#34;,&#34;Stack_filter_inserter&#34;,&#34;Stack_inserter&#34;,&#34;Steam_engine&#34;,&#34;Steam_turbine&#34;,&#34;Steel_chest&#34;,&#34;Steel_furnace&#34;,&#34;Steel_plate&#34;,&#34;Stone&#34;,&#34;Stone_brick&#34;,&#34;Stone_furnace&#34;,&#34;Storage_chest&#34;,&#34;Storage_tank&#34;,&#34;Submachine_gun&#34;,&#34;Substation&#34;,&#34;Sulfur&#34;,&#34;Sulfuric_acid&#34;,&#34;Tank&#34;,&#34;Train_stop&#34;,&#34;Transport_belt&#34;,&#34;Underground_belt&#34;,&#34;Uranium_cannon_shell&#34;,&#34;Uranium_fuel_cell&#34;,&#34;Uranium_ore&#34;,&#34;Uranium_processing&#34;,&#34;Uranium_rounds_magazine&#34;,&#34;Uranium-235&#34;,&#34;Uranium-238&#34;,&#34;Used_up_uranium_fuel_cell&#34;,&#34;Utility_science_pack&#34;,&#34;Wall&#34;,&#34;Water&#34;,&#34;Wood&#34;,&#34;Wooden_chest&#34;],&#34;shape&#34;:[&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;,&#34;image&#34;],&#34;image&#34;:[&#34;https://wiki.factorio.com/images/Accumulator.png&#34;,&#34;https://wiki.factorio.com/images/Active_provider_chest.png&#34;,&#34;https://wiki.factorio.com/images/Advanced_circuit.png&#34;,&#34;https://wiki.factorio.com/images/Arithmetic_combinator.png&#34;,&#34;https://wiki.factorio.com/images/Artillery_shell.png&#34;,&#34;https://wiki.factorio.com/images/Artillery_targeting_remote.png&#34;,&#34;https://wiki.factorio.com/images/Artillery_turret.png&#34;,&#34;https://wiki.factorio.com/images/Artillery_wagon.png&#34;,&#34;https://wiki.factorio.com/images/Assembling_machine_1.png&#34;,&#34;https://wiki.factorio.com/images/Assembling_machine_2.png&#34;,&#34;https://wiki.factorio.com/images/Assembling_machine_3.png&#34;,&#34;https://wiki.factorio.com/images/Atomic_bomb.png&#34;,&#34;https://wiki.factorio.com/images/Automation_science_pack.png&#34;,&#34;https://wiki.factorio.com/images/Battery.png&#34;,&#34;https://wiki.factorio.com/images/Beacon.png&#34;,&#34;https://wiki.factorio.com/images/Belt_immunity_equipment.png&#34;,&#34;https://wiki.factorio.com/images/Big_electric_pole.png&#34;,&#34;https://wiki.factorio.com/images/Boiler.png&#34;,&#34;https://wiki.factorio.com/images/Buffer_chest.png&#34;,&#34;https://wiki.factorio.com/images/Burner_inserter.png&#34;,&#34;https://wiki.factorio.com/images/Burner_mining_drill.png&#34;,&#34;https://wiki.factorio.com/images/Cannon_shell.png&#34;,&#34;https://wiki.factorio.com/images/Car.png&#34;,&#34;https://wiki.factorio.com/images/Cargo_wagon.png&#34;,&#34;https://wiki.factorio.com/images/Centrifuge.png&#34;,&#34;https://wiki.factorio.com/images/Chemical_plant.png&#34;,&#34;https://wiki.factorio.com/images/Chemical_science_pack.png&#34;,&#34;https://wiki.factorio.com/images/Cliff_explosives.png&#34;,&#34;https://wiki.factorio.com/images/Cluster_grenade.png&#34;,&#34;https://wiki.factorio.com/images/Coal.png&#34;,&#34;https://wiki.factorio.com/images/Combat_shotgun.png&#34;,&#34;https://wiki.factorio.com/images/Concrete.png&#34;,&#34;https://wiki.factorio.com/images/Constant_combinator.png&#34;,&#34;https://wiki.factorio.com/images/Construction_robot.png&#34;,&#34;https://wiki.factorio.com/images/Copper_cable.png&#34;,&#34;https://wiki.factorio.com/images/Copper_ore.png&#34;,&#34;https://wiki.factorio.com/images/Copper_plate.png&#34;,&#34;https://wiki.factorio.com/images/Decider_combinator.png&#34;,&#34;https://wiki.factorio.com/images/Defender_capsule.png&#34;,&#34;https://wiki.factorio.com/images/Destroyer_capsule.png&#34;,&#34;https://wiki.factorio.com/images/Discharge_defense.png&#34;,&#34;https://wiki.factorio.com/images/Discharge_defense_remote.png&#34;,&#34;https://wiki.factorio.com/images/Distractor_capsule.png&#34;,&#34;https://wiki.factorio.com/images/Efficiency_module.png&#34;,&#34;https://wiki.factorio.com/images/Efficiency_module_2.png&#34;,&#34;https://wiki.factorio.com/images/Efficiency_module_3.png&#34;,&#34;https://wiki.factorio.com/images/Electric_engine_unit.png&#34;,&#34;https://wiki.factorio.com/images/Electric_furnace.png&#34;,&#34;https://wiki.factorio.com/images/Electric_mining_drill.png&#34;,&#34;https://wiki.factorio.com/images/Electronic_circuit.png&#34;,&#34;https://wiki.factorio.com/images/Empty_barrel.png&#34;,&#34;https://wiki.factorio.com/images/Energy_shield.png&#34;,&#34;https://wiki.factorio.com/images/Energy_shield_MK2.png&#34;,&#34;https://wiki.factorio.com/images/Engine_unit.png&#34;,&#34;https://wiki.factorio.com/images/Exoskeleton.png&#34;,&#34;https://wiki.factorio.com/images/Explosive_cannon_shell.png&#34;,&#34;https://wiki.factorio.com/images/Explosive_rocket.png&#34;,&#34;https://wiki.factorio.com/images/Explosive_uranium_cannon_shell.png&#34;,&#34;https://wiki.factorio.com/images/Explosives.png&#34;,&#34;https://wiki.factorio.com/images/Express_splitter.png&#34;,&#34;https://wiki.factorio.com/images/Express_transport_belt.png&#34;,&#34;https://wiki.factorio.com/images/Express_underground_belt.png&#34;,&#34;https://wiki.factorio.com/images/Fast_inserter.png&#34;,&#34;https://wiki.factorio.com/images/Fast_splitter.png&#34;,&#34;https://wiki.factorio.com/images/Fast_transport_belt.png&#34;,&#34;https://wiki.factorio.com/images/Fast_underground_belt.png&#34;,&#34;https://wiki.factorio.com/images/Filter_inserter.png&#34;,&#34;https://wiki.factorio.com/images/Firearm_magazine.png&#34;,&#34;https://wiki.factorio.com/images/Flamethrower.png&#34;,&#34;https://wiki.factorio.com/images/Flamethrower_ammo.png&#34;,&#34;https://wiki.factorio.com/images/Flamethrower_turret.png&#34;,&#34;https://wiki.factorio.com/images/Fluid_wagon.png&#34;,&#34;https://wiki.factorio.com/images/Flying_robot_frame.png&#34;,&#34;https://wiki.factorio.com/images/Gate.png&#34;,&#34;https://wiki.factorio.com/images/Green_wire.png&#34;,&#34;https://wiki.factorio.com/images/Grenade.png&#34;,&#34;https://wiki.factorio.com/images/Gun_turret.png&#34;,&#34;https://wiki.factorio.com/images/Hazard_concrete.png&#34;,&#34;https://wiki.factorio.com/images/Heat_exchanger.png&#34;,&#34;https://wiki.factorio.com/images/Heat_pipe.png&#34;,&#34;https://wiki.factorio.com/images/Heavy_armor.png&#34;,&#34;https://wiki.factorio.com/images/Heavy_oil.png&#34;,&#34;https://wiki.factorio.com/images/Inserter.png&#34;,&#34;https://wiki.factorio.com/images/Iron_chest.png&#34;,&#34;https://wiki.factorio.com/images/Iron_gear_wheel.png&#34;,&#34;https://wiki.factorio.com/images/Iron_ore.png&#34;,&#34;https://wiki.factorio.com/images/Iron_plate.png&#34;,&#34;https://wiki.factorio.com/images/Iron_stick.png&#34;,&#34;https://wiki.factorio.com/images/Kovarex_enrichment_process.png&#34;,&#34;https://wiki.factorio.com/images/Lab.png&#34;,&#34;https://wiki.factorio.com/images/Lamp.png&#34;,&#34;https://wiki.factorio.com/images/Land_mine.png&#34;,&#34;https://wiki.factorio.com/images/Landfill.png&#34;,&#34;https://wiki.factorio.com/images/Laser_turret.png&#34;,&#34;https://wiki.factorio.com/images/Light_armor.png&#34;,&#34;https://wiki.factorio.com/images/Light_oil.png&#34;,&#34;https://wiki.factorio.com/images/Locomotive.png&#34;,&#34;https://wiki.factorio.com/images/Logistic_robot.png&#34;,&#34;https://wiki.factorio.com/images/Logistic_science_pack.png&#34;,&#34;https://wiki.factorio.com/images/Long_handed_inserter.png&#34;,&#34;https://wiki.factorio.com/images/Low_density_structure.png&#34;,&#34;https://wiki.factorio.com/images/Lubricant.png&#34;,&#34;https://wiki.factorio.com/images/Medium_electric_pole.png&#34;,&#34;https://wiki.factorio.com/images/Military_science_pack.png&#34;,&#34;https://wiki.factorio.com/images/Modular_armor.png&#34;,&#34;https://wiki.factorio.com/images/Nightvision.png&#34;,&#34;https://wiki.factorio.com/images/Nuclear_fuel.png&#34;,&#34;https://wiki.factorio.com/images/Nuclear_fuel_reprocessing.png&#34;,&#34;https://wiki.factorio.com/images/Nuclear_reactor.png&#34;,&#34;https://wiki.factorio.com/images/Offshore_pump.png&#34;,&#34;https://wiki.factorio.com/images/Oil_refinery.png&#34;,&#34;https://wiki.factorio.com/images/Passive_provider_chest.png&#34;,&#34;https://wiki.factorio.com/images/Personal_battery.png&#34;,&#34;https://wiki.factorio.com/images/Personal_battery_MK2.png&#34;,&#34;https://wiki.factorio.com/images/Personal_laser_defense.png&#34;,&#34;https://wiki.factorio.com/images/Personal_roboport.png&#34;,&#34;https://wiki.factorio.com/images/Personal_roboport_MK2.png&#34;,&#34;https://wiki.factorio.com/images/Petroleum_gas.png&#34;,&#34;https://wiki.factorio.com/images/Piercing_rounds_magazine.png&#34;,&#34;https://wiki.factorio.com/images/Piercing_shotgun_shells.png&#34;,&#34;https://wiki.factorio.com/images/Pipe.png&#34;,&#34;https://wiki.factorio.com/images/Pipe_to_ground.png&#34;,&#34;https://wiki.factorio.com/images/Pistol.png&#34;,&#34;https://wiki.factorio.com/images/Plastic_bar.png&#34;,&#34;https://wiki.factorio.com/images/Poison_capsule.png&#34;,&#34;https://wiki.factorio.com/images/Portable_fusion_reactor.png&#34;,&#34;https://wiki.factorio.com/images/Portable_solar_panel.png&#34;,&#34;https://wiki.factorio.com/images/Power_armor.png&#34;,&#34;https://wiki.factorio.com/images/Power_armor_MK2.png&#34;,&#34;https://wiki.factorio.com/images/Power_switch.png&#34;,&#34;https://wiki.factorio.com/images/Processing_unit.png&#34;,&#34;https://wiki.factorio.com/images/Production_science_pack.png&#34;,&#34;https://wiki.factorio.com/images/Productivity_module.png&#34;,&#34;https://wiki.factorio.com/images/Productivity_module_2.png&#34;,&#34;https://wiki.factorio.com/images/Productivity_module_3.png&#34;,&#34;https://wiki.factorio.com/images/Programmable_speaker.png&#34;,&#34;https://wiki.factorio.com/images/Pump.png&#34;,&#34;https://wiki.factorio.com/images/Pumpjack.png&#34;,&#34;https://wiki.factorio.com/images/Radar.png&#34;,&#34;https://wiki.factorio.com/images/Rail.png&#34;,&#34;https://wiki.factorio.com/images/Rail_chain_signal.png&#34;,&#34;https://wiki.factorio.com/images/Rail_signal.png&#34;,&#34;https://wiki.factorio.com/images/Red_wire.png&#34;,&#34;https://wiki.factorio.com/images/Refined_concrete.png&#34;,&#34;https://wiki.factorio.com/images/Refined_hazard_concrete.png&#34;,&#34;https://wiki.factorio.com/images/Repair_pack.png&#34;,&#34;https://wiki.factorio.com/images/Requester_chest.png&#34;,&#34;https://wiki.factorio.com/images/Roboport.png&#34;,&#34;https://wiki.factorio.com/images/Rocket.png&#34;,&#34;https://wiki.factorio.com/images/Rocket_control_unit.png&#34;,&#34;https://wiki.factorio.com/images/Rocket_fuel.png&#34;,&#34;https://wiki.factorio.com/images/Rocket_launcher.png&#34;,&#34;https://wiki.factorio.com/images/Rocket_part.png&#34;,&#34;https://wiki.factorio.com/images/Rocket_silo.png&#34;,&#34;https://wiki.factorio.com/images/Satellite.png&#34;,&#34;https://wiki.factorio.com/images/Shotgun.png&#34;,&#34;https://wiki.factorio.com/images/Shotgun_shells.png&#34;,&#34;https://wiki.factorio.com/images/Slowdown_capsule.png&#34;,&#34;https://wiki.factorio.com/images/Small_electric_pole.png&#34;,&#34;https://wiki.factorio.com/images/Solar_panel.png&#34;,&#34;https://wiki.factorio.com/images/Solid_fuel.png&#34;,&#34;https://wiki.factorio.com/images/Speed_module.png&#34;,&#34;https://wiki.factorio.com/images/Speed_module_2.png&#34;,&#34;https://wiki.factorio.com/images/Speed_module_3.png&#34;,&#34;https://wiki.factorio.com/images/Splitter.png&#34;,&#34;https://wiki.factorio.com/images/Stack_filter_inserter.png&#34;,&#34;https://wiki.factorio.com/images/Stack_inserter.png&#34;,&#34;https://wiki.factorio.com/images/Steam_engine.png&#34;,&#34;https://wiki.factorio.com/images/Steam_turbine.png&#34;,&#34;https://wiki.factorio.com/images/Steel_chest.png&#34;,&#34;https://wiki.factorio.com/images/Steel_furnace.png&#34;,&#34;https://wiki.factorio.com/images/Steel_plate.png&#34;,&#34;https://wiki.factorio.com/images/Stone.png&#34;,&#34;https://wiki.factorio.com/images/Stone_brick.png&#34;,&#34;https://wiki.factorio.com/images/Stone_furnace.png&#34;,&#34;https://wiki.factorio.com/images/Storage_chest.png&#34;,&#34;https://wiki.factorio.com/images/Storage_tank.png&#34;,&#34;https://wiki.factorio.com/images/Submachine_gun.png&#34;,&#34;https://wiki.factorio.com/images/Substation.png&#34;,&#34;https://wiki.factorio.com/images/Sulfur.png&#34;,&#34;https://wiki.factorio.com/images/Sulfuric_acid.png&#34;,&#34;https://wiki.factorio.com/images/Tank.png&#34;,&#34;https://wiki.factorio.com/images/Train_stop.png&#34;,&#34;https://wiki.factorio.com/images/Transport_belt.png&#34;,&#34;https://wiki.factorio.com/images/Underground_belt.png&#34;,&#34;https://wiki.factorio.com/images/Uranium_cannon_shell.png&#34;,&#34;https://wiki.factorio.com/images/Uranium_fuel_cell.png&#34;,&#34;https://wiki.factorio.com/images/Uranium_ore.png&#34;,&#34;https://wiki.factorio.com/images/Uranium_processing.png&#34;,&#34;https://wiki.factorio.com/images/Uranium_rounds_magazine.png&#34;,&#34;https://wiki.factorio.com/images/Uranium-235.png&#34;,&#34;https://wiki.factorio.com/images/Uranium-238.png&#34;,&#34;https://wiki.factorio.com/images/Used_up_uranium_fuel_cell.png&#34;,&#34;https://wiki.factorio.com/images/Utility_science_pack.png&#34;,&#34;https://wiki.factorio.com/images/Wall.png&#34;,&#34;https://wiki.factorio.com/images/Water.png&#34;,&#34;https://wiki.factorio.com/images/Wood.png&#34;,&#34;https://wiki.factorio.com/images/Wooden_chest.png&#34;],&#34;label&#34;:[&#34;Accumulator&#34;,&#34;Active_provider_chest&#34;,&#34;Advanced_circuit&#34;,&#34;Arithmetic_combinator&#34;,&#34;Artillery_shell&#34;,&#34;Artillery_targeting_remote&#34;,&#34;Artillery_turret&#34;,&#34;Artillery_wagon&#34;,&#34;Assembling_machine_1&#34;,&#34;Assembling_machine_2&#34;,&#34;Assembling_machine_3&#34;,&#34;Atomic_bomb&#34;,&#34;Automation_science_pack&#34;,&#34;Battery&#34;,&#34;Beacon&#34;,&#34;Belt_immunity_equipment&#34;,&#34;Big_electric_pole&#34;,&#34;Boiler&#34;,&#34;Buffer_chest&#34;,&#34;Burner_inserter&#34;,&#34;Burner_mining_drill&#34;,&#34;Cannon_shell&#34;,&#34;Car&#34;,&#34;Cargo_wagon&#34;,&#34;Centrifuge&#34;,&#34;Chemical_plant&#34;,&#34;Chemical_science_pack&#34;,&#34;Cliff_explosives&#34;,&#34;Cluster_grenade&#34;,&#34;Coal&#34;,&#34;Combat_shotgun&#34;,&#34;Concrete&#34;,&#34;Constant_combinator&#34;,&#34;Construction_robot&#34;,&#34;Copper_cable&#34;,&#34;Copper_ore&#34;,&#34;Copper_plate&#34;,&#34;Decider_combinator&#34;,&#34;Defender_capsule&#34;,&#34;Destroyer_capsule&#34;,&#34;Discharge_defense&#34;,&#34;Discharge_defense_remote&#34;,&#34;Distractor_capsule&#34;,&#34;Efficiency_module&#34;,&#34;Efficiency_module_2&#34;,&#34;Efficiency_module_3&#34;,&#34;Electric_engine_unit&#34;,&#34;Electric_furnace&#34;,&#34;Electric_mining_drill&#34;,&#34;Electronic_circuit&#34;,&#34;Empty_barrel&#34;,&#34;Energy_shield&#34;,&#34;Energy_shield_MK2&#34;,&#34;Engine_unit&#34;,&#34;Exoskeleton&#34;,&#34;Explosive_cannon_shell&#34;,&#34;Explosive_rocket&#34;,&#34;Explosive_uranium_cannon_shell&#34;,&#34;Explosives&#34;,&#34;Express_splitter&#34;,&#34;Express_transport_belt&#34;,&#34;Express_underground_belt&#34;,&#34;Fast_inserter&#34;,&#34;Fast_splitter&#34;,&#34;Fast_transport_belt&#34;,&#34;Fast_underground_belt&#34;,&#34;Filter_inserter&#34;,&#34;Firearm_magazine&#34;,&#34;Flamethrower&#34;,&#34;Flamethrower_ammo&#34;,&#34;Flamethrower_turret&#34;,&#34;Fluid_wagon&#34;,&#34;Flying_robot_frame&#34;,&#34;Gate&#34;,&#34;Green_wire&#34;,&#34;Grenade&#34;,&#34;Gun_turret&#34;,&#34;Hazard_concrete&#34;,&#34;Heat_exchanger&#34;,&#34;Heat_pipe&#34;,&#34;Heavy_armor&#34;,&#34;Heavy_oil&#34;,&#34;Inserter&#34;,&#34;Iron_chest&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_ore&#34;,&#34;Iron_plate&#34;,&#34;Iron_stick&#34;,&#34;Kovarex_enrichment_process&#34;,&#34;Lab&#34;,&#34;Lamp&#34;,&#34;Land_mine&#34;,&#34;Landfill&#34;,&#34;Laser_turret&#34;,&#34;Light_armor&#34;,&#34;Light_oil&#34;,&#34;Locomotive&#34;,&#34;Logistic_robot&#34;,&#34;Logistic_science_pack&#34;,&#34;Long_handed_inserter&#34;,&#34;Low_density_structure&#34;,&#34;Lubricant&#34;,&#34;Medium_electric_pole&#34;,&#34;Military_science_pack&#34;,&#34;Modular_armor&#34;,&#34;Nightvision&#34;,&#34;Nuclear_fuel&#34;,&#34;Nuclear_fuel_reprocessing&#34;,&#34;Nuclear_reactor&#34;,&#34;Offshore_pump&#34;,&#34;Oil_refinery&#34;,&#34;Passive_provider_chest&#34;,&#34;Personal_battery&#34;,&#34;Personal_battery_MK2&#34;,&#34;Personal_laser_defense&#34;,&#34;Personal_roboport&#34;,&#34;Personal_roboport_MK2&#34;,&#34;Petroleum_gas&#34;,&#34;Piercing_rounds_magazine&#34;,&#34;Piercing_shotgun_shells&#34;,&#34;Pipe&#34;,&#34;Pipe_to_ground&#34;,&#34;Pistol&#34;,&#34;Plastic_bar&#34;,&#34;Poison_capsule&#34;,&#34;Portable_fusion_reactor&#34;,&#34;Portable_solar_panel&#34;,&#34;Power_armor&#34;,&#34;Power_armor_MK2&#34;,&#34;Power_switch&#34;,&#34;Processing_unit&#34;,&#34;Production_science_pack&#34;,&#34;Productivity_module&#34;,&#34;Productivity_module_2&#34;,&#34;Productivity_module_3&#34;,&#34;Programmable_speaker&#34;,&#34;Pump&#34;,&#34;Pumpjack&#34;,&#34;Radar&#34;,&#34;Rail&#34;,&#34;Rail_chain_signal&#34;,&#34;Rail_signal&#34;,&#34;Red_wire&#34;,&#34;Refined_concrete&#34;,&#34;Refined_hazard_concrete&#34;,&#34;Repair_pack&#34;,&#34;Requester_chest&#34;,&#34;Roboport&#34;,&#34;Rocket&#34;,&#34;Rocket_control_unit&#34;,&#34;Rocket_fuel&#34;,&#34;Rocket_launcher&#34;,&#34;Rocket_part&#34;,&#34;Rocket_silo&#34;,&#34;Satellite&#34;,&#34;Shotgun&#34;,&#34;Shotgun_shells&#34;,&#34;Slowdown_capsule&#34;,&#34;Small_electric_pole&#34;,&#34;Solar_panel&#34;,&#34;Solid_fuel&#34;,&#34;Speed_module&#34;,&#34;Speed_module_2&#34;,&#34;Speed_module_3&#34;,&#34;Splitter&#34;,&#34;Stack_filter_inserter&#34;,&#34;Stack_inserter&#34;,&#34;Steam_engine&#34;,&#34;Steam_turbine&#34;,&#34;Steel_chest&#34;,&#34;Steel_furnace&#34;,&#34;Steel_plate&#34;,&#34;Stone&#34;,&#34;Stone_brick&#34;,&#34;Stone_furnace&#34;,&#34;Storage_chest&#34;,&#34;Storage_tank&#34;,&#34;Submachine_gun&#34;,&#34;Substation&#34;,&#34;Sulfur&#34;,&#34;Sulfuric_acid&#34;,&#34;Tank&#34;,&#34;Train_stop&#34;,&#34;Transport_belt&#34;,&#34;Underground_belt&#34;,&#34;Uranium_cannon_shell&#34;,&#34;Uranium_fuel_cell&#34;,&#34;Uranium_ore&#34;,&#34;Uranium_processing&#34;,&#34;Uranium_rounds_magazine&#34;,&#34;Uranium-235&#34;,&#34;Uranium-238&#34;,&#34;Used_up_uranium_fuel_cell&#34;,&#34;Utility_science_pack&#34;,&#34;Wall&#34;,&#34;Water&#34;,&#34;Wood&#34;,&#34;Wooden_chest&#34;]},&#34;edges&#34;:{&#34;from&#34;:[&#34;Iron_plate&#34;,&#34;Copper_plate&#34;,&#34;Solid_fuel&#34;,&#34;Solid_fuel&#34;,&#34;Solid_fuel&#34;,&#34;Steel_plate&#34;,&#34;Plastic_bar&#34;,&#34;Plastic_bar&#34;,&#34;Sulfur&#34;,&#34;Sulfur&#34;,&#34;Battery&#34;,&#34;Battery&#34;,&#34;Battery&#34;,&#34;Explosives&#34;,&#34;Explosives&#34;,&#34;Explosives&#34;,&#34;Uranium_processing&#34;,&#34;Empty_barrel&#34;,&#34;Copper_cable&#34;,&#34;Iron_stick&#34;,&#34;Iron_gear_wheel&#34;,&#34;Electronic_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Advanced_circuit&#34;,&#34;Advanced_circuit&#34;,&#34;Advanced_circuit&#34;,&#34;Processing_unit&#34;,&#34;Processing_unit&#34;,&#34;Processing_unit&#34;,&#34;Engine_unit&#34;,&#34;Engine_unit&#34;,&#34;Engine_unit&#34;,&#34;Electric_engine_unit&#34;,&#34;Electric_engine_unit&#34;,&#34;Electric_engine_unit&#34;,&#34;Flying_robot_frame&#34;,&#34;Flying_robot_frame&#34;,&#34;Flying_robot_frame&#34;,&#34;Flying_robot_frame&#34;,&#34;Satellite&#34;,&#34;Satellite&#34;,&#34;Satellite&#34;,&#34;Satellite&#34;,&#34;Satellite&#34;,&#34;Satellite&#34;,&#34;Rocket_part&#34;,&#34;Rocket_part&#34;,&#34;Rocket_part&#34;,&#34;Rocket_control_unit&#34;,&#34;Rocket_control_unit&#34;,&#34;Low_density_structure&#34;,&#34;Low_density_structure&#34;,&#34;Low_density_structure&#34;,&#34;Rocket_fuel&#34;,&#34;Nuclear_fuel&#34;,&#34;Nuclear_fuel&#34;,&#34;Uranium-235&#34;,&#34;Uranium-238&#34;,&#34;Uranium_fuel_cell&#34;,&#34;Uranium_fuel_cell&#34;,&#34;Uranium_fuel_cell&#34;,&#34;Used_up_uranium_fuel_cell&#34;,&#34;Nuclear_fuel_reprocessing&#34;,&#34;Kovarex_enrichment_process&#34;,&#34;Kovarex_enrichment_process&#34;,&#34;Automation_science_pack&#34;,&#34;Automation_science_pack&#34;,&#34;Logistic_science_pack&#34;,&#34;Logistic_science_pack&#34;,&#34;Military_science_pack&#34;,&#34;Military_science_pack&#34;,&#34;Military_science_pack&#34;,&#34;Chemical_science_pack&#34;,&#34;Chemical_science_pack&#34;,&#34;Chemical_science_pack&#34;,&#34;Production_science_pack&#34;,&#34;Production_science_pack&#34;,&#34;Production_science_pack&#34;,&#34;Utility_science_pack&#34;,&#34;Utility_science_pack&#34;,&#34;Utility_science_pack&#34;,&#34;Pistol&#34;,&#34;Pistol&#34;,&#34;Submachine_gun&#34;,&#34;Submachine_gun&#34;,&#34;Submachine_gun&#34;,&#34;Shotgun&#34;,&#34;Shotgun&#34;,&#34;Shotgun&#34;,&#34;Shotgun&#34;,&#34;Combat_shotgun&#34;,&#34;Combat_shotgun&#34;,&#34;Combat_shotgun&#34;,&#34;Combat_shotgun&#34;,&#34;Rocket_launcher&#34;,&#34;Rocket_launcher&#34;,&#34;Rocket_launcher&#34;,&#34;Flamethrower&#34;,&#34;Flamethrower&#34;,&#34;Land_mine&#34;,&#34;Land_mine&#34;,&#34;Firearm_magazine&#34;,&#34;Piercing_rounds_magazine&#34;,&#34;Piercing_rounds_magazine&#34;,&#34;Piercing_rounds_magazine&#34;,&#34;Uranium_rounds_magazine&#34;,&#34;Uranium_rounds_magazine&#34;,&#34;Shotgun_shells&#34;,&#34;Shotgun_shells&#34;,&#34;Piercing_shotgun_shells&#34;,&#34;Piercing_shotgun_shells&#34;,&#34;Piercing_shotgun_shells&#34;,&#34;Cannon_shell&#34;,&#34;Cannon_shell&#34;,&#34;Cannon_shell&#34;,&#34;Explosive_cannon_shell&#34;,&#34;Explosive_cannon_shell&#34;,&#34;Explosive_cannon_shell&#34;,&#34;Uranium_cannon_shell&#34;,&#34;Uranium_cannon_shell&#34;,&#34;Explosive_uranium_cannon_shell&#34;,&#34;Explosive_uranium_cannon_shell&#34;,&#34;Artillery_shell&#34;,&#34;Artillery_shell&#34;,&#34;Artillery_shell&#34;,&#34;Rocket&#34;,&#34;Rocket&#34;,&#34;Rocket&#34;,&#34;Explosive_rocket&#34;,&#34;Explosive_rocket&#34;,&#34;Atomic_bomb&#34;,&#34;Atomic_bomb&#34;,&#34;Atomic_bomb&#34;,&#34;Flamethrower_ammo&#34;,&#34;Flamethrower_ammo&#34;,&#34;Flamethrower_ammo&#34;,&#34;Grenade&#34;,&#34;Grenade&#34;,&#34;Cluster_grenade&#34;,&#34;Cluster_grenade&#34;,&#34;Cluster_grenade&#34;,&#34;Poison_capsule&#34;,&#34;Poison_capsule&#34;,&#34;Poison_capsule&#34;,&#34;Slowdown_capsule&#34;,&#34;Slowdown_capsule&#34;,&#34;Slowdown_capsule&#34;,&#34;Defender_capsule&#34;,&#34;Defender_capsule&#34;,&#34;Defender_capsule&#34;,&#34;Distractor_capsule&#34;,&#34;Distractor_capsule&#34;,&#34;Destroyer_capsule&#34;,&#34;Destroyer_capsule&#34;,&#34;Discharge_defense_remote&#34;,&#34;Artillery_targeting_remote&#34;,&#34;Artillery_targeting_remote&#34;,&#34;Light_armor&#34;,&#34;Heavy_armor&#34;,&#34;Heavy_armor&#34;,&#34;Modular_armor&#34;,&#34;Modular_armor&#34;,&#34;Power_armor&#34;,&#34;Power_armor&#34;,&#34;Power_armor&#34;,&#34;Power_armor_MK2&#34;,&#34;Power_armor_MK2&#34;,&#34;Power_armor_MK2&#34;,&#34;Power_armor_MK2&#34;,&#34;Power_armor_MK2&#34;,&#34;Portable_solar_panel&#34;,&#34;Portable_solar_panel&#34;,&#34;Portable_solar_panel&#34;,&#34;Portable_fusion_reactor&#34;,&#34;Portable_fusion_reactor&#34;,&#34;Energy_shield&#34;,&#34;Energy_shield&#34;,&#34;Energy_shield_MK2&#34;,&#34;Energy_shield_MK2&#34;,&#34;Energy_shield_MK2&#34;,&#34;Personal_battery&#34;,&#34;Personal_battery&#34;,&#34;Personal_battery_MK2&#34;,&#34;Personal_battery_MK2&#34;,&#34;Personal_battery_MK2&#34;,&#34;Personal_laser_defense&#34;,&#34;Personal_laser_defense&#34;,&#34;Personal_laser_defense&#34;,&#34;Discharge_defense&#34;,&#34;Discharge_defense&#34;,&#34;Discharge_defense&#34;,&#34;Belt_immunity_equipment&#34;,&#34;Belt_immunity_equipment&#34;,&#34;Exoskeleton&#34;,&#34;Exoskeleton&#34;,&#34;Exoskeleton&#34;,&#34;Personal_roboport&#34;,&#34;Personal_roboport&#34;,&#34;Personal_roboport&#34;,&#34;Personal_roboport&#34;,&#34;Personal_roboport_MK2&#34;,&#34;Personal_roboport_MK2&#34;,&#34;Personal_roboport_MK2&#34;,&#34;Nightvision&#34;,&#34;Nightvision&#34;,&#34;Wall&#34;,&#34;Gate&#34;,&#34;Gate&#34;,&#34;Gate&#34;,&#34;Gun_turret&#34;,&#34;Gun_turret&#34;,&#34;Gun_turret&#34;,&#34;Laser_turret&#34;,&#34;Laser_turret&#34;,&#34;Laser_turret&#34;,&#34;Flamethrower_turret&#34;,&#34;Flamethrower_turret&#34;,&#34;Flamethrower_turret&#34;,&#34;Flamethrower_turret&#34;,&#34;Artillery_turret&#34;,&#34;Artillery_turret&#34;,&#34;Artillery_turret&#34;,&#34;Artillery_turret&#34;,&#34;Radar&#34;,&#34;Radar&#34;,&#34;Radar&#34;,&#34;Rocket_silo&#34;,&#34;Rocket_silo&#34;,&#34;Rocket_silo&#34;,&#34;Rocket_silo&#34;,&#34;Rocket_silo&#34;,&#34;Repair_pack&#34;,&#34;Repair_pack&#34;,&#34;Boiler&#34;,&#34;Boiler&#34;,&#34;Steam_engine&#34;,&#34;Steam_engine&#34;,&#34;Steam_engine&#34;,&#34;Steam_turbine&#34;,&#34;Steam_turbine&#34;,&#34;Steam_turbine&#34;,&#34;Solar_panel&#34;,&#34;Solar_panel&#34;,&#34;Solar_panel&#34;,&#34;Accumulator&#34;,&#34;Accumulator&#34;,&#34;Nuclear_reactor&#34;,&#34;Nuclear_reactor&#34;,&#34;Nuclear_reactor&#34;,&#34;Nuclear_reactor&#34;,&#34;Heat_exchanger&#34;,&#34;Heat_exchanger&#34;,&#34;Heat_exchanger&#34;,&#34;Heat_pipe&#34;,&#34;Heat_pipe&#34;,&#34;Burner_mining_drill&#34;,&#34;Burner_mining_drill&#34;,&#34;Burner_mining_drill&#34;,&#34;Electric_mining_drill&#34;,&#34;Electric_mining_drill&#34;,&#34;Electric_mining_drill&#34;,&#34;Offshore_pump&#34;,&#34;Offshore_pump&#34;,&#34;Offshore_pump&#34;,&#34;Pumpjack&#34;,&#34;Pumpjack&#34;,&#34;Pumpjack&#34;,&#34;Pumpjack&#34;,&#34;Stone_furnace&#34;,&#34;Steel_furnace&#34;,&#34;Steel_furnace&#34;,&#34;Electric_furnace&#34;,&#34;Electric_furnace&#34;,&#34;Electric_furnace&#34;,&#34;Assembling_machine_1&#34;,&#34;Assembling_machine_1&#34;,&#34;Assembling_machine_1&#34;,&#34;Assembling_machine_2&#34;,&#34;Assembling_machine_2&#34;,&#34;Assembling_machine_2&#34;,&#34;Assembling_machine_2&#34;,&#34;Assembling_machine_3&#34;,&#34;Assembling_machine_3&#34;,&#34;Oil_refinery&#34;,&#34;Oil_refinery&#34;,&#34;Oil_refinery&#34;,&#34;Oil_refinery&#34;,&#34;Oil_refinery&#34;,&#34;Chemical_plant&#34;,&#34;Chemical_plant&#34;,&#34;Chemical_plant&#34;,&#34;Chemical_plant&#34;,&#34;Centrifuge&#34;,&#34;Centrifuge&#34;,&#34;Centrifuge&#34;,&#34;Centrifuge&#34;,&#34;Lab&#34;,&#34;Lab&#34;,&#34;Lab&#34;,&#34;Beacon&#34;,&#34;Beacon&#34;,&#34;Beacon&#34;,&#34;Beacon&#34;,&#34;Speed_module&#34;,&#34;Speed_module&#34;,&#34;Speed_module_2&#34;,&#34;Speed_module_2&#34;,&#34;Speed_module_2&#34;,&#34;Speed_module_3&#34;,&#34;Speed_module_3&#34;,&#34;Speed_module_3&#34;,&#34;Efficiency_module&#34;,&#34;Efficiency_module&#34;,&#34;Efficiency_module_2&#34;,&#34;Efficiency_module_2&#34;,&#34;Efficiency_module_2&#34;,&#34;Efficiency_module_3&#34;,&#34;Efficiency_module_3&#34;,&#34;Efficiency_module_3&#34;,&#34;Productivity_module&#34;,&#34;Productivity_module&#34;,&#34;Productivity_module_2&#34;,&#34;Productivity_module_2&#34;,&#34;Productivity_module_2&#34;,&#34;Productivity_module_3&#34;,&#34;Productivity_module_3&#34;,&#34;Productivity_module_3&#34;,&#34;Wooden_chest&#34;,&#34;Iron_chest&#34;,&#34;Steel_chest&#34;,&#34;Storage_tank&#34;,&#34;Storage_tank&#34;,&#34;Transport_belt&#34;,&#34;Transport_belt&#34;,&#34;Fast_transport_belt&#34;,&#34;Fast_transport_belt&#34;,&#34;Express_transport_belt&#34;,&#34;Express_transport_belt&#34;,&#34;Express_transport_belt&#34;,&#34;Underground_belt&#34;,&#34;Underground_belt&#34;,&#34;Fast_underground_belt&#34;,&#34;Fast_underground_belt&#34;,&#34;Express_underground_belt&#34;,&#34;Express_underground_belt&#34;,&#34;Express_underground_belt&#34;,&#34;Splitter&#34;,&#34;Splitter&#34;,&#34;Splitter&#34;,&#34;Fast_splitter&#34;,&#34;Fast_splitter&#34;,&#34;Fast_splitter&#34;,&#34;Express_splitter&#34;,&#34;Express_splitter&#34;,&#34;Express_splitter&#34;,&#34;Express_splitter&#34;,&#34;Burner_inserter&#34;,&#34;Burner_inserter&#34;,&#34;Inserter&#34;,&#34;Inserter&#34;,&#34;Inserter&#34;,&#34;Long_handed_inserter&#34;,&#34;Long_handed_inserter&#34;,&#34;Long_handed_inserter&#34;,&#34;Fast_inserter&#34;,&#34;Fast_inserter&#34;,&#34;Fast_inserter&#34;,&#34;Filter_inserter&#34;,&#34;Filter_inserter&#34;,&#34;Stack_inserter&#34;,&#34;Stack_inserter&#34;,&#34;Stack_inserter&#34;,&#34;Stack_inserter&#34;,&#34;Stack_filter_inserter&#34;,&#34;Stack_filter_inserter&#34;,&#34;Small_electric_pole&#34;,&#34;Small_electric_pole&#34;,&#34;Medium_electric_pole&#34;,&#34;Medium_electric_pole&#34;,&#34;Medium_electric_pole&#34;,&#34;Big_electric_pole&#34;,&#34;Big_electric_pole&#34;,&#34;Big_electric_pole&#34;,&#34;Substation&#34;,&#34;Substation&#34;,&#34;Substation&#34;,&#34;Pipe&#34;,&#34;Pipe_to_ground&#34;,&#34;Pipe_to_ground&#34;,&#34;Pump&#34;,&#34;Pump&#34;,&#34;Pump&#34;,&#34;Rail&#34;,&#34;Rail&#34;,&#34;Rail&#34;,&#34;Train_stop&#34;,&#34;Train_stop&#34;,&#34;Train_stop&#34;,&#34;Train_stop&#34;,&#34;Rail_signal&#34;,&#34;Rail_signal&#34;,&#34;Rail_chain_signal&#34;,&#34;Rail_chain_signal&#34;,&#34;Locomotive&#34;,&#34;Locomotive&#34;,&#34;Locomotive&#34;,&#34;Cargo_wagon&#34;,&#34;Cargo_wagon&#34;,&#34;Cargo_wagon&#34;,&#34;Fluid_wagon&#34;,&#34;Fluid_wagon&#34;,&#34;Fluid_wagon&#34;,&#34;Fluid_wagon&#34;,&#34;Artillery_wagon&#34;,&#34;Artillery_wagon&#34;,&#34;Artillery_wagon&#34;,&#34;Artillery_wagon&#34;,&#34;Artillery_wagon&#34;,&#34;Car&#34;,&#34;Car&#34;,&#34;Car&#34;,&#34;Tank&#34;,&#34;Tank&#34;,&#34;Tank&#34;,&#34;Tank&#34;,&#34;Logistic_robot&#34;,&#34;Logistic_robot&#34;,&#34;Construction_robot&#34;,&#34;Construction_robot&#34;,&#34;Active_provider_chest&#34;,&#34;Active_provider_chest&#34;,&#34;Active_provider_chest&#34;,&#34;Passive_provider_chest&#34;,&#34;Passive_provider_chest&#34;,&#34;Passive_provider_chest&#34;,&#34;Storage_chest&#34;,&#34;Storage_chest&#34;,&#34;Storage_chest&#34;,&#34;Buffer_chest&#34;,&#34;Buffer_chest&#34;,&#34;Buffer_chest&#34;,&#34;Requester_chest&#34;,&#34;Requester_chest&#34;,&#34;Requester_chest&#34;,&#34;Roboport&#34;,&#34;Roboport&#34;,&#34;Roboport&#34;,&#34;Lamp&#34;,&#34;Lamp&#34;,&#34;Lamp&#34;,&#34;Red_wire&#34;,&#34;Red_wire&#34;,&#34;Green_wire&#34;,&#34;Green_wire&#34;,&#34;Arithmetic_combinator&#34;,&#34;Arithmetic_combinator&#34;,&#34;Decider_combinator&#34;,&#34;Decider_combinator&#34;,&#34;Constant_combinator&#34;,&#34;Constant_combinator&#34;,&#34;Power_switch&#34;,&#34;Power_switch&#34;,&#34;Power_switch&#34;,&#34;Programmable_speaker&#34;,&#34;Programmable_speaker&#34;,&#34;Programmable_speaker&#34;,&#34;Programmable_speaker&#34;,&#34;Stone_brick&#34;,&#34;Concrete&#34;,&#34;Concrete&#34;,&#34;Concrete&#34;,&#34;Hazard_concrete&#34;,&#34;Refined_concrete&#34;,&#34;Refined_concrete&#34;,&#34;Refined_concrete&#34;,&#34;Refined_concrete&#34;,&#34;Refined_hazard_concrete&#34;,&#34;Landfill&#34;,&#34;Cliff_explosives&#34;,&#34;Cliff_explosives&#34;,&#34;Cliff_explosives&#34;],&#34;to&#34;:[&#34;Iron_ore&#34;,&#34;Copper_ore&#34;,&#34;Heavy_oil&#34;,&#34;Light_oil&#34;,&#34;Petroleum_gas&#34;,&#34;Iron_plate&#34;,&#34;Coal&#34;,&#34;Petroleum_gas&#34;,&#34;Water&#34;,&#34;Petroleum_gas&#34;,&#34;Copper_plate&#34;,&#34;Iron_plate&#34;,&#34;Sulfuric_acid&#34;,&#34;Coal&#34;,&#34;Sulfur&#34;,&#34;Water&#34;,&#34;Uranium_ore&#34;,&#34;Steel_plate&#34;,&#34;Copper_plate&#34;,&#34;Iron_plate&#34;,&#34;Iron_plate&#34;,&#34;Copper_cable&#34;,&#34;Iron_plate&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Plastic_bar&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Sulfuric_acid&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Engine_unit&#34;,&#34;Lubricant&#34;,&#34;Battery&#34;,&#34;Electric_engine_unit&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_plate&#34;,&#34;Accumulator&#34;,&#34;Low_density_structure&#34;,&#34;Processing_unit&#34;,&#34;Radar&#34;,&#34;Rocket_fuel&#34;,&#34;Solar_panel&#34;,&#34;Low_density_structure&#34;,&#34;Rocket_control_unit&#34;,&#34;Rocket_fuel&#34;,&#34;Processing_unit&#34;,&#34;Speed_module&#34;,&#34;Copper_plate&#34;,&#34;Steel_plate&#34;,&#34;Plastic_bar&#34;,&#34;Solid_fuel&#34;,&#34;Rocket_fuel&#34;,&#34;Uranium-235&#34;,&#34;Uranium_ore&#34;,&#34;Uranium_ore&#34;,&#34;Iron_plate&#34;,&#34;Uranium-235&#34;,&#34;Uranium-238&#34;,&#34;Uranium_fuel_cell&#34;,&#34;Used_up_uranium_fuel_cell&#34;,&#34;Uranium-235&#34;,&#34;Uranium-238&#34;,&#34;Copper_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Inserter&#34;,&#34;Transport_belt&#34;,&#34;Grenade&#34;,&#34;Piercing_rounds_magazine&#34;,&#34;Wall&#34;,&#34;Advanced_circuit&#34;,&#34;Engine_unit&#34;,&#34;Solid_fuel&#34;,&#34;Electric_furnace&#34;,&#34;Productivity_module&#34;,&#34;Rail&#34;,&#34;Flying_robot_frame&#34;,&#34;Low_density_structure&#34;,&#34;Processing_unit&#34;,&#34;Copper_plate&#34;,&#34;Iron_plate&#34;,&#34;Copper_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Copper_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Wood&#34;,&#34;Copper_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Steel_plate&#34;,&#34;Wood&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Steel_plate&#34;,&#34;Explosives&#34;,&#34;Steel_plate&#34;,&#34;Iron_plate&#34;,&#34;Copper_plate&#34;,&#34;Firearm_magazine&#34;,&#34;Steel_plate&#34;,&#34;Piercing_rounds_magazine&#34;,&#34;Uranium-238&#34;,&#34;Copper_plate&#34;,&#34;Iron_plate&#34;,&#34;Shotgun_shells&#34;,&#34;Copper_plate&#34;,&#34;Steel_plate&#34;,&#34;Explosives&#34;,&#34;Plastic_bar&#34;,&#34;Steel_plate&#34;,&#34;Explosives&#34;,&#34;Plastic_bar&#34;,&#34;Steel_plate&#34;,&#34;Cannon_shell&#34;,&#34;Uranium-238&#34;,&#34;Explosive_cannon_shell&#34;,&#34;Uranium-238&#34;,&#34;Explosive_cannon_shell&#34;,&#34;Explosives&#34;,&#34;Radar&#34;,&#34;Electronic_circuit&#34;,&#34;Explosives&#34;,&#34;Iron_plate&#34;,&#34;Rocket&#34;,&#34;Explosives&#34;,&#34;Explosives&#34;,&#34;Rocket_control_unit&#34;,&#34;Uranium-235&#34;,&#34;Heavy_oil&#34;,&#34;Light_oil&#34;,&#34;Steel_plate&#34;,&#34;Coal&#34;,&#34;Iron_plate&#34;,&#34;Explosives&#34;,&#34;Grenade&#34;,&#34;Steel_plate&#34;,&#34;Coal&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_plate&#34;,&#34;Coal&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Piercing_rounds_magazine&#34;,&#34;Advanced_circuit&#34;,&#34;Defender_capsule&#34;,&#34;Distractor_capsule&#34;,&#34;Speed_module&#34;,&#34;Electronic_circuit&#34;,&#34;Processing_unit&#34;,&#34;Radar&#34;,&#34;Iron_plate&#34;,&#34;Copper_plate&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Steel_plate&#34;,&#34;Electric_engine_unit&#34;,&#34;Processing_unit&#34;,&#34;Steel_plate&#34;,&#34;Efficiency_module_2&#34;,&#34;Electric_engine_unit&#34;,&#34;Low_density_structure&#34;,&#34;Processing_unit&#34;,&#34;Speed_module_2&#34;,&#34;Advanced_circuit&#34;,&#34;Solar_panel&#34;,&#34;Steel_plate&#34;,&#34;Low_density_structure&#34;,&#34;Processing_unit&#34;,&#34;Advanced_circuit&#34;,&#34;Steel_plate&#34;,&#34;Low_density_structure&#34;,&#34;Processing_unit&#34;,&#34;Energy_shield&#34;,&#34;Battery&#34;,&#34;Steel_plate&#34;,&#34;Personal_battery&#34;,&#34;Low_density_structure&#34;,&#34;Processing_unit&#34;,&#34;Laser_turret&#34;,&#34;Low_density_structure&#34;,&#34;Processing_unit&#34;,&#34;Laser_turret&#34;,&#34;Processing_unit&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Steel_plate&#34;,&#34;Electric_engine_unit&#34;,&#34;Processing_unit&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Battery&#34;,&#34;Iron_gear_wheel&#34;,&#34;Steel_plate&#34;,&#34;Low_density_structure&#34;,&#34;Personal_roboport&#34;,&#34;Processing_unit&#34;,&#34;Advanced_circuit&#34;,&#34;Steel_plate&#34;,&#34;Stone_brick&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_plate&#34;,&#34;Wall&#34;,&#34;Copper_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Battery&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_plate&#34;,&#34;Engine_unit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Concrete&#34;,&#34;Iron_gear_wheel&#34;,&#34;Steel_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Concrete&#34;,&#34;Electric_engine_unit&#34;,&#34;Pipe&#34;,&#34;Processing_unit&#34;,&#34;Steel_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Stone_furnace&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Pipe&#34;,&#34;Copper_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Copper_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_plate&#34;,&#34;Battery&#34;,&#34;Iron_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Concrete&#34;,&#34;Copper_plate&#34;,&#34;Steel_plate&#34;,&#34;Copper_plate&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Copper_plate&#34;,&#34;Steel_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_gear_wheel&#34;,&#34;Stone_furnace&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Stone&#34;,&#34;Steel_plate&#34;,&#34;Stone_brick&#34;,&#34;Advanced_circuit&#34;,&#34;Steel_plate&#34;,&#34;Stone_brick&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Assembling_machine_1&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Steel_plate&#34;,&#34;Assembling_machine_2&#34;,&#34;Speed_module&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Stone_brick&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Concrete&#34;,&#34;Iron_gear_wheel&#34;,&#34;Steel_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Transport_belt&#34;,&#34;Advanced_circuit&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Advanced_circuit&#34;,&#34;Processing_unit&#34;,&#34;Speed_module&#34;,&#34;Advanced_circuit&#34;,&#34;Processing_unit&#34;,&#34;Speed_module_2&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Advanced_circuit&#34;,&#34;Processing_unit&#34;,&#34;Efficiency_module&#34;,&#34;Advanced_circuit&#34;,&#34;Efficiency_module_2&#34;,&#34;Processing_unit&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Advanced_circuit&#34;,&#34;Processing_unit&#34;,&#34;Productivity_module&#34;,&#34;Advanced_circuit&#34;,&#34;Processing_unit&#34;,&#34;Productivity_module_2&#34;,&#34;Wood&#34;,&#34;Iron_plate&#34;,&#34;Steel_plate&#34;,&#34;Iron_plate&#34;,&#34;Steel_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Transport_belt&#34;,&#34;Fast_transport_belt&#34;,&#34;Iron_gear_wheel&#34;,&#34;Lubricant&#34;,&#34;Iron_plate&#34;,&#34;Transport_belt&#34;,&#34;Iron_gear_wheel&#34;,&#34;Underground_belt&#34;,&#34;Fast_underground_belt&#34;,&#34;Iron_gear_wheel&#34;,&#34;Lubricant&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_plate&#34;,&#34;Transport_belt&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Splitter&#34;,&#34;Advanced_circuit&#34;,&#34;Fast_splitter&#34;,&#34;Iron_gear_wheel&#34;,&#34;Lubricant&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Inserter&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Inserter&#34;,&#34;Iron_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Fast_inserter&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Fast_inserter&#34;,&#34;Iron_gear_wheel&#34;,&#34;Electronic_circuit&#34;,&#34;Stack_inserter&#34;,&#34;Copper_cable&#34;,&#34;Wood&#34;,&#34;Copper_plate&#34;,&#34;Iron_stick&#34;,&#34;Steel_plate&#34;,&#34;Copper_plate&#34;,&#34;Iron_stick&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Copper_plate&#34;,&#34;Steel_plate&#34;,&#34;Iron_plate&#34;,&#34;Iron_plate&#34;,&#34;Pipe&#34;,&#34;Engine_unit&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Iron_stick&#34;,&#34;Steel_plate&#34;,&#34;Stone&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_plate&#34;,&#34;Iron_stick&#34;,&#34;Steel_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_plate&#34;,&#34;Electronic_circuit&#34;,&#34;Engine_unit&#34;,&#34;Steel_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Iron_plate&#34;,&#34;Steel_plate&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Storage_tank&#34;,&#34;Advanced_circuit&#34;,&#34;Engine_unit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Pipe&#34;,&#34;Steel_plate&#34;,&#34;Engine_unit&#34;,&#34;Iron_plate&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Engine_unit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Steel_plate&#34;,&#34;Advanced_circuit&#34;,&#34;Flying_robot_frame&#34;,&#34;Electronic_circuit&#34;,&#34;Flying_robot_frame&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_chest&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_chest&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_chest&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_chest&#34;,&#34;Advanced_circuit&#34;,&#34;Electronic_circuit&#34;,&#34;Steel_chest&#34;,&#34;Advanced_circuit&#34;,&#34;Iron_gear_wheel&#34;,&#34;Steel_plate&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_plate&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_plate&#34;,&#34;Copper_cable&#34;,&#34;Electronic_circuit&#34;,&#34;Iron_plate&#34;,&#34;Iron_stick&#34;,&#34;Stone&#34;,&#34;Iron_ore&#34;,&#34;Stone_brick&#34;,&#34;Water&#34;,&#34;Concrete&#34;,&#34;Concrete&#34;,&#34;Iron_stick&#34;,&#34;Steel_plate&#34;,&#34;Water&#34;,&#34;Refined_concrete&#34;,&#34;Stone&#34;,&#34;Empty_barrel&#34;,&#34;Explosives&#34;,&#34;Grenade&#34;]},&#34;nodesToDataframe&#34;:true,&#34;edgesToDataframe&#34;:true,&#34;options&#34;:{&#34;width&#34;:&#34;100%&#34;,&#34;height&#34;:&#34;100%&#34;,&#34;nodes&#34;:{&#34;shape&#34;:&#34;dot&#34;},&#34;manipulation&#34;:{&#34;enabled&#34;:false},&#34;edges&#34;:{&#34;arrows&#34;:&#34;from&#34;,&#34;color&#34;:&#34;lightgrey&#34;},&#34;physics&#34;:{&#34;solver&#34;:&#34;forceAtlas2Based&#34;,&#34;forceAtlas2Based&#34;:{&#34;gravitationalConstant&#34;:-60}},&#34;interaction&#34;:{&#34;keyboard&#34;:true,&#34;navigationButtons&#34;:true},&#34;layout&#34;:{&#34;randomSeed&#34;:2}},&#34;groups&#34;:null,&#34;width&#34;:null,&#34;height&#34;:null,&#34;idselection&#34;:{&#34;enabled&#34;:true,&#34;style&#34;:&#34;width: 150px; height: 26px&#34;,&#34;useLabels&#34;:true,&#34;main&#34;:&#34;Select by id&#34;},&#34;byselection&#34;:{&#34;enabled&#34;:false,&#34;style&#34;:&#34;width: 150px; height: 26px&#34;,&#34;multiple&#34;:false,&#34;hideColor&#34;:&#34;rgba(200,200,200,0.5)&#34;},&#34;main&#34;:null,&#34;submain&#34;:null,&#34;footer&#34;:null,&#34;background&#34;:&#34;rgba(0, 0, 0, 0)&#34;,&#34;highlight&#34;:{&#34;enabled&#34;:true,&#34;hoverNearest&#34;:false,&#34;degree&#34;:1,&#34;algorithm&#34;:&#34;all&#34;,&#34;hideColor&#34;:&#34;rgba(200,200,200,0.5)&#34;,&#34;labelOnly&#34;:true},&#34;collapse&#34;:{&#34;enabled&#34;:false,&#34;fit&#34;:false,&#34;resetHighlight&#34;:true,&#34;clusterOptions&#34;:null},&#34;tooltipStay&#34;:300,&#34;tooltipStyle&#34;:&#34;position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Background&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://factorio.com/&#34;&gt;Factorio&lt;/a&gt; is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Construction_and_management_simulation&#34;&gt;management game&lt;/a&gt; where you survive by building automated systems on an alien planet. The game is built on creating ever more complicated items from simpler building blocks. It can get &lt;a href=&#34;https://www.pcgamer.com/see-what-a-factorio-factory-looks-like-after-500-hours-of-work/&#34;&gt;quite complicated&lt;/a&gt;, but the basic process involves making things that can accomplish tasks and chaining them together. There are a lot of things you can build, and this visualization will let you explore how the items relate to one another in terms of build requirements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-to-understand-the-network&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;How to understand the network&lt;/h3&gt;
+&lt;p&gt;The network above shows all items in Factorio (almost; see &lt;a href=&#34;#method&#34;&gt;Method&lt;/a&gt;) and their build relationships. The item images are the nodes and the arrows are the edges.&lt;/p&gt;
+&lt;p&gt;To illustrate how the arrows work, let’s highlight the &lt;em&gt;Transport_belt&lt;/em&gt; node:&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;pics/factorio_transport_example.png&#34; width=&#34;500&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Arrows&lt;/strong&gt; point in the direction of &lt;strong&gt;increasing complexity&lt;/strong&gt;. For example, an arrow between &lt;em&gt;Iron_gear_wheel&lt;/em&gt; and &lt;em&gt;Transport_belt&lt;/em&gt; means an &lt;em&gt;Iron_gear_wheel&lt;/em&gt; can be used to make a &lt;em&gt;Transport_belt&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Relationship: An &lt;em&gt;Iron_gear_wheel&lt;/em&gt; is a &lt;strong&gt;building block&lt;/strong&gt; for a &lt;em&gt;Transport_belt&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Looking at all of the arrows that point &lt;strong&gt;toward&lt;/strong&gt; a node shows what items are &lt;strong&gt;required to build&lt;/strong&gt; that node:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recipe: A &lt;em&gt;Transport_belt&lt;/em&gt; uses an &lt;em&gt;Iron_plate&lt;/em&gt; and an &lt;em&gt;Iron_gear_wheel&lt;/em&gt; as building blocks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Looking at all of the arrows that point &lt;strong&gt;away&lt;/strong&gt; from a node shows what items use that node as a &lt;strong&gt;building block&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recipe: A &lt;em&gt;Transport_belt&lt;/em&gt; is used in building an &lt;em&gt;Underground_belt&lt;/em&gt;, a &lt;em&gt;Fast_transport_belt&lt;/em&gt;, a &lt;em&gt;Logistic_science_pack&lt;/em&gt;, a &lt;em&gt;Lab&lt;/em&gt;, and a &lt;em&gt;Splitter&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interaction&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Interaction&lt;/h3&gt;
+&lt;p&gt;The graph allows for easy navigation and manipulation of the network. Navigation buttons are available as well as Mouse and Keyboard interactions. &lt;strong&gt;Pan&lt;/strong&gt; and &lt;strong&gt;Zoom&lt;/strong&gt; to orient the graph. Nodes can be &lt;strong&gt;clicked&lt;/strong&gt; to highlight nearest connections (direct neighbors, in and out degree) or use the &lt;strong&gt;dropdown menu&lt;/strong&gt;. Nodes can also be &lt;strong&gt;dragged&lt;/strong&gt; to expose hard-to-see connections.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;method&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Method&lt;/h3&gt;
+&lt;p&gt;Built using the &lt;a href=&#34;https://datastorm-open.github.io/visNetwork/&#34;&gt;&lt;code&gt;visNetwork&lt;/code&gt;&lt;/a&gt; package. Images from &lt;a href=&#34;https://wiki.factorio.com/&#34;&gt;Factorio Wiki&lt;/a&gt; (grateful the wiki organization was so clean, but of course Factorio pros would keep it that way!) Items that only link to themselves—such as Raw_fish or Space_science_pack—were excluded. An arrow only describes a requirement, &lt;em&gt;not&lt;/em&gt; a quantity; many relationships require multiple items to successfully build. Network contains 198 nodes and 481 edges.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;about&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;About&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/zachbogart/portfolio#factorio-recipe-network&#34;&gt;Portfolio blurb on GitHub&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zachbogart.com&#34;&gt;Zach Bogart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/zachbogart&#34;&gt;@zachbogart&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -129,12 +237,20 @@
     </item>
     
     <item>
+      <title>FilmCats</title>
+      <link>/project/filmcats/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      <guid>/project/filmcats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Koji Typeface</title>
       <link>/project/koji/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       <guid>/project/koji/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been sketching out font ideas in the margins of college notebooks for years, so I thought it might be time to formalize one of them. The result is Koji, a typeface based off of a simple jig I would draw in my workbooks during class.&lt;/p&gt;
-
+&lt;div align=&#34;center&#34;&gt;
 
 
 
@@ -208,13 +324,31 @@
   
 
   
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;The main idea of Koji was to base all of the characters off of a simple template. But, as I began formally defining the font, it of course came down to some aesthetic choices. Creating this font was an incredible experience and I hope to improve it more and more, adding new characters to support more languages and tightening up each letter to improve usability.&lt;/p&gt;
+&lt;h2 id=&#34;included-unicode-blocks&#34;&gt;Included Unicode Blocks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Basic_Latin_%28Unicode_block%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Basic Latin (U+0020-U+007E)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Latin-1_Supplement_%28Unicode_block%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Latin-1 Supplement (U+00A0-U+00FF)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;why-koji&#34;&gt;Why Koji?&lt;/h2&gt;
 &lt;p&gt;Naming a font is arguably as hard as creating one. I could say it was chosen because 
 &lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Aspergillus_oryzae.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Koji fungal blooms&lt;/a&gt; are sort of round like this font. Or I could say it&amp;rsquo;s a principal ingredient in fermenting 
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Soy_sauce&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;soy sauce&lt;/a&gt;, a condiment that is simple yet complex, just like this font. But the truth is far less poetic: it came from an 
 &lt;a href=&#34;https://word.tips/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online word finder&lt;/a&gt;. I wanted a name that used an uppercase &amp;ldquo;K&amp;rdquo; and a lowercase &amp;ldquo;j&amp;rdquo; because those are two of my favorite letters in this typeface. So I searched for a word that fit the bill and came across &amp;ldquo;Koji&amp;rdquo; and it just grew on me. It&amp;rsquo;s easy to say, it has a cool but as you now know somewhat tacked-on backstory, and it looks good when written in the font, which is always a plus. Overall, a simple and catchy name for what I hope is your new favorite font.&lt;/p&gt;
+&lt;h2 id=&#34;try-it-out&#34;&gt;Try it out!&lt;/h2&gt;
+&lt;p&gt;If you try out the Koji typeface, consider 
+&lt;a href=&#34;https://ko-fi.com/zachbogart&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;throwing a digital coffee my way&lt;/a&gt; ☕. Much appreciated. ❤️&lt;/p&gt;
+&lt;p&gt;Hope you enjoy the Koji typeface.&lt;/p&gt;
+&lt;h3 id=&#34;version-log&#34;&gt;Version Log&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Jan 2019&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release (1.000)&lt;/li&gt;
+&lt;li&gt;Basic Latin (U+0020-U+007E)&lt;/li&gt;
+&lt;li&gt;Latin-1 Supplement (U+00A0-U+00FF)&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -254,7 +388,146 @@
 &lt;p&gt;For more information about how Noun Project works, checkout 
 &lt;a href=&#34;https://thenounproject.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;their About page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;🖤&lt;/p&gt;
-</description>
+&lt;p&gt;Here&amp;rsquo;s a look at some of 
+&lt;a href=&#34;https://thenounproject.com/zachbogart/kit/favorites/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my favorite creations&lt;/a&gt;:&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites01.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites01_hu8d5b0646064dc265b4ee4ada274d7fcf_180151_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;230&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites02.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites02_hud7cd104e1a40f883e7ab1d7cd2a78690_187317_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;229&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites03.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites03_hu9832975c010cf8a0187e437a5df02a27_190509_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;225&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites04.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites04_hud9156b82e1d93b4f30002c70b0b27174_174513_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;220&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites05.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites05_hu80eea7682d0c0485e4081142b64dd499_164479_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;225&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites06.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites06_hu87c0e941b38ddc6342737b003f7b4694_238539_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;228&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites07.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites07_hueeba308787f4e8dfab445ca5b3e799d1_211634_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;230&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites08.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites08_huda0870e56eb32f44791bbaec2049c9d3_234865_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;235&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites09.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites09_hu20e5083668746da80cece4fb88f48a8b_236213_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;227&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites10.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites10_hu8e583dd456ea99e0637bd01e463f7d6a_218938_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;224&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites11.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites11_hue8617617bf8cd7bab5b057e4ad6c0d5f_218580_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;229&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites12.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites12_hu328834f977f241845c0eb6fb2c167089_209721_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;227&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites13.png&#34; &gt;
+  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites13_hufdb82658f48f524453170e899191cfe1_239485_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;202&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -274,6 +547,14 @@
     </item>
     
     <item>
+      <title>Neat Tweet: Skittles CandyViz</title>
+      <link>/project/candyviz-skittles/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/project/candyviz-skittles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Podcast Postcard</title>
       <link>/project/postcard/</link>
       <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
@@ -288,7 +569,7 @@
 &lt;a href=&#34;http://www.dear-data.com/week-37-a-week-of-swearing/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;swearing&lt;/a&gt; to 
 &lt;a href=&#34;http://www.dear-data.com/week-51-a-week-of-privacy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;privacy&lt;/a&gt; and the resulting postcards embodied their personal style of telling stories with data. I loved listening to their project and was intrigued when the podcast ended with a challenge: 
 &lt;a href=&#34;https://fivethirtyeight.com/features/dear-data-and-fivethirtyeight-want-you-to-visualize-your-podcast-habits/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;try it for yourself, dear listener&lt;/a&gt;. The podcast asked its audience to have a go and make their own postcard with the theme of &amp;lsquo;podcasts&amp;rsquo; and send it in. I had been interested in data visualization for some time and here was a great excuse to play around with data and inject some creative flair. So I gave it a try.&lt;/p&gt;
-
+&lt;div align=&#34;center&#34;&gt;
 
 
 
@@ -335,7 +616,7 @@
   
 
   
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;I decided to track WHEN and HOW I listened to podcasts. I recorded the time of day, my listening position (standing, sitting, etc.), and whether I used speakers or headphones. After a week, I had a collection of data points that described my week in podcasts. I made a simple grid and used a light table to fill in the correct cells. The result was an eye-catching postcard that has a lot of hidden data if you look closely.&lt;/p&gt;
 &lt;p&gt;It was a lot of fun tracking my behavior and making the postcard. I encourage you to check out 
 &lt;a href=&#34;http://www.dear-data.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DearData&lt;/a&gt;. Also, if you have the desire to track things but aren’t sure how to keep it organized, check out 
@@ -385,9 +666,9 @@
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <link>/blog/hello-r-markdown/</link>
+      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>/blog/hello-r-markdown/</guid>
       <description>
 
 
@@ -429,6 +710,24 @@ pie(
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;checking-fonts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Checking Fonts&lt;/h2&gt;
+&lt;div id=&#34;small-header&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Small Header&lt;/h3&gt;
+&lt;div id=&#34;small-small&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Small Small&lt;/h4&gt;
+&lt;p&gt;Testing &lt;em&gt;emphasis&lt;/em&gt; and &lt;strong&gt;accents&lt;/strong&gt; in the writing in markdown&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one&lt;/li&gt;
+&lt;li&gt;two&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;hello&lt;/li&gt;
+&lt;li&gt;hello there&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -452,7 +751,7 @@ Figure 1: A fancy pie chart.
       <guid>/project/origami/</guid>
       <description>&lt;p&gt;Unit origami is beautiful. You can make dozens of simple modules and turn them into stunning 3D creations. I thought it would be hard to fold anything at college till I found that every print job released through the university gave you a cover sheet. People would recycle these sheets (easily a hundred a day) and I would collect some and use them to make the pieces pictured above. It became a nice way to spend an afternoon over the summer or during some downtime. It is quite meditative to make the units and I would leave the completed pieces around the library on campus as well as various other places.&lt;/p&gt;
 &lt;p&gt;I easily did this with several hundred cover sheets over the years. I would leave them and in a day or two they would disappear. There is only one that is still in the library: in the IT Center on the 1st floor of Mugar Library, on top of a cabinet, sits a Sonobe piece, occasionally sharing the space with a Jack O’Lantern. Whatever happened to the rest, I hope people enjoyed them. It is certainly prettier than a lump of sheets in a recycling bin.&lt;/p&gt;
-
+&lt;div align=&#34;center&#34;&gt;
 
 
 
@@ -544,7 +843,7 @@ Figure 1: A fancy pie chart.
   
 
   
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&#34;helpful-directions&#34;&gt;Helpful Directions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;

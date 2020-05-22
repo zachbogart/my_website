@@ -1,6 +1,7 @@
 ---
 title: Noun Project Icon Design
-summary: 3000+ icons to spice up your projects.
+subtitle: 3000+ icons and counting
+summary: Hand-crafted, small-batch icons to spice up your projects.
 tags:
 - Featured
 - Design
@@ -18,15 +19,15 @@ links:
 - icon: star
   icon_pack: fas
   name: My Favorites
-  url: https://thenounproject.com/zachbogart/uploads/
+  url: https://thenounproject.com/zachbogart/kit/favorites/
 - icon: tshirt
   icon_pack: fas
   name: Merch
-  url: https://thenounproject.com/zachbogart/uploads/
+  url: https://teespring.com/stores/imakenouns
 - icon: twitter
   icon_pack: fab
   name: '@imakenouns'
-  url: https://thenounproject.com/zachbogart/uploads/
+  url: http://www.twitter.com/imakenouns
 ---
 
 Noun Project is a site that provides icons for everything. I have [a collection of my own icon designs on Noun Project](https://thenounproject.com/zachbogart/uploads/) that you can choose from to spice up your own projects. I add new designs often, so check back to see what's available.
@@ -38,3 +39,7 @@ Noun Project supports creators when people download their icons. Whether you cho
 For more information about how Noun Project works, checkout [their About page](https://thenounproject.com/about/).
 
 :black_heart:
+
+Here's a look at some of [my favorite creations](https://thenounproject.com/zachbogart/kit/favorites/):
+
+<div align="center">{{< gallery album="images_nouns" >}}</div>

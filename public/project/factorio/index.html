@@ -1,0 +1,996 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Zach Bogart">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Visualization of the crazy connections of a complicated video game">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/project/factorio/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#007791">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i%7CRaleway:400,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu983e49d17a61c1d7fcd91be745a91945_20172_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu983e49d17a61c1d7fcd91be745a91945_20172_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/project/factorio/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@zachbogart">
+  <meta property="twitter:creator" content="@zachbogart">
+  
+  <meta property="og:site_name" content="Zach Bogart">
+  <meta property="og:url" content="/project/factorio/">
+  <meta property="og:title" content="Factorio Recipe Network | Zach Bogart">
+  <meta property="og:description" content="Visualization of the crazy connections of a complicated video game"><meta property="og:image" content="/project/factorio/featured.png">
+  <meta property="twitter:image" content="/project/factorio/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-09-05T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-09-05T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/project/factorio/"
+  },
+  "headline": "Factorio Recipe Network",
+  
+  "image": [
+    "/project/factorio/featured.png"
+  ],
+  
+  "datePublished": "2019-09-05T00:00:00Z",
+  "dateModified": "2019-09-05T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Zach Bogart"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zach Bogart",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu983e49d17a61c1d7fcd91be745a91945_20172_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Visualization of the crazy connections of a complicated video game"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Factorio Recipe Network | Zach Bogart</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Zach Bogart</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Zach Bogart</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/about"><span>About</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Factorio Recipe Network</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 5, 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 720px;">
+  <div style="position: relative">
+    <img src="/project/factorio/featured_hu85a7b1d64317460d8957bbf3e65d97eb_236212_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="/rmarkdown-libs/vis/vis.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/vis/vis.min.js"></script>
+<script src="/rmarkdown-libs/visNetwork-binding/visNetwork.js"></script>
+
+
+<div id="jump-in" class="section level2">
+<h2>Jump In!</h2>
+<p><em>(give it a sec to load)</em></p>
+<p>Click a node to explore its nearest neighbors. Arrows point toward <a href="#how-to-understand-the-network">increasing complexity</a>. Happy building!</p>
+<div id="htmlwidget-1" style="width:960px;height:576px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"nodes":{"id":["Accumulator","Active_provider_chest","Advanced_circuit","Arithmetic_combinator","Artillery_shell","Artillery_targeting_remote","Artillery_turret","Artillery_wagon","Assembling_machine_1","Assembling_machine_2","Assembling_machine_3","Atomic_bomb","Automation_science_pack","Battery","Beacon","Belt_immunity_equipment","Big_electric_pole","Boiler","Buffer_chest","Burner_inserter","Burner_mining_drill","Cannon_shell","Car","Cargo_wagon","Centrifuge","Chemical_plant","Chemical_science_pack","Cliff_explosives","Cluster_grenade","Coal","Combat_shotgun","Concrete","Constant_combinator","Construction_robot","Copper_cable","Copper_ore","Copper_plate","Decider_combinator","Defender_capsule","Destroyer_capsule","Discharge_defense","Discharge_defense_remote","Distractor_capsule","Efficiency_module","Efficiency_module_2","Efficiency_module_3","Electric_engine_unit","Electric_furnace","Electric_mining_drill","Electronic_circuit","Empty_barrel","Energy_shield","Energy_shield_MK2","Engine_unit","Exoskeleton","Explosive_cannon_shell","Explosive_rocket","Explosive_uranium_cannon_shell","Explosives","Express_splitter","Express_transport_belt","Express_underground_belt","Fast_inserter","Fast_splitter","Fast_transport_belt","Fast_underground_belt","Filter_inserter","Firearm_magazine","Flamethrower","Flamethrower_ammo","Flamethrower_turret","Fluid_wagon","Flying_robot_frame","Gate","Green_wire","Grenade","Gun_turret","Hazard_concrete","Heat_exchanger","Heat_pipe","Heavy_armor","Heavy_oil","Inserter","Iron_chest","Iron_gear_wheel","Iron_ore","Iron_plate","Iron_stick","Kovarex_enrichment_process","Lab","Lamp","Land_mine","Landfill","Laser_turret","Light_armor","Light_oil","Locomotive","Logistic_robot","Logistic_science_pack","Long_handed_inserter","Low_density_structure","Lubricant","Medium_electric_pole","Military_science_pack","Modular_armor","Nightvision","Nuclear_fuel","Nuclear_fuel_reprocessing","Nuclear_reactor","Offshore_pump","Oil_refinery","Passive_provider_chest","Personal_battery","Personal_battery_MK2","Personal_laser_defense","Personal_roboport","Personal_roboport_MK2","Petroleum_gas","Piercing_rounds_magazine","Piercing_shotgun_shells","Pipe","Pipe_to_ground","Pistol","Plastic_bar","Poison_capsule","Portable_fusion_reactor","Portable_solar_panel","Power_armor","Power_armor_MK2","Power_switch","Processing_unit","Production_science_pack","Productivity_module","Productivity_module_2","Productivity_module_3","Programmable_speaker","Pump","Pumpjack","Radar","Rail","Rail_chain_signal","Rail_signal","Red_wire","Refined_concrete","Refined_hazard_concrete","Repair_pack","Requester_chest","Roboport","Rocket","Rocket_control_unit","Rocket_fuel","Rocket_launcher","Rocket_part","Rocket_silo","Satellite","Shotgun","Shotgun_shells","Slowdown_capsule","Small_electric_pole","Solar_panel","Solid_fuel","Speed_module","Speed_module_2","Speed_module_3","Splitter","Stack_filter_inserter","Stack_inserter","Steam_engine","Steam_turbine","Steel_chest","Steel_furnace","Steel_plate","Stone","Stone_brick","Stone_furnace","Storage_chest","Storage_tank","Submachine_gun","Substation","Sulfur","Sulfuric_acid","Tank","Train_stop","Transport_belt","Underground_belt","Uranium_cannon_shell","Uranium_fuel_cell","Uranium_ore","Uranium_processing","Uranium_rounds_magazine","Uranium-235","Uranium-238","Used_up_uranium_fuel_cell","Utility_science_pack","Wall","Water","Wood","Wooden_chest"],"shape":["image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image","image"],"image":["https://wiki.factorio.com/images/Accumulator.png","https://wiki.factorio.com/images/Active_provider_chest.png","https://wiki.factorio.com/images/Advanced_circuit.png","https://wiki.factorio.com/images/Arithmetic_combinator.png","https://wiki.factorio.com/images/Artillery_shell.png","https://wiki.factorio.com/images/Artillery_targeting_remote.png","https://wiki.factorio.com/images/Artillery_turret.png","https://wiki.factorio.com/images/Artillery_wagon.png","https://wiki.factorio.com/images/Assembling_machine_1.png","https://wiki.factorio.com/images/Assembling_machine_2.png","https://wiki.factorio.com/images/Assembling_machine_3.png","https://wiki.factorio.com/images/Atomic_bomb.png","https://wiki.factorio.com/images/Automation_science_pack.png","https://wiki.factorio.com/images/Battery.png","https://wiki.factorio.com/images/Beacon.png","https://wiki.factorio.com/images/Belt_immunity_equipment.png","https://wiki.factorio.com/images/Big_electric_pole.png","https://wiki.factorio.com/images/Boiler.png","https://wiki.factorio.com/images/Buffer_chest.png","https://wiki.factorio.com/images/Burner_inserter.png","https://wiki.factorio.com/images/Burner_mining_drill.png","https://wiki.factorio.com/images/Cannon_shell.png","https://wiki.factorio.com/images/Car.png","https://wiki.factorio.com/images/Cargo_wagon.png","https://wiki.factorio.com/images/Centrifuge.png","https://wiki.factorio.com/images/Chemical_plant.png","https://wiki.factorio.com/images/Chemical_science_pack.png","https://wiki.factorio.com/images/Cliff_explosives.png","https://wiki.factorio.com/images/Cluster_grenade.png","https://wiki.factorio.com/images/Coal.png","https://wiki.factorio.com/images/Combat_shotgun.png","https://wiki.factorio.com/images/Concrete.png","https://wiki.factorio.com/images/Constant_combinator.png","https://wiki.factorio.com/images/Construction_robot.png","https://wiki.factorio.com/images/Copper_cable.png","https://wiki.factorio.com/images/Copper_ore.png","https://wiki.factorio.com/images/Copper_plate.png","https://wiki.factorio.com/images/Decider_combinator.png","https://wiki.factorio.com/images/Defender_capsule.png","https://wiki.factorio.com/images/Destroyer_capsule.png","https://wiki.factorio.com/images/Discharge_defense.png","https://wiki.factorio.com/images/Discharge_defense_remote.png","https://wiki.factorio.com/images/Distractor_capsule.png","https://wiki.factorio.com/images/Efficiency_module.png","https://wiki.factorio.com/images/Efficiency_module_2.png","https://wiki.factorio.com/images/Efficiency_module_3.png","https://wiki.factorio.com/images/Electric_engine_unit.png","https://wiki.factorio.com/images/Electric_furnace.png","https://wiki.factorio.com/images/Electric_mining_drill.png","https://wiki.factorio.com/images/Electronic_circuit.png","https://wiki.factorio.com/images/Empty_barrel.png","https://wiki.factorio.com/images/Energy_shield.png","https://wiki.factorio.com/images/Energy_shield_MK2.png","https://wiki.factorio.com/images/Engine_unit.png","https://wiki.factorio.com/images/Exoskeleton.png","https://wiki.factorio.com/images/Explosive_cannon_shell.png","https://wiki.factorio.com/images/Explosive_rocket.png","https://wiki.factorio.com/images/Explosive_uranium_cannon_shell.png","https://wiki.factorio.com/images/Explosives.png","https://wiki.factorio.com/images/Express_splitter.png","https://wiki.factorio.com/images/Express_transport_belt.png","https://wiki.factorio.com/images/Express_underground_belt.png","https://wiki.factorio.com/images/Fast_inserter.png","https://wiki.factorio.com/images/Fast_splitter.png","https://wiki.factorio.com/images/Fast_transport_belt.png","https://wiki.factorio.com/images/Fast_underground_belt.png","https://wiki.factorio.com/images/Filter_inserter.png","https://wiki.factorio.com/images/Firearm_magazine.png","https://wiki.factorio.com/images/Flamethrower.png","https://wiki.factorio.com/images/Flamethrower_ammo.png","https://wiki.factorio.com/images/Flamethrower_turret.png","https://wiki.factorio.com/images/Fluid_wagon.png","https://wiki.factorio.com/images/Flying_robot_frame.png","https://wiki.factorio.com/images/Gate.png","https://wiki.factorio.com/images/Green_wire.png","https://wiki.factorio.com/images/Grenade.png","https://wiki.factorio.com/images/Gun_turret.png","https://wiki.factorio.com/images/Hazard_concrete.png","https://wiki.factorio.com/images/Heat_exchanger.png","https://wiki.factorio.com/images/Heat_pipe.png","https://wiki.factorio.com/images/Heavy_armor.png","https://wiki.factorio.com/images/Heavy_oil.png","https://wiki.factorio.com/images/Inserter.png","https://wiki.factorio.com/images/Iron_chest.png","https://wiki.factorio.com/images/Iron_gear_wheel.png","https://wiki.factorio.com/images/Iron_ore.png","https://wiki.factorio.com/images/Iron_plate.png","https://wiki.factorio.com/images/Iron_stick.png","https://wiki.factorio.com/images/Kovarex_enrichment_process.png","https://wiki.factorio.com/images/Lab.png","https://wiki.factorio.com/images/Lamp.png","https://wiki.factorio.com/images/Land_mine.png","https://wiki.factorio.com/images/Landfill.png","https://wiki.factorio.com/images/Laser_turret.png","https://wiki.factorio.com/images/Light_armor.png","https://wiki.factorio.com/images/Light_oil.png","https://wiki.factorio.com/images/Locomotive.png","https://wiki.factorio.com/images/Logistic_robot.png","https://wiki.factorio.com/images/Logistic_science_pack.png","https://wiki.factorio.com/images/Long_handed_inserter.png","https://wiki.factorio.com/images/Low_density_structure.png","https://wiki.factorio.com/images/Lubricant.png","https://wiki.factorio.com/images/Medium_electric_pole.png","https://wiki.factorio.com/images/Military_science_pack.png","https://wiki.factorio.com/images/Modular_armor.png","https://wiki.factorio.com/images/Nightvision.png","https://wiki.factorio.com/images/Nuclear_fuel.png","https://wiki.factorio.com/images/Nuclear_fuel_reprocessing.png","https://wiki.factorio.com/images/Nuclear_reactor.png","https://wiki.factorio.com/images/Offshore_pump.png","https://wiki.factorio.com/images/Oil_refinery.png","https://wiki.factorio.com/images/Passive_provider_chest.png","https://wiki.factorio.com/images/Personal_battery.png","https://wiki.factorio.com/images/Personal_battery_MK2.png","https://wiki.factorio.com/images/Personal_laser_defense.png","https://wiki.factorio.com/images/Personal_roboport.png","https://wiki.factorio.com/images/Personal_roboport_MK2.png","https://wiki.factorio.com/images/Petroleum_gas.png","https://wiki.factorio.com/images/Piercing_rounds_magazine.png","https://wiki.factorio.com/images/Piercing_shotgun_shells.png","https://wiki.factorio.com/images/Pipe.png","https://wiki.factorio.com/images/Pipe_to_ground.png","https://wiki.factorio.com/images/Pistol.png","https://wiki.factorio.com/images/Plastic_bar.png","https://wiki.factorio.com/images/Poison_capsule.png","https://wiki.factorio.com/images/Portable_fusion_reactor.png","https://wiki.factorio.com/images/Portable_solar_panel.png","https://wiki.factorio.com/images/Power_armor.png","https://wiki.factorio.com/images/Power_armor_MK2.png","https://wiki.factorio.com/images/Power_switch.png","https://wiki.factorio.com/images/Processing_unit.png","https://wiki.factorio.com/images/Production_science_pack.png","https://wiki.factorio.com/images/Productivity_module.png","https://wiki.factorio.com/images/Productivity_module_2.png","https://wiki.factorio.com/images/Productivity_module_3.png","https://wiki.factorio.com/images/Programmable_speaker.png","https://wiki.factorio.com/images/Pump.png","https://wiki.factorio.com/images/Pumpjack.png","https://wiki.factorio.com/images/Radar.png","https://wiki.factorio.com/images/Rail.png","https://wiki.factorio.com/images/Rail_chain_signal.png","https://wiki.factorio.com/images/Rail_signal.png","https://wiki.factorio.com/images/Red_wire.png","https://wiki.factorio.com/images/Refined_concrete.png","https://wiki.factorio.com/images/Refined_hazard_concrete.png","https://wiki.factorio.com/images/Repair_pack.png","https://wiki.factorio.com/images/Requester_chest.png","https://wiki.factorio.com/images/Roboport.png","https://wiki.factorio.com/images/Rocket.png","https://wiki.factorio.com/images/Rocket_control_unit.png","https://wiki.factorio.com/images/Rocket_fuel.png","https://wiki.factorio.com/images/Rocket_launcher.png","https://wiki.factorio.com/images/Rocket_part.png","https://wiki.factorio.com/images/Rocket_silo.png","https://wiki.factorio.com/images/Satellite.png","https://wiki.factorio.com/images/Shotgun.png","https://wiki.factorio.com/images/Shotgun_shells.png","https://wiki.factorio.com/images/Slowdown_capsule.png","https://wiki.factorio.com/images/Small_electric_pole.png","https://wiki.factorio.com/images/Solar_panel.png","https://wiki.factorio.com/images/Solid_fuel.png","https://wiki.factorio.com/images/Speed_module.png","https://wiki.factorio.com/images/Speed_module_2.png","https://wiki.factorio.com/images/Speed_module_3.png","https://wiki.factorio.com/images/Splitter.png","https://wiki.factorio.com/images/Stack_filter_inserter.png","https://wiki.factorio.com/images/Stack_inserter.png","https://wiki.factorio.com/images/Steam_engine.png","https://wiki.factorio.com/images/Steam_turbine.png","https://wiki.factorio.com/images/Steel_chest.png","https://wiki.factorio.com/images/Steel_furnace.png","https://wiki.factorio.com/images/Steel_plate.png","https://wiki.factorio.com/images/Stone.png","https://wiki.factorio.com/images/Stone_brick.png","https://wiki.factorio.com/images/Stone_furnace.png","https://wiki.factorio.com/images/Storage_chest.png","https://wiki.factorio.com/images/Storage_tank.png","https://wiki.factorio.com/images/Submachine_gun.png","https://wiki.factorio.com/images/Substation.png","https://wiki.factorio.com/images/Sulfur.png","https://wiki.factorio.com/images/Sulfuric_acid.png","https://wiki.factorio.com/images/Tank.png","https://wiki.factorio.com/images/Train_stop.png","https://wiki.factorio.com/images/Transport_belt.png","https://wiki.factorio.com/images/Underground_belt.png","https://wiki.factorio.com/images/Uranium_cannon_shell.png","https://wiki.factorio.com/images/Uranium_fuel_cell.png","https://wiki.factorio.com/images/Uranium_ore.png","https://wiki.factorio.com/images/Uranium_processing.png","https://wiki.factorio.com/images/Uranium_rounds_magazine.png","https://wiki.factorio.com/images/Uranium-235.png","https://wiki.factorio.com/images/Uranium-238.png","https://wiki.factorio.com/images/Used_up_uranium_fuel_cell.png","https://wiki.factorio.com/images/Utility_science_pack.png","https://wiki.factorio.com/images/Wall.png","https://wiki.factorio.com/images/Water.png","https://wiki.factorio.com/images/Wood.png","https://wiki.factorio.com/images/Wooden_chest.png"],"label":["Accumulator","Active_provider_chest","Advanced_circuit","Arithmetic_combinator","Artillery_shell","Artillery_targeting_remote","Artillery_turret","Artillery_wagon","Assembling_machine_1","Assembling_machine_2","Assembling_machine_3","Atomic_bomb","Automation_science_pack","Battery","Beacon","Belt_immunity_equipment","Big_electric_pole","Boiler","Buffer_chest","Burner_inserter","Burner_mining_drill","Cannon_shell","Car","Cargo_wagon","Centrifuge","Chemical_plant","Chemical_science_pack","Cliff_explosives","Cluster_grenade","Coal","Combat_shotgun","Concrete","Constant_combinator","Construction_robot","Copper_cable","Copper_ore","Copper_plate","Decider_combinator","Defender_capsule","Destroyer_capsule","Discharge_defense","Discharge_defense_remote","Distractor_capsule","Efficiency_module","Efficiency_module_2","Efficiency_module_3","Electric_engine_unit","Electric_furnace","Electric_mining_drill","Electronic_circuit","Empty_barrel","Energy_shield","Energy_shield_MK2","Engine_unit","Exoskeleton","Explosive_cannon_shell","Explosive_rocket","Explosive_uranium_cannon_shell","Explosives","Express_splitter","Express_transport_belt","Express_underground_belt","Fast_inserter","Fast_splitter","Fast_transport_belt","Fast_underground_belt","Filter_inserter","Firearm_magazine","Flamethrower","Flamethrower_ammo","Flamethrower_turret","Fluid_wagon","Flying_robot_frame","Gate","Green_wire","Grenade","Gun_turret","Hazard_concrete","Heat_exchanger","Heat_pipe","Heavy_armor","Heavy_oil","Inserter","Iron_chest","Iron_gear_wheel","Iron_ore","Iron_plate","Iron_stick","Kovarex_enrichment_process","Lab","Lamp","Land_mine","Landfill","Laser_turret","Light_armor","Light_oil","Locomotive","Logistic_robot","Logistic_science_pack","Long_handed_inserter","Low_density_structure","Lubricant","Medium_electric_pole","Military_science_pack","Modular_armor","Nightvision","Nuclear_fuel","Nuclear_fuel_reprocessing","Nuclear_reactor","Offshore_pump","Oil_refinery","Passive_provider_chest","Personal_battery","Personal_battery_MK2","Personal_laser_defense","Personal_roboport","Personal_roboport_MK2","Petroleum_gas","Piercing_rounds_magazine","Piercing_shotgun_shells","Pipe","Pipe_to_ground","Pistol","Plastic_bar","Poison_capsule","Portable_fusion_reactor","Portable_solar_panel","Power_armor","Power_armor_MK2","Power_switch","Processing_unit","Production_science_pack","Productivity_module","Productivity_module_2","Productivity_module_3","Programmable_speaker","Pump","Pumpjack","Radar","Rail","Rail_chain_signal","Rail_signal","Red_wire","Refined_concrete","Refined_hazard_concrete","Repair_pack","Requester_chest","Roboport","Rocket","Rocket_control_unit","Rocket_fuel","Rocket_launcher","Rocket_part","Rocket_silo","Satellite","Shotgun","Shotgun_shells","Slowdown_capsule","Small_electric_pole","Solar_panel","Solid_fuel","Speed_module","Speed_module_2","Speed_module_3","Splitter","Stack_filter_inserter","Stack_inserter","Steam_engine","Steam_turbine","Steel_chest","Steel_furnace","Steel_plate","Stone","Stone_brick","Stone_furnace","Storage_chest","Storage_tank","Submachine_gun","Substation","Sulfur","Sulfuric_acid","Tank","Train_stop","Transport_belt","Underground_belt","Uranium_cannon_shell","Uranium_fuel_cell","Uranium_ore","Uranium_processing","Uranium_rounds_magazine","Uranium-235","Uranium-238","Used_up_uranium_fuel_cell","Utility_science_pack","Wall","Water","Wood","Wooden_chest"]},"edges":{"from":["Iron_plate","Copper_plate","Solid_fuel","Solid_fuel","Solid_fuel","Steel_plate","Plastic_bar","Plastic_bar","Sulfur","Sulfur","Battery","Battery","Battery","Explosives","Explosives","Explosives","Uranium_processing","Empty_barrel","Copper_cable","Iron_stick","Iron_gear_wheel","Electronic_circuit","Electronic_circuit","Advanced_circuit","Advanced_circuit","Advanced_circuit","Processing_unit","Processing_unit","Processing_unit","Engine_unit","Engine_unit","Engine_unit","Electric_engine_unit","Electric_engine_unit","Electric_engine_unit","Flying_robot_frame","Flying_robot_frame","Flying_robot_frame","Flying_robot_frame","Satellite","Satellite","Satellite","Satellite","Satellite","Satellite","Rocket_part","Rocket_part","Rocket_part","Rocket_control_unit","Rocket_control_unit","Low_density_structure","Low_density_structure","Low_density_structure","Rocket_fuel","Nuclear_fuel","Nuclear_fuel","Uranium-235","Uranium-238","Uranium_fuel_cell","Uranium_fuel_cell","Uranium_fuel_cell","Used_up_uranium_fuel_cell","Nuclear_fuel_reprocessing","Kovarex_enrichment_process","Kovarex_enrichment_process","Automation_science_pack","Automation_science_pack","Logistic_science_pack","Logistic_science_pack","Military_science_pack","Military_science_pack","Military_science_pack","Chemical_science_pack","Chemical_science_pack","Chemical_science_pack","Production_science_pack","Production_science_pack","Production_science_pack","Utility_science_pack","Utility_science_pack","Utility_science_pack","Pistol","Pistol","Submachine_gun","Submachine_gun","Submachine_gun","Shotgun","Shotgun","Shotgun","Shotgun","Combat_shotgun","Combat_shotgun","Combat_shotgun","Combat_shotgun","Rocket_launcher","Rocket_launcher","Rocket_launcher","Flamethrower","Flamethrower","Land_mine","Land_mine","Firearm_magazine","Piercing_rounds_magazine","Piercing_rounds_magazine","Piercing_rounds_magazine","Uranium_rounds_magazine","Uranium_rounds_magazine","Shotgun_shells","Shotgun_shells","Piercing_shotgun_shells","Piercing_shotgun_shells","Piercing_shotgun_shells","Cannon_shell","Cannon_shell","Cannon_shell","Explosive_cannon_shell","Explosive_cannon_shell","Explosive_cannon_shell","Uranium_cannon_shell","Uranium_cannon_shell","Explosive_uranium_cannon_shell","Explosive_uranium_cannon_shell","Artillery_shell","Artillery_shell","Artillery_shell","Rocket","Rocket","Rocket","Explosive_rocket","Explosive_rocket","Atomic_bomb","Atomic_bomb","Atomic_bomb","Flamethrower_ammo","Flamethrower_ammo","Flamethrower_ammo","Grenade","Grenade","Cluster_grenade","Cluster_grenade","Cluster_grenade","Poison_capsule","Poison_capsule","Poison_capsule","Slowdown_capsule","Slowdown_capsule","Slowdown_capsule","Defender_capsule","Defender_capsule","Defender_capsule","Distractor_capsule","Distractor_capsule","Destroyer_capsule","Destroyer_capsule","Discharge_defense_remote","Artillery_targeting_remote","Artillery_targeting_remote","Light_armor","Heavy_armor","Heavy_armor","Modular_armor","Modular_armor","Power_armor","Power_armor","Power_armor","Power_armor_MK2","Power_armor_MK2","Power_armor_MK2","Power_armor_MK2","Power_armor_MK2","Portable_solar_panel","Portable_solar_panel","Portable_solar_panel","Portable_fusion_reactor","Portable_fusion_reactor","Energy_shield","Energy_shield","Energy_shield_MK2","Energy_shield_MK2","Energy_shield_MK2","Personal_battery","Personal_battery","Personal_battery_MK2","Personal_battery_MK2","Personal_battery_MK2","Personal_laser_defense","Personal_laser_defense","Personal_laser_defense","Discharge_defense","Discharge_defense","Discharge_defense","Belt_immunity_equipment","Belt_immunity_equipment","Exoskeleton","Exoskeleton","Exoskeleton","Personal_roboport","Personal_roboport","Personal_roboport","Personal_roboport","Personal_roboport_MK2","Personal_roboport_MK2","Personal_roboport_MK2","Nightvision","Nightvision","Wall","Gate","Gate","Gate","Gun_turret","Gun_turret","Gun_turret","Laser_turret","Laser_turret","Laser_turret","Flamethrower_turret","Flamethrower_turret","Flamethrower_turret","Flamethrower_turret","Artillery_turret","Artillery_turret","Artillery_turret","Artillery_turret","Radar","Radar","Radar","Rocket_silo","Rocket_silo","Rocket_silo","Rocket_silo","Rocket_silo","Repair_pack","Repair_pack","Boiler","Boiler","Steam_engine","Steam_engine","Steam_engine","Steam_turbine","Steam_turbine","Steam_turbine","Solar_panel","Solar_panel","Solar_panel","Accumulator","Accumulator","Nuclear_reactor","Nuclear_reactor","Nuclear_reactor","Nuclear_reactor","Heat_exchanger","Heat_exchanger","Heat_exchanger","Heat_pipe","Heat_pipe","Burner_mining_drill","Burner_mining_drill","Burner_mining_drill","Electric_mining_drill","Electric_mining_drill","Electric_mining_drill","Offshore_pump","Offshore_pump","Offshore_pump","Pumpjack","Pumpjack","Pumpjack","Pumpjack","Stone_furnace","Steel_furnace","Steel_furnace","Electric_furnace","Electric_furnace","Electric_furnace","Assembling_machine_1","Assembling_machine_1","Assembling_machine_1","Assembling_machine_2","Assembling_machine_2","Assembling_machine_2","Assembling_machine_2","Assembling_machine_3","Assembling_machine_3","Oil_refinery","Oil_refinery","Oil_refinery","Oil_refinery","Oil_refinery","Chemical_plant","Chemical_plant","Chemical_plant","Chemical_plant","Centrifuge","Centrifuge","Centrifuge","Centrifuge","Lab","Lab","Lab","Beacon","Beacon","Beacon","Beacon","Speed_module","Speed_module","Speed_module_2","Speed_module_2","Speed_module_2","Speed_module_3","Speed_module_3","Speed_module_3","Efficiency_module","Efficiency_module","Efficiency_module_2","Efficiency_module_2","Efficiency_module_2","Efficiency_module_3","Efficiency_module_3","Efficiency_module_3","Productivity_module","Productivity_module","Productivity_module_2","Productivity_module_2","Productivity_module_2","Productivity_module_3","Productivity_module_3","Productivity_module_3","Wooden_chest","Iron_chest","Steel_chest","Storage_tank","Storage_tank","Transport_belt","Transport_belt","Fast_transport_belt","Fast_transport_belt","Express_transport_belt","Express_transport_belt","Express_transport_belt","Underground_belt","Underground_belt","Fast_underground_belt","Fast_underground_belt","Express_underground_belt","Express_underground_belt","Express_underground_belt","Splitter","Splitter","Splitter","Fast_splitter","Fast_splitter","Fast_splitter","Express_splitter","Express_splitter","Express_splitter","Express_splitter","Burner_inserter","Burner_inserter","Inserter","Inserter","Inserter","Long_handed_inserter","Long_handed_inserter","Long_handed_inserter","Fast_inserter","Fast_inserter","Fast_inserter","Filter_inserter","Filter_inserter","Stack_inserter","Stack_inserter","Stack_inserter","Stack_inserter","Stack_filter_inserter","Stack_filter_inserter","Small_electric_pole","Small_electric_pole","Medium_electric_pole","Medium_electric_pole","Medium_electric_pole","Big_electric_pole","Big_electric_pole","Big_electric_pole","Substation","Substation","Substation","Pipe","Pipe_to_ground","Pipe_to_ground","Pump","Pump","Pump","Rail","Rail","Rail","Train_stop","Train_stop","Train_stop","Train_stop","Rail_signal","Rail_signal","Rail_chain_signal","Rail_chain_signal","Locomotive","Locomotive","Locomotive","Cargo_wagon","Cargo_wagon","Cargo_wagon","Fluid_wagon","Fluid_wagon","Fluid_wagon","Fluid_wagon","Artillery_wagon","Artillery_wagon","Artillery_wagon","Artillery_wagon","Artillery_wagon","Car","Car","Car","Tank","Tank","Tank","Tank","Logistic_robot","Logistic_robot","Construction_robot","Construction_robot","Active_provider_chest","Active_provider_chest","Active_provider_chest","Passive_provider_chest","Passive_provider_chest","Passive_provider_chest","Storage_chest","Storage_chest","Storage_chest","Buffer_chest","Buffer_chest","Buffer_chest","Requester_chest","Requester_chest","Requester_chest","Roboport","Roboport","Roboport","Lamp","Lamp","Lamp","Red_wire","Red_wire","Green_wire","Green_wire","Arithmetic_combinator","Arithmetic_combinator","Decider_combinator","Decider_combinator","Constant_combinator","Constant_combinator","Power_switch","Power_switch","Power_switch","Programmable_speaker","Programmable_speaker","Programmable_speaker","Programmable_speaker","Stone_brick","Concrete","Concrete","Concrete","Hazard_concrete","Refined_concrete","Refined_concrete","Refined_concrete","Refined_concrete","Refined_hazard_concrete","Landfill","Cliff_explosives","Cliff_explosives","Cliff_explosives"],"to":["Iron_ore","Copper_ore","Heavy_oil","Light_oil","Petroleum_gas","Iron_plate","Coal","Petroleum_gas","Water","Petroleum_gas","Copper_plate","Iron_plate","Sulfuric_acid","Coal","Sulfur","Water","Uranium_ore","Steel_plate","Copper_plate","Iron_plate","Iron_plate","Copper_cable","Iron_plate","Copper_cable","Electronic_circuit","Plastic_bar","Advanced_circuit","Electronic_circuit","Sulfuric_acid","Iron_gear_wheel","Pipe","Steel_plate","Electronic_circuit","Engine_unit","Lubricant","Battery","Electric_engine_unit","Electronic_circuit","Steel_plate","Accumulator","Low_density_structure","Processing_unit","Radar","Rocket_fuel","Solar_panel","Low_density_structure","Rocket_control_unit","Rocket_fuel","Processing_unit","Speed_module","Copper_plate","Steel_plate","Plastic_bar","Solid_fuel","Rocket_fuel","Uranium-235","Uranium_ore","Uranium_ore","Iron_plate","Uranium-235","Uranium-238","Uranium_fuel_cell","Used_up_uranium_fuel_cell","Uranium-235","Uranium-238","Copper_plate","Iron_gear_wheel","Inserter","Transport_belt","Grenade","Piercing_rounds_magazine","Wall","Advanced_circuit","Engine_unit","Solid_fuel","Electric_furnace","Productivity_module","Rail","Flying_robot_frame","Low_density_structure","Processing_unit","Copper_plate","Iron_plate","Copper_plate","Iron_gear_wheel","Iron_plate","Copper_plate","Iron_gear_wheel","Iron_plate","Wood","Copper_plate","Iron_gear_wheel","Steel_plate","Wood","Electronic_circuit","Iron_gear_wheel","Iron_plate","Iron_gear_wheel","Steel_plate","Explosives","Steel_plate","Iron_plate","Copper_plate","Firearm_magazine","Steel_plate","Piercing_rounds_magazine","Uranium-238","Copper_plate","Iron_plate","Shotgun_shells","Copper_plate","Steel_plate","Explosives","Plastic_bar","Steel_plate","Explosives","Plastic_bar","Steel_plate","Cannon_shell","Uranium-238","Explosive_cannon_shell","Uranium-238","Explosive_cannon_shell","Explosives","Radar","Electronic_circuit","Explosives","Iron_plate","Rocket","Explosives","Explosives","Rocket_control_unit","Uranium-235","Heavy_oil","Light_oil","Steel_plate","Coal","Iron_plate","Explosives","Grenade","Steel_plate","Coal","Electronic_circuit","Steel_plate","Coal","Electronic_circuit","Steel_plate","Electronic_circuit","Iron_gear_wheel","Piercing_rounds_magazine","Advanced_circuit","Defender_capsule","Distractor_capsule","Speed_module","Electronic_circuit","Processing_unit","Radar","Iron_plate","Copper_plate","Steel_plate","Advanced_circuit","Steel_plate","Electric_engine_unit","Processing_unit","Steel_plate","Efficiency_module_2","Electric_engine_unit","Low_density_structure","Processing_unit","Speed_module_2","Advanced_circuit","Solar_panel","Steel_plate","Low_density_structure","Processing_unit","Advanced_circuit","Steel_plate","Low_density_structure","Processing_unit","Energy_shield","Battery","Steel_plate","Personal_battery","Low_density_structure","Processing_unit","Laser_turret","Low_density_structure","Processing_unit","Laser_turret","Processing_unit","Steel_plate","Advanced_circuit","Steel_plate","Electric_engine_unit","Processing_unit","Steel_plate","Advanced_circuit","Battery","Iron_gear_wheel","Steel_plate","Low_density_structure","Personal_roboport","Processing_unit","Advanced_circuit","Steel_plate","Stone_brick","Electronic_circuit","Steel_plate","Wall","Copper_plate","Iron_gear_wheel","Iron_plate","Battery","Electronic_circuit","Steel_plate","Engine_unit","Iron_gear_wheel","Pipe","Steel_plate","Advanced_circuit","Concrete","Iron_gear_wheel","Steel_plate","Electronic_circuit","Iron_gear_wheel","Iron_plate","Concrete","Electric_engine_unit","Pipe","Processing_unit","Steel_plate","Electronic_circuit","Iron_gear_wheel","Pipe","Stone_furnace","Iron_gear_wheel","Iron_plate","Pipe","Copper_plate","Iron_gear_wheel","Pipe","Copper_plate","Electronic_circuit","Steel_plate","Battery","Iron_plate","Advanced_circuit","Concrete","Copper_plate","Steel_plate","Copper_plate","Pipe","Steel_plate","Copper_plate","Steel_plate","Iron_gear_wheel","Iron_gear_wheel","Stone_furnace","Electronic_circuit","Iron_gear_wheel","Iron_plate","Electronic_circuit","Iron_gear_wheel","Pipe","Electronic_circuit","Iron_gear_wheel","Pipe","Steel_plate","Stone","Steel_plate","Stone_brick","Advanced_circuit","Steel_plate","Stone_brick","Electronic_circuit","Iron_gear_wheel","Iron_plate","Assembling_machine_1","Electronic_circuit","Iron_gear_wheel","Steel_plate","Assembling_machine_2","Speed_module","Electronic_circuit","Iron_gear_wheel","Pipe","Steel_plate","Stone_brick","Electronic_circuit","Iron_gear_wheel","Pipe","Steel_plate","Advanced_circuit","Concrete","Iron_gear_wheel","Steel_plate","Electronic_circuit","Iron_gear_wheel","Transport_belt","Advanced_circuit","Copper_cable","Electronic_circuit","Steel_plate","Advanced_circuit","Electronic_circuit","Advanced_circuit","Processing_unit","Speed_module","Advanced_circuit","Processing_unit","Speed_module_2","Advanced_circuit","Electronic_circuit","Advanced_circuit","Processing_unit","Efficiency_module","Advanced_circuit","Efficiency_module_2","Processing_unit","Advanced_circuit","Electronic_circuit","Advanced_circuit","Processing_unit","Productivity_module","Advanced_circuit","Processing_unit","Productivity_module_2","Wood","Iron_plate","Steel_plate","Iron_plate","Steel_plate","Iron_gear_wheel","Iron_plate","Iron_gear_wheel","Transport_belt","Fast_transport_belt","Iron_gear_wheel","Lubricant","Iron_plate","Transport_belt","Iron_gear_wheel","Underground_belt","Fast_underground_belt","Iron_gear_wheel","Lubricant","Electronic_circuit","Iron_plate","Transport_belt","Electronic_circuit","Iron_gear_wheel","Splitter","Advanced_circuit","Fast_splitter","Iron_gear_wheel","Lubricant","Iron_gear_wheel","Iron_plate","Electronic_circuit","Iron_gear_wheel","Iron_plate","Inserter","Iron_gear_wheel","Iron_plate","Electronic_circuit","Inserter","Iron_plate","Electronic_circuit","Fast_inserter","Advanced_circuit","Electronic_circuit","Fast_inserter","Iron_gear_wheel","Electronic_circuit","Stack_inserter","Copper_cable","Wood","Copper_plate","Iron_stick","Steel_plate","Copper_plate","Iron_stick","Steel_plate","Advanced_circuit","Copper_plate","Steel_plate","Iron_plate","Iron_plate","Pipe","Engine_unit","Pipe","Steel_plate","Iron_stick","Steel_plate","Stone","Electronic_circuit","Iron_plate","Iron_stick","Steel_plate","Electronic_circuit","Iron_plate","Electronic_circuit","Iron_plate","Electronic_circuit","Engine_unit","Steel_plate","Iron_gear_wheel","Iron_plate","Steel_plate","Iron_gear_wheel","Pipe","Steel_plate","Storage_tank","Advanced_circuit","Engine_unit","Iron_gear_wheel","Pipe","Steel_plate","Engine_unit","Iron_plate","Steel_plate","Advanced_circuit","Engine_unit","Iron_gear_wheel","Steel_plate","Advanced_circuit","Flying_robot_frame","Electronic_circuit","Flying_robot_frame","Advanced_circuit","Electronic_circuit","Steel_chest","Advanced_circuit","Electronic_circuit","Steel_chest","Advanced_circuit","Electronic_circuit","Steel_chest","Advanced_circuit","Electronic_circuit","Steel_chest","Advanced_circuit","Electronic_circuit","Steel_chest","Advanced_circuit","Iron_gear_wheel","Steel_plate","Copper_cable","Electronic_circuit","Iron_plate","Copper_cable","Electronic_circuit","Copper_cable","Electronic_circuit","Copper_cable","Electronic_circuit","Copper_cable","Electronic_circuit","Copper_cable","Electronic_circuit","Copper_cable","Electronic_circuit","Iron_plate","Copper_cable","Electronic_circuit","Iron_plate","Iron_stick","Stone","Iron_ore","Stone_brick","Water","Concrete","Concrete","Iron_stick","Steel_plate","Water","Refined_concrete","Stone","Empty_barrel","Explosives","Grenade"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"from","color":"lightgrey"},"physics":{"solver":"forceAtlas2Based","forceAtlas2Based":{"gravitationalConstant":-60}},"interaction":{"keyboard":true,"navigationButtons":true},"layout":{"randomSeed":2}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)"},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+<div id="background" class="section level3">
+<h3>Background</h3>
+<p><a href="https://factorio.com/">Factorio</a> is a <a href="https://en.wikipedia.org/wiki/Construction_and_management_simulation">management game</a> where you survive by building automated systems on an alien planet. The game is built on creating ever more complicated items from simpler building blocks. It can get <a href="https://www.pcgamer.com/see-what-a-factorio-factory-looks-like-after-500-hours-of-work/">quite complicated</a>, but the basic process involves making things that can accomplish tasks and chaining them together. There are a lot of things you can build, and this visualization will let you explore how the items relate to one another in terms of build requirements.</p>
+</div>
+<div id="how-to-understand-the-network" class="section level3">
+<h3>How to understand the network</h3>
+<p>The network above shows all items in Factorio (almost; see <a href="#method">Method</a>) and their build relationships. The item images are the nodes and the arrows are the edges.</p>
+<p>To illustrate how the arrows work, let’s highlight the <em>Transport_belt</em> node:</p>
+<div class="figure">
+<img src="pics/factorio_transport_example.png" width="500" />
+
+</div>
+<p><strong>Arrows</strong> point in the direction of <strong>increasing complexity</strong>. For example, an arrow between <em>Iron_gear_wheel</em> and <em>Transport_belt</em> means an <em>Iron_gear_wheel</em> can be used to make a <em>Transport_belt</em>:</p>
+<ul>
+<li>Relationship: An <em>Iron_gear_wheel</em> is a <strong>building block</strong> for a <em>Transport_belt</em></li>
+</ul>
+<p>Looking at all of the arrows that point <strong>toward</strong> a node shows what items are <strong>required to build</strong> that node:</p>
+<ul>
+<li>Recipe: A <em>Transport_belt</em> uses an <em>Iron_plate</em> and an <em>Iron_gear_wheel</em> as building blocks</li>
+</ul>
+<p>Looking at all of the arrows that point <strong>away</strong> from a node shows what items use that node as a <strong>building block</strong>:</p>
+<ul>
+<li>Recipe: A <em>Transport_belt</em> is used in building an <em>Underground_belt</em>, a <em>Fast_transport_belt</em>, a <em>Logistic_science_pack</em>, a <em>Lab</em>, and a <em>Splitter</em></li>
+</ul>
+</div>
+<div id="interaction" class="section level3">
+<h3>Interaction</h3>
+<p>The graph allows for easy navigation and manipulation of the network. Navigation buttons are available as well as Mouse and Keyboard interactions. <strong>Pan</strong> and <strong>Zoom</strong> to orient the graph. Nodes can be <strong>clicked</strong> to highlight nearest connections (direct neighbors, in and out degree) or use the <strong>dropdown menu</strong>. Nodes can also be <strong>dragged</strong> to expose hard-to-see connections.</p>
+</div>
+<div id="method" class="section level3">
+<h3>Method</h3>
+<p>Built using the <a href="https://datastorm-open.github.io/visNetwork/"><code>visNetwork</code></a> package. Images from <a href="https://wiki.factorio.com/">Factorio Wiki</a> (grateful the wiki organization was so clean, but of course Factorio pros would keep it that way!) Items that only link to themselves—such as Raw_fish or Space_science_pack—were excluded. An arrow only describes a requirement, <em>not</em> a quantity; many relationships require multiple items to successfully build. Network contains 198 nodes and 481 edges.</p>
+</div>
+<div id="about" class="section level3">
+<h3>About</h3>
+<ul>
+<li><p><a href="https://github.com/zachbogart/portfolio#factorio-recipe-network">Portfolio blurb on GitHub</a></p></li>
+<li><a href="https://zachbogart.com">Zach Bogart</a></li>
+<li><p><a href="https://twitter.com/zachbogart">@zachbogart</a></p></li>
+</ul>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/data/">Data</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/project/factorio/&amp;text=Factorio%20Recipe%20Network" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/project/factorio/&amp;t=Factorio%20Recipe%20Network" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Factorio%20Recipe%20Network&amp;body=/project/factorio/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/project/factorio/&amp;title=Factorio%20Recipe%20Network" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Factorio%20Recipe%20Network%20/project/factorio/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/project/factorio/&amp;title=Factorio%20Recipe%20Network" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/zach-bogart/avatar_hu52001906009a87db61bb486bde1b7d40_960256_270x270_fill_lanczos_center_2.png" alt="Zach Bogart">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="/">Zach Bogart</a></h5>
+        <h6 class="card-subtitle">Data Explorer</h6>
+        <p class="card-text">Science, Design, &amp; Data</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/zachbogart" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/zachbogart" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/ninja/">Ninja, 24 Elim Solo</a></li>
+      
+      <li><a href="/project/comedy/">Ribaldry in Stand-Up</a></li>
+      
+      <li><a href="/project/edav/">edav.info/</a></li>
+      
+      <li><a href="/project/candyviz-skittles/">Neat Tweet: Skittles CandyViz</a></li>
+      
+      <li><a href="/project/postcard/">Podcast Postcard</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

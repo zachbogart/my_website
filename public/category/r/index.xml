@@ -5,7 +5,7 @@
     <link>/category/r/</link>
       <atom:link href="/category/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/happy_nerd02.png</url>
       <title>R</title>
@@ -13,10 +13,47 @@
     </image>
     
     <item>
+      <title>Checking Python Functionality</title>
+      <link>/blog/checking-python-functionality/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      <guid>/blog/checking-python-functionality/</guid>
+      <description>&lt;h2 id=&#34;wondering-if-this-works-for-setup&#34;&gt;Wondering if this Works for Setup&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def foo():
+    for item in [1,2,3]:
+        print(item)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;foo()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;1
+2
+3
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello, World!</title>
+      <link>/blog/hello-world/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      <guid>/blog/hello-world/</guid>
+      <description>
+
+
+&lt;div id=&#34;look-a-coding-website&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Look, a coding website!&lt;/h2&gt;
+&lt;p&gt;I got this website up and running! Looking forward to being able to work on honing my skills and making is easy to post progress on that fact.&lt;/p&gt;
+&lt;p&gt;I am sort of torn between Python and R at this point.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <link>/blog/hello-r-markdown/</link>
+      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>/blog/hello-r-markdown/</guid>
       <description>
 
 
@@ -57,6 +94,24 @@ pie(
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;checking-fonts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Checking Fonts&lt;/h2&gt;
+&lt;div id=&#34;small-header&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Small Header&lt;/h3&gt;
+&lt;div id=&#34;small-small&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Small Small&lt;/h4&gt;
+&lt;p&gt;Testing &lt;em&gt;emphasis&lt;/em&gt; and &lt;strong&gt;accents&lt;/strong&gt; in the writing in markdown&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one&lt;/li&gt;
+&lt;li&gt;two&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;hello&lt;/li&gt;
+&lt;li&gt;hello there&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

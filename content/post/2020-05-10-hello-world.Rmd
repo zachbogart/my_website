@@ -1,0 +1,17 @@
+---
+title: "Hello, World!"
+date: 2020-05-10
+categories: ["R"]
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+## Look, a coding website!
+
+I got this website up and running! Looking forward to being able to work on honing my skills and making is easy to post progress on that fact.
+
+I am sort of torn between Python and R at this point. 
+

@@ -1,5 +1,6 @@
 ---
 title: MZ Tees
+subtitle: Nerdy T-Shirt designs galore
 summary: Fun shirt designs
 tags:
 - Design

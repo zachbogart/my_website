@@ -5,12 +5,20 @@
     <link>/tag/other/</link>
       <atom:link href="/tag/other/index.xml" rel="self" type="application/rss+xml" />
     <description>Other</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 05 Sep 2011 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/happy_nerd02.png</url>
       <title>Other</title>
       <link>/tag/other/</link>
     </image>
+    
+    <item>
+      <title>FilmCats</title>
+      <link>/project/filmcats/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      <guid>/project/filmcats/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Recycled Origami</title>
@@ -19,7 +27,7 @@
       <guid>/project/origami/</guid>
       <description>&lt;p&gt;Unit origami is beautiful. You can make dozens of simple modules and turn them into stunning 3D creations. I thought it would be hard to fold anything at college till I found that every print job released through the university gave you a cover sheet. People would recycle these sheets (easily a hundred a day) and I would collect some and use them to make the pieces pictured above. It became a nice way to spend an afternoon over the summer or during some downtime. It is quite meditative to make the units and I would leave the completed pieces around the library on campus as well as various other places.&lt;/p&gt;
 &lt;p&gt;I easily did this with several hundred cover sheets over the years. I would leave them and in a day or two they would disappear. There is only one that is still in the library: in the IT Center on the 1st floor of Mugar Library, on top of a cabinet, sits a Sonobe piece, occasionally sharing the space with a Jack O’Lantern. Whatever happened to the rest, I hope people enjoyed them. It is certainly prettier than a lump of sheets in a recycling bin.&lt;/p&gt;
-
+&lt;div align=&#34;center&#34;&gt;
 
 
 
@@ -111,7 +119,7 @@
   
 
   
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&#34;helpful-directions&#34;&gt;Helpful Directions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
