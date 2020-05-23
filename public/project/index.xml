@@ -47,7 +47,7 @@
 &lt;p&gt;The network above shows all items in Factorio (almost; see &lt;a href=&#34;#method&#34;&gt;Method&lt;/a&gt;) and their build relationships. The item images are the nodes and the arrows are the edges.&lt;/p&gt;
 &lt;p&gt;To illustrate how the arrows work, let’s highlight the &lt;em&gt;Transport_belt&lt;/em&gt; node:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;pics/factorio_transport_example.png&#34; width=&#34;500&#34; /&gt;
+&lt;img src=&#34;factorio_transport_example.png&#34; width=&#34;500&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Arrows&lt;/strong&gt; point in the direction of &lt;strong&gt;increasing complexity&lt;/strong&gt;. For example, an arrow between &lt;em&gt;Iron_gear_wheel&lt;/em&gt; and &lt;em&gt;Transport_belt&lt;/em&gt; means an &lt;em&gt;Iron_gear_wheel&lt;/em&gt; can be used to make a &lt;em&gt;Transport_belt&lt;/em&gt;:&lt;/p&gt;
@@ -70,14 +70,6 @@
 &lt;div id=&#34;method&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Method&lt;/h3&gt;
 &lt;p&gt;Built using the &lt;a href=&#34;https://datastorm-open.github.io/visNetwork/&#34;&gt;&lt;code&gt;visNetwork&lt;/code&gt;&lt;/a&gt; package. Images from &lt;a href=&#34;https://wiki.factorio.com/&#34;&gt;Factorio Wiki&lt;/a&gt; (grateful the wiki organization was so clean, but of course Factorio pros would keep it that way!) Items that only link to themselves—such as Raw_fish or Space_science_pack—were excluded. An arrow only describes a requirement, &lt;em&gt;not&lt;/em&gt; a quantity; many relationships require multiple items to successfully build. Network contains 198 nodes and 481 edges.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;about&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;About&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/zachbogart/portfolio#factorio-recipe-network&#34;&gt;Portfolio blurb on GitHub&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zachbogart.com&#34;&gt;Zach Bogart&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/zachbogart&#34;&gt;@zachbogart&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

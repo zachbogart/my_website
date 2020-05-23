@@ -3,11 +3,10 @@ title: "Factorio Recipe Network"
 summary: Visualization of the crazy connections of a complicated video game
 tags:
 - Data
-date: "2019-09-05T00:00:00Z"
+date: "2019-09-05T00:00:00Z" 
 
 image:
-  placement: 1
-  focal_point: Smart
+  preview_only: true
 ---
 
 ```{r setup, include=FALSE}
@@ -84,7 +83,7 @@ The network above shows all items in Factorio (almost; see [Method](#method)) an
 
 To illustrate how the arrows work, let's highlight the *Transport_belt* node:
 
-![](pics/factorio_transport_example.png){width=500px}
+![](factorio_transport_example.png){width=500px} 
 
 **Arrows** point in the direction of **increasing complexity**. For example, an arrow between *Iron_gear_wheel* and *Transport_belt* means an *Iron_gear_wheel* can be used to make a *Transport_belt*: 
 
@@ -105,10 +104,3 @@ The graph allows for easy navigation and manipulation of the network. Navigation
 ### Method
 
 Built using the [`visNetwork`](https://datastorm-open.github.io/visNetwork/) package. Images from [Factorio Wiki](https://wiki.factorio.com/) (grateful the wiki organization was so clean, but of course Factorio pros would keep it that way!) Items that only link to themselves—such as Raw_fish or Space_science_pack—were excluded. An arrow only describes a requirement, *not* a quantity; many relationships require multiple items to successfully build. Network contains `r dim(nodes)[1]` nodes and `r dim(edges)[1]` edges.
-
-### About
-
-- [Portfolio blurb on GitHub](https://github.com/zachbogart/portfolio#factorio-recipe-network)
-
-- [Zach Bogart](https://zachbogart.com)
-- [\@zachbogart](https://twitter.com/zachbogart)
