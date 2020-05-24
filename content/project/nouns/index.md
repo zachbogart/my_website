@@ -2,6 +2,8 @@
 title: Noun Project Icon Design
 subtitle: 3000+ icons and counting
 summary: Hand-crafted, small-batch icons to spice up your projects.
+categories:
+- Design
 tags:
 - Featured
 - Design

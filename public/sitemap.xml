@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>/tag/website/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -113,6 +118,11 @@
   </url>
   
   <url>
+    <loc>/category/design/</loc>
+    <lastmod>2018-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/project/edav/</loc>
     <lastmod>2018-08-18T00:00:00+00:00</lastmod>
   </url>
@@ -135,11 +145,6 @@
   <url>
     <loc>/project/postcard/</loc>
     <lastmod>2016-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/hello-r-markdown/</loc>
-    <lastmod>2015-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>

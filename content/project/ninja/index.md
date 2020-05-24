@@ -5,9 +5,12 @@ tags:
 - Data
 date: "2019-09-05T00:00:00Z"
 
+share: false
+
 image:
   placement: 1
   focal_point: Smart
+  preview_only: true
 
 links:
 - icon: external-link-alt

@@ -5,11 +5,11 @@ categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---
 
-## Wondering if this Works for Setup
+## Wondering if this Works for Setup 
 
 
 ```python
-import pandas as pd
+import pandas as pd 
 ```
 
 
