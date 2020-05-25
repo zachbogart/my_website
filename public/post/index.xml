@@ -13,27 +13,6 @@
     </image>
     
     <item>
-      <title>Checking Python Functionality</title>
-      <link>/blog/checking-python-functionality/</link>
-      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
-      <guid>/blog/checking-python-functionality/</guid>
-      <description>&lt;h2 id=&#34;wondering-if-this-works-for-setup&#34;&gt;Wondering if this Works for Setup&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def foo():
-    for item in [1,2,3]:
-        print(item)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;foo()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;1
-2
-3
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Hello, World!</title>
       <link>/blog/hello-world/</link>
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
@@ -44,8 +23,7 @@
 &lt;div id=&#34;look-a-coding-website&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Look, a coding website!&lt;/h2&gt;
 &lt;p&gt;I got this website up and running! Looking forward to being able to work on honing my skills and making is easy to post progress on that fact.&lt;/p&gt;
-&lt;p&gt;I am sort of torn between Python and R at this point.&lt;/p&gt;
-&lt;p&gt;This is more info&lt;/p&gt;
+&lt;p&gt;Okay, byeeeeeee…&lt;/p&gt;
 &lt;div id=&#34;image-credit&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Image Credit&lt;/h4&gt;
 &lt;p&gt;waving hello by Zach Bogart from the &lt;a href=&#34;https://thenounproject.com/search/?q=hello&amp;amp;creator=4129988&amp;amp;i=3169895&#34;&gt;Noun Project&lt;/a&gt;&lt;/p&gt;

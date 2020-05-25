@@ -1,6 +1,7 @@
 ---
 title: "Factorio Recipe Network"
-summary: Visualization of the crazy connections of a complicated video game
+subtitle: "Mapping what you can build in Factorio" 
+summary: "Visualization of the crazy connections of a complicated video game"
 tags:
 - Data
 date: "2019-09-05T00:00:00Z" 

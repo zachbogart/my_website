@@ -1,5 +1,6 @@
 ---
 title: Recycled Origami
+subtitle: Making pretty things from discarded print receipts
 summary: Using university print receipts for a pretty purpose 
 tags:
 - Other

@@ -1,5 +1,6 @@
 ---
 title: Ribaldry in Stand-Up
+subtitle: How comedians work blue.
 summary: Exploration of Stand-Up Comedy Specials Ordered by Relative Ribaldry
 tags:
 - Data

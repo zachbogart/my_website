@@ -5,12 +5,26 @@
     <link>/tag/science/</link>
       <atom:link href="/tag/science/index.xml" rel="self" type="application/rss+xml" />
     <description>Science</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 12 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/happy_nerd02.png</url>
       <title>Science</title>
       <link>/tag/science/</link>
     </image>
+    
+    <item>
+      <title>Implant Manual</title>
+      <link>/project/implant-manual/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>/project/implant-manual/</guid>
+      <description>&lt;p&gt;While I was working at the 
+&lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/research/laboratories/lmn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Laboratory of Molecular Neurobiology&lt;/a&gt; at 
+&lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Boston University School of Medicine&lt;/a&gt;, I spent most of my time building implants. These implants were used to record neuronal firing in rats and allowed the lab to perform experiments that explored the effects of cognitive enhancers. In short, the lab needed to get data from the brains of rats and these implants allowed that data to be acquired in real-time. Think of it like a USB port for a brain: with these implants, we could plug an animal into a computer and get data from it!&lt;/p&gt;
+&lt;p&gt;Naturally, these devices are very time-consuming to make; they are made up of dozens of parts that all need to be manufactured to high tolerances. Because of this, a lot of my time in the lab was getting these implants to work properly. I would take notes about how to make each piece and how to put them together. Soon I had amassed a large collection of notes that started to resemble a manual for how to build these implants. I talked with my manager and decided to work on combining my notes into a comprehensive implant manual specifically geared towards undergraduate researchers.&lt;/p&gt;
+&lt;p&gt;When I started out in the lab, I relied on the senior undergraduate researcher as well as my manager. There was a protocol written up by a graduate student, but it was written for researchers more experienced than I was at the time. I wanted to make something any upcoming scientist could use. My goal was to make a reference that would be approachable to any incoming undergraduate, allowing them to start building implants quickly and efficiently.&lt;/p&gt;
+&lt;p&gt;The result was a 54-page manual that covered all aspects of building the implants. It was built off of my experiences in implant manufacturing as well as working with incoming undergraduates. The act of documenting the manufacturing process helped me better understand the implants as well as give back a useful tool to the lab. It makes me proud to think that even now my manual may be helping new researchers grasp the implant manufacturing process.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>BU Directed Study</title>
@@ -21,6 +35,75 @@
 &lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/research/laboratories/lmn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Laboratory of Molecular Neurobiology&lt;/a&gt; within the 
 &lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Department of Experimental Therapeutics&lt;/a&gt; at Boston University’s School of Medicine. Under the supervision of Dr. Marcia H. Ratner and Dr. David H. Farb, I studied how endogenous neurosteroids like pregnenolone sulfate affect learning and memory and how they may be used as cognitive enhancers. I learned how electrophysiological methods could be used to record from the CA1 region of the hippocampus in rats and allow neural activity data to be extracted in response to effects of cognitive enhancers. I manufactured custom-made neural recording devices, performed several surgeries on the animals to attach the implants, and gained a basic understanding of how the neural activity data can be interpreted and analyzed. In addition, I used the 
 &lt;a href=&#34;https://www.bu.edu/eng/current-students/epic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BU Engineering Product Innovation Center&lt;/a&gt; to explore how the neural implants could be made more efficiently using 3D-printing technology, which resulted in adoption of a unibody core designed by Dr. Matthew Wilson at the Department of Brain and Cognitive Sciences at Massachusetts Institute of Technology and produced using stereolithography.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Frog Tank Enclosure</title>
+      <link>/project/frog-enclosure/</link>
+      <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
+      <guid>/project/frog-enclosure/</guid>
+      <description>&lt;p&gt;While working at the 
+&lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/research/laboratories/lmn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Laboratory of Molecular Neurobiology&lt;/a&gt; at 
+&lt;a href=&#34;https://www.bumc.bu.edu/busm-pm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Boston University School of Medicine&lt;/a&gt;, a graduate student asked me to help her solve a problem involving frogs. She did work on oocytes, frog embryos, and so performed a lot of surgeries. The problem was the frogs were housed in a facility across campus, meaning she would have to transport the animals back and forth to get any work done. To solve this, she wanted to build an enclosure that could keep the frogs in our lab while still complying with all of the animal health and safety regulations. So, she asked me to build a frog enclosure that could do just that.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_frog&#34; href=&#34;/project/frog-enclosure/images_frog/frog1.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/frog-enclosure/images_frog/frog1_hu1cd02112fe2302e446caec60bffd9861_96894_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_frog&#34; href=&#34;/project/frog-enclosure/images_frog/frog2.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/frog-enclosure/images_frog/frog2_hu12caae759048bbc54cad4a32894d2e1e_107234_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_frog&#34; href=&#34;/project/frog-enclosure/images_frog/frog3.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/frog-enclosure/images_frog/frog3_hu7b356ac64b4df08a23328bfdd8142eff_103769_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+  &lt;a data-fancybox=&#34;gallery-images_frog&#34; href=&#34;/project/frog-enclosure/images_frog/frog4.jpg&#34; &gt;
+  &lt;img data-src=&#34;/project/frog-enclosure/images_frog/frog4_hu1d87db1bfed2e3e0c139c9b3844ab4dc_94049_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;&lt;/div&gt; 
+&lt;p&gt;Working with my manager, I designed and built a custom-made frog enclosure that allowed the frogs to be housed on-site. The finished piece had two double-hinged doors for easy access of the tank, air grills and a fan for continuous airflow, an LED light strip hooked up to a timer to simulate light cycles, and a waterproof coating. All the electronics were hooked up to a backup power outlet to ensure the frogs would not be affected by any power failures. The completed setup was approved by the animal care facility and allowed the frogs to be housed in our lab. This let surgeries be entirely performed on-site, eliminating the need to transport the animals across campus.&lt;/p&gt;
 </description>
     </item>
     
