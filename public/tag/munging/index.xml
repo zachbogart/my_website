@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>munging | Zach Bogart</title>
+    <link>/tag/munging/</link>
+      <atom:link href="/tag/munging/index.xml" rel="self" type="application/rss+xml" />
+    <description>munging</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/happy_nerd02.png</url>
+      <title>munging</title>
+      <link>/tag/munging/</link>
+    </image>
+    
+    <item>
+      <title>Looking into YouTube Free Movies</title>
+      <link>/blog/youtube-movies/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      <guid>/blog/youtube-movies/</guid>
+      <description>&lt;h2 id=&#34;looking-into-youtube-movies&#34;&gt;Looking into YouTube Movies&lt;/h2&gt;
+&lt;p&gt;Wanted to look into what kind of ratings the free movies on YouTube are getting.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;url = &#39;https://www.youtube.com/feed/storefront?bp=kgEmCGQSIlBMSFBUeFR4dEMwaWJWWnJUMl9XS1dVbDJTQXhzS3VLd3iiBQIoAg%3D%3D&#39;
+page = requests.get(url)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;soup = BeautifulSoup(page.text, &#39;html.parser&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(soup.prettify()[:200])
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html data-cast-api-enabled=&amp;quot;true&amp;quot; lang=&amp;quot;en&amp;quot;&amp;gt;
+ &amp;lt;head&amp;gt;
+  &amp;lt;style name=&amp;quot;www-roboto&amp;quot;&amp;gt;
+   @font-face{font-family:&#39;Roboto&#39;;font-style:normal;font-weight:500;src:local(&#39;Roboto Medium&#39;),local(
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;html_films = soup.find_all(class_=&amp;quot;yt-lockup-title&amp;quot;)
+
+for film in html_films[:5]:
+    print(film.get_text())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Dino King - Duration: 1:28:47.
+Snow Queen - Duration: 1:16:07.
+Beyond Beyond - Duration: 1:19:24.
+Fair Game - Duration: 1:47:43.
+Sleepover - Duration: 1:29:29.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;movies = [film.get_text() for film in html_films]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;movies[:6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&#39;Dino King - Duration: 1:28:47.&#39;,
+ &#39;Snow Queen - Duration: 1:16:07.&#39;,
+ &#39;Beyond Beyond - Duration: 1:19:24.&#39;,
+ &#39;Fair Game - Duration: 1:47:43.&#39;,
+ &#39;Sleepover - Duration: 1:29:29.&#39;,
+ &#39;The Magic of Belle Isle - Duration: 1:49:19.&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = pd.DataFrame(movies)
+df.rename(columns={0: &#39;movie&#39;}, inplace=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df.movie.str.contains(&#39; - Duration: &#39;)].head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;movie&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Dino King - Duration: 1:28:47.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Snow Queen - Duration: 1:16:07.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Beyond Beyond - Duration: 1:19:24.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Fair Game - Duration: 1:47:43.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Sleepover - Duration: 1:29:29.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df.movie.str.split(&#39; - Duration: &#39;, expand=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[1] = df[1].str.rstrip(&#39;.&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df.reset_index()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.rename(columns={0: &#39;yt_title&#39;, 1: &#39;yt_duration&#39;, &#39;index&#39;: &#39;yt_id&#39;}, inplace=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;yt_id&lt;/th&gt;
+      &lt;th&gt;yt_title&lt;/th&gt;
+      &lt;th&gt;yt_duration&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;Dino King&lt;/td&gt;
+      &lt;td&gt;1:28:47&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Snow Queen&lt;/td&gt;
+      &lt;td&gt;1:16:07&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Beyond Beyond&lt;/td&gt;
+      &lt;td&gt;1:19:24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Fair Game&lt;/td&gt;
+      &lt;td&gt;1:47:43&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Sleepover&lt;/td&gt;
+      &lt;td&gt;1:29:29&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;convert-duration-to-minutes&#34;&gt;Convert Duration to minutes&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def split_time(x):
+    numbers = x.split(&#39;:&#39;)
+    time = int(numbers[0]) * 60 + int(numbers[1])
+    return time
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&#39;yt_minutes&#39;] = df[&#39;yt_duration&#39;].apply(split_time)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;imdb-data&#34;&gt;IMDb Data&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imdb_ratings = pd.read_csv(&#39;/Users/zachbogart/Downloads/title.ratings.tsv&#39;, sep=&#39;\t&#39;)
+imdb_basics = pd.read_csv(&#39;/Users/zachbogart/Downloads/title.basics.tsv&#39;, sep=&#39;\t&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;/Users/zachbogart/Documents/venv-breadbasket/sourdough_venv/lib/python3.7/site-packages/IPython/core/interactiveshell.py:3058: DtypeWarning: Columns (5) have mixed types.Specify dtype option on import or set low_memory=False.
+  interactivity=interactivity, compiler=compiler, result=result)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imdb = imdb_basics.merge(imdb_ratings, how=&#39;left&#39;, on=&#39;tconst&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imdb.shape
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;(6831547, 11)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Let&amp;rsquo;s just look at movies (we get what we get)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imdb.titleType.value_counts()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;tvEpisode       4869408
+short            741081
+movie            551301
+video            265727
+tvSeries         184466
+tvMovie          121175
+tvMiniSeries      31078
+tvSpecial         29209
+videoGame         25548
+tvShort           12554
+Name: titleType, dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imdb = imdb.loc[imdb.titleType == &#39;movie&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imdb.shape
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;(551301, 11)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imdb.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;tconst&lt;/th&gt;
+      &lt;th&gt;titleType&lt;/th&gt;
+      &lt;th&gt;primaryTitle&lt;/th&gt;
+      &lt;th&gt;originalTitle&lt;/th&gt;
+      &lt;th&gt;isAdult&lt;/th&gt;
+      &lt;th&gt;startYear&lt;/th&gt;
+      &lt;th&gt;endYear&lt;/th&gt;
+      &lt;th&gt;runtimeMinutes&lt;/th&gt;
+      &lt;th&gt;genres&lt;/th&gt;
+      &lt;th&gt;averageRating&lt;/th&gt;
+      &lt;th&gt;numVotes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;8&lt;/th&gt;
+      &lt;td&gt;tt0000009&lt;/td&gt;
+      &lt;td&gt;movie&lt;/td&gt;
+      &lt;td&gt;Miss Jerry&lt;/td&gt;
+      &lt;td&gt;Miss Jerry&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1894&lt;/td&gt;
+      &lt;td&gt;\N&lt;/td&gt;
+      &lt;td&gt;45&lt;/td&gt;
+      &lt;td&gt;Romance&lt;/td&gt;
+      &lt;td&gt;5.9&lt;/td&gt;
+      &lt;td&gt;153.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;145&lt;/th&gt;
+      &lt;td&gt;tt0000147&lt;/td&gt;
+      &lt;td&gt;movie&lt;/td&gt;
+      &lt;td&gt;The Corbett-Fitzsimmons Fight&lt;/td&gt;
+      &lt;td&gt;The Corbett-Fitzsimmons Fight&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1897&lt;/td&gt;
+      &lt;td&gt;\N&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;Documentary,News,Sport&lt;/td&gt;
+      &lt;td&gt;5.2&lt;/td&gt;
+      &lt;td&gt;346.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;332&lt;/th&gt;
+      &lt;td&gt;tt0000335&lt;/td&gt;
+      &lt;td&gt;movie&lt;/td&gt;
+      &lt;td&gt;Soldiers of the Cross&lt;/td&gt;
+      &lt;td&gt;Soldiers of the Cross&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1900&lt;/td&gt;
+      &lt;td&gt;\N&lt;/td&gt;
+      &lt;td&gt;\N&lt;/td&gt;
+      &lt;td&gt;Biography,Drama&lt;/td&gt;
+      &lt;td&gt;6.1&lt;/td&gt;
+      &lt;td&gt;40.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;499&lt;/th&gt;
+      &lt;td&gt;tt0000502&lt;/td&gt;
+      &lt;td&gt;movie&lt;/td&gt;
+      &lt;td&gt;Bohemios&lt;/td&gt;
+      &lt;td&gt;Bohemios&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1905&lt;/td&gt;
+      &lt;td&gt;\N&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+      &lt;td&gt;\N&lt;/td&gt;
+      &lt;td&gt;3.8&lt;/td&gt;
+      &lt;td&gt;6.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;571&lt;/th&gt;
+      &lt;td&gt;tt0000574&lt;/td&gt;
+      &lt;td&gt;movie&lt;/td&gt;
+      &lt;td&gt;The Story of the Kelly Gang&lt;/td&gt;
+      &lt;td&gt;The Story of the Kelly Gang&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1906&lt;/td&gt;
+      &lt;td&gt;\N&lt;/td&gt;
+      &lt;td&gt;70&lt;/td&gt;
+      &lt;td&gt;Biography,Crime,Drama&lt;/td&gt;
+      &lt;td&gt;6.1&lt;/td&gt;
+      &lt;td&gt;574.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;try-joining&#34;&gt;Try Joining&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;joined = df.merge(imdb, how=&#39;left&#39;, left_on=&#39;yt_title&#39;, right_on=&#39;primaryTitle&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# remove any values with null
+joined = joined.dropna().sort_values(&#39;primaryTitle&#39;).head(30)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s not deal with any overlap. Just the movies that have one match&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;joined.yt_title.value_counts()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Aftershock                       3
+Bandits                          3
+Bad Trip                         3
+A Girl Like Her                  2
+A Little Bit of Heaven           2
+All We Had                       2
+Back in Time                     1
+Alien Code                       1
+Apartment 1303                   1
+Alcatraz                         1
+4 Minute Mile                    1
+8 Assassins                      1
+A Cowgirl&#39;s Story                1
+17 Miracles                      1
+Arthur &amp;amp; Merlin                  1
+Almost Adults                    1
+Atlas Shrugged II: The Strike    1
+American Ninja                   1
+2036 Origin Unknown              1
+Alien Arrival                    1
+Alex &amp;amp; The List                  1
+Name: yt_title, dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;resources&#34;&gt;Resources&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.python-guide.org/scenarios/scrape/&#34;&gt;https://docs.python-guide.org/scenarios/scrape/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-work-with-web-data-using-requests-and-beautiful-soup-with-python-3&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-work-with-web-data-using-requests-and-beautiful-soup-with-python-3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/split-a-text-column-into-two-columns-in-pandas-dataframe/&#34;&gt;https://www.geeksforgeeks.org/split-a-text-column-into-two-columns-in-pandas-dataframe/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;image-credit&#34;&gt;Image Credit&lt;/h4&gt;
+&lt;p&gt;integrated system by Zach Bogart from the 
+&lt;a href=&#34;https://thenounproject.com/search/?q=integrated%20system&amp;amp;creator=4129988&amp;amp;i=3169228&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Noun Project&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

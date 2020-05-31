@@ -1,0 +1,1195 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Zach Bogart">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Looking into YouTube Movies Wanted to look into what kind of ratings the free movies on YouTube are getting.
+import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;https://www.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/blog/youtube-movies/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#007791">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i%7CRaleway:400,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu983e49d17a61c1d7fcd91be745a91945_20172_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu983e49d17a61c1d7fcd91be745a91945_20172_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/blog/youtube-movies/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@zachbogart">
+  <meta property="twitter:creator" content="@zachbogart">
+  
+  <meta property="og:site_name" content="Zach Bogart">
+  <meta property="og:url" content="/blog/youtube-movies/">
+  <meta property="og:title" content="Looking into YouTube Free Movies | Zach Bogart">
+  <meta property="og:description" content="Looking into YouTube Movies Wanted to look into what kind of ratings the free movies on YouTube are getting.
+import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;https://www."><meta property="og:image" content="/blog/youtube-movies/featured.png">
+  <meta property="twitter:image" content="/blog/youtube-movies/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-05-10T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-05-10T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/blog/youtube-movies/"
+  },
+  "headline": "Looking into YouTube Free Movies",
+  
+  "image": [
+    "/blog/youtube-movies/featured.png"
+  ],
+  
+  "datePublished": "2020-05-10T00:00:00Z",
+  "dateModified": "2020-05-10T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Zach Bogart"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zach Bogart",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu983e49d17a61c1d7fcd91be745a91945_20172_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Looking into YouTube Movies Wanted to look into what kind of ratings the free movies on YouTube are getting.\nimport pandas as pd import requests from bs4 import BeautifulSoup  url = 'https://www."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Looking into YouTube Free Movies | Zach Bogart</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Zach Bogart</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Zach Bogart</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/blog"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/about"><span>About</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Looking into YouTube Free Movies</h1>
+
+  
+  <p class="page-subtitle">You get what you (don&rsquo;t) pay for</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 10, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/python/">Python</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 100px; max-height: 88px;">
+  <div style="position: relative">
+    <img src="/blog/youtube-movies/featured.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="looking-into-youtube-movies">Looking into YouTube Movies</h2>
+<p>Wanted to look into what kind of ratings the free movies on YouTube are getting.</p>
+<pre><code class="language-python">import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+</code></pre>
+<pre><code class="language-python">url = 'https://www.youtube.com/feed/storefront?bp=kgEmCGQSIlBMSFBUeFR4dEMwaWJWWnJUMl9XS1dVbDJTQXhzS3VLd3iiBQIoAg%3D%3D'
+page = requests.get(url)
+
+</code></pre>
+<pre><code class="language-python">soup = BeautifulSoup(page.text, 'html.parser')
+</code></pre>
+<pre><code class="language-python">print(soup.prettify()[:200])
+
+</code></pre>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html data-cast-api-enabled=&quot;true&quot; lang=&quot;en&quot;&gt;
+ &lt;head&gt;
+  &lt;style name=&quot;www-roboto&quot;&gt;
+   @font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(
+</code></pre>
+<pre><code class="language-python">html_films = soup.find_all(class_=&quot;yt-lockup-title&quot;)
+
+for film in html_films[:5]:
+    print(film.get_text())
+</code></pre>
+<pre><code>Dino King - Duration: 1:28:47.
+Snow Queen - Duration: 1:16:07.
+Beyond Beyond - Duration: 1:19:24.
+Fair Game - Duration: 1:47:43.
+Sleepover - Duration: 1:29:29.
+</code></pre>
+<pre><code class="language-python">movies = [film.get_text() for film in html_films]
+</code></pre>
+<pre><code class="language-python">movies[:6]
+</code></pre>
+<pre><code>['Dino King - Duration: 1:28:47.',
+ 'Snow Queen - Duration: 1:16:07.',
+ 'Beyond Beyond - Duration: 1:19:24.',
+ 'Fair Game - Duration: 1:47:43.',
+ 'Sleepover - Duration: 1:29:29.',
+ 'The Magic of Belle Isle - Duration: 1:49:19.']
+</code></pre>
+<pre><code class="language-python">df = pd.DataFrame(movies)
+df.rename(columns={0: 'movie'}, inplace=True)
+</code></pre>
+<pre><code class="language-python">df[df.movie.str.contains(' - Duration: ')].head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Dino King - Duration: 1:28:47.</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Snow Queen - Duration: 1:16:07.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Beyond Beyond - Duration: 1:19:24.</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fair Game - Duration: 1:47:43.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sleepover - Duration: 1:29:29.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">df = df.movie.str.split(' - Duration: ', expand=True)
+</code></pre>
+<pre><code class="language-python">df[1] = df[1].str.rstrip('.')
+</code></pre>
+<pre><code class="language-python">df = df.reset_index()
+</code></pre>
+<pre><code class="language-python">df.rename(columns={0: 'yt_title', 1: 'yt_duration', 'index': 'yt_id'}, inplace=True)
+</code></pre>
+<pre><code class="language-python">df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>yt_id</th>
+      <th>yt_title</th>
+      <th>yt_duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>Dino King</td>
+      <td>1:28:47</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>Snow Queen</td>
+      <td>1:16:07</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Beyond Beyond</td>
+      <td>1:19:24</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>Fair Game</td>
+      <td>1:47:43</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>Sleepover</td>
+      <td>1:29:29</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h3 id="convert-duration-to-minutes">Convert Duration to minutes</h3>
+<pre><code class="language-python">def split_time(x):
+    numbers = x.split(':')
+    time = int(numbers[0]) * 60 + int(numbers[1])
+    return time
+</code></pre>
+<pre><code class="language-python">df['yt_minutes'] = df['yt_duration'].apply(split_time)
+</code></pre>
+<h2 id="imdb-data">IMDb Data</h2>
+<pre><code class="language-python">imdb_ratings = pd.read_csv('/Users/zachbogart/Downloads/title.ratings.tsv', sep='\t')
+imdb_basics = pd.read_csv('/Users/zachbogart/Downloads/title.basics.tsv', sep='\t')
+</code></pre>
+<pre><code>/Users/zachbogart/Documents/venv-breadbasket/sourdough_venv/lib/python3.7/site-packages/IPython/core/interactiveshell.py:3058: DtypeWarning: Columns (5) have mixed types.Specify dtype option on import or set low_memory=False.
+  interactivity=interactivity, compiler=compiler, result=result)
+</code></pre>
+<pre><code class="language-python">imdb = imdb_basics.merge(imdb_ratings, how='left', on='tconst')
+</code></pre>
+<pre><code class="language-python">imdb.shape
+</code></pre>
+<pre><code>(6831547, 11)
+</code></pre>
+<ul>
+<li>Let&rsquo;s just look at movies (we get what we get)</li>
+</ul>
+<pre><code class="language-python">imdb.titleType.value_counts()
+</code></pre>
+<pre><code>tvEpisode       4869408
+short            741081
+movie            551301
+video            265727
+tvSeries         184466
+tvMovie          121175
+tvMiniSeries      31078
+tvSpecial         29209
+videoGame         25548
+tvShort           12554
+Name: titleType, dtype: int64
+</code></pre>
+<pre><code class="language-python">imdb = imdb.loc[imdb.titleType == 'movie']
+</code></pre>
+<pre><code class="language-python">imdb.shape
+</code></pre>
+<pre><code>(551301, 11)
+</code></pre>
+<pre><code class="language-python">imdb.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tconst</th>
+      <th>titleType</th>
+      <th>primaryTitle</th>
+      <th>originalTitle</th>
+      <th>isAdult</th>
+      <th>startYear</th>
+      <th>endYear</th>
+      <th>runtimeMinutes</th>
+      <th>genres</th>
+      <th>averageRating</th>
+      <th>numVotes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>8</th>
+      <td>tt0000009</td>
+      <td>movie</td>
+      <td>Miss Jerry</td>
+      <td>Miss Jerry</td>
+      <td>0</td>
+      <td>1894</td>
+      <td>\N</td>
+      <td>45</td>
+      <td>Romance</td>
+      <td>5.9</td>
+      <td>153.0</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>tt0000147</td>
+      <td>movie</td>
+      <td>The Corbett-Fitzsimmons Fight</td>
+      <td>The Corbett-Fitzsimmons Fight</td>
+      <td>0</td>
+      <td>1897</td>
+      <td>\N</td>
+      <td>20</td>
+      <td>Documentary,News,Sport</td>
+      <td>5.2</td>
+      <td>346.0</td>
+    </tr>
+    <tr>
+      <th>332</th>
+      <td>tt0000335</td>
+      <td>movie</td>
+      <td>Soldiers of the Cross</td>
+      <td>Soldiers of the Cross</td>
+      <td>0</td>
+      <td>1900</td>
+      <td>\N</td>
+      <td>\N</td>
+      <td>Biography,Drama</td>
+      <td>6.1</td>
+      <td>40.0</td>
+    </tr>
+    <tr>
+      <th>499</th>
+      <td>tt0000502</td>
+      <td>movie</td>
+      <td>Bohemios</td>
+      <td>Bohemios</td>
+      <td>0</td>
+      <td>1905</td>
+      <td>\N</td>
+      <td>100</td>
+      <td>\N</td>
+      <td>3.8</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>571</th>
+      <td>tt0000574</td>
+      <td>movie</td>
+      <td>The Story of the Kelly Gang</td>
+      <td>The Story of the Kelly Gang</td>
+      <td>0</td>
+      <td>1906</td>
+      <td>\N</td>
+      <td>70</td>
+      <td>Biography,Crime,Drama</td>
+      <td>6.1</td>
+      <td>574.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="try-joining">Try Joining</h2>
+<pre><code class="language-python">joined = df.merge(imdb, how='left', left_on='yt_title', right_on='primaryTitle')
+</code></pre>
+<pre><code class="language-python"># remove any values with null
+joined = joined.dropna().sort_values('primaryTitle').head(30)
+</code></pre>
+<p>Let&rsquo;s not deal with any overlap. Just the movies that have one match</p>
+<pre><code class="language-python">joined.yt_title.value_counts()
+</code></pre>
+<pre><code>Aftershock                       3
+Bandits                          3
+Bad Trip                         3
+A Girl Like Her                  2
+A Little Bit of Heaven           2
+All We Had                       2
+Back in Time                     1
+Alien Code                       1
+Apartment 1303                   1
+Alcatraz                         1
+4 Minute Mile                    1
+8 Assassins                      1
+A Cowgirl's Story                1
+17 Miracles                      1
+Arthur &amp; Merlin                  1
+Almost Adults                    1
+Atlas Shrugged II: The Strike    1
+American Ninja                   1
+2036 Origin Unknown              1
+Alien Arrival                    1
+Alex &amp; The List                  1
+Name: yt_title, dtype: int64
+</code></pre>
+<h4 id="resources">Resources</h4>
+<ul>
+<li><a href="https://docs.python-guide.org/scenarios/scrape/">https://docs.python-guide.org/scenarios/scrape/</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-work-with-web-data-using-requests-and-beautiful-soup-with-python-3">https://www.digitalocean.com/community/tutorials/how-to-work-with-web-data-using-requests-and-beautiful-soup-with-python-3</a></li>
+<li><a href="https://www.geeksforgeeks.org/split-a-text-column-into-two-columns-in-pandas-dataframe/">https://www.geeksforgeeks.org/split-a-text-column-into-two-columns-in-pandas-dataframe/</a></li>
+</ul>
+<h4 id="image-credit">Image Credit</h4>
+<p>integrated system by Zach Bogart from the 
+<a href="https://thenounproject.com/search/?q=integrated%20system&amp;creator=4129988&amp;i=3169228" target="_blank" rel="noopener">Noun Project</a></p>
+<pre><code class="language-python">
+</code></pre>
+
+    </div>
+
+    
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/cleaning/">cleaning</a>
+  
+  <a class="badge badge-light" href="/tag/movies/">movies</a>
+  
+  <a class="badge badge-light" href="/tag/munging/">munging</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/zach-bogart/avatar_hu52001906009a87db61bb486bde1b7d40_960256_270x270_fill_lanczos_center_2.png" alt="Zach Bogart">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="/">Zach Bogart</a></h5>
+        <h6 class="card-subtitle">Data Explorer</h6>
+        <p class="card-text">Science, Design, &amp; Data</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/zachbogart" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/zachbogart" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
