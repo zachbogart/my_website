@@ -27,8 +27,7 @@
   
     
   
-  <meta name="description" content="Looking into YouTube Movies Wanted to look into what kind of ratings the free movies on YouTube are getting.
-import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;https://www.">
+  <meta name="description" content="I saw that YouTube had a wide selection of movies, but the free movies didn&rsquo;t seem very good. Was interested in seeing what kind of ratings the free movies on YouTube receive.">
 
   
   <link rel="alternate" hreflang="en-us" href="/blog/youtube-movies/">
@@ -236,14 +235,13 @@ import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;ht
   <meta property="og:site_name" content="Zach Bogart">
   <meta property="og:url" content="/blog/youtube-movies/">
   <meta property="og:title" content="Looking into YouTube Free Movies | Zach Bogart">
-  <meta property="og:description" content="Looking into YouTube Movies Wanted to look into what kind of ratings the free movies on YouTube are getting.
-import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;https://www."><meta property="og:image" content="/blog/youtube-movies/featured.png">
+  <meta property="og:description" content="I saw that YouTube had a wide selection of movies, but the free movies didn&rsquo;t seem very good. Was interested in seeing what kind of ratings the free movies on YouTube receive."><meta property="og:image" content="/blog/youtube-movies/featured.png">
   <meta property="twitter:image" content="/blog/youtube-movies/featured.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-05-10T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-06-01T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-05-10T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-06-01T00:00:00&#43;00:00">
   
 
   
@@ -275,8 +273,8 @@ import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;ht
     "/blog/youtube-movies/featured.png"
   ],
   
-  "datePublished": "2020-05-10T00:00:00Z",
-  "dateModified": "2020-05-10T00:00:00Z",
+  "datePublished": "2020-06-01T00:00:00Z",
+  "dateModified": "2020-06-01T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -291,7 +289,7 @@ import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;ht
       "url": "/images/icon_hu983e49d17a61c1d7fcd91be745a91945_20172_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Looking into YouTube Movies Wanted to look into what kind of ratings the free movies on YouTube are getting.\nimport pandas as pd import requests from bs4 import BeautifulSoup  url = 'https://www."
+  "description": "I saw that YouTube had a wide selection of movies, but the free movies didn\u0026rsquo;t seem very good. Was interested in seeing what kind of ratings the free movies on YouTube receive."
 }
 </script>
 
@@ -500,7 +498,7 @@ import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;ht
     
       
     
-    May 10, 2020
+    Jun 1, 2020
   </span>
   
 
@@ -509,7 +507,7 @@ import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;ht
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    5 min read
   </span>
   
 
@@ -556,12 +554,18 @@ import pandas as pd import requests from bs4 import BeautifulSoup  url = &#39;ht
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="looking-into-youtube-movies">Looking into YouTube Movies</h2>
-<p>Wanted to look into what kind of ratings the free movies on YouTube are getting.</p>
+      <p>I saw that YouTube had 
+<a href="https://www.youtube.com/movies" target="_blank" rel="noopener">a wide selection of movies</a>, but the free movies didn&rsquo;t seem very good. Was interested in seeing what kind of ratings the free movies on YouTube receive. Let&rsquo;s figure it out!</p>
+<h2 id="go-to-the-movies">Go to the Movies</h2>
+<p>To start, let&rsquo;s import some things.</p>
 <pre><code class="language-python">import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+
+import seaborn as sns
+import matplotlib.pyplot as plt
 </code></pre>
+<p>We can use <code>requests</code> to grab the html.</p>
 <pre><code class="language-python">url = 'https://www.youtube.com/feed/storefront?bp=kgEmCGQSIlBMSFBUeFR4dEMwaWJWWnJUMl9XS1dVbDJTQXhzS3VLd3iiBQIoAg%3D%3D'
 page = requests.get(url)
 
@@ -577,6 +581,7 @@ page = requests.get(url)
   &lt;style name=&quot;www-roboto&quot;&gt;
    @font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(
 </code></pre>
+<p>At this point, we can do some inspecting to find that each film has a <code>yt-lockup-title</code> class that we can access. With a little bit of fiddling, we can get a dataframe of the movie names. There is also a common format which we can use to split the strings into separate columns.</p>
 <pre><code class="language-python">html_films = soup.find_all(class_=&quot;yt-lockup-title&quot;)
 
 for film in html_films[:5]:
@@ -585,7 +590,7 @@ for film in html_films[:5]:
 <pre><code>Dino King - Duration: 1:28:47.
 Snow Queen - Duration: 1:16:07.
 Beyond Beyond - Duration: 1:19:24.
-Fair Game - Duration: 1:47:43.
+Igor (U.S) - Duration: 1:26:31.
 Sleepover - Duration: 1:29:29.
 </code></pre>
 <pre><code class="language-python">movies = [film.get_text() for film in html_films]
@@ -595,9 +600,9 @@ Sleepover - Duration: 1:29:29.
 <pre><code>['Dino King - Duration: 1:28:47.',
  'Snow Queen - Duration: 1:16:07.',
  'Beyond Beyond - Duration: 1:19:24.',
- 'Fair Game - Duration: 1:47:43.',
+ 'Igor (U.S) - Duration: 1:26:31.',
  'Sleepover - Duration: 1:29:29.',
- 'The Magic of Belle Isle - Duration: 1:49:19.']
+ 'The Secret of Nimh - Duration: 1:22:46.']
 </code></pre>
 <pre><code class="language-python">df = pd.DataFrame(movies)
 df.rename(columns={0: 'movie'}, inplace=True)
@@ -640,7 +645,7 @@ df.rename(columns={0: 'movie'}, inplace=True)
     </tr>
     <tr>
       <th>3</th>
-      <td>Fair Game - Duration: 1:47:43.</td>
+      <td>Igor (U.S) - Duration: 1:26:31.</td>
     </tr>
     <tr>
       <th>4</th>
@@ -704,8 +709,8 @@ df.rename(columns={0: 'movie'}, inplace=True)
     <tr>
       <th>3</th>
       <td>3</td>
-      <td>Fair Game</td>
-      <td>1:47:43</td>
+      <td>Igor (U.S)</td>
+      <td>1:26:31</td>
     </tr>
     <tr>
       <th>4</th>
@@ -717,6 +722,7 @@ df.rename(columns={0: 'movie'}, inplace=True)
 </table>
 </div>
 <h3 id="convert-duration-to-minutes">Convert Duration to minutes</h3>
+<p>The string movie time doesn&rsquo;t mean much to us. Let&rsquo;s turn it into minutes.</p>
 <pre><code class="language-python">def split_time(x):
     numbers = x.split(':')
     time = int(numbers[0]) * 60 + int(numbers[1])
@@ -725,6 +731,9 @@ df.rename(columns={0: 'movie'}, inplace=True)
 <pre><code class="language-python">df['yt_minutes'] = df['yt_duration'].apply(split_time)
 </code></pre>
 <h2 id="imdb-data">IMDb Data</h2>
+<ul>
+<li>We will use data from the IMDb datasets to get info on the movie ratings</li>
+</ul>
 <pre><code class="language-python">imdb_ratings = pd.read_csv('/Users/zachbogart/Downloads/title.ratings.tsv', sep='\t')
 imdb_basics = pd.read_csv('/Users/zachbogart/Downloads/title.basics.tsv', sep='\t')
 </code></pre>
@@ -737,9 +746,7 @@ imdb_basics = pd.read_csv('/Users/zachbogart/Downloads/title.basics.tsv', sep='\
 </code></pre>
 <pre><code>(6831547, 11)
 </code></pre>
-<ul>
-<li>Let&rsquo;s just look at movies (we get what we get)</li>
-</ul>
+<p>Let&rsquo;s look just at items that are <code>movie</code>s</p>
 <pre><code class="language-python">imdb.titleType.value_counts()
 </code></pre>
 <pre><code>tvEpisode       4869408
@@ -868,37 +875,256 @@ Name: titleType, dtype: int64
 </table>
 </div>
 <h2 id="try-joining">Try Joining</h2>
+<p>We are playing this pretty fast and loose, but we can get a rough sense of the movie ratings using a simple join and dropping any corner cases.</p>
 <pre><code class="language-python">joined = df.merge(imdb, how='left', left_on='yt_title', right_on='primaryTitle')
 </code></pre>
 <pre><code class="language-python"># remove any values with null
-joined = joined.dropna().sort_values('primaryTitle').head(30)
+joined = joined.dropna().sort_values('primaryTitle')
 </code></pre>
-<p>Let&rsquo;s not deal with any overlap. Just the movies that have one match</p>
+<p>Let&rsquo;s not deal with any overlap. Just the movies that have one match (Could also try to match durations to get more movies, but let&rsquo;s ignore that right now).</p>
+<ul>
+<li>there are a bunch of items with multiple results</li>
+<li>Let&rsquo;s see what we have without trying to dig out overlapping movies</li>
+</ul>
 <pre><code class="language-python">joined.yt_title.value_counts()
 </code></pre>
-<pre><code>Aftershock                       3
-Bandits                          3
-Bad Trip                         3
-A Girl Like Her                  2
-A Little Bit of Heaven           2
-All We Had                       2
-Back in Time                     1
-Alien Code                       1
-Apartment 1303                   1
-Alcatraz                         1
-4 Minute Mile                    1
-8 Assassins                      1
-A Cowgirl's Story                1
-17 Miracles                      1
-Arthur &amp; Merlin                  1
-Almost Adults                    1
-Atlas Shrugged II: The Strike    1
-American Ninja                   1
-2036 Origin Unknown              1
-Alien Arrival                    1
-Alex &amp; The List                  1
-Name: yt_title, dtype: int64
+<pre><code>Romeo and Juliet      10
+Happily Ever After    10
+Zoo                   10
+The Suspect            8
+Gone                   8
+                      ..
+A Cowgirl's Story      1
+Mad Money              1
+Bakery in Brooklyn     1
+Snow Queen             1
+17 Miracles            1
+Name: yt_title, Length: 262, dtype: int64
 </code></pre>
+<pre><code class="language-python">singles = joined.groupby('yt_title')['yt_title'].filter(lambda x: len(x) == 1)
+</code></pre>
+<pre><code class="language-python">easy = joined[joined.yt_title.isin(singles)]
+</code></pre>
+<h1 id="what-do-we-find">What Do We Find?</h1>
+<h2 id="the-highest-and-lowest-rated">The Highest (and Lowest) Rated</h2>
+<ul>
+<li>What are the top-rated movies available? Worst Rated?</li>
+</ul>
+<pre><code class="language-python">cols = ['yt_title', 'averageRating', 'numVotes']
+</code></pre>
+<pre><code class="language-python">easy[cols].sort_values('averageRating', ascending=False).head(10)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>yt_title</th>
+      <th>averageRating</th>
+      <th>numVotes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>478</th>
+      <td>The Usual Suspects</td>
+      <td>8.5</td>
+      <td>956313.0</td>
+    </tr>
+    <tr>
+      <th>429</th>
+      <td>Zeitgeist: Moving Forward</td>
+      <td>8.2</td>
+      <td>17246.0</td>
+    </tr>
+    <tr>
+      <th>440</th>
+      <td>Bones Brigade: An Autobiography</td>
+      <td>8.1</td>
+      <td>2306.0</td>
+    </tr>
+    <tr>
+      <th>433</th>
+      <td>Requiem for the American Dream</td>
+      <td>8.1</td>
+      <td>8297.0</td>
+    </tr>
+    <tr>
+      <th>712</th>
+      <td>Citizenfour</td>
+      <td>8.0</td>
+      <td>50670.0</td>
+    </tr>
+    <tr>
+      <th>413</th>
+      <td>Sound City</td>
+      <td>7.8</td>
+      <td>11887.0</td>
+    </tr>
+    <tr>
+      <th>308</th>
+      <td>Muscle Shoals</td>
+      <td>7.7</td>
+      <td>3400.0</td>
+    </tr>
+    <tr>
+      <th>303</th>
+      <td>Fat, Sick &amp; Nearly Dead</td>
+      <td>7.5</td>
+      <td>8338.0</td>
+    </tr>
+    <tr>
+      <th>272</th>
+      <td>The Secret of Roan Inish</td>
+      <td>7.5</td>
+      <td>6792.0</td>
+    </tr>
+    <tr>
+      <th>319</th>
+      <td>Unbranded</td>
+      <td>7.4</td>
+      <td>1326.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">easy[cols].sort_values('averageRating').head(10)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>yt_title</th>
+      <th>averageRating</th>
+      <th>numVotes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>Disaster Movie</td>
+      <td>1.9</td>
+      <td>85558.0</td>
+    </tr>
+    <tr>
+      <th>636</th>
+      <td>Alcatraz</td>
+      <td>3.3</td>
+      <td>359.0</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>Spiders 3D</td>
+      <td>3.3</td>
+      <td>3960.0</td>
+    </tr>
+    <tr>
+      <th>707</th>
+      <td>The Remains</td>
+      <td>3.7</td>
+      <td>2870.0</td>
+    </tr>
+    <tr>
+      <th>513</th>
+      <td>Fist of the Warrior</td>
+      <td>3.8</td>
+      <td>369.0</td>
+    </tr>
+    <tr>
+      <th>740</th>
+      <td>Fishing Naked</td>
+      <td>4.0</td>
+      <td>782.0</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>Ribbit</td>
+      <td>4.0</td>
+      <td>611.0</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>Hollow Creek</td>
+      <td>4.2</td>
+      <td>592.0</td>
+    </tr>
+    <tr>
+      <th>327</th>
+      <td>Arthur &amp; Merlin</td>
+      <td>4.3</td>
+      <td>1226.0</td>
+    </tr>
+    <tr>
+      <th>611</th>
+      <td>Out of Liberty</td>
+      <td>4.4</td>
+      <td>262.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="how-old-are-these-movies">How Old Are These Movies?</h2>
+<ul>
+<li>Most are a few years old. Some are decades old.</li>
+</ul>
+<pre><code class="language-python">easy['startYear'] = pd.to_numeric(easy.startYear)
+</code></pre>
+<pre><code>/Users/zachbogart/Documents/venv-breadbasket/sourdough_venv/lib/python3.7/site-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  &quot;&quot;&quot;Entry point for launching an IPython kernel.
+</code></pre>
+<pre><code class="language-python">ax = sns.relplot(data=easy,
+                x='startYear',
+                y='averageRating',
+                kind='scatter',
+                hue='yt_minutes')
+plt.show()
+</code></pre>
+<p><img src="output_46_0.png" alt="png"></p>
+<h2 id="scraping-the-bottom-of-the-barrel">Scraping the Bottom of the Barrel</h2>
+<ul>
+<li>Looks like the movies are pretty poorly rated, averaging around 6 out of 10</li>
+</ul>
+<pre><code class="language-python">ax = easy.averageRating.hist()
+plt.show()
+</code></pre>
+<p><img src="output_48_0.png" alt="png"></p>
+<pre><code class="language-python">print(f&quot;{easy.averageRating.mean():.2f}&quot;)
+</code></pre>
+<pre><code>5.95
+</code></pre>
+<h2 id="overall">Overall</h2>
+<p>You get what you (don&rsquo;t) pay for.</p>
 <h4 id="resources">Resources</h4>
 <ul>
 <li><a href="https://docs.python-guide.org/scenarios/scrape/">https://docs.python-guide.org/scenarios/scrape/</a></li>
@@ -908,8 +1134,6 @@ Name: yt_title, dtype: int64
 <h4 id="image-credit">Image Credit</h4>
 <p>integrated system by Zach Bogart from the 
 <a href="https://thenounproject.com/search/?q=integrated%20system&amp;creator=4129988&amp;i=3169228" target="_blank" rel="noopener">Noun Project</a></p>
-<pre><code class="language-python">
-</code></pre>
 
     </div>
 
