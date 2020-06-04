@@ -9,6 +9,11 @@ tags:
   - cleaning
   - movies
 slug: "youtube-movies"
+links:
+- icon: external-link-alt
+  icon_pack: fas
+  name: Jupyter Notebook
+  url: https://github.com/zachbogart/my_website/blob/master/content/post/2020-05-25-youtube-movies/2020-05-25-youtube-movies.ipynb
 ---
 
 I saw that YouTube had [a wide selection of movies](https://www.youtube.com/movies), but the free movies didn't seem very good. Was interested in seeing what kind of ratings the free movies on YouTube receive. Let's figure it out!
@@ -260,7 +265,7 @@ df['yt_minutes'] = df['yt_duration'].apply(split_time)
 ```
 
 ## IMDb Data
-- We will use data from the IMDb datasets to get info on the movie ratings
+- We will use data from the IMDb datasets to get info on the movie ratings.
 
 
 ```python
@@ -731,7 +736,7 @@ plt.show()
 ```
 
 
-![png](output_46_0.png)
+![png](index_files/index_46_0.png)
 
 
 ## Scraping the Bottom of the Barrel
@@ -744,7 +749,7 @@ plt.show()
 ```
 
 
-![png](output_48_0.png)
+![png](index_files/index_48_0.png)
 
 
 

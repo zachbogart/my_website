@@ -195,7 +195,7 @@ df.rename(columns={0: &#39;movie&#39;}, inplace=True)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;imdb-data&#34;&gt;IMDb Data&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;We will use data from the IMDb datasets to get info on the movie ratings&lt;/li&gt;
+&lt;li&gt;We will use data from the IMDb datasets to get info on the movie ratings.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imdb_ratings = pd.read_csv(&#39;/Users/zachbogart/Downloads/title.ratings.tsv&#39;, sep=&#39;\t&#39;)
 imdb_basics = pd.read_csv(&#39;/Users/zachbogart/Downloads/title.basics.tsv&#39;, sep=&#39;\t&#39;)
@@ -573,7 +573,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
                 hue=&#39;yt_minutes&#39;)
 plt.show()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;output_46_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;index_files/index_46_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;scraping-the-bottom-of-the-barrel&#34;&gt;Scraping the Bottom of the Barrel&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Looks like the movies are pretty poorly rated, averaging around 6 out of 10&lt;/li&gt;
@@ -581,7 +581,7 @@ plt.show()
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax = easy.averageRating.hist()
 plt.show()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;output_48_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;index_files/index_48_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(f&amp;quot;{easy.averageRating.mean():.2f}&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;5.95

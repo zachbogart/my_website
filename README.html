@@ -370,17 +370,19 @@ summary {
 <ul>
 <li><a href="https://sourcethemes.com/academic/docs/">Hugo Academic Docs</a></li>
 </ul>
+<div id="where-is-everything" class="section level2">
+<h2>Where is everything?</h2>
+<ul>
+<li>work out of <code>content</code></li>
+<li>parameters and config stuff can be found in <code>config</code> and <code>config.toml</code></li>
+</ul>
+</div>
 <div id="making-a-post" class="section level2">
 <h2>Making a post?</h2>
 <ol style="list-style-type: decimal">
 <li>Navigate to <code>content/post</code></li>
 <li>Make a new folder, titled with <code>YYYY-MM-DD-&lt;quickblurb&gt;</code></li>
 <li>Add new file, <code>index.Rmd</code></li>
-</ol>
-<ul>
-<li>Working in python? Make normla jupyter file and convert to markdown when finished</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
 <li>Add front matter meta-stuff between triple hyphens:</li>
 </ol>
 <pre><code>---
@@ -394,7 +396,7 @@ tags:
 slug: &quot;url_path_name_multi_words_use_hyphens&quot;  
 ---</code></pre>
 <ol start="4" style="list-style-type: decimal">
-<li>Can add other thigns as well to front matter:</li>
+<li>Can add other things as well to front matter:</li>
 </ol>
 <ul>
 <li>Can add <code>image</code> to front matter for <code>preview_only</code> for example</li>
@@ -410,6 +412,50 @@ links:
   icon_pack: fas
   name: 
   url: </code></pre>
+</div>
+<div id="working-in-python" class="section level2">
+<h2>Working in Python?</h2>
+<ul>
+<li>The above info applies</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Create <code>.ipynb</code> file to work out of</li>
+<li>Make first cell markdown with front matter (as above). Make sure to include slug.</li>
+<li>When ready to update/publish, run this command</li>
+</ol>
+<pre><code>jupyter nbconvert &lt;notebook_name&gt; --to markdown --output index.md</code></pre>
+<ul>
+<li>it will generate the markdown file and any images will go to a <code>index_files</code> folder</li>
+</ul>
+</div>
+<div id="adding-a-noun-as-an-image" class="section level2">
+<h2>Adding A Noun as an Image</h2>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://thenounproject.com/zachbogart/">your noun page on Noun Project</a></li>
+<li>Find desired icon and save it as a PNG (copy url to icon)</li>
+</ol>
+<ul>
+<li>Save to folder as <code>featured.png</code> to make it the main image</li>
+<li>Copy the URL icon for later to add to post</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Open the PNG in Preview and remove the attribution</li>
+</ol>
+<ul>
+<li>Crop it out</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Resize PNG to be small</li>
+</ol>
+<ul>
+<li><code>Tools &gt; Adjust Size...</code></li>
+<li>Make it around 100 px by 100 px</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Add image credit at end of post:</li>
+</ol>
+<pre><code>#### Image Credit
+&lt;ICON_TITLE&gt; by Zach Bogart from the [Noun Project](&lt;URL_TO_ICON&gt;) </code></pre>
 </div>
 </div>
 

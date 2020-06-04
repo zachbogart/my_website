@@ -45,9 +45,14 @@ links:
 ## Working in Python?
 - The above info applies
 1. Create `.ipynb` file to work out of
-2. Make first cell markdwon with front matter (as above). Make sure to include slug.
-3. When ready to update/publish, Download the file as markdown (Dropdown under `File` is easiest)
-  - Name the file `index.md`
+2. Make first cell markdown with front matter (as above). Make sure to include slug.
+3. When ready to update/publish, run this command:
+
+```
+jupyter nbconvert <notebook_name> --to markdown --output index.md
+```
+
+- it will generate the markdown file and any images will go to a `index_files` folder
 
 ## Adding A Noun as an Image
 1. Go to [your noun page on Noun Project](https://thenounproject.com/zachbogart/)
