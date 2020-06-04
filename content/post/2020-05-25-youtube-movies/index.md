@@ -14,6 +14,11 @@ links:
   icon_pack: fas
   name: Jupyter Notebook
   url: https://github.com/zachbogart/my_website/blob/master/content/post/2020-05-25-youtube-movies/2020-05-25-youtube-movies.ipynb
+- icon: mug-hot
+  icon_pack: fas
+  name: Give a Coffee
+  url: https://ko-fi.com/zachbogart
+  
 ---
 
 I saw that YouTube had [a wide selection of movies](https://www.youtube.com/movies), but the free movies didn't seem very good. Was interested in seeing what kind of ratings the free movies on YouTube receive. Let's figure it out!
