@@ -5,6 +5,6 @@ header:
 title: Data Workings
 view: 2
 
-aliases: [/blog/] 
+aliases: [/blog/]
 ---
 
