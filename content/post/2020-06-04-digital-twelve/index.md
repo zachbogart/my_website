@@ -1,3 +1,4 @@
+
 ---
 title: "Twelve Clock List"
 subtitle: "Documenting the options for a clock game"
@@ -33,7 +34,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
-## Look at the Time
+## Get with the times
 First we need to get a list of the times. I'm going to work with strings. Let's go through some numbers and rule out invalid ones by places.
 
 
@@ -77,7 +78,7 @@ valid[:4]
 
 
 
-## Prep the Times
+## Prep the times
 To do this, I'm going to put together strings of math expressions for all permutations of the numbers, then evaluate them and see which ones work. Certainly brute force, but it'll work. First, I make a dictionary of all permutations of the numbers for each time.
 
 
@@ -173,7 +174,7 @@ equations['100'][:10]
 
 
 
-## Look at the Time
+## Look at the time
 
 Cool. Now that we have a bunch of expressions, let's evaluate them and see what we get.
 

@@ -625,7 +625,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 </code></pre>
-<h2 id="look-at-the-time">Look at the Time</h2>
+<h2 id="get-with-the-times">Get with the times</h2>
 <p>First we need to get a list of the times. I&rsquo;m going to work with strings. Let&rsquo;s go through some numbers and rule out invalid ones by places.</p>
 <pre><code class="language-python">valid = []
 for x in range(100, 1260):
@@ -648,7 +648,7 @@ for x in range(100, 1260):
 </code></pre>
 <pre><code>['100', '101', '102', '103']
 </code></pre>
-<h2 id="prep-the-times">Prep the Times</h2>
+<h2 id="prep-the-times">Prep the times</h2>
 <p>To do this, I&rsquo;m going to put together strings of math expressions for all permutations of the numbers, then evaluate them and see which ones work. Certainly brute force, but it&rsquo;ll work. First, I make a dictionary of all permutations of the numbers for each time.</p>
 <pre><code class="language-python"># moded from https://www.geeksforgeeks.org/python-permutation-given-string-using-inbuilt-function/
 from itertools import permutations 
@@ -717,7 +717,7 @@ for time, perms in time_dict.items():
  '(((0)*0)+1)',
  '(((0)*0)-1)']
 </code></pre>
-<h2 id="look-at-the-time-1">Look at the Time</h2>
+<h2 id="look-at-the-time">Look at the time</h2>
 <p>Cool. Now that we have a bunch of expressions, let&rsquo;s evaluate them and see what we get.</p>
 <pre><code class="language-python">they_work = {}
 
