@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Zach Bogart</title>
+    <link>/posts/</link>
+      <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright>
+    <image>
+      <url>/img/happy_nerd02.png</url>
+      <title>Posts</title>
+      <link>/posts/</link>
+    </image>
+    
+  </channel>
+</rss>

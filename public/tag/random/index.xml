@@ -14,9 +14,9 @@
     
     <item>
       <title>Twelve Clock List</title>
-      <link>/blog/twelve-clock/</link>
+      <link>/post/twelve-clock/</link>
       <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/blog/twelve-clock/</guid>
+      <guid>/post/twelve-clock/</guid>
       <description>&lt;h2 id=&#34;what&#34;&gt;&amp;hellip;What?&lt;/h2&gt;
 &lt;p&gt;Whenever I see a digital clock, I do a little math in my head. I try to take the numbers and, using only addition, subtraction, multiplication and division, get them to come out to twelve. I thought I&amp;rsquo;d try to get an exhaustive list of times that this trick applies to. Let&amp;rsquo;s figure it out!&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import re

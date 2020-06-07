@@ -14,9 +14,9 @@
     
     <item>
       <title>Twelve Clock List</title>
-      <link>/blog/twelve-clock/</link>
+      <link>/post/twelve-clock/</link>
       <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/blog/twelve-clock/</guid>
+      <guid>/post/twelve-clock/</guid>
       <description>&lt;h2 id=&#34;what&#34;&gt;&amp;hellip;What?&lt;/h2&gt;
 &lt;p&gt;Whenever I see a digital clock, I do a little math in my head. I try to take the numbers and, using only addition, subtraction, multiplication and division, get them to come out to twelve. I thought I&amp;rsquo;d try to get an exhaustive list of times that this trick applies to. Let&amp;rsquo;s figure it out!&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import re
@@ -639,9 +639,9 @@ df.rename(columns={0: &#39;raw&#39;}, inplace=True)
     
     <item>
       <title>Looking into YouTube Free Movies</title>
-      <link>/blog/youtube-movies/</link>
+      <link>/post/youtube-movies/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/blog/youtube-movies/</guid>
+      <guid>/post/youtube-movies/</guid>
       <description>&lt;p&gt;I saw that YouTube had 
 &lt;a href=&#34;https://www.youtube.com/movies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a wide selection of movies&lt;/a&gt;, but the free movies didn&amp;rsquo;t seem very good. Was interested in seeing what kind of ratings the free movies on YouTube receive. Let&amp;rsquo;s figure it out!&lt;/p&gt;
 &lt;h2 id=&#34;go-to-the-movies&#34;&gt;Go to the Movies&lt;/h2&gt;
@@ -1227,9 +1227,9 @@ plt.show()
     
     <item>
       <title>Hello, World!</title>
-      <link>/blog/hello-world/</link>
+      <link>/post/hello-world/</link>
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
-      <guid>/blog/hello-world/</guid>
+      <guid>/post/hello-world/</guid>
       <description>
 
 
@@ -1681,33 +1681,6 @@ plt.show()
     
   &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites10.png&#34; &gt;
   &lt;img data-src=&#34;/project/nouns/images_nouns/favorites10_hu8e583dd456ea99e0637bd01e463f7d6a_218938_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;224&#34; height=&#34;190&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites11.png&#34; &gt;
-  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites11_hue8617617bf8cd7bab5b057e4ad6c0d5f_218580_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;229&#34; height=&#34;190&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites12.png&#34; &gt;
-  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites12_hu328834f977f241845c0eb6fb2c167089_209721_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;227&#34; height=&#34;190&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-  &lt;a data-fancybox=&#34;gallery-images_nouns&#34; href=&#34;/project/nouns/images_nouns/favorites13.png&#34; &gt;
-  &lt;img data-src=&#34;/project/nouns/images_nouns/favorites13_hufdb82658f48f524453170e899191cfe1_239485_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;202&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
 

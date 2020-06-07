@@ -28,6 +28,9 @@ links:
   icon_pack: fab
   name: '@imakenouns'
   url: http://www.twitter.com/imakenouns
+
+aliases:
+- /nouns
 ---
 
 Noun Project is a site that provides icons for everything. I have [a collection of my own icon designs on Noun Project](https://thenounproject.com/zachbogart/uploads/) that you can choose from to spice up your own projects. I add new designs often, so check back to see what's available.
