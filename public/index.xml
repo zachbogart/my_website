@@ -632,8 +632,9 @@ df.rename(columns={0: &#39;raw&#39;}, inplace=True)
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;image-credit&#34;&gt;Image Credit&lt;/h3&gt;
-&lt;p&gt;Twelve by Zach Bogart from the 
-&lt;a href=&#34;https://thenounproject.com/search/?q=twelve&amp;amp;creator=4129988&amp;amp;i=2184535&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Noun Project&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://thenounproject.com/search/?q=twelve&amp;amp;creator=4129988&amp;amp;i=2184535&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twelve&lt;/a&gt; by Zach Bogart from 
+&lt;a href=&#34;https://thenounproject.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the Noun Project&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1220,8 +1221,9 @@ plt.show()
 &lt;li&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/split-a-text-column-into-two-columns-in-pandas-dataframe/&#34;&gt;https://www.geeksforgeeks.org/split-a-text-column-into-two-columns-in-pandas-dataframe/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;image-credit&#34;&gt;Image Credit&lt;/h4&gt;
-&lt;p&gt;integrated system by Zach Bogart from the 
-&lt;a href=&#34;https://thenounproject.com/search/?q=integrated%20system&amp;amp;creator=4129988&amp;amp;i=3169228&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Noun Project&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://thenounproject.com/search/?q=integrated%20system&amp;amp;creator=4129988&amp;amp;i=3169228&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;integrated system&lt;/a&gt; by Zach Bogart from 
+&lt;a href=&#34;https://thenounproject.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the Noun Project&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1239,7 +1241,7 @@ plt.show()
 &lt;p&gt;Okay, byeeeeeee…&lt;/p&gt;
 &lt;div id=&#34;image-credit&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Image Credit&lt;/h4&gt;
-&lt;p&gt;waving hello by Zach Bogart from the &lt;a href=&#34;https://thenounproject.com/search/?q=hello&amp;amp;creator=4129988&amp;amp;i=3169895&#34;&gt;Noun Project&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;(https://thenounproject.com/search/?q=hello&amp;amp;creator=4129988&amp;amp;i=3169895)&#34;&gt;waving hello&lt;/a&gt; by Zach Bogart from &lt;a href=&#34;https://thenounproject.com&#34;&gt;the Noun Project&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

@@ -68,7 +68,7 @@ jupyter nbconvert <notebook_name> --to markdown --output index.md
 
 ```
 #### Image Credit
-<ICON_TITLE> by Zach Bogart from the [Noun Project](<URL_TO_ICON>) 
+[<ICON_TITLE>](<URL_TO_ICON>) by Zach Bogart from [the Noun Project](https://thenounproject.com/) 
 ```
   
   

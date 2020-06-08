@@ -19,8 +19,7 @@ links:
   icon_pack: fas
   name: Give a Coffee
   url: https://ko-fi.com/zachbogart
-    
-     
+            
 ---
 
 ## ...What?
@@ -751,4 +750,4 @@ df.head()
 
 
 ### Image Credit
-Twelve by Zach Bogart from the [Noun Project](https://thenounproject.com/search/?q=twelve&creator=4129988&i=2184535)
+[Twelve](https://thenounproject.com/search/?q=twelve&creator=4129988&i=2184535) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
