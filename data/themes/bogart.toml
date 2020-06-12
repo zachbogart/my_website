@@ -5,12 +5,12 @@ name = "bogart"
 light = true
 
 # Primary
-primary = "#FB4D3D" #F19A3E
+primary = "#FC6C5F" #F19A3E
 
 # Menu
 menu_primary = "#f9f9f9"
-menu_text = "#FB4D3D"
-menu_text_active = "#FB4D3D"
+menu_text = "#FC6C5F"
+menu_text_active = "#FC6C5F"
 menu_title = "#323232"
 
 # Home sections
