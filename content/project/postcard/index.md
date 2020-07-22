@@ -3,7 +3,7 @@ title: Podcast Postcard
 subtitle: How do I listen?
 summary: Hand-Drawn Data Visualization of Podcast Listening
 tags:
-- Data
+- data
 date: "2016-03-05T00:00:00Z"
 
 image:

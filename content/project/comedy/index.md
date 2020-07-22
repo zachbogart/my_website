@@ -3,7 +3,7 @@ title: Ribaldry in Stand-Up
 subtitle: How comedians work blue.
 summary: Exploration of Stand-Up Comedy Specials Ordered by Relative Ribaldry
 tags:
-- Data
+- data
 date: "2019-09-05T00:00:00Z"
 
 image:

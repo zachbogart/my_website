@@ -2,7 +2,7 @@
 title: "Neat Tweet: M&Ms CandyViz"
 summary: Tasty take on dataviz.
 tags:
-- Data
+- data
 date: "2019-12-05T00:00:00Z"
 
 image:

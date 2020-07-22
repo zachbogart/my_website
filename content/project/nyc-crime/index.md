@@ -3,7 +3,7 @@ title: NYC Crime
 subtitle: Plotting some simple datapoints
 summary: Discussion of NYC Crime Dataset
 tags:
-- Data
+- data
 date: "2016-12-07"
 
 image:

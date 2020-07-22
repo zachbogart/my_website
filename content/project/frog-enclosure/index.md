@@ -3,7 +3,7 @@ title: Frog Tank Enclosure
 subtitle: Building a tricked-out box for froggies.
 summary: Designed/Built Custom Frog Tank Enclosure
 tags:
-- Science
+- science
 date: "2013-06-03"
 
 image:

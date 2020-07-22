@@ -4,9 +4,9 @@ date: 2020-07-18
 categories:  
   - Tableau
 tags:  
-  - Maps
-  - Color
-  - Tricks
+  - maps
+  - color
+  - tricks
 slug: "two-tableau-tricks"  
 links:
 - icon: mug-hot

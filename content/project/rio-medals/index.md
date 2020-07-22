@@ -3,7 +3,7 @@ title: Rio 2016 Prize Money
 subtitle: How much is a gold medal worth? A bunch in Singapore.
 summary: Gold Medals Earned & Prize Money Given (in USD) by Different Countries in the Rio 2016 Olympics
 tags:
-- Data
+- data
 date: "2016-08-17"
 
 image:

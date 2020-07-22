@@ -23,23 +23,23 @@ subtitle = "Various little projects."
   
   [[content.filter_button]]
     name = "Featured"
-    tag = "Featured"
+    tag = "featured"
   
   [[content.filter_button]]
     name = "Data"
-    tag = "Data"
+    tag = "data"
   
   [[content.filter_button]]
     name = "Design"
-    tag = "Design"
+    tag = "design"
     
   [[content.filter_button]]
     name = "Science"
-    tag = "Science"
+    tag = "science"
   
   [[content.filter_button]]
     name = "Misc."
-    tag = "Other"
+    tag = "other"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.

@@ -3,7 +3,7 @@ title: Implant Manual
 subtitle: Approachable directions for a complicated & technical task
 summary: Implant Manual to Aid Undergraduates
 tags:
-- Science
+- science
 date: "2014-01-07"
 
 image:

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Color | Zach Bogart</title>
+    <title>color | Zach Bogart</title>
     <link>/tag/color/</link>
       <atom:link href="/tag/color/index.xml" rel="self" type="application/rss+xml" />
-    <description>Color</description>
+    <description>color</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/happy_nerd02.png</url>
-      <title>Color</title>
+      <title>color</title>
       <link>/tag/color/</link>
     </image>
     

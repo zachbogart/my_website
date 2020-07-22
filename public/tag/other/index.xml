@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Other | Zach Bogart</title>
+    <title>other | Zach Bogart</title>
     <link>/tag/other/</link>
       <atom:link href="/tag/other/index.xml" rel="self" type="application/rss+xml" />
-    <description>Other</description>
+    <description>other</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/happy_nerd02.png</url>
-      <title>Other</title>
+      <title>other</title>
       <link>/tag/other/</link>
     </image>
     

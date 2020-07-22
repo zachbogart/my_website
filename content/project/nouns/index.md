@@ -3,8 +3,8 @@ title: Noun Project Icon Design
 subtitle: 3000+ icons and counting
 summary: Hand-crafted, small-batch icons to spice up your projects.
 tags:
-- Featured
-- Design
+- featured
+- design
 date: "2018-08-18T00:00:00Z"
 
 image:
