@@ -4,16 +4,46 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tag/clocks/</loc>
-    <lastmod>2020-06-04T00:00:00+00:00</lastmod>
+    <loc>/tag/color/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/maps/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/tableau/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/two-tableau-tricks/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/tricks/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/clocks/</loc>
     <lastmod>2020-06-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,11 +54,6 @@
   
   <url>
     <loc>/tag/random/</loc>
-    <lastmod>2020-06-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-06-04T00:00:00+00:00</lastmod>
   </url>
   

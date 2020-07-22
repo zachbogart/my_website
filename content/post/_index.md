@@ -2,7 +2,7 @@
 header: 
   caption: ""
   image: ""
-title: Data Workings
+title: Worker Bee
 view: 2
 
 aliases: [/blog/]

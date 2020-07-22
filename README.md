@@ -14,14 +14,19 @@
 
 ```
 ---
-title: "post_title"  
+title: "TODO_post_title"  
 date: YYYY-MM-DD  
 categories:  
-  - main_grouping  
-  - code_language_used_for_example  
+  - TODO_main_grouping  
+  - TODO_code_language_used_for_example  
 tags:  
-  - realted_to_post_tags  
-slug: "url_path_name_multi_words_use_hyphens"  
+  - TODO_related_to_post_tags  
+slug: "TODO_url_path_name_multi_words_use_hyphens"  
+links:
+- icon: mug-hot
+  icon_pack: fas
+  name: Give a Coffee
+  url: https://ko-fi.com/zachbogart
 ---
 ```
 
@@ -68,7 +73,7 @@ jupyter nbconvert <notebook_name> --to markdown --output index.md
 
 ```
 #### Image Credit
-[<ICON_TITLE>](<URL_TO_ICON>) by Zach Bogart from [the Noun Project](https://thenounproject.com/) 
+[ICON_TITLE](URL_TO_ICON) by Zach Bogart from [the Noun Project](https://thenounproject.com/) 
 ```
   
   
