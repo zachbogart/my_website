@@ -1,0 +1,24 @@
+---
+title: "A Python Blog Post I Often Reach For"  
+date: 2020-07-26  
+categories:  
+  - Python  
+tags:  
+  - grouping
+  - pandas  
+slug: "pandas-grouping-data"  
+links:
+- icon: mug-hot
+  icon_pack: fas
+  name: Give a Coffee
+  url: https://ko-fi.com/zachbogart
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+I find I have to do a lot of grouping in pandas and I reach for this blog post by Shane Lynn all the  time to get it done. I've found grouping things in pandas difficult sometimes, usually when  I want to create a column in the original dataframe by grouping stuff. This technique solves that and I'm super grateful to it.
+
+#### Image Credit
+[ICON_TITLE](URL_TO_ICON) by Zach Bogart from [the Noun Project](https://thenounproject.com/) 
