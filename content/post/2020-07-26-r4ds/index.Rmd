@@ -1,0 +1,73 @@
+---
+title: "R4DS Day 1: Getting Started"  
+date: 2020-07-26 
+categories:  
+  - R
+tags:  
+  - r4ds
+  - learning
+  - basics
+slug: "r4ds-00"  
+links:
+- icon: mug-hot
+  icon_pack: fas
+  name: Give a Coffee
+  url: https://ko-fi.com/zachbogart
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+*I learned the necessary tools for data science in a fragmented way (a little R  here, a little Python there, a lot of theory and less mastery of a tool  to apply it). Here I'm trying to go through things a little more  regimented, focussing right now on R. Goal is to get better at a tool.*
+
+Let's go through r4ds!
+
+## Do Cars With Big Engines use more Fuel than Small Ones?
+
+```{r  include=FALSE}
+library(tidyverse)
+```
+
+
+```{r}
+mpg
+```
+
+```{r}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+- **Overall**: Yup, cars  with bigger engine  displacement (`displ`) get lower fuel efficiency (`hwy`). See `?mpg` for  definitions.
+
+- *Note*: While `mapping` is often  omitted, it is instructive to think of `aes()` as  a  mapping of variables to different aesthetics.
+
+## 3.2.4 Exercises
+
+1. Run ggplot(data = mpg). What do you see?
+
+```{r}
+ggplot(data = mpg)
+```
+
+- I get a blank page in the `Plots` viewer. Only showing  the "coordinate system that [I] can add layers to". Need to complete it by adding more layers  link `geom_point()`
+
+2. How many rows are in mpg? How many columns?
+
+```{r}
+dim(mpg)
+```
+
+- Can be answered by looking at the dimensions with `dim()` (recalling this from EDAV course). Also shows up when simply typing `mpg` to console to see it is a tibble with **234 rows and 11 columns**. Tibbles seem to default to showing 10 rows and also constrains columns shown by window size.
+
+3. How many rows are in mpg? How many columns?
+- When in doubt, RT(F)M. `?mpg` explains that `drv` is "the type of drive train" with three options: "f" (front-wheel drive), "r" (rear wheel drive), and "4" (4wd). Would want to confirm that there are no nulls in the column (in Python with Pandas, I'd do `mpg['drv'].isnull().sum()`. Not sure how to accomplish this in R yet.  This is certainly one of my weaknesses for  R: data transformation over data visualization).
+
+4. Make a scatterplot of hwy vs cyl
+
+
+
+
+#### Image Credit
+[Hard Drive](https://thenounproject.com/search/?q=data&creator=4129988&i=2906687) by Zach Bogart from [the Noun Project](https://thenounproject.com/) 
