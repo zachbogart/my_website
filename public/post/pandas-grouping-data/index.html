@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="I find I have to do a lot of grouping in pandas and I reach for this blog post by Shane Lynn all the time to get it done. I’ve found grouping things in pandas difficult sometimes, usually when I want to create a column in the original dataframe by grouping stuff.">
+  <meta name="description" content="I find I have to do a lot of grouping in pandas and I reach for this blog post by Shane Lynn all the time to remind me how to get it done.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/pandas-grouping-data/">
@@ -233,8 +233,8 @@
   <meta property="og:site_name" content="Zach Bogart">
   <meta property="og:url" content="/post/pandas-grouping-data/">
   <meta property="og:title" content="A Python Blog Post I Often Reach For | Zach Bogart">
-  <meta property="og:description" content="I find I have to do a lot of grouping in pandas and I reach for this blog post by Shane Lynn all the time to get it done. I’ve found grouping things in pandas difficult sometimes, usually when I want to create a column in the original dataframe by grouping stuff."><meta property="og:image" content="/img/happy_nerd02.png">
-  <meta property="twitter:image" content="/img/happy_nerd02.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="I find I have to do a lot of grouping in pandas and I reach for this blog post by Shane Lynn all the time to remind me how to get it done."><meta property="og:image" content="/post/pandas-grouping-data/featured.png">
+  <meta property="twitter:image" content="/post/pandas-grouping-data/featured.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-07-26T00:00:00&#43;00:00">
@@ -267,6 +267,10 @@
   },
   "headline": "A Python Blog Post I Often Reach For",
   
+  "image": [
+    "/post/pandas-grouping-data/featured.png"
+  ],
+  
   "datePublished": "2020-07-26T00:00:00Z",
   "dateModified": "2020-07-26T00:00:00Z",
   
@@ -283,7 +287,7 @@
       "url": "/images/icon_hu983e49d17a61c1d7fcd91be745a91945_20172_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "I find I have to do a lot of grouping in pandas and I reach for this blog post by Shane Lynn all the time to get it done. I’ve found grouping things in pandas difficult sometimes, usually when I want to create a column in the original dataframe by grouping stuff."
+  "description": "I find I have to do a lot of grouping in pandas and I reach for this blog post by Shane Lynn all the time to remind me how to get it done."
 }
 </script>
 
@@ -503,18 +507,24 @@
 
 
 
-  
+
+
+
+
+
+
+
 
   
   
-  
+
+
 <div class="article-container pt-3">
   <h1>A Python Blog Post I Often Reach For</h1>
 
   
 
   
-    
 
 
 <div class="article-metadata">
@@ -537,7 +547,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -554,7 +564,7 @@
 
 </div>
 
-    
+  
 
 
 
@@ -618,7 +628,14 @@
 </div>
 
 
-  
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 100px; max-height: 100px;">
+  <div style="position: relative">
+    <img src="/post/pandas-grouping-data/featured.png" alt="" class="featured-image">
+    
+  </div>
 </div>
 
 
@@ -626,14 +643,230 @@
   <div class="article-container">
 
     <div class="article-style">
-      
+      <p>I find I have to do a lot of grouping in pandas and I reach for 
+<a href="https://www.shanelynn.ie/summarising-aggregation-and-grouping-data-in-python-pandas/" target="_blank" rel="noopener">this blog post by Shane Lynn</a> all the  time to remind me how to get it done. I&rsquo;ve found grouping things in pandas difficult sometimes, usually when  I want to create a column in the original dataframe by grouping stuff. This technique solves that and I&rsquo;m super grateful to it.</p>
+<h2 id="so-group-already">So Group, Already</h2>
+<p>Learning works best when you try it out yourself, so let&rsquo;s give it a go!</p>
+<p>Say I have some  census data and  I want to group it together to get the sum of each group.</p>
+<ul>
+<li>Dataset is from 
+<a href="https://www.kaggle.com/muonneutrino/us-census-demographic-data/data" target="_blank" rel="noopener">US Census Demographics Data</a> on Kaggle</li>
+</ul>
+<pre><code class="language-python">import pandas as pd
+</code></pre>
+<pre><code class="language-python">df = pd.read_csv(&quot;/Users/bogart/Downloads/7001_312628_bundle_archive/acs2017_county_data.csv&quot;)
+df =  df[['State', 'County', 'TotalPop']]
+</code></pre>
+<pre><code class="language-python">df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-
-<p>I find I have to do a lot of grouping in pandas and I reach for this blog post by Shane Lynn all the time to get it done. I’ve found grouping things in pandas difficult sometimes, usually when I want to create a column in the original dataframe by grouping stuff. This technique solves that and I’m super grateful to it.</p>
-<div id="image-credit" class="section level4">
-<h4>Image Credit</h4>
-<p><a href="URL_TO_ICON">ICON_TITLE</a> by Zach Bogart from <a href="https://thenounproject.com/">the Noun Project</a></p>
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>County</th>
+      <th>TotalPop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>Autauga County</td>
+      <td>55036</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>Baldwin County</td>
+      <td>203360</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alabama</td>
+      <td>Barbour County</td>
+      <td>26201</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alabama</td>
+      <td>Bibb County</td>
+      <td>22580</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alabama</td>
+      <td>Blount County</td>
+      <td>57667</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+<p>Using  the method from the blog post, I can make a grouped dataframe that sums up the populations for each county:</p>
+<pre><code class="language-python">df.groupby('State').agg(
+    state_pop = pd.NamedAgg(column='TotalPop', aggfunc='sum')
+).head(7)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>state_pop</th>
+    </tr>
+    <tr>
+      <th>State</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Alabama</th>
+      <td>4850771</td>
+    </tr>
+    <tr>
+      <th>Alaska</th>
+      <td>738565</td>
+    </tr>
+    <tr>
+      <th>Arizona</th>
+      <td>6809946</td>
+    </tr>
+    <tr>
+      <th>Arkansas</th>
+      <td>2977944</td>
+    </tr>
+    <tr>
+      <th>California</th>
+      <td>38982847</td>
+    </tr>
+    <tr>
+      <th>Colorado</th>
+      <td>5436519</td>
+    </tr>
+    <tr>
+      <th>Connecticut</th>
+      <td>3594478</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>If  I wrap it in a <code>.join()</code>, I can add it back to the original  dataframe to use later:</p>
+<pre><code class="language-python">df.join(df.groupby('State').agg(
+    state_pop = pd.NamedAgg(column='TotalPop', aggfunc='sum')
+), on='State').head(7)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>County</th>
+      <th>TotalPop</th>
+      <th>state_pop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>Autauga County</td>
+      <td>55036</td>
+      <td>4850771</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>Baldwin County</td>
+      <td>203360</td>
+      <td>4850771</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alabama</td>
+      <td>Barbour County</td>
+      <td>26201</td>
+      <td>4850771</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alabama</td>
+      <td>Bibb County</td>
+      <td>22580</td>
+      <td>4850771</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alabama</td>
+      <td>Blount County</td>
+      <td>57667</td>
+      <td>4850771</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Alabama</td>
+      <td>Bullock County</td>
+      <td>10478</td>
+      <td>4850771</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Alabama</td>
+      <td>Butler County</td>
+      <td>20126</td>
+      <td>4850771</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="overall">Overall</h2>
+<p>Grouping data happens a bunch,  but it can be complicated to remember  the mechanics. It can also feel sometimes like blog posts  are shouts into a  void, but they can be the best teaching tools out there! Gotta say thanks again to Shane Lynn; I review 
+<a href="https://shanelynnwebsite-mid9n9g1q9y8tt.netdna-ssl.com/wp-content/uploads/2019/10/pandas-python-group-by-named-aggregation-update.jpg" target="_blank" rel="noopener">the screenshot at the top of your blog post</a> often.</p>
+<h4 id="image-credit">Image Credit</h4>
+<p>
+<a href="https://thenounproject.com/search/?q=dataframe&amp;creator=4129988&amp;i=3097973" target="_blank" rel="noopener">merged dataframes</a> by Zach Bogart from 
+<a href="https://thenounproject.com/" target="_blank" rel="noopener">the Noun Project</a></p>
 
     </div>
 
