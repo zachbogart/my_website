@@ -194,6 +194,8 @@ summary {
 </div>
 <div id="making-a-post" class="section level2">
 <h2>Making a post?</h2>
+<div id="in-rmarkdown" class="section level3">
+<h3>In RMarkdown</h3>
 <ol style="list-style-type: decimal">
 <li>Navigate to <code>content/post</code></li>
 <li>Make a new folder, titled with <code>YYYY-MM-DD-&lt;quickblurb&gt;</code></li>
@@ -204,10 +206,10 @@ summary {
 title: &quot;TODO_post_title&quot;  
 date: YYYY-MM-DD  
 categories:  
-  - TODO_main_grouping  
+  - TODO_main_grouping_Capitalize
   - TODO_code_language_used_for_example  
 tags:  
-  - TODO_related_to_post_tags  
+  - TODO_related_to_post_tags_lowercase_only 
 slug: &quot;TODO_url_path_name_multi_words_use_hyphens&quot;  
 links:
 - icon: mug-hot
@@ -233,20 +235,26 @@ links:
   name: 
   url: </code></pre>
 </div>
-<div id="working-in-python" class="section level2">
-<h2>Working in Python?</h2>
+<div id="working-in-python" class="section level3">
+<h3>Working in Python?</h3>
 <ul>
 <li>The above info applies</li>
 </ul>
 <ol style="list-style-type: decimal">
 <li>Create <code>.ipynb</code> file to work out of</li>
+</ol>
+<ul>
+<li>Name it something like <code>YYYY-MM-DD-&lt;quickblurb&gt;</code></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
 <li>Make first cell markdown with front matter (as above). Make sure to include slug.</li>
 <li>When ready to update/publish, run this command:</li>
 </ol>
 <pre><code>jupyter nbconvert &lt;notebook_name&gt; --to markdown --output index.md</code></pre>
 <ul>
-<li>it will generate the markdown file and any images will go to a <code>index_files</code> folder</li>
+<li>it will generate the markdown file as <code>index.md</code> and any images will go to a <code>index_files</code> folder. Will then be viewable in Viewer when serving the site preview.</li>
 </ul>
+</div>
 </div>
 <div id="adding-a-noun-as-an-image" class="section level2">
 <h2>Adding A Noun as an Image</h2>
@@ -262,14 +270,15 @@ links:
 <li>Open the PNG in Preview and remove the attribution</li>
 </ol>
 <ul>
-<li>Crop it out</li>
+<li>Crop it out (okay since going to resize the image to 100 px by 100 px, see below)</li>
+<li>Can hold shift to ensure a square crop</li>
 </ul>
 <ol start="4" style="list-style-type: decimal">
 <li>Resize PNG to be small</li>
 </ol>
 <ul>
 <li><code>Tools &gt; Adjust Size...</code></li>
-<li>Make it around 100 px by 100 px</li>
+<li>Make it 100 px by 100 px</li>
 </ul>
 <ol start="5" style="list-style-type: decimal">
 <li>Add image credit at end of post:</li>
