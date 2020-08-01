@@ -13,15 +13,17 @@
     </image>
     
     <item>
-      <title>R4DS Day 1: Getting Started</title>
+      <title>R4DS Week 1: Getting Started</title>
       <link>/post/r4ds-00/</link>
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/post/r4ds-00/</guid>
       <description>
 
 
-&lt;p&gt;&lt;em&gt;I learned the necessary tools for data science in a fragmented way (a little R here, a little Python there, a lot of theory and less mastery of a tool to apply it). Here I&#39;m trying to go through things a little more regimented, focussing right now on R. Goal is to get better at a tool.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Let&#39;s go through r4ds!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I learned the necessary tools for data science in a fragmented way (a little R here, a little Python there, a lot of theory and less mastery of a tool to apply it). Here I’m trying to go through things a little more regimented, focusing right now on R. Goal is to get better at a tool.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Let’s go through r4ds!&lt;/p&gt;
+&lt;div id=&#34;chapter-3-data-visualization&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Chapter 3: Data Visualization&lt;/h1&gt;
 &lt;div id=&#34;do-cars-with-big-engines-use-more-fuel-than-small-ones&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Do Cars With Big Engines use more Fuel than Small Ones?&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mpg&lt;/code&gt;&lt;/pre&gt;
@@ -47,18 +49,18 @@
 &lt;li&gt;&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: While &lt;code&gt;mapping&lt;/code&gt; is often omitted, it is instructive to think of &lt;code&gt;aes()&lt;/code&gt; as a mapping of variables to different aesthetics.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;exercises&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.2.4 Exercises&lt;/h2&gt;
+&lt;div id=&#34;exercises-creating-a-ggplot&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.2.4 Exercises (Creating a ggplot)&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Run ggplot(data = mpg). What do you see?&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Run ggplot(data = mpg). What do you see?&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;I get a blank page in the &lt;code&gt;Plots&lt;/code&gt; viewer. Only showing the &amp;quot;coordinate system that [I] can add layers to&amp;quot;. Need to complete it by adding more layers link &lt;code&gt;geom_point()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;I get a blank page in the &lt;code&gt;Plots&lt;/code&gt; viewer. Only showing the “coordinate system that [I] can add layers to”. Need to complete it by adding more layers link &lt;code&gt;geom_point()&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;How many rows are in mpg? How many columns?&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How many rows are in mpg? How many columns?&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dim(mpg)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 234  11&lt;/code&gt;&lt;/pre&gt;
@@ -66,17 +68,191 @@
 &lt;li&gt;Can be answered by looking at the dimensions with &lt;code&gt;dim()&lt;/code&gt; (recalling this from EDAV course). Also shows up when simply typing &lt;code&gt;mpg&lt;/code&gt; to console to see it is a tibble with &lt;strong&gt;234 rows and 11 columns&lt;/strong&gt;. Tibbles seem to default to showing 10 rows and also constrains columns shown by window size.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;How many rows are in mpg? How many columns?&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How many rows are in mpg? How many columns?&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;When in doubt, RT(F)M. &lt;code&gt;?mpg&lt;/code&gt; explains that &lt;code&gt;drv&lt;/code&gt; is &amp;quot;the type of drive train&amp;quot; with three options: &amp;quot;f&amp;quot; (front-wheel drive), &amp;quot;r&amp;quot; (rear wheel drive), and &amp;quot;4&amp;quot; (4wd). Would want to confirm that there are no nulls in the column (in Python with Pandas, I&#39;d do &lt;code&gt;mpg[&#39;drv&#39;].isnull().sum()&lt;/code&gt;. Not sure how to accomplish this in R yet. This is certainly one of my weaknesses for R: data transformation over data visualization).&lt;/li&gt;
+&lt;li&gt;When in doubt, RT(F)M. &lt;code&gt;?mpg&lt;/code&gt; explains that &lt;code&gt;drv&lt;/code&gt; is “the type of drive train” with three options: “f” (front-wheel drive), “r” (rear wheel drive), and “4” (4wd). Would want to confirm that there are no nulls in the column (in Python with Pandas, I’d do &lt;code&gt;mpg[&#39;drv&#39;].isnull().sum()&lt;/code&gt;. Not sure how to accomplish this in R yet. This is certainly one of my weaknesses for R: data transformation over data visualization).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Make a scatterplot of hwy vs cyl&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Make a scatterplot of &lt;code&gt;hwy&lt;/code&gt; vs &lt;code&gt;cyl&lt;/code&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=mpg, mapping= aes(x=cyl, y=hwy)) +
+  geom_point()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What happens if you make a scatterplot of class vs drv? Why is the plot not useful?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg, aes(x = drv, y = class)) +
+  geom_point()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neither of the variables is ordered.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-aesthetic-mappings&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.3.1 Exercises (Aesthetic mappings)&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What’s gone wrong with this code? Why are the points not blue?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = &amp;quot;blue&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The color is being specified within &lt;code&gt;aes()&lt;/code&gt;, but it is not varying by a variable, but a constant value. Pull it out and it should work nicely:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  geom_point(aes(x  =  displ, y = hwy), color= &amp;quot;blue&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Can look for &lt;code&gt;&amp;lt;chr&lt;/code&gt; in the class for each variable.&lt;/li&gt;
+&lt;li&gt;Categorical: &lt;code&gt;manufacturer&lt;/code&gt;, &lt;code&gt;model&lt;/code&gt;, &lt;code&gt;trans&lt;/code&gt;, &lt;code&gt;drv&lt;/code&gt;, &lt;code&gt;fl&lt;/code&gt;, &lt;code&gt;class&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Continuous: &lt;code&gt;displ&lt;/code&gt;, &lt;code&gt;cty&lt;/code&gt;, &lt;code&gt;hwy&lt;/code&gt;, &lt;code&gt;cyl&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  geom_point(aes(x=displ, y=hwy, color=displ, size=hwy, shape=drv))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shape cannot plot a continuous variable. Color and Size can plot aesthetics continuously.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What happens if you map the same variable to multiple aesthetics?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  geom_point(aes(x=hwy, y=cty, size=cty))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  geom_point(aes(x=cty, y=hwy), shape=8, stroke=1.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ &amp;lt; 5)? Note, you’ll also need to specify x and y.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  geom_point(aes(x=cty, y=hwy, color=displ &amp;lt; 5))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Can create boolean as an aesthetic (example above of coloring by cylinder count cutoff)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Colors the border of the shape (&lt;a href=&#34;https://r4ds.had.co.nz/data-visualisation.html#fig:shapes&#34;&gt;link for shape options&lt;/a&gt;). It seems to work for all shapes&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-facets&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.5.1 Exercises (Facets)&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What happens if you facet on a continuous variable?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  geom_point(aes(x=displ, y=hwy)) +
+  facet_wrap(~cty)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It goes ahead an facets on all the options. So…that’ll get outta hand with larger datasets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What do the empty cells in plot with facet_grid(drv ~ cyl) mean? How do they relate to this plot?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# version with facet_grid
+ggplot(mpg) +
+  geom_point(aes(x=drv, y=cyl)) +
+  facet_grid(drv ~ cyl)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The empty cells are where there is no value for that combination of the two categorical variables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What plots does the following code make? What does . do?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-17-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The code above facets just on one variable. The &lt;code&gt;.&lt;/code&gt; is a placeholder (can facet_grid by rows and no columns)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Take the first faceted plot in this section:&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;What are the advantages to using faceting instead of the colour aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Faceting can let you see each variable in isolation, with less crowding it makes it easier to see the distirbution of just one variable. It also means it is harder to see the extent of the full dataset. If the dataset gets larger, it could be more useful to facet to break it up and see individual variables over the whole thing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Read ?facet_wrap. What does nrow do? What does ncol do? What other options control the layout of the individual panels? Why doesn’t facet_grid() have nrow and ncol arguments?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;facet_wrap&lt;/code&gt; splits on one variable, and nrow and ncol specifies the layout of those facets.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;as.table&lt;/code&gt; can lay things out like a plot (highest in top-right if TRUE) or like a table (default TRUE, highest bottom right).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;facet_grid&lt;/code&gt; doesn’t have nrow or ncol since the grid size is dependent on the unique values of the two variables being faceted on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;When using facet_grid() you should usually put the variable with more unique levels in the columns. Why?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  geom_point(aes(x=drv, y=class)) +
+  facet_grid(drv ~ class)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The unique values in the columns will be labeled on the y axis, easier to read, I’d say.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;geometric-objects&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Geometric objects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Visual objects use different &lt;strong&gt;geoms&lt;/strong&gt; (like point versus line)&lt;/li&gt;
+&lt;li&gt;Can keep the same aesthetic mapping in &lt;code&gt;aes()&lt;/code&gt; but change the geom to get a different visual.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Separating lines in a line plot? Use &lt;code&gt;linetype&lt;/code&gt; in a line geom:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg, aes(x=displ, y=hwy, color=drv)) +
+  geom_smooth(aes(linetype=drv)) +
+  geom_point()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can manually group things with &lt;code&gt;group&lt;/code&gt; aesthetic, but relying on mapping aesthetic to a discrete variable can be easier (creates a legend for you).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-geometric-objects&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.6.1 Exercises (Geometric Objects)&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;line chart: &lt;code&gt;geom_line&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;boxplot: &lt;code&gt;geom_boxplot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;histogram: &lt;code&gt;geom_histogram&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;area: &lt;code&gt;geom_area&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
+  geom_point() + 
+  geom_smooth(se = FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/fig-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: geom mappings can be global in the &lt;code&gt;ggplot&lt;/code&gt; section or local to a single layer (adds to/overwrites globals)&lt;/p&gt;
 &lt;div id=&#34;image-credit&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Image Credit&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://thenounproject.com/search/?q=data&amp;amp;creator=4129988&amp;amp;i=2906687&#34;&gt;Hard Drive&lt;/a&gt; by Zach Bogart from &lt;a href=&#34;https://thenounproject.com/&#34;&gt;the Noun Project&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

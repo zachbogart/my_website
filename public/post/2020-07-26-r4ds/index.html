@@ -576,7 +576,6 @@ ggplot(mpg) +
 <ul>
 <li>You can manually group things with <code>group</code> aesthetic, but relying on mapping aesthetic to a discrete variable can be easier (creates a legend for you).</li>
 </ul>
-<p><strong>Important</strong>: geom mappings can be global in the <code>ggplot</code> section or local to a single layer (adds to/overwrites globals)</p>
 </div>
 <div id="exercises-geometric-objects" class="section level2">
 <h2>3.6.1 Exercises (Geometric Objects)</h2>
@@ -595,9 +594,8 @@ ggplot(mpg) +
 <pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
   geom_point() + 
   geom_smooth(se = FALSE)</code></pre>
-<ul>
-<li>This will make a scatter plot of <code>hwy</code> versus <code>displ</code> colored by <code>drv</code>. Includes a smooth line of each <code>drv</code> of the data with no standard error</li>
-</ul>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><strong>Important</strong>: geom mappings can be global in the <code>ggplot</code> section or local to a single layer (adds to/overwrites globals)</p>
 <div id="image-credit" class="section level4">
 <h4>Image Credit</h4>
 <p><a href="https://thenounproject.com/search/?q=data&amp;creator=4129988&amp;i=2906687">Hard Drive</a> by Zach Bogart from <a href="https://thenounproject.com/">the Noun Project</a></p>
