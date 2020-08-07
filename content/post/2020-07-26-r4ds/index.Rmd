@@ -1,5 +1,5 @@
 ---
-title: "R4DS Week 1: Getting Started"  
+title: "R4DS Week 1: Exercises and Notes"  
 date: 2020-07-26 
 categories:  
   - R
@@ -13,13 +13,16 @@ links:
   icon_pack: fas
   name: Give a Coffee
   url: https://ko-fi.com/zachbogart
+draft: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-*I learned the necessary tools for data science in a fragmented way (a little R  here, a little Python there, a lot of theory and less mastery of a tool  to apply it). Here I'm trying to go through things a little more  regimented, focusing right now on R. Goal is to get better at a tool.*
+## Testing this out
+
+*I learned the necessary tools for data science in a fragmented way (a little R  here, a little Python there, a lot of theory and less mastery of a tool  to apply it). Here I'm trying to go through things a little more  regimented, focusing right now on R. Goal is to get better at a tool.*  
 
 Let's go through r4ds!
 
@@ -432,16 +435,164 @@ ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
 
 ## 5.2.4 Exercises (Data Tranformation)
 
+```{r include=FALSE}
+library(nycflights13)
+```
+
+
 1. Find all flights that
 
   1. Had an arrival delay of two or more hours
+  
+```{r}
+#  arr_delay  is in minutes
+filter(flights, arr_delay >= 120)
+```
+  
   2. Flew to Houston (IAH or HOU)
+  
+```{r}
+filter(flights, dest %in% c('IAH', 'HOU'))
+```
+  
   3. Were operated by United, American, or Delta
+  
+```{r}
+foo <- read_csv("~/Downloads/L_UNIQUE_CARRIERS.csv")
+selected_airlines <- c("UA", "AA", "DL")
+filter(flights, carrier %in% selected_airlines)
+```
+  
   4. Departed in summer (July, August, and September)
+  
+```{r}
+summer_months <- seq(7,9)
+filter(flights, month %in% summer_months)
+```
+  
   5. Arrived more than two hours late, but didn’t leave late
+  
+```{r}
+filter(flights, arr_delay > 120, dep_delay <= 0)
+```
+  
   6. Were delayed by at least an hour, but made up over 30 minutes in flight
+  
+```{r}
+filter(flights, dep_delay >= 60, arr_delay <= 30)
+```
+  
   7. Departed between midnight and 6am (inclusive)
+  
+```{r}
+filter(flights, dep_time <= 600 | dep_time == 2400)
+```
 
+2. *Another useful dplyr filtering helper is between(). What does it do? Can you use it to simplify the code needed to answer the previous challenges?*
+
+- shortcut to between two values, inclusive:
+```{r}
+# anything from half and hour to one hour late
+filter(flights,  between(arr_delay, 30, 60))
+```
+
+3. *How many flights have a missing dep_time? What other variables are missing? What might these rows represent?*
+
+- There are `r filter(flights, is.na(dep_time)) %>% nrow()` flights with missing departure times. These could be flights that were cancelled
+
+## 5.3.1 Exercises (Arrange Rows)
+
+1. *How could you use arrange() to sort all missing values to the start? (Hint: use is.na()).*
+```{r}
+flights %>% 
+  filter(is.na(dep_time)) %>% 
+  arrange(dep_time)
+```
+
+2. *Sort flights to find the most delayed flights. Find the flights that left earliest.*
+
+```{r}
+# most delayed flights
+flights %>% 
+  arrange(desc(dep_delay))
+
+# flights that left earliest
+flights %>% 
+  arrange(dep_delay)
+```
+
+3. *Sort flights to find the fastest (highest speed) flights.*
+
+```{r}
+#  I guess this  means by air time
+flights %>% 
+  arrange(air_time)
+```
+
+4. *Which flights travelled the farthest? Which travelled the shortest?*
+
+```{r}
+# shortest
+flights %>% 
+  arrange(distance) %>% head()
+```
+
+## Selecting Columns
+
+- Colon to get all columns inclusive is helpful `select(flights, carrier:origin)`
+
+## Renaming columns
+
+- Nice version of python's `.rename(columns={old_col_name: new_col_name})`
+```{r}
+flights %>% 
+  rename(testing = dep_delay)
+```
+
+- I had this switched around in my head, but makes sense
+
+- Using `everything()`
+```{r}
+flights %>% 
+  select(dep_time, dep_delay, everything())
+```
+
+- I'm a big fan of using `everything` to reorder stuff    
+
+```{r}
+flights %>% 
+  select(contains("time"))
+```
+
+## 5.4.1 Exercises
+
+1. *Brainstorm as many ways as possible to select dep_time, dep_delay, arr_time, and arr_delay from flights.*
+- could specify them all in a `select` call
+```{r}
+flights %>% 
+  select(contains("delay"), arr_time, dep_time)
+```
+
+2. *What happens if you include the name of a variable multiple times in a select() call?*
+- Good question!
+```{r}
+flights %>% 
+  select(arr_time, arr_time)
+```
+- multiple selections become just one selection
+
+3. *What does the one_of() function do?*
+- allows you to select not knowing columns and not throw errors.
+```{r}
+flights %>% 
+  select(one_of(c('year', 'foo', 'delay')))
+```
+
+4. *Does the result of running the following code surprise you? How do the select helpers deal with case by default? How can you change that default?*
+```{r}
+select(flights, contains("TIME"))
+```
+- contains has a field called `ignore.case` which defaults to TRUE. Can set to FALSE to make case matter
 
 #### Image Credit
 [Hard Drive](https://thenounproject.com/search/?q=data&creator=4129988&i=2906687) by Zach Bogart from [the Noun Project](https://thenounproject.com/) 

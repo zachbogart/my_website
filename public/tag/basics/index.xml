@@ -13,15 +13,18 @@
     </image>
     
     <item>
-      <title>R4DS Week 1: Getting Started</title>
+      <title>R4DS Week 1: Exercises and Notes</title>
       <link>/post/r4ds-00/</link>
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/post/r4ds-00/</guid>
       <description>
 
 
+&lt;div id=&#34;testing-this-out&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Testing this out&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;I learned the necessary tools for data science in a fragmented way (a little R here, a little Python there, a lot of theory and less mastery of a tool to apply it). Here I’m trying to go through things a little more regimented, focusing right now on R. Goal is to get better at a tool.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Let’s go through r4ds!&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;chapter-3-data-visualization&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Chapter 3: Data Visualization&lt;/h1&gt;
 &lt;div id=&#34;do-cars-with-big-engines-use-more-fuel-than-small-ones&#34; class=&#34;section level2&#34;&gt;
@@ -228,6 +231,7 @@ ggplot(mpg) +
 &lt;ul&gt;
 &lt;li&gt;You can manually group things with &lt;code&gt;group&lt;/code&gt; aesthetic, but relying on mapping aesthetic to a discrete variable can be easier (creates a legend for you).&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: geom mappings can be global in the &lt;code&gt;ggplot&lt;/code&gt; section or local to a single layer (adds to/overwrites globals)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exercises-geometric-objects&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3.6.1 Exercises (Geometric Objects)&lt;/h2&gt;
@@ -246,9 +250,661 @@ ggplot(mpg) +
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
   geom_point() + 
   geom_smooth(se = FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;This will make a scatter plot of &lt;code&gt;hwy&lt;/code&gt; versus &lt;code&gt;displ&lt;/code&gt; colored by &lt;code&gt;drv&lt;/code&gt;. Includes a smooth line of each &lt;code&gt;drv&lt;/code&gt; of the data with no standard error&lt;/li&gt;
+&lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/fig-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: geom mappings can be global in the &lt;code&gt;ggplot&lt;/code&gt; section or local to a single layer (adds to/overwrites globals)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What does show.legend = FALSE do? What happens if you remove it?
+Why do you think I used it earlier in the chapter?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;show.legend&lt;/code&gt; includes the geom in the legend. Probably used it in the triplet of graphs to save space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What does the se argument to geom_smooth() do?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;displays the confidence interval around the line&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Will these two graphs look different? Why/why not?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_point(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-23-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;they are the same, just repeating the aethetics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Recreating plots&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg, aes(x=displ, y=hwy)) +
+  geom_point() +
+  geom_smooth(se=FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg, aes(x=displ, y=hwy)) +
+  geom_point() +
+  geom_smooth(aes(group=drv), se=FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg, aes(x=displ, y=hwy, color=drv)) +
+  geom_point() +
+  geom_smooth(se=FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg, aes(x=displ, y=hwy)) +
+  geom_point(aes(color=drv)) +
+  geom_smooth(se=FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg, aes(x=displ, y=hwy)) +
+  geom_point(aes(color=drv)) +
+  geom_smooth(aes(linetype=drv), se=FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-28-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg, aes(x=displ, y=hwy)) +
+  geom_point(aes(fill=drv), color=&amp;#39;white&amp;#39;, stroke=2, shape=21) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;3.7 Statistical Transformations&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What is the default geom associated with stat_summary()? How could you rewrite the previous plot to use that geom function instead of the stat function?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;stat_bin, I think&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What does geom_col() do? How is it different to geom_bar()?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;geom_col uses stat_identity by default (values in the data), and geom_bar uses stat_count by default (number of entries)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Most geoms and stats come in pairs that are almost always used in concert. Read through the documentation and make a list of all the pairs. What do they have in common?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What variables does stat_smooth() compute? What parameters control its behaviour?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  stat_smooth(aes(x=displ, y=hwy))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I’m not sure. The confidence interval?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;In our proportion bar chart, we need to set group = 1. Why? In other words what is the problem with these two graphs?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(diamonds) +
+  geom_bar(aes(x=cut, y=stat(prop), group=1))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It’s a dummmy grouping so that it doesn’t group by the default x variable &lt;code&gt;cut&lt;/code&gt; (would say there is 100% Fair in Fair, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;position-arguments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.8 Position Arguments&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Color and Fill in bars can be a nice addition (fill more than color)&lt;/li&gt;
+&lt;li&gt;Mapping a different variable to aesthetic will created a stacked bar chart&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-position-arguments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.8.1 Exercises (Position Arguments)&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What is the problem with this plot? How could you improve it?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;A lot of the data overalps (overplotting problems)&lt;/li&gt;
+&lt;li&gt;Can include low &lt;code&gt;alpha&lt;/code&gt; or jitter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point(alpha=1/5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_jitter(width=1, height=1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What parameters to geom_jitter() control the amount of jittering?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;width&lt;/code&gt; and &lt;code&gt;height&lt;/code&gt; control the spread. Has to do with the resolution of the data (added in the positive and negative directions, double the value specified 0 to 1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Compare and contrast geom_jitter() with geom_count().&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_count()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;geom_count keeps the locations as is, but the point count is mapped to area. From manual: “helps with overplotting”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What’s the default position adjustment for geom_boxplot()? Create a visualisation of the mpg dataset that demonstrates it.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mpg) +
+  geom_boxplot(aes(x=drv, y=cty))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;defaults to &lt;code&gt;dodge2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;coordinate-systems&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.9 Coordinate systems&lt;/h2&gt;
+&lt;p&gt;Tacking these on things:
+- coord_flip helps when the labels are long and they keep bunching up
+- coord_quickmap is necessary to plot spatial data correctly
+- coord_polar: polar coordinates&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-coordinate-systems&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.9 Exercises (Coordinate systems)&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Turn a stacked bar chart into a pie chart using coord_polar().&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bar = ggplot(diamonds) +
+  geom_bar(aes(x=cut, fill=cut), width=1)
+
+bar + coord_polar()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-36-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;width =1 is required to get the bars to touch. When applied in polar coordinates, no gaps.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What does labs() do? Read the documentation.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;labs&lt;/code&gt; modifies the axis labels, title, caption, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What’s the difference between coord_quickmap() and coord_map()?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;coord_quickmap approximates striaght lines approximating the Mercator projection, coord_map does the calculations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What does the plot below tell you about the relationship between city and highway mpg? Why is coord_fixed() important? What does geom_abline() do?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
+  geom_point() + 
+  geom_abline() +
+  coord_fixed()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-26-r4ds/index_files/figure-html/unnamed-chunk-37-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the mpg are positively correlated. coord_fixed ensures the aspect ratio is square, getting the axes to match. geom_abline draws a line default to slope 1, intercept 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-tranformation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;5 Data Tranformation&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Can use &lt;code&gt;near()&lt;/code&gt; to deal with floating point math that doesn’t match up perfectly (.Machine$double.eps^0.5 tolerance)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;filter&lt;/code&gt; from dplyr does not include NA by default. To include, add &lt;code&gt;is.na(&amp;lt;variable&amp;gt;)&lt;/code&gt; as a condition.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;exercises-data-tranformation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;5.2.4 Exercises (Data Tranformation)&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find all flights that&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Had an arrival delay of two or more hours&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#  arr_delay  is in minutes
+filter(flights, arr_delay &amp;gt;= 120)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10,200 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1      811            630       101     1047            830
+##  2  2013     1     1      848           1835       853     1001           1950
+##  3  2013     1     1      957            733       144     1056            853
+##  4  2013     1     1     1114            900       134     1447           1222
+##  5  2013     1     1     1505           1310       115     1638           1431
+##  6  2013     1     1     1525           1340       105     1831           1626
+##  7  2013     1     1     1549           1445        64     1912           1656
+##  8  2013     1     1     1558           1359       119     1718           1515
+##  9  2013     1     1     1732           1630        62     2028           1825
+## 10  2013     1     1     1803           1620       103     2008           1750
+## # … with 10,190 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Flew to Houston (IAH or HOU)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(flights, dest %in% c(&amp;#39;IAH&amp;#39;, &amp;#39;HOU&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9,313 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1      517            515         2      830            819
+##  2  2013     1     1      533            529         4      850            830
+##  3  2013     1     1      623            627        -4      933            932
+##  4  2013     1     1      728            732        -4     1041           1038
+##  5  2013     1     1      739            739         0     1104           1038
+##  6  2013     1     1      908            908         0     1228           1219
+##  7  2013     1     1     1028           1026         2     1350           1339
+##  8  2013     1     1     1044           1045        -1     1352           1351
+##  9  2013     1     1     1114            900       134     1447           1222
+## 10  2013     1     1     1205           1200         5     1503           1505
+## # … with 9,303 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Were operated by United, American, or Delta&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;foo &amp;lt;- read_csv(&amp;quot;~/Downloads/L_UNIQUE_CARRIERS.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Parsed with column specification:
+## cols(
+##   Code = col_character(),
+##   Description = col_character()
+## )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;selected_airlines &amp;lt;- c(&amp;quot;UA&amp;quot;, &amp;quot;AA&amp;quot;, &amp;quot;DL&amp;quot;)
+filter(flights, carrier %in% selected_airlines)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 139,504 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1      517            515         2      830            819
+##  2  2013     1     1      533            529         4      850            830
+##  3  2013     1     1      542            540         2      923            850
+##  4  2013     1     1      554            600        -6      812            837
+##  5  2013     1     1      554            558        -4      740            728
+##  6  2013     1     1      558            600        -2      753            745
+##  7  2013     1     1      558            600        -2      924            917
+##  8  2013     1     1      558            600        -2      923            937
+##  9  2013     1     1      559            600        -1      941            910
+## 10  2013     1     1      559            600        -1      854            902
+## # … with 139,494 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Departed in summer (July, August, and September)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summer_months &amp;lt;- seq(7,9)
+filter(flights, month %in% summer_months)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 86,326 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     7     1        1           2029       212      236           2359
+##  2  2013     7     1        2           2359         3      344            344
+##  3  2013     7     1       29           2245       104      151              1
+##  4  2013     7     1       43           2130       193      322             14
+##  5  2013     7     1       44           2150       174      300            100
+##  6  2013     7     1       46           2051       235      304           2358
+##  7  2013     7     1       48           2001       287      308           2305
+##  8  2013     7     1       58           2155       183      335             43
+##  9  2013     7     1      100           2146       194      327             30
+## 10  2013     7     1      100           2245       135      337            135
+## # … with 86,316 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Arrived more than two hours late, but didn’t leave late&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(flights, arr_delay &amp;gt; 120, dep_delay &amp;lt;= 0)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 29 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1    27     1419           1420        -1     1754           1550
+##  2  2013    10     7     1350           1350         0     1736           1526
+##  3  2013    10     7     1357           1359        -2     1858           1654
+##  4  2013    10    16      657            700        -3     1258           1056
+##  5  2013    11     1      658            700        -2     1329           1015
+##  6  2013     3    18     1844           1847        -3       39           2219
+##  7  2013     4    17     1635           1640        -5     2049           1845
+##  8  2013     4    18      558            600        -2     1149            850
+##  9  2013     4    18      655            700        -5     1213            950
+## 10  2013     5    22     1827           1830        -3     2217           2010
+## # … with 19 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;, carrier &amp;lt;chr&amp;gt;,
+## #   flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;, air_time &amp;lt;dbl&amp;gt;,
+## #   distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Were delayed by at least an hour, but made up over 30 minutes in flight&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(flights, dep_delay &amp;gt;= 60, arr_delay &amp;lt;= 30)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 239 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     3     1850           1745        65     2148           2120
+##  2  2013     1     3     1950           1845        65     2228           2227
+##  3  2013     1     3     2015           1915        60     2135           2111
+##  4  2013     1     6     1019            900        79     1558           1530
+##  5  2013     1     7     1543           1430        73     1758           1735
+##  6  2013     1    11     1020            920        60     1311           1245
+##  7  2013     1    12     1706           1600        66     1949           1927
+##  8  2013     1    12     1953           1845        68     2154           2137
+##  9  2013     1    19     1456           1355        61     1636           1615
+## 10  2013     1    21     1531           1430        61     1843           1815
+## # … with 229 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;, carrier &amp;lt;chr&amp;gt;,
+## #   flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;, air_time &amp;lt;dbl&amp;gt;,
+## #   distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;7&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Departed between midnight and 6am (inclusive)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(flights, dep_time &amp;lt;= 600 | dep_time == 2400)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9,373 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1      517            515         2      830            819
+##  2  2013     1     1      533            529         4      850            830
+##  3  2013     1     1      542            540         2      923            850
+##  4  2013     1     1      544            545        -1     1004           1022
+##  5  2013     1     1      554            600        -6      812            837
+##  6  2013     1     1      554            558        -4      740            728
+##  7  2013     1     1      555            600        -5      913            854
+##  8  2013     1     1      557            600        -3      709            723
+##  9  2013     1     1      557            600        -3      838            846
+## 10  2013     1     1      558            600        -2      753            745
+## # … with 9,363 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Another useful dplyr filtering helper is between(). What does it do? Can you use it to simplify the code needed to answer the previous challenges?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;shortcut to between two values, inclusive:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# anything from half and hour to one hour late
+filter(flights,  between(arr_delay, 30, 60))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 25,013 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1      542            540         2      923            850
+##  2  2013     1     1      559            600        -1      941            910
+##  3  2013     1     1      608            600         8      807            735
+##  4  2013     1     1      635            635         0     1028            940
+##  5  2013     1     1      702            700         2     1058           1014
+##  6  2013     1     1      724            730        -6     1111           1040
+##  7  2013     1     1      732            645        47     1011            941
+##  8  2013     1     1      749            710        39      939            850
+##  9  2013     1     1      754            755        -1     1103           1030
+## 10  2013     1     1      826            715        71     1136           1045
+## # … with 25,003 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;How many flights have a missing dep_time? What other variables are missing? What might these rows represent?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;There are 8255 flights with missing departure times. These could be flights that were cancelled&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-arrange-rows&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;5.3.1 Exercises (Arrange Rows)&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;How could you use arrange() to sort all missing values to the start? (Hint: use is.na()).&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;% 
+  filter(is.na(dep_time)) %&amp;gt;% 
+  arrange(dep_time)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 8,255 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1       NA           1630        NA       NA           1815
+##  2  2013     1     1       NA           1935        NA       NA           2240
+##  3  2013     1     1       NA           1500        NA       NA           1825
+##  4  2013     1     1       NA            600        NA       NA            901
+##  5  2013     1     2       NA           1540        NA       NA           1747
+##  6  2013     1     2       NA           1620        NA       NA           1746
+##  7  2013     1     2       NA           1355        NA       NA           1459
+##  8  2013     1     2       NA           1420        NA       NA           1644
+##  9  2013     1     2       NA           1321        NA       NA           1536
+## 10  2013     1     2       NA           1545        NA       NA           1910
+## # … with 8,245 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Sort flights to find the most delayed flights. Find the flights that left earliest.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# most delayed flights
+flights %&amp;gt;% 
+  arrange(desc(dep_delay))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     9      641            900      1301     1242           1530
+##  2  2013     6    15     1432           1935      1137     1607           2120
+##  3  2013     1    10     1121           1635      1126     1239           1810
+##  4  2013     9    20     1139           1845      1014     1457           2210
+##  5  2013     7    22      845           1600      1005     1044           1815
+##  6  2013     4    10     1100           1900       960     1342           2211
+##  7  2013     3    17     2321            810       911      135           1020
+##  8  2013     6    27      959           1900       899     1236           2226
+##  9  2013     7    22     2257            759       898      121           1026
+## 10  2013    12     5      756           1700       896     1058           2020
+## # … with 336,766 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# flights that left earliest
+flights %&amp;gt;% 
+  arrange(dep_delay)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013    12     7     2040           2123       -43       40           2352
+##  2  2013     2     3     2022           2055       -33     2240           2338
+##  3  2013    11    10     1408           1440       -32     1549           1559
+##  4  2013     1    11     1900           1930       -30     2233           2243
+##  5  2013     1    29     1703           1730       -27     1947           1957
+##  6  2013     8     9      729            755       -26     1002            955
+##  7  2013    10    23     1907           1932       -25     2143           2143
+##  8  2013     3    30     2030           2055       -25     2213           2250
+##  9  2013     3     2     1431           1455       -24     1601           1631
+## 10  2013     5     5      934            958       -24     1225           1309
+## # … with 336,766 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Sort flights to find the fastest (highest speed) flights.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#  I guess this  means by air time
+flights %&amp;gt;% 
+  arrange(air_time)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1    16     1355           1315        40     1442           1411
+##  2  2013     4    13      537            527        10      622            628
+##  3  2013    12     6      922            851        31     1021            954
+##  4  2013     2     3     2153           2129        24     2247           2224
+##  5  2013     2     5     1303           1315       -12     1342           1411
+##  6  2013     2    12     2123           2130        -7     2211           2225
+##  7  2013     3     2     1450           1500       -10     1547           1608
+##  8  2013     3     8     2026           1935        51     2131           2056
+##  9  2013     3    18     1456           1329        87     1533           1426
+## 10  2013     3    19     2226           2145        41     2305           2246
+## # … with 336,766 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Which flights travelled the farthest? Which travelled the shortest?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# shortest
+flights %&amp;gt;% 
+  arrange(distance) %&amp;gt;% head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 19
+##    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+## 1  2013     7    27       NA            106        NA       NA            245
+## 2  2013     1     3     2127           2129        -2     2222           2224
+## 3  2013     1     4     1240           1200        40     1333           1306
+## 4  2013     1     4     1829           1615       134     1937           1721
+## 5  2013     1     4     2128           2129        -1     2218           2224
+## 6  2013     1     5     1155           1200        -5     1241           1306
+## # … with 11 more variables: arr_delay &amp;lt;dbl&amp;gt;, carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;,
+## #   tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;, air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;,
+## #   hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;selecting-columns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Selecting Columns&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Colon to get all columns inclusive is helpful &lt;code&gt;select(flights, carrier:origin)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;renaming-columns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Renaming columns&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Nice version of python’s &lt;code&gt;.rename(columns={old_col_name: new_col_name})&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;% 
+  rename(testing = dep_delay)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time testing arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1      517            515       2      830            819
+##  2  2013     1     1      533            529       4      850            830
+##  3  2013     1     1      542            540       2      923            850
+##  4  2013     1     1      544            545      -1     1004           1022
+##  5  2013     1     1      554            600      -6      812            837
+##  6  2013     1     1      554            558      -4      740            728
+##  7  2013     1     1      555            600      -5      913            854
+##  8  2013     1     1      557            600      -3      709            723
+##  9  2013     1     1      557            600      -3      838            846
+## 10  2013     1     1      558            600      -2      753            745
+## # … with 336,766 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I had this switched around in my head, but makes sense&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using &lt;code&gt;everything()&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;% 
+  select(dep_time, dep_delay, everything())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 19
+##    dep_time dep_delay  year month   day sched_dep_time arr_time sched_arr_time
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1      517         2  2013     1     1            515      830            819
+##  2      533         4  2013     1     1            529      850            830
+##  3      542         2  2013     1     1            540      923            850
+##  4      544        -1  2013     1     1            545     1004           1022
+##  5      554        -6  2013     1     1            600      812            837
+##  6      554        -4  2013     1     1            558      740            728
+##  7      555        -5  2013     1     1            600      913            854
+##  8      557        -3  2013     1     1            600      709            723
+##  9      557        -3  2013     1     1            600      838            846
+## 10      558        -2  2013     1     1            600      753            745
+## # … with 336,766 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;I’m a big fan of using &lt;code&gt;everything&lt;/code&gt; to reorder stuff&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;% 
+  select(contains(&amp;quot;time&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 6
+##    dep_time sched_dep_time arr_time sched_arr_time air_time time_hour          
+##       &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dttm&amp;gt;             
+##  1      517            515      830            819      227 2013-01-01 05:00:00
+##  2      533            529      850            830      227 2013-01-01 05:00:00
+##  3      542            540      923            850      160 2013-01-01 05:00:00
+##  4      544            545     1004           1022      183 2013-01-01 05:00:00
+##  5      554            600      812            837      116 2013-01-01 06:00:00
+##  6      554            558      740            728      150 2013-01-01 05:00:00
+##  7      555            600      913            854      158 2013-01-01 06:00:00
+##  8      557            600      709            723       53 2013-01-01 06:00:00
+##  9      557            600      838            846      140 2013-01-01 06:00:00
+## 10      558            600      753            745      138 2013-01-01 06:00:00
+## # … with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;5.4.1 Exercises&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Brainstorm as many ways as possible to select dep_time, dep_delay, arr_time, and arr_delay from flights.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;could specify them all in a &lt;code&gt;select&lt;/code&gt; call&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;% 
+  select(contains(&amp;quot;delay&amp;quot;), arr_time, dep_time)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_delay arr_delay arr_time dep_time
+##        &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;
+##  1         2        11      830      517
+##  2         4        20      850      533
+##  3         2        33      923      542
+##  4        -1       -18     1004      544
+##  5        -6       -25      812      554
+##  6        -4        12      740      554
+##  7        -5        19      913      555
+##  8        -3       -14      709      557
+##  9        -3        -8      838      557
+## 10        -2         8      753      558
+## # … with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What happens if you include the name of a variable multiple times in a select() call?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Good question!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;% 
+  select(arr_time, arr_time)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 1
+##    arr_time
+##       &amp;lt;int&amp;gt;
+##  1      830
+##  2      850
+##  3      923
+##  4     1004
+##  5      812
+##  6      740
+##  7      913
+##  8      709
+##  9      838
+## 10      753
+## # … with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;multiple selections become just one selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;What does the one_of() function do?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;allows you to select not knowing columns and not throw errors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;% 
+  select(one_of(c(&amp;#39;year&amp;#39;, &amp;#39;foo&amp;#39;, &amp;#39;delay&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Unknown columns: `foo`, `delay`&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 1
+##     year
+##    &amp;lt;int&amp;gt;
+##  1  2013
+##  2  2013
+##  3  2013
+##  4  2013
+##  5  2013
+##  6  2013
+##  7  2013
+##  8  2013
+##  9  2013
+## 10  2013
+## # … with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;em&gt;Does the result of running the following code surprise you? How do the select helpers deal with case by default? How can you change that default?&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, contains(&amp;quot;TIME&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 6
+##    dep_time sched_dep_time arr_time sched_arr_time air_time time_hour          
+##       &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dttm&amp;gt;             
+##  1      517            515      830            819      227 2013-01-01 05:00:00
+##  2      533            529      850            830      227 2013-01-01 05:00:00
+##  3      542            540      923            850      160 2013-01-01 05:00:00
+##  4      544            545     1004           1022      183 2013-01-01 05:00:00
+##  5      554            600      812            837      116 2013-01-01 06:00:00
+##  6      554            558      740            728      150 2013-01-01 05:00:00
+##  7      555            600      913            854      158 2013-01-01 06:00:00
+##  8      557            600      709            723       53 2013-01-01 06:00:00
+##  9      557            600      838            846      140 2013-01-01 06:00:00
+## 10      558            600      753            745      138 2013-01-01 06:00:00
+## # … with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;contains has a field called &lt;code&gt;ignore.case&lt;/code&gt; which defaults to TRUE. Can set to FALSE to make case matter&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;image-credit&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Image Credit&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://thenounproject.com/search/?q=data&amp;amp;creator=4129988&amp;amp;i=2906687&#34;&gt;Hard Drive&lt;/a&gt; by Zach Bogart from &lt;a href=&#34;https://thenounproject.com/&#34;&gt;the Noun Project&lt;/a&gt;&lt;/p&gt;
