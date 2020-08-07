@@ -36,6 +36,10 @@ I would often have a setup of rows and columns, but want to filter out some part
 - **Command-click-and-drag your nice variable to preserve desired aggregations**
 - Simple but saves a lot of hassle and makes it more fluid
 
+### 2020-08-Update: Tableau Can Do This!
+
+You can select a given variable and change the default aggregation to something other than `SUM`! Will try to take advantage, although I will probably only change it after dragging a new variable over with the wrong aggregation several times over.
+
 ## Click and Hold to Pan Maps
 
 I found maps annoying to navigate, till  I learned you can do it all from the mouse. I would go back and forth clicking tools to get the placement right, usually between pan and zoom. Instead of toggling, you can click-and-hold and it will allow you to pan around, and zoom with scrolling. 
