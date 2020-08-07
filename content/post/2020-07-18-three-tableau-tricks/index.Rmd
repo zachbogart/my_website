@@ -38,7 +38,7 @@ I would often have a setup of rows and columns, but want to filter out some part
 
 ### 2020-08-Update: Tableau Can Do This!
 
-You can select a given variable and change the default aggregation to something other than `SUM`! Will try to take advantage, although I will probably only change it after dragging a new variable over with the wrong aggregation several times over.
+You can select a given variable and change the default aggregation to something other than `SUM`! Will try to take advantage, although I will probably only change it after dragging a new variable over with the wrong aggregation several times over!
 
 ## Click and Hold to Pan Maps
 
