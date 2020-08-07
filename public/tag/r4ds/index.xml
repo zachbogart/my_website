@@ -905,6 +905,9 @@ flights %&amp;gt;%
 &lt;ul&gt;
 &lt;li&gt;contains has a field called &lt;code&gt;ignore.case&lt;/code&gt; which defaults to TRUE. Can set to FALSE to make case matter&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;adding-new-variables-with-mutate&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;5.5 Adding new variables with mutate&lt;/h2&gt;
 &lt;div id=&#34;image-credit&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Image Credit&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://thenounproject.com/search/?q=data&amp;amp;creator=4129988&amp;amp;i=2906687&#34;&gt;Hard Drive&lt;/a&gt; by Zach Bogart from &lt;a href=&#34;https://thenounproject.com/&#34;&gt;the Noun Project&lt;/a&gt;&lt;/p&gt;

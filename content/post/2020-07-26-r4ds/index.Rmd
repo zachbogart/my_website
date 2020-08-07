@@ -594,5 +594,9 @@ select(flights, contains("TIME"))
 ```
 - contains has a field called `ignore.case` which defaults to TRUE. Can set to FALSE to make case matter
 
+## 5.5 Adding new variables with mutate
+
+
+
 #### Image Credit
 [Hard Drive](https://thenounproject.com/search/?q=data&creator=4129988&i=2906687) by Zach Bogart from [the Noun Project](https://thenounproject.com/) 
