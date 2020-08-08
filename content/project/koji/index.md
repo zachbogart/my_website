@@ -20,6 +20,9 @@ links:
   icon_pack: fas
   name: Exploration and Drafting Notes
   url: koji-font-notes.pdf
+  
+aliases:
+- /koji
 ---
 
 I've been sketching out font ideas in the margins of college notebooks for years, so I thought it might be time to formalize one of them. The result is Koji, a typeface based off of a simple jig I would draw in my workbooks during class.
