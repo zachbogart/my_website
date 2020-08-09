@@ -7,6 +7,8 @@
 - parameters and config stuff can be found in `config` and `config.toml`
 
 ## Making a post?
+
+### In RMarkdown
 1. Navigate to `content/post`
 1. Make a new folder, titled with `YYYY-MM-DD-<quickblurb>`
 2. Add new file, `index.Rmd`
@@ -17,10 +19,10 @@
 title: "TODO_post_title"  
 date: YYYY-MM-DD  
 categories:  
-  - TODO_main_grouping  
+  - TODO_main_grouping_Capitalize
   - TODO_code_language_used_for_example  
 tags:  
-  - TODO_related_to_post_tags  
+  - TODO_related_to_post_tags_lowercase_only 
 slug: "TODO_url_path_name_multi_words_use_hyphens"  
 links:
 - icon: mug-hot
@@ -47,9 +49,10 @@ links:
   url: 
 ```
 
-## Working in Python?
+### Working in Python?
 - The above info applies
 1. Create `.ipynb` file to work out of
+  - Name it something like `YYYY-MM-DD-<quickblurb>`
 2. Make first cell markdown with front matter (as above). Make sure to include slug.
 3. When ready to update/publish, run this command:
 
@@ -57,7 +60,7 @@ links:
 jupyter nbconvert <notebook_name> --to markdown --output index.md
 ```
 
-- it will generate the markdown file and any images will go to a `index_files` folder
+- it will generate the markdown file as `index.md` and any images will go to a `index_files` folder. Will then be viewable in Viewer when serving the site  preview.
 
 ## Adding A Noun as an Image
 1. Go to [your noun page on Noun Project](https://thenounproject.com/zachbogart/)
@@ -65,10 +68,11 @@ jupyter nbconvert <notebook_name> --to markdown --output index.md
   - Save to folder as `featured.png` to make it the main image
   - Copy the URL icon for later to add to post
 3. Open the PNG in Preview and remove the attribution
-  - Crop it out 
+  - Crop it out (okay since going to resize the image to 100 px by 100 px, see below)
+  - Can hold shift to ensure a square crop
 4. Resize PNG to be small
   - `Tools > Adjust Size...`
-  - Make it around 100 px by 100 px
+  - Make it 100 px by 100 px
 5. Add image credit at end of post:
 
 ```
