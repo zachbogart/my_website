@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TODO_main_grouping | Zach Bogart</title>
+    <link>/category/todo_main_grouping/</link>
+      <atom:link href="/category/todo_main_grouping/index.xml" rel="self" type="application/rss+xml" />
+    <description>TODO_main_grouping</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright>
+    <image>
+      <url>/img/happy_nerd02.png</url>
+      <title>TODO_main_grouping</title>
+      <link>/category/todo_main_grouping/</link>
+    </image>
+    
+    <item>
+      <title>TODO_post_title</title>
+      <link>/post/todo_url_path_name_multi_words_use_hyphens/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/todo_url_path_name_multi_words_use_hyphens/</guid>
+      <description>
+
+
+&lt;div id=&#34;general-setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;General Setup&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
