@@ -1,14 +1,14 @@
 ---
-title: "Learning R: Plotting Data in Polar Coordinates"  
-date: 2020-08-11  
+title: "I love everything() from the tidyverse"  
+date: 2020-08-20
 categories:  
   - R
-  - learning
 tags:  
-  - temperature
-  - plotting
-  - graph
-slug: "learning-r-polar-coords"  
+  - wrangling
+  - tidyverse
+  - python
+  - everything
+slug: "everything"  
 image:
   preview_only: FALSE
 links:
@@ -25,22 +25,54 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+It is probably true that I love everything from the tidyverse, full stop, but in this case parens matter. Reordering columns happens a bunch and it can be a pain, but `everything()` allows for easy manipulation of columns in a dataframe. Let's give it a go.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## How I'd do it in Python
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Say I have some data on rainfall and I want to add a column for the decade in which the reading was taken.
 
-```{r cars}
-summary(cars)
+```{r include=FALSE}
+library(reticulate)
+use_python("/Users/bogart/Documents/Zach/coding/venv_fruitbasket/venv_lychee/bin/python")
 ```
 
-## Including Plots
+```{python}
+import pandas as pd
+pd.set_option("display.max_columns", 20)
 
-You can also embed plots, for example:
+df = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-07/rainfall.csv')
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+df["decade"] = df.year // 10 * 10
+
+df.head()
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+If I create a new column, it is tacked onto the end of the dataframe, but I'd prefer the `decade` and `year` columns to be closer together. In python, I find this to be kind of a pain since you need to know the column index and you have to do conversions and junk ([insert](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.insert.html) is also an option, but you have to drop duplicate columns...it's a whole deal):
+
+```{python}
+cols = list(df.columns)
+# manual ordering of list...ewww
+cols = cols[:3] + [cols[-1]] + cols[3:-1]
+
+df[cols].head()
+```
+
+## How Tidyverse does it
+
+I find it much easier to manipulate the column names. In comes `everything()` to the rescue. Combining with `select()`, you can get pretty fancy.
+
+```{r message = FALSE}
+library(tidyverse)
+
+rainfall <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-07/rainfall.csv') %>% 
+  mutate(decade = year %/% 10 * 10)
+```
+
+```{r}
+rainfall %>% 
+  select(station_code:year, decade, everything())
+```
+
+The reason I love `everything()` is you don't have to think about it. Get the thing in place then shove the rest on and it'll deal with it nicely. Also learned in going through this that [`last_col()`](https://www.rdocumentation.org/packages/tidyselect/versions/1.0.0/topics/select_helpers) is also available to help out
+
+
