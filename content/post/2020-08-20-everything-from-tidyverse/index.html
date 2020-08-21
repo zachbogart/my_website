@@ -26,7 +26,7 @@ editor_options:
 <p>It is probably true that I love everything from the tidyverse, full stop, but in this case parens matter. Reordering columns happens a bunch and it can be a pain, but <code>everything()</code> allows for easy manipulation of columns in a dataframe. Let’s give it a go.</p>
 <div id="how-id-do-it-in-python" class="section level2">
 <h2>How I’d do it in Python</h2>
-<p>Say I have some data on rainfall and I want to add a column for the decade in which the reading was taken.</p>
+<p>Say I have some data on rainfall and I want to add a column for the decade in which the reading was taken (Source: <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-07/readme.md">tidytuesday</a>).</p>
 <pre class="python"><code>import pandas as pd
 pd.set_option(&quot;display.max_columns&quot;, 20)
 
@@ -75,7 +75,8 @@ df[cols].head()</code></pre>
 
 rainfall &lt;- read_csv(&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-07/rainfall.csv&#39;) %&gt;% 
   mutate(decade = year %/% 10 * 10)</code></pre>
-<pre class="r"><code>rainfall %&gt;% 
+<pre class="r"><code># drop it right into place
+rainfall %&gt;% 
   select(station_code:year, decade, everything())</code></pre>
 <pre><code>## # A tibble: 179,273 x 12
 ##    station_code city_name  year decade month day   rainfall period quality   lat
@@ -92,5 +93,9 @@ rainfall &lt;- read_csv(&#39;https://raw.githubusercontent.com/rfordatascience/t
 ## 10 009151       Perth      1967   1960 01    10          NA     NA &lt;NA&gt;    -32.0
 ## # … with 179,263 more rows, and 2 more variables: long &lt;dbl&gt;,
 ## #   station_name &lt;chr&gt;</code></pre>
-<p>The reason I love <code>everything()</code> is you don’t have to think about it. Get the thing in place then shove the rest on and it’ll deal with it nicely. Also learned in going through this that <a href="https://www.rdocumentation.org/packages/tidyselect/versions/1.0.0/topics/select_helpers"><code>last_col()</code></a> is also available to help out</p>
+<p>The reason I love <code>everything()</code> is you don’t have to think about it. Get the thing in place then shove the rest on and it’ll deal with it nicely. Also learned after writing this that <a href="https://www.rdocumentation.org/packages/tidyselect/versions/1.0.0/topics/select_helpers"><code>last_col()</code></a> is also available to help out.</p>
+<div id="image-credit" class="section level4">
+<h4>Image Credit</h4>
+<p><a href="https://thenounproject.com/search/?creator=4129988&amp;q=love&amp;i=1894377">Heart</a> by Zach Bogart from <a href="https://thenounproject.com/">the Noun Project</a></p>
+</div>
 </div>

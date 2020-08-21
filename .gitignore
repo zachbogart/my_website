@@ -3,5 +3,5 @@
 .RData
 .Ruserdata
 .idea/
-.DS_Store
+**/.DS_Store
 public/
