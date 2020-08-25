@@ -1,0 +1,90 @@
+---
+title: "Tidytuesday #1: Australia Fires"  
+date: 2020-08-25
+categories:  
+  - R
+tags:  
+  - tidytuesday
+slug: "tt-aus-fires"  
+image:
+  preview_only: FALSE
+links:
+- icon: mug-hot
+  icon_pack: fas
+  name: Give a Coffee
+  url: https://ko-fi.com/zachbogart
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+library(tidyverse)
+library(tidytuesdayR)
+
+theme_set(theme_light())
+
+tuesdata <- tidytuesdayR::tt_load('2020-01-07') 
+```
+
+## Look at Temperature Data
+
+```{r}
+temperature <- tuesdata$temperature
+
+# how many cities are there in the data?
+temperature %>% 
+  count(city_name)
+```
+
+```{r}
+# some prep
+temperature <- temperature %>% 
+  mutate(year = as.numeric(format(date, "%Y",)),
+         month = as.numeric(format(date, "%m")))
+```
+
+```{r}
+# look at max and min temps for each city over time
+
+temperature %>% 
+  group_by(city_name, year, temp_type) %>% 
+  summarise(avg_temp = mean(temperature, na.rm = TRUE)) %>% 
+  ggplot(aes(year, avg_temp)) +
+    geom_line(aes(linetype = temp_type, color = temp_type)) +
+    facet_wrap(~ city_name)
+```
+
+```{r}
+# max temperatures for each region over time
+temperature %>% 
+  filter(temp_type == "max") %>% 
+  group_by(city_name, year) %>% 
+  summarise(avg_monthly_max_temp = mean(temperature, na.rm = TRUE)) %>% 
+  
+  ggplot(aes(avg_monthly_max_temp, color = city_name)) +
+    geom_freqpoly(bins = 20)
+```
+
+```{r}
+# then and now
+temperature %>% 
+  filter(year %in% c(1919, 2019)) %>% 
+  group_by(city_name, year, temp_type) %>% 
+  summarise(avg_temp = mean(temperature, na.rm = TRUE)) %>% 
+  
+  ggplot(aes(year, avg_temp, color = city_name)) +
+    geom_point(aes(shape = temp_type)) +
+    geom_line(aes(group = interaction(temp_type, city_name), linetype = temp_type))
+```
+
+
+## Learning
+
+- without as.numeric, years get crowded
