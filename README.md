@@ -57,10 +57,12 @@ links:
 3. When ready to update/publish, run this command:
 
 ```
-jupyter nbconvert <notebook_name> --to markdown --output index.md
+jupyter nbconvert <notebook_name> --to markdown --output index.md --TagRemovePreprocessor.remove_cell_tags='{"hide"}'
 ```
 
 - it will generate the markdown file as `index.md` and any images will go to a `index_files` folder. Will then be viewable in Viewer when serving the site  preview.
+- If you add `hide` as a tag for a given cell (`View > Cell Toolbar > Tags`), it will not be included in the output
+  - useful for omitting imports and other such notes
 
 ## Adding A Noun as an Image
 1. Go to [your noun page on Noun Project](https://thenounproject.com/zachbogart/)

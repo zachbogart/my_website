@@ -25,11 +25,6 @@ Say I have some  census data and  I want to group it together to get the sum of 
 
 
 ```python
-import pandas as pd
-```
-
-
-```python
 df = pd.read_csv("/Users/bogart/Downloads/7001_312628_bundle_archive/acs2017_county_data.csv")
 df =  df[['State', 'County', 'TotalPop']]
 ```
