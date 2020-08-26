@@ -3,6 +3,7 @@ title: "I love everything() from the tidyverse"
 date: 2020-08-20
 categories:  
   - R
+  - Python
 tags:  
   - wrangling
   - tidyverse
