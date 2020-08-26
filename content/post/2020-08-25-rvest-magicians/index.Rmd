@@ -1,0 +1,32 @@
+---
+title: "Exploring rvest Wizardry"  
+date: 2020-08-25
+categories:  
+  - R
+tags:  
+  - rvest
+slug: "rvest-wizardry"  
+image:
+  preview_only: FALSE
+links:
+- icon: mug-hot
+  icon_pack: fas
+  name: Give a Coffee
+  url: https://ko-fi.com/zachbogart
+output: html_document
+editor_options: 
+  chunk_output_type: console
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+TODO Starting Blurb
+
+How I usually feel putting something together: 
+<div style="width:100%;height:0;padding-bottom:78%;position:relative;"><iframe src="https://giphy.com/embed/ieREaX3VTHsqc" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/milhouse-ieREaX3VTHsqc">via GIPHY</a></p>
+
+#### Image Credit
+[soybean](https://thenounproject.com/zachbogart/collection/field-crops/?i=2700664) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
