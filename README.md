@@ -1,5 +1,13 @@
 # Personal Website
 
+This is my personal website, made with Hugo, deployed with Netlify.
+
+# For Visitors
+
+Check out the [real thing](https://zachbogart.com/)!
+
+# For Future Me, who's confuzzled
+
 - [Hugo Academic Docs](https://sourcethemes.com/academic/docs/)
 
 ## Where is everything?
