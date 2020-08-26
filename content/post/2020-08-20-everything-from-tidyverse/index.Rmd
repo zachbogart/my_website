@@ -3,6 +3,7 @@ title: "I love everything() from the tidyverse"
 date: 2020-08-20
 categories:  
   - R
+  - Python
 tags:  
   - wrangling
   - tidyverse
@@ -16,6 +17,10 @@ links:
   icon_pack: fas
   name: Give a Coffee
   url: https://ko-fi.com/zachbogart
+- icon: tshirt
+  icon_pack: fas
+  name: I need a hex heart tee in my life
+  url: https://teespring.com/cool-hex-heart?pid=2&cid=578
 output: html_document
 editor_options: 
   chunk_output_type: console
