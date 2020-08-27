@@ -23,10 +23,204 @@ draft: true
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-TODO Starting Blurb
+I love *[The Magicians](https://en.wikipedia.org/wiki/The_Magicians_(American_TV_series))*. I was in the midst of rewatching this wonderful show recently and as I did, I felt a feeling. This feeling often crops up when rewatching a series or watching a show with someone who hasn't seen it before: it takes a few episodes to reach it's stride. I knew what was going to happen and I latched on to my favorite bits, but it's a different experience on first blush. I remember being quite confused when first watching the series, only to really get into it a few episodes in (maybe it was a whole season?).
+
+This made me curious what other people thought about the show, episode-by-episode. This curiosity took me down a pleasant little rabbit hole, discovering how `rvest` can make easy work of web scraping. Let's get into it!
+
+## Unleash My Inner (rvest) Magician
+
+My basic goal was to grab the IMDb ratings of *The Magicians* for each episode and plot them over time. This turned into a little exercise in how to use `[rvest](https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/)` to get the data. Here's what I came up with:
+
+```{r message=FALSE}
+library(tidyverse) # cause duh
+library(rvest) # for web scraping
+library(glue) # for that warm and fuzzy fstring feeling (python)
+
+theme_set(theme_light()) # for cleaner plots (David Robinson screencasts are rubbing off)
+library(RColorBrewer) # for a nicer set of colors
+```
+
+```{r cache = TRUE}
+# list of seasons
+seasons = seq(1,5)
+
+# empty list to store dataframes
+df_list = list()
+
+# lez go!
+for (season in seasons) {
+  
+  # define url, using glue for combining strings
+  base_url <- "https://www.imdb.com/title/tt4254242/episodes?season="
+  season_url <- glue("{base_url}{season}")
+  
+  # go get the html
+  html <- read_html(season_url)
+  
+  # isolate the desired data
+  title <- html_nodes(html, "#episodes_content strong a") %>% 
+    html_text(trim = TRUE)
+  rating <- html_nodes(html, ".ipl-rating-star.small .ipl-rating-star__rating") %>% 
+    html_text(trim = TRUE) %>% 
+    as.numeric()
+  votes <- html_nodes(html, ".ipl-rating-star__total-votes") %>% 
+    html_text(trim = TRUE) %>% 
+    parse_number() # this saved the day! super helpful readr function
+  air_date <- html_nodes(html, ".airdate") %>% 
+    html_text(trim = TRUE) %>% 
+    parse_date("%d %b. %Y")
+  
+  # make a tibble for each season 
+  df <- tibble(air_date, title, rating, votes) %>%
+    mutate(season = season,
+           episode = seq(1, nrow(.))) %>% 
+    select(season:episode, everything())
+  
+  # add to list
+  df_list[[season]] <- df
+}
+
+# smoosh the list into one tibble
+magicians <- bind_rows(df_list)
+
+```
+
+## Try Some Spells
+
+The results show the average rating of a given episode and how many IMDb users that rating is based on. Episodes of *The Magicians* seem very well-received overall, with an average episode rating of `r round(mean(magicians$rating), 2)` across all seasons. Split by season, the average episode rating has a slight increase in the third season.
+
+```{r message=FALSE}
+magicians %>% 
+  group_by(season) %>% 
+  summarise(avg_rating = mean(rating))
+```
+
+Plotting the episodes over time, we can see some interesting results. Going off of ratings, the show seems to "hit it's stride" in the third season, where it had its highest-rated episode. The ratings took the biggest hit with the season four finale, which is quite an eventful one for the show (also interesting how the number of ratings for that episode is bigger than the others). Even so, the worst-rated episode only dips into the low sevens: quite a good run. 
+
+```{r message=FALSE}
+magicians_plot <- magicians %>% 
+  mutate(season = factor(season)) %>% 
+  ggplot(aes(air_date, rating)) +
+    geom_smooth(color = "#dddddd", se = FALSE, linetype = "dashed") +
+    geom_line(aes(group = season, color = season), alpha = 0.4) +
+    geom_point(aes(color = season, size = votes), alpha = 0.4) +
+    scale_color_brewer(palette = "Dark2") +
+    labs(x = "",
+         y = "IMDb Rating",
+         size = "# IMDb Users",
+         color = "Season",
+         caption = "Source: IMBb")
+
+magicians_plot +
+  labs(title = "The Source of Magic",
+       subtitle = "Weighted Average IMDb Ratings for 'The Magicians'")
+```
+
+Here's a look at the progression faceted by season. The progression between seasons is easier to see without the spaces where new episodes weren't airing. The general upward trend is quite steady for the first three seasons, peaking in the 9's then dipping down to mid to low 8's for the last two seasons (excluding the season four finale). Also can see a high volume of users rating episodes for the earlier seasons, with the final season having the fewest users.
+
+```{r message=FALSE}
+magicians_plot + 
+  facet_wrap(~ season, scales = "free_x", nrow = 2) +
+  labs(title = "No Better to Be Safe Than Sorry",
+       subtitle = "Weighted Average IMDb Ratings for 'The Magicians' by Season")
+```
+
+## Advanced Spellcasting
+
+```{r}
+grab_imdb_ratings <- function(imdb_code, seasons) {
+    # Grabbing Rating Data for a show on IMDb
+    # 
+    # - imdb_code: url code for a given show
+    # - seasons: list of desired seasons
+  
+  # empty list to store dataframes
+  df_list = list()
+  
+  # lez go!
+  for (season in seasons) {
+    
+    # define url, using glue for combining strings
+    base_url <- "https://www.imdb.com/title/"
+    season_url <- glue("{base_url}{imdb_code}/episodes?season={season}")
+    
+    # go get the html
+    html <- read_html(season_url)
+    
+    # isolate the desired data
+    title <- html_nodes(html, "#episodes_content strong a") %>% 
+      html_text(trim = TRUE)
+    rating <- html_nodes(html, ".ipl-rating-star.small .ipl-rating-star__rating") %>% 
+      html_text(trim = TRUE) %>% 
+      as.numeric()
+    votes <- html_nodes(html, ".ipl-rating-star__total-votes") %>% 
+      html_text(trim = TRUE) %>% 
+      parse_number() # this saved the day! super helpful readr function
+    air_date <- html_nodes(html, ".airdate") %>% 
+      html_text(trim = TRUE) %>% 
+      str_remove("[.]") %>%  # remove periods (May doesn't have a period like the rest: Apr., Oct.)
+      parse_date("%d %b %Y")
+    
+    # make a tibble for each season 
+    df <- tibble(air_date, title, rating, votes) %>%
+      mutate(season = season,
+             episode = seq(1, nrow(.))) %>% 
+      select(season:episode, everything())
+    
+    # add to list
+    df_list[[season]] <- df
+  }
+  
+  # smoosh the list into one tibble
+  show_run <- bind_rows(df_list)
+  
+  return(show_run)
+  
+}
+```
+
+```{r}
+simpsons <- grab_imdb_ratings("tt0096697", c(3,6,12))
+```
+
+
+## Fun Refs
 
 How I usually feel putting something together: 
 <div style="width:100%;height:0;padding-bottom:78%;position:relative;"><iframe src="https://giphy.com/embed/ieREaX3VTHsqc" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/milhouse-ieREaX3VTHsqc">via GIPHY</a></p>
 
+
+
+
+## Learning (There Will be a Quiz)
+
+- Desire for fstrings in R filled in with glue
+- Functions and for loops feel foreign
+- command entering a line in a for loop can let you sequentially execute for loop lines
+- str_extract("\\d+") sort of worked, except for commas. parse_number from readr to the rescue. A little unclear to me actually how it works for corner cases
+- using selectorGadget is lovely
+- channeling a lot of python thoughts when I made this
+- blog post on rvest was invaluable
+- note about just recently getting the name rvest
+
+- What I should do
+  - make it into a function to grab data on a given show
+  - could even extract data about number of seasons
+  
+Going (Fillory and) Further
+
+- Adding note when they first go into Fillory or introductions of characters could be interesting (harder to find)
+- Sentiment of reviews could also be an interesting avenue to explore. 
+- Stay off the garden path
+- labeling the episodes or things that happened
+
+
 #### Image Credit
 [soybean](https://thenounproject.com/zachbogart/collection/field-crops/?i=2700664) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+
+
+TODO
+
+- get GIFs from the Magicians to sprinkle in
+- Add interim bit about testing things out just by the onsie (without for loop example)
+- Notes about using this in the future
