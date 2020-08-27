@@ -1,7 +1,7 @@
 ---
 title: "Becoming An rvest Magician"  
 subtitle: "Scraping IMDb data for 'The Magicians' using rvest"
-date: 2020-08-25
+date: 2020-08-27
 categories:  
   - R
 tags:  
@@ -9,7 +9,7 @@ tags:
   - ggplot
 slug: "rvest-wizardry"  
 image:
-  preview_only: FALSE
+  preview_only: FALSE 
 links:
 - icon: mug-hot
   icon_pack: fas
@@ -18,7 +18,7 @@ links:
 output: html_document
 editor_options: 
   chunk_output_type: inline
-draft: true
+draft: false
 ---
 
 ```{r setup, include=FALSE}
