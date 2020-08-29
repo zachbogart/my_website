@@ -22,18 +22,21 @@ draft: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache.lazy = FALSE)
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5)
 ```
 
-In [an earlier post](TODO), I used rvest to scrape IMDB episode ratings data about *The Magicians*. Under the section "Advanced Spellcasting", I made a function that could scrape *any* show, and I gave an example grabbing some data about *The Simpsons*. It worked so well last time, let's keep on using it! Let's try grabbing a couple shows and see what we can make. 
+In [an earlier post](https://zachbogart.com/post/rvest-wizardry/), I used rvest to scrape IMDb episode ratings about *The Magicians*. Under the section "Advanced Spellcasting", I made a function that could scrape *any* show, and I gave an example grabbing some data about *The Simpsons*. It worked so well last time, let's keep on using it! Let's try grabbing some more animated shows and see what we can make. 
 
-Time to watch cartoons...
+Take a seat. It's time to watch cartoons...
 
-TODO GIF
+![](https://media.giphy.com/media/RwLDkna2fN3fG/giphy.gif)
 
 ## ...We Came In?
 
-We are going to start where we ended, using the same `grab_imdb_ratings()` function from [the earlier post](TODO) (with a small tweak).
+We are going to start where we ended, using the same `grab_imdb_ratings()` function from [the earlier post](https://zachbogart.com/post/rvest-wizardry/) (with a small tweak).
 
 ```{r message=FALSE}
 library(tidyverse) # cause duh
@@ -106,7 +109,7 @@ Notes:
 
 ## Watch Cartoons
 
-Here we go and grab all of the data for a bunch of different cartoons. Focusing on popular/long-running animated comedies in primetime (I guess).
+Here we grab all of the data for a bunch of different cartoons. Focusing on popular and/or long-running animated comedies in primetime (I guess).
 
 ```{r cache=TRUE}
 # collect cartoon shows
@@ -128,9 +131,9 @@ shows <- bind_rows(simpsons,
 
 ## In Hell They Make You Watch Them All in a Row
 
-TODO
+Let's look at the ratings over time, as the episodes aired. 
 
-```{r message=FALSE}
+```{r message=FALSE, class.source = "numberLines"}
 # Ratings Over Time
 plot_title <-  glue("Oh Jeez, Rick! {dim(shows)[1]} Episodes! Oh Man!")
 plot_subtitle <- "IMDb Episode Ratings Over Time"
@@ -149,9 +152,26 @@ shows %>%
          color = "Show")
 ```
 
+The plot shows one dot for each episode, placed according to the date it was aired and it's weighted average IMDB rating ([explained, sort of](https://help.imdb.com/article/imdb/track-movies-tv/weighted-average-ratings/GWT2DSBYVT2F25SK?ref_=cons_tt_rt_wtavg#)). The size of each dot is mapped to how many users voted to create the IMDb rating. Finally, some `geom_smooth()` lines to see the overall trend for each show.
+
+*The Simpsons* started in the 1990's (just kissed 1989 with their inaugural Christmas special) and set the stage for the other shows that followed. There first decade has proven to have been the highest rated (as is the case with the other long-running shows pictured). Over time, they have had a slight, but steady decrease, yet they are still quite highly-rated after three decades on the air. 
+
+Other shows followed in the late 90's/early aughts. They all start at similar levels to the yellow juggernaut, but some shows have been able to keep a higher rating for a longer stretch. *South Park* for example, has kept a higher average rating than *The Simpsons* in the early years, and they're also comfortably above other shows that started around a similar time. 
+
+Finally, *Rick and Morty*, though much newer than the others, has had a very high approval rating across its run. It is also interesting that, of all the shows, it has the most user votes for each episode (bigger dots) by a big margin, with close to ten thousand reviews per episode.
+
+```{r}
+# look at average episode votes for each show
+shows %>% 
+  count(show, 
+        wt = mean(votes), 
+        sort = TRUE,
+        name = "avg_votes_per_episode")
+```
+
 ## The Terrifying Lows. The Dizzying Highs. The Creamy Middles.
 
-TODO
+Now let's look at the distribution of each show's ratings. To spice up the plot, let's include the names of the episodes that earn the highest and lowest rating for each show. I made them as separate tibbles and added them as `geom_text()` layers.
 
 ```{r}
 # get highest/lowest rated episodes, breaking ties
@@ -164,7 +184,9 @@ worst_rated <- shows %>%
   slice_min(rating, with_ties = FALSE)
 ```
 
-```{r}
+Here's a look at each show's collection of episodes as a boxplot.
+
+```{r fig.height=6}
 # horizontal boxplots
 plot_title <-  "Atlantis, Baby!"
 plot_subtitle <- "IMDb Episode Ratings with Highest/Lowest-Rated Episode Titles"
@@ -195,12 +217,40 @@ shows %>%
     coord_flip()
 ```
 
-## Learning
+```{r include = FALSE}
+r_and_m_episodes <-  shows %>% 
+  filter(show == "Rick and Morty") %>% 
+  count()
 
-- Color was an accident. Would want to get better at manually binding palette colors to a given part of the data
+simpsons_episodes <- shows %>% 
+  filter(show == "The Simpsons") %>% 
+  count()
+```
 
-#### Image Credit
-TODO
+
+Interesting to see how different shows span different rating ranges. Granted it has the smallest number of episodes (`r r_and_m_episodes`), but *Rick and Morty* has a very narrow distribution of ratings, all clustered high up the scale. At the other extreme, *The Simpsons* has a ridiculous number of episodes (`r simpsons_episodes`), which span a much wider range. It is also noteworthy that while many shows have episodes averaging a six, *The Simpsons* and *Family Guy* are the only ones with episodes that dip below four. While corner cases, they both seem to have an episode that is quite disliked by viewers (or at least those willing to say something on IMDb). Do any of the best/worst episodes ring a bell? Do you agree with IMDb?
 
 ## Isn't This Where...
-TODO
+
+Kinda feel like I'm repeating myself, but this was such a breeze to setup/joy to play with since [the earlier post](https://zachbogart.com/post/rvest-wizardry/) did the heavy-lifting (yes, future-me is thankful). Maybe I'll grab some more shows in the future. I'm sure there is a lot to dig up and since things are all in place, it should be easy to ask questions about multiple shows together. Should make for some good viewing.
+
+### Getting More Complicated
+
+- Could look into getting the *actual reviews* people leave about episodes or shows. Getting my feet wet with sentiment analysis would be worth doing.
+- I think I'm not done with *The Simpsons* just yet. Would be interesting to see that show's long run split up a bit, maybe tell some more specific stories (season-by-season, Treehouse of Horror, etc.)
+
+Alright. Till next time!
+
+![](https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif)
+
+\<vsauce_voice>And as always...thanks for watching.\</vsauce_voice>
+
+## Learning
+
+- Color was an accident in terms of getting *The Simpsons* to be yellow. Would want to get better at manually binding palette colors to a given part of the data.
+- Factoring out styling variables proved useful when I was deciding between displaying a horizontal versus vertical boxplot. Allowed for easy tweaking across multiple plots.
+- Would be nice to allow for links to headers in a post in `blogdown`. I found some things [online](https://ericbryantphd.com/2020/01/13/add-section-links-in-blogdown/), but I'll have to look it over more thoroughly.
+- Another `blogdown` question: how to get twitter URLs to render as cards with an image. With [Twitter's Card Validator](https://cards-dev.twitter.com/validator), it doesn't seem to include an image. Wondering how I add one without getting too much into the HUGO weeds.
+
+#### Image Credit
+[large sofa](https://thenounproject.com/zachbogart/collection/strolling-through-ikea/?i=3169372) by Zach Bogart from [the Noun Project](https://thenounproject.com/)

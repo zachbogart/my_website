@@ -23,12 +23,12 @@ draft: true
 
 
 
-<p>In <a href="TODO">an earlier post</a>, I used rvest to scrape IMDB episode ratings data about <em>The Magicians</em>. Under the section “Advanced Spellcasting”, I made a function that could scrape <em>any</em> show, and I gave an example grabbing some data about <em>The Simpsons</em>. It worked so well last time, let’s keep on using it! Let’s try grabbing a couple shows and see what we can make.</p>
-<p>Time to watch cartoons…</p>
-<p>TODO GIF</p>
+<p>In <a href="https://zachbogart.com/post/rvest-wizardry/">an earlier post</a>, I used rvest to scrape IMDb episode ratings about <em>The Magicians</em>. Under the section “Advanced Spellcasting”, I made a function that could scrape <em>any</em> show, and I gave an example grabbing some data about <em>The Simpsons</em>. It worked so well last time, let’s keep on using it! Let’s try grabbing some more animated shows and see what we can make.</p>
+<p>Take a seat. It’s time to watch cartoons…</p>
+<p><img src="https://media.giphy.com/media/RwLDkna2fN3fG/giphy.gif" /></p>
 <div id="we-came-in" class="section level2">
 <h2>…We Came In?</h2>
-<p>We are going to start where we ended, using the same <code>grab_imdb_ratings()</code> function from <a href="TODO">the earlier post</a> (with a small tweak).</p>
+<p>We are going to start where we ended, using the same <code>grab_imdb_ratings()</code> function from <a href="https://zachbogart.com/post/rvest-wizardry/">the earlier post</a> (with a small tweak).</p>
 <pre class="r"><code>library(tidyverse) # cause duh
 library(rvest) # for web scraping
 library(glue) # for that warm and fuzzy fstring feeling (python-like)
@@ -94,7 +94,7 @@ theme_set(theme_light())</code></pre>
 </div>
 <div id="watch-cartoons" class="section level2">
 <h2>Watch Cartoons</h2>
-<p>Here we go and grab all of the data for a bunch of different cartoons. Focusing on popular/long-running animated comedies in primetime (I guess).</p>
+<p>Here we grab all of the data for a bunch of different cartoons. Focusing on popular and/or long-running animated comedies in primetime (I guess).</p>
 <pre class="r"><code># collect cartoon shows
 simpsons &lt;- grab_imdb_ratings(&quot;tt0096697&quot;, c(1:31)) 
 family_guy &lt;- grab_imdb_ratings(&quot;tt0182576&quot;, c(1:18)) 
@@ -113,8 +113,8 @@ shows &lt;- bind_rows(simpsons,
 </div>
 <div id="in-hell-they-make-you-watch-them-all-in-a-row" class="section level2">
 <h2>In Hell They Make You Watch Them All in a Row</h2>
-<p>TODO</p>
-<pre class="r"><code># Ratings Over Time
+<p>Let’s look at the ratings over time, as the episodes aired.</p>
+<pre class="r numberLines"><code># Ratings Over Time
 plot_title &lt;-  glue(&quot;Oh Jeez, Rick! {dim(shows)[1]} Episodes! Oh Man!&quot;)
 plot_subtitle &lt;- &quot;IMDb Episode Ratings Over Time&quot;
 
@@ -130,11 +130,30 @@ shows %&gt;%
          caption = &quot;zachbogart.com\nSource: IMDb&quot;,
          size = &quot;Total Votes&quot;,
          color = &quot;Show&quot;)</code></pre>
-<p><img src="/post/2020-08-28-simpsons/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/2020-08-28-simpsons/index_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
+<p>The plot shows one dot for each episode, placed according to the date it was aired and it’s weighted average IMDB rating (<a href="https://help.imdb.com/article/imdb/track-movies-tv/weighted-average-ratings/GWT2DSBYVT2F25SK?ref_=cons_tt_rt_wtavg#">explained, sort of</a>). The size of each dot is mapped to how many users voted to create the IMDb rating. Finally, some <code>geom_smooth()</code> lines to see the overall trend for each show.</p>
+<p><em>The Simpsons</em> started in the 1990’s (just kissed 1989 with their inaugural Christmas special) and set the stage for the other shows that followed. There first decade has proven to have been the highest rated (as is the case with the other long-running shows pictured). Over time, they have had a slight, but steady decrease, yet they are still quite highly-rated after three decades on the air.</p>
+<p>Other shows followed in the late 90’s/early aughts. They all start at similar levels to the yellow juggernaut, but some shows have been able to keep a higher rating for a longer stretch. <em>South Park</em> for example, has kept a higher average rating than <em>The Simpsons</em> in the early years, and they’re also comfortably above other shows that started around a similar time.</p>
+<p>Finally, <em>Rick and Morty</em>, though much newer than the others, has had a very high approval rating across its run. It is also interesting that, of all the shows, it has the most user votes for each episode (bigger dots) by a big margin, with close to ten thousand reviews per episode.</p>
+<pre class="r"><code># look at average episode votes for each show
+shows %&gt;% 
+  count(show, 
+        wt = mean(votes), 
+        sort = TRUE,
+        name = &quot;avg_votes_per_episode&quot;)</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   show             avg_votes_per_episode
+##   &lt;chr&gt;                            &lt;dbl&gt;
+## 1 Rick and Morty                   9556.
+## 2 South Park                       2047.
+## 3 Futurama                         1491.
+## 4 The Simpsons                     1344.
+## 5 Family Guy                       1145.
+## 6 King of the Hill                  199.</code></pre>
 </div>
 <div id="the-terrifying-lows.-the-dizzying-highs.-the-creamy-middles." class="section level2">
 <h2>The Terrifying Lows. The Dizzying Highs. The Creamy Middles.</h2>
-<p>TODO</p>
+<p>Now let’s look at the distribution of each show’s ratings. To spice up the plot, let’s include the names of the episodes that earn the highest and lowest rating for each show. I made them as separate tibbles and added them as <code>geom_text()</code> layers.</p>
 <pre class="r"><code># get highest/lowest rated episodes, breaking ties
 best_rated &lt;- shows %&gt;% 
   group_by(show) %&gt;% 
@@ -143,6 +162,7 @@ best_rated &lt;- shows %&gt;%
 worst_rated &lt;- shows %&gt;% 
   group_by(show) %&gt;% 
   slice_min(rating, with_ties = FALSE)</code></pre>
+<p>Here’s a look at each show’s collection of episodes as a boxplot.</p>
 <pre class="r"><code># horizontal boxplots
 plot_title &lt;-  &quot;Atlantis, Baby!&quot;
 plot_subtitle &lt;- &quot;IMDb Episode Ratings with Highest/Lowest-Rated Episode Titles&quot;
@@ -171,19 +191,33 @@ shows %&gt;%
          subtitle = plot_subtitle,
          caption = &quot;zachbogart.com\nSource: IMDb&quot;) +
     coord_flip()</code></pre>
-<p><img src="/post/2020-08-28-simpsons/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/post/2020-08-28-simpsons/index_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
+<p>Interesting to see how different shows span different rating ranges. Granted it has the smallest number of episodes (41), but <em>Rick and Morty</em> has a very narrow distribution of ratings, all clustered high up the scale. At the other extreme, <em>The Simpsons</em> has a ridiculous number of episodes (683), which span a much wider range. It is also noteworthy that while many shows have episodes averaging a six, <em>The Simpsons</em> and <em>Family Guy</em> are the only ones with episodes that dip below four. While corner cases, they both seem to have an episode that is quite disliked by viewers (or at least those willing to say something on IMDb). Do any of the best/worst episodes ring a bell? Do you agree with IMDb?</p>
+</div>
+<div id="isnt-this-where" class="section level2">
+<h2>Isn’t This Where…</h2>
+<p>Kinda feel like I’m repeating myself, but this was such a breeze to setup/joy to play with since <a href="https://zachbogart.com/post/rvest-wizardry/">the earlier post</a> did the heavy-lifting (yes, future-me is thankful). Maybe I’ll grab some more shows in the future. I’m sure there is a lot to dig up and since things are all in place, it should be easy to ask questions about multiple shows together. Should make for some good viewing.</p>
+<div id="getting-more-complicated" class="section level3">
+<h3>Getting More Complicated</h3>
+<ul>
+<li>Could look into getting the <em>actual reviews</em> people leave about episodes or shows. Getting my feet wet with sentiment analysis would be worth doing.</li>
+<li>I think I’m not done with <em>The Simpsons</em> just yet. Would be interesting to see that show’s long run split up a bit, maybe tell some more specific stories (season-by-season, Treehouse of Horror, etc.)</li>
+</ul>
+<p>Alright. Till next time!</p>
+<p><img src="https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif" /></p>
+<p>&lt;vsauce_voice&gt;And as always…thanks for watching.&lt;/vsauce_voice&gt;</p>
+</div>
 </div>
 <div id="learning" class="section level2">
 <h2>Learning</h2>
 <ul>
-<li>Color was an accident. Would want to get better at manually binding palette colors to a given part of the data</li>
+<li>Color was an accident in terms of getting <em>The Simpsons</em> to be yellow. Would want to get better at manually binding palette colors to a given part of the data.</li>
+<li>Factoring out styling variables proved useful when I was deciding between displaying a horizontal versus vertical boxplot. Allowed for easy tweaking across multiple plots.</li>
+<li>Would be nice to allow for links to headers in a post in <code>blogdown</code>. I found some things <a href="https://ericbryantphd.com/2020/01/13/add-section-links-in-blogdown/">online</a>, but I’ll have to look it over more thoroughly.</li>
+<li>Another <code>blogdown</code> question: how to get twitter URLs to render as cards with an image. With <a href="https://cards-dev.twitter.com/validator">Twitter’s Card Validator</a>, it doesn’t seem to include an image. Wondering how I add one without getting too much into the HUGO weeds.</li>
 </ul>
 <div id="image-credit" class="section level4">
 <h4>Image Credit</h4>
-<p>TODO</p>
+<p><a href="https://thenounproject.com/zachbogart/collection/strolling-through-ikea/?i=3169372">large sofa</a> by Zach Bogart from <a href="https://thenounproject.com/">the Noun Project</a></p>
 </div>
-</div>
-<div id="isnt-this-where" class="section level2">
-<h2>Isn’t This Where…</h2>
-<p>TODO</p>
 </div>
