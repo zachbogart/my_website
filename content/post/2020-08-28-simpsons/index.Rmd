@@ -1,0 +1,206 @@
+---
+title: "Watching Cartoonies"  
+subtitle: "Using IMDb rvest scraper to look at some animated shows"
+date: 2020-08-28
+categories:  
+  - R
+tags:  
+  - rvest
+  - ggplot
+slug: "cartoonies"  
+image:
+  preview_only: FALSE 
+links:
+- icon: mug-hot
+  icon_pack: fas
+  name: Give a Coffee
+  url: https://ko-fi.com/zachbogart
+output: html_document
+editor_options: 
+  chunk_output_type: console
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache.lazy = FALSE)
+```
+
+In [an earlier post](TODO), I used rvest to scrape IMDB episode ratings data about *The Magicians*. Under the section "Advanced Spellcasting", I made a function that could scrape *any* show, and I gave an example grabbing some data about *The Simpsons*. It worked so well last time, let's keep on using it! Let's try grabbing a couple shows and see what we can make. 
+
+Time to watch cartoons...
+
+TODO GIF
+
+## ...We Came In?
+
+We are going to start where we ended, using the same `grab_imdb_ratings()` function from [the earlier post](TODO) (with a small tweak).
+
+```{r message=FALSE}
+library(tidyverse) # cause duh
+library(rvest) # for web scraping
+library(glue) # for that warm and fuzzy fstring feeling (python-like)
+library(RColorBrewer) # for a nicer set of colors
+
+theme_set(theme_light())
+```
+
+```{r}
+grab_imdb_ratings <- function(imdb_code, seasons) {
+    # Grabbing Rating Data for a show on IMDb
+    # 
+    # - imdb_code: url code for a given show (the "tt<number_string>" in the url)
+    # - seasons: list of desired seasons
+  
+  # empty list to store dataframes
+  df_list = list()
+  
+  # lez go!
+  for (season in seasons) {
+    
+    # define url, using glue for combining strings
+    base_url <- "https://www.imdb.com/title/"
+    season_url <- glue("{base_url}{imdb_code}/episodes?season={season}")
+    
+    # go get the html
+    html <- read_html(season_url)
+    
+    # isolate the desired data
+    show <- html_nodes(html, ".parent a") %>% 
+      html_text(trim = TRUE)
+    title <- html_nodes(html, "#episodes_content strong a") %>% 
+      html_text(trim = TRUE)
+    rating <- html_nodes(html, ".ipl-rating-star.small .ipl-rating-star__rating") %>% 
+      html_text(trim = TRUE) %>% 
+      as.numeric()
+    votes <- html_nodes(html, ".ipl-rating-star__total-votes") %>% 
+      html_text(trim = TRUE) %>% 
+      parse_number() # this saved the day! super helpful readr function
+    air_date <- html_nodes(html, ".airdate") %>% 
+      html_text(trim = TRUE) %>% 
+      str_remove("[.]") %>%  # remove periods (May doesn't have a period like the rest: Apr., Oct.)
+      parse_date("%d %b %Y")
+    
+    # make a tibble for each season 
+    df <- tibble(show, air_date, title, rating, votes) %>%
+      mutate(season = season,
+             episode = seq(1, nrow(.))) %>% 
+      select(show, season:episode, everything())
+    
+    # add to list
+    df_list[[season]] <- df
+  }
+  
+  # smoosh the list into one tibble
+  show_run <- bind_rows(df_list)
+  
+  return(show_run)
+  
+}
+```
+
+In this version, we want to know what show each episode belongs to, so I added a `show` field when parsing the html. Works like a charm!
+
+Notes:
+
+- **So...many...cartoons**: I gave this a go with a bunch of different shows, settling on a smaller subset. This is a super fun process to explore these shows, so I'll probably be grabbing more someday! Interestingly, the code broke for [season eight of Bob's Burger's](https://www.imdb.com/title/tt1561755/episodes?season=8). Turns out The episode "The Bleakening" has a separate entry for ["The Bleakening - Part Two"](https://www.imdb.com/title/tt12970446/?ref_=ttep_ep7) with no reviews or ratings, which made my code mad. Would require some code surgery to fix that season's output.
+
+## Watch Cartoons
+
+Here we go and grab all of the data for a bunch of different cartoons. Focusing on popular/long-running animated comedies in primetime (I guess).
+
+```{r cache=TRUE}
+# collect cartoon shows
+simpsons <- grab_imdb_ratings("tt0096697", c(1:31)) 
+family_guy <- grab_imdb_ratings("tt0182576", c(1:18)) 
+south_park <- grab_imdb_ratings("tt0121955", c(1:23))
+rick_and_morty <- grab_imdb_ratings("tt2861424", c(1:4))
+futurama <- grab_imdb_ratings("tt0149460", c(1:7))
+king_of_the_hill <- grab_imdb_ratings("tt0118375", c(1:13))
+
+# all-in-one
+shows <- bind_rows(simpsons, 
+                   family_guy, 
+                   south_park, 
+                   rick_and_morty,
+                   futurama,
+                   king_of_the_hill)
+```
+
+## In Hell They Make You Watch Them All in a Row
+
+TODO
+
+```{r message=FALSE}
+# Ratings Over Time
+plot_title <-  glue("Oh Jeez, Rick! {dim(shows)[1]} Episodes! Oh Man!")
+plot_subtitle <- "IMDb Episode Ratings Over Time"
+
+shows %>% 
+  ggplot(aes(air_date, rating, color = show)) +
+    geom_point(aes(size = votes), alpha = 0.2, stroke = 0) +
+    geom_smooth(se = FALSE, linetype = "solid") +
+    scale_color_brewer(palette = "Set2") +
+    labs(title = plot_title,
+         subtitle = plot_subtitle,
+         x = "Episode Air Date",
+         y = "Weighted Average IMDb Rating",
+         caption = "zachbogart.com\nSource: IMDb",
+         size = "Total Votes",
+         color = "Show")
+```
+
+## The Terrifying Lows. The Dizzying Highs. The Creamy Middles.
+
+TODO
+
+```{r}
+# get highest/lowest rated episodes, breaking ties
+best_rated <- shows %>% 
+  group_by(show) %>% 
+  slice_max(rating, with_ties = FALSE)
+
+worst_rated <- shows %>% 
+  group_by(show) %>% 
+  slice_min(rating, with_ties = FALSE)
+```
+
+```{r}
+# horizontal boxplots
+plot_title <-  "Atlantis, Baby!"
+plot_subtitle <- "IMDb Episode Ratings with Highest/Lowest-Rated Episode Titles"
+
+text_size = 3
+text_offset = 0.7
+text_wrap_limit = 17
+
+shows %>% 
+  ggplot(aes(x = fct_reorder(show, rating, "median"), y = rating, color = show)) +
+    geom_boxplot() +
+    geom_jitter(alpha = 0.1) +
+    # use best/worst rated data
+    geom_text(data = best_rated, 
+              aes(y = rating + text_offset, label = str_wrap(title, text_wrap_limit)),
+              size = text_size, fontface = "bold") +
+    geom_text(data = worst_rated, 
+              aes(y = rating - text_offset, label = str_wrap(title, text_wrap_limit)),
+              size = text_size, fontface = "bold") +
+    ylim(2.6, 10.8) +
+    scale_color_brewer(palette = "Set2") +
+    guides(color = FALSE) +
+    labs(x = "",
+         y = "Weighted Average IMDb Rating",
+         title = plot_title,
+         subtitle = plot_subtitle,
+         caption = "zachbogart.com\nSource: IMDb") +
+    coord_flip()
+```
+
+## Learning
+
+- Color was an accident. Would want to get better at manually binding palette colors to a given part of the data
+
+#### Image Credit
+TODO
+
+## Isn't This Where...
+TODO

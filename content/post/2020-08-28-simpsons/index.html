@@ -1,0 +1,189 @@
+---
+title: "Watching Cartoonies"  
+subtitle: "Using IMDb rvest scraper to look at some animated shows"
+date: 2020-08-28
+categories:  
+  - R
+tags:  
+  - rvest
+  - ggplot
+slug: "cartoonies"  
+image:
+  preview_only: FALSE 
+links:
+- icon: mug-hot
+  icon_pack: fas
+  name: Give a Coffee
+  url: https://ko-fi.com/zachbogart
+output: html_document
+editor_options: 
+  chunk_output_type: console
+draft: true
+---
+
+
+
+<p>In <a href="TODO">an earlier post</a>, I used rvest to scrape IMDB episode ratings data about <em>The Magicians</em>. Under the section “Advanced Spellcasting”, I made a function that could scrape <em>any</em> show, and I gave an example grabbing some data about <em>The Simpsons</em>. It worked so well last time, let’s keep on using it! Let’s try grabbing a couple shows and see what we can make.</p>
+<p>Time to watch cartoons…</p>
+<p>TODO GIF</p>
+<div id="we-came-in" class="section level2">
+<h2>…We Came In?</h2>
+<p>We are going to start where we ended, using the same <code>grab_imdb_ratings()</code> function from <a href="TODO">the earlier post</a> (with a small tweak).</p>
+<pre class="r"><code>library(tidyverse) # cause duh
+library(rvest) # for web scraping
+library(glue) # for that warm and fuzzy fstring feeling (python-like)
+library(RColorBrewer) # for a nicer set of colors
+
+theme_set(theme_light())</code></pre>
+<pre class="r"><code>grab_imdb_ratings &lt;- function(imdb_code, seasons) {
+    # Grabbing Rating Data for a show on IMDb
+    # 
+    # - imdb_code: url code for a given show (the &quot;tt&lt;number_string&gt;&quot; in the url)
+    # - seasons: list of desired seasons
+  
+  # empty list to store dataframes
+  df_list = list()
+  
+  # lez go!
+  for (season in seasons) {
+    
+    # define url, using glue for combining strings
+    base_url &lt;- &quot;https://www.imdb.com/title/&quot;
+    season_url &lt;- glue(&quot;{base_url}{imdb_code}/episodes?season={season}&quot;)
+    
+    # go get the html
+    html &lt;- read_html(season_url)
+    
+    # isolate the desired data
+    show &lt;- html_nodes(html, &quot;.parent a&quot;) %&gt;% 
+      html_text(trim = TRUE)
+    title &lt;- html_nodes(html, &quot;#episodes_content strong a&quot;) %&gt;% 
+      html_text(trim = TRUE)
+    rating &lt;- html_nodes(html, &quot;.ipl-rating-star.small .ipl-rating-star__rating&quot;) %&gt;% 
+      html_text(trim = TRUE) %&gt;% 
+      as.numeric()
+    votes &lt;- html_nodes(html, &quot;.ipl-rating-star__total-votes&quot;) %&gt;% 
+      html_text(trim = TRUE) %&gt;% 
+      parse_number() # this saved the day! super helpful readr function
+    air_date &lt;- html_nodes(html, &quot;.airdate&quot;) %&gt;% 
+      html_text(trim = TRUE) %&gt;% 
+      str_remove(&quot;[.]&quot;) %&gt;%  # remove periods (May doesn&#39;t have a period like the rest: Apr., Oct.)
+      parse_date(&quot;%d %b %Y&quot;)
+    
+    # make a tibble for each season 
+    df &lt;- tibble(show, air_date, title, rating, votes) %&gt;%
+      mutate(season = season,
+             episode = seq(1, nrow(.))) %&gt;% 
+      select(show, season:episode, everything())
+    
+    # add to list
+    df_list[[season]] &lt;- df
+  }
+  
+  # smoosh the list into one tibble
+  show_run &lt;- bind_rows(df_list)
+  
+  return(show_run)
+  
+}</code></pre>
+<p>In this version, we want to know what show each episode belongs to, so I added a <code>show</code> field when parsing the html. Works like a charm!</p>
+<p>Notes:</p>
+<ul>
+<li><strong>So…many…cartoons</strong>: I gave this a go with a bunch of different shows, settling on a smaller subset. This is a super fun process to explore these shows, so I’ll probably be grabbing more someday! Interestingly, the code broke for <a href="https://www.imdb.com/title/tt1561755/episodes?season=8">season eight of Bob’s Burger’s</a>. Turns out The episode “The Bleakening” has a separate entry for <a href="https://www.imdb.com/title/tt12970446/?ref_=ttep_ep7">“The Bleakening - Part Two”</a> with no reviews or ratings, which made my code mad. Would require some code surgery to fix that season’s output.</li>
+</ul>
+</div>
+<div id="watch-cartoons" class="section level2">
+<h2>Watch Cartoons</h2>
+<p>Here we go and grab all of the data for a bunch of different cartoons. Focusing on popular/long-running animated comedies in primetime (I guess).</p>
+<pre class="r"><code># collect cartoon shows
+simpsons &lt;- grab_imdb_ratings(&quot;tt0096697&quot;, c(1:31)) 
+family_guy &lt;- grab_imdb_ratings(&quot;tt0182576&quot;, c(1:18)) 
+south_park &lt;- grab_imdb_ratings(&quot;tt0121955&quot;, c(1:23))
+rick_and_morty &lt;- grab_imdb_ratings(&quot;tt2861424&quot;, c(1:4))
+futurama &lt;- grab_imdb_ratings(&quot;tt0149460&quot;, c(1:7))
+king_of_the_hill &lt;- grab_imdb_ratings(&quot;tt0118375&quot;, c(1:13))
+
+# all-in-one
+shows &lt;- bind_rows(simpsons, 
+                   family_guy, 
+                   south_park, 
+                   rick_and_morty,
+                   futurama,
+                   king_of_the_hill)</code></pre>
+</div>
+<div id="in-hell-they-make-you-watch-them-all-in-a-row" class="section level2">
+<h2>In Hell They Make You Watch Them All in a Row</h2>
+<p>TODO</p>
+<pre class="r"><code># Ratings Over Time
+plot_title &lt;-  glue(&quot;Oh Jeez, Rick! {dim(shows)[1]} Episodes! Oh Man!&quot;)
+plot_subtitle &lt;- &quot;IMDb Episode Ratings Over Time&quot;
+
+shows %&gt;% 
+  ggplot(aes(air_date, rating, color = show)) +
+    geom_point(aes(size = votes), alpha = 0.2, stroke = 0) +
+    geom_smooth(se = FALSE, linetype = &quot;solid&quot;) +
+    scale_color_brewer(palette = &quot;Set2&quot;) +
+    labs(title = plot_title,
+         subtitle = plot_subtitle,
+         x = &quot;Episode Air Date&quot;,
+         y = &quot;Weighted Average IMDb Rating&quot;,
+         caption = &quot;zachbogart.com\nSource: IMDb&quot;,
+         size = &quot;Total Votes&quot;,
+         color = &quot;Show&quot;)</code></pre>
+<p><img src="/post/2020-08-28-simpsons/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="the-terrifying-lows.-the-dizzying-highs.-the-creamy-middles." class="section level2">
+<h2>The Terrifying Lows. The Dizzying Highs. The Creamy Middles.</h2>
+<p>TODO</p>
+<pre class="r"><code># get highest/lowest rated episodes, breaking ties
+best_rated &lt;- shows %&gt;% 
+  group_by(show) %&gt;% 
+  slice_max(rating, with_ties = FALSE)
+
+worst_rated &lt;- shows %&gt;% 
+  group_by(show) %&gt;% 
+  slice_min(rating, with_ties = FALSE)</code></pre>
+<pre class="r"><code># horizontal boxplots
+plot_title &lt;-  &quot;Atlantis, Baby!&quot;
+plot_subtitle &lt;- &quot;IMDb Episode Ratings with Highest/Lowest-Rated Episode Titles&quot;
+
+text_size = 3
+text_offset = 0.7
+text_wrap_limit = 17
+
+shows %&gt;% 
+  ggplot(aes(x = fct_reorder(show, rating, &quot;median&quot;), y = rating, color = show)) +
+    geom_boxplot() +
+    geom_jitter(alpha = 0.1) +
+    # use best/worst rated data
+    geom_text(data = best_rated, 
+              aes(y = rating + text_offset, label = str_wrap(title, text_wrap_limit)),
+              size = text_size, fontface = &quot;bold&quot;) +
+    geom_text(data = worst_rated, 
+              aes(y = rating - text_offset, label = str_wrap(title, text_wrap_limit)),
+              size = text_size, fontface = &quot;bold&quot;) +
+    ylim(2.6, 10.8) +
+    scale_color_brewer(palette = &quot;Set2&quot;) +
+    guides(color = FALSE) +
+    labs(x = &quot;&quot;,
+         y = &quot;Weighted Average IMDb Rating&quot;,
+         title = plot_title,
+         subtitle = plot_subtitle,
+         caption = &quot;zachbogart.com\nSource: IMDb&quot;) +
+    coord_flip()</code></pre>
+<p><img src="/post/2020-08-28-simpsons/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="learning" class="section level2">
+<h2>Learning</h2>
+<ul>
+<li>Color was an accident. Would want to get better at manually binding palette colors to a given part of the data</li>
+</ul>
+<div id="image-credit" class="section level4">
+<h4>Image Credit</h4>
+<p>TODO</p>
+</div>
+</div>
+<div id="isnt-this-where" class="section level2">
+<h2>Isn’t This Where…</h2>
+<p>TODO</p>
+</div>
