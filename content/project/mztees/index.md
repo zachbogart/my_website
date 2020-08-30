@@ -3,7 +3,7 @@ title: MZ Tees
 subtitle: Nerdy T-Shirt designs galore
 summary: Fun shirt designs
 tags:
-- design
+- design_project
 date: "2017-12-09T00:00:00Z"
 
 image:

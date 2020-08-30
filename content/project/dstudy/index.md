@@ -3,7 +3,7 @@ title: BU Directed Study
 subtitle: Putting hats on rats
 summary: Implants for Hippocampal Recording in Rats
 tags:
-- science
+- science_project
 date: "2013-12-12T00:00:00Z"
 
 image:

@@ -2,7 +2,7 @@
 title: "Neat Tweet: Skittles CandyViz"
 summary: Tasty take on dataviz. 
 tags:
-- data
+- data_project
 date: "2017-12-09T00:00:00Z"
 
 image:

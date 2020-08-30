@@ -5,7 +5,6 @@ date: 2020-07-26
 categories:  
   - Python  
 tags:  
-  - grouping
   - pandas  
 slug: "pandas-grouping-data"  
 links:

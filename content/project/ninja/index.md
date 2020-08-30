@@ -3,7 +3,7 @@ title: Ninja, 24 Elim Solo
 subtitle: Mapping how Ninja destroys the entire lobby.
 summary: Visualization of one of Ninja's Fortnite runs
 tags:
-- data
+- data_project
 date: "2019-09-05T00:00:00Z"
 
 image:

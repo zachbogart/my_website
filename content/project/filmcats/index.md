@@ -2,7 +2,7 @@
 title: FilmCats
 summary: Twitter account of film clips that have cats in them.
 tags:
-- other
+- other_project
 date: "2019-05-12T00:00:00Z"
 
 image:

@@ -6,9 +6,10 @@ date: 2020-06-01
 categories: 
   - Python
 tags: 
-  - munging
-  - cleaning
-  - movies
+  - pandas
+  - beautifulsoup
+  - seaborn
+  - matplotlib
 slug: "youtube-movies"
 links:
 - icon: external-link-alt

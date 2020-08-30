@@ -3,7 +3,7 @@ title: "Meteor Strikes (Skillshare: Feltron Map Course)"
 subtitle: Result from course on dataviz
 summary: Data Visualization of Meteor Strikes from Skillshare Course
 tags:
-- data
+- data_project
 date: "2016-06-20"
 
 image:

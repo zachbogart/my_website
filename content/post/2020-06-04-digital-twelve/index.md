@@ -6,9 +6,7 @@ date: 2020-06-04
 categories: 
   - Python
 tags: 
-  - random
-  - time
-  - clocks
+  - pandas
 slug: "twelve-clock"
 links:
 - icon: external-link-alt

@@ -3,7 +3,7 @@ title: New Yorker Covers
 subtitle: Smoosh 4620 New Yorker Covers together and see what we get
 summary: 90 Years of New Yorker Covers
 tags:
-- data
+- data_project
 date: "2016-07-12"
 
 image:
