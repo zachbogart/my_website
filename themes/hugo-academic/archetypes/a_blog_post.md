@@ -30,3 +30,19 @@ links:
     name: Give a Coffee
     url: https://ko-fi.com/zachbogart
 ---
+
+<!--Starting Blurb-->
+TODO
+
+<!--Put actual work here-->
+
+TODO
+
+
+<!--Section on Learning (general notes that came up)-->
+## Learning
+TODO
+
+<!--Noun Image Credit-->
+#### Image Credit
+[TODO](TODO) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
