@@ -15,12 +15,10 @@ image:
   focal_point: ""
   preview_only: false
 
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-# projects: []
+# Output and Chunk Output in Console
+output: html_document
+editor_options: 
+  chunk_output_type: console
 
 # Koji Button
 # YAML language example from https://yaml.org/spec/1.2/spec.html#id2772075
