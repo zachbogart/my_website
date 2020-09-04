@@ -1,0 +1,41 @@
+---
+title: Treehouse of Horror
+author: Zach Bogart
+date: '2020-09-03'
+slug: treehouse-of-horror
+categories:
+  - R
+tags:
+  - rvest
+  - tidyverse
+subtitle: TODO
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  koji_button:
+    icon: mug-hot
+    icon_pack: fas
+    name: Give a Coffee
+    url: https://ko-fi.com/zachbogart
+---
+
+<!--Starting Blurb-->
+TODO
+
+<!--Put actual work here-->
+
+TODO
+
+
+<!--Section on Learning (general notes that came up)-->
+## Learning
+TODO
+
+<!--Noun Image Credit-->
+#### Image Credit
+[TODO](TODO) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
