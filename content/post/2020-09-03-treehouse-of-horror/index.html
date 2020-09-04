@@ -1,0 +1,115 @@
+---
+title: Treehouse of Horror
+author: Zach Bogart
+date: '2020-09-03'
+slug: treehouse-of-horror
+categories:
+  - R
+tags:
+  - rvest
+  - tidyverse
+subtitle: "The Halloween Specials, Visualized"
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  koji_button:
+    icon: mug-hot
+    icon_pack: fas
+    name: Give a Coffee
+    url: https://ko-fi.com/zachbogart
+---
+
+
+
+<!--Starting Blurb-->
+<p>Told ya I wasn’t done with The Simpsons just yet. After <a href="https://zachbogart.com/post/cartoonies/">comparing them to other animated shows</a>, there is still more to tell. Here’s a quick look at the Treehouse of Horror episodes.</p>
+<!--Put actual work here-->
+<div id="setup" class="section level1">
+<h1>Setup</h1>
+<p>Using an R script file, I can reference the rvest scraper I made earlier without copy/pasting.</p>
+<pre class="r"><code>library(tidyverse)
+source(&quot;../2020-08-28-simpsons/rvest_scraper.R&quot;)
+
+theme_set(theme_light())
+
+plot_caption &lt;- &quot;zachbogart.com\nSource: IMDb&quot;</code></pre>
+<p>After getting the data, we can do some plotting.</p>
+<pre class="r"><code>simpsons &lt;- grab_imdb_ratings(&quot;tt0096697&quot;, c(1:31))</code></pre>
+<div id="treehouse-of-horror-episodes-do-well" class="section level2">
+<h2>Treehouse of Horror Episodes Do Well</h2>
+<p>Here we use <code>str_detect</code> to just grab the relevant episodes. With some grouping, can get the average ratings for non-Halloween-special episodes to compare against the October favorites. Turns out the Treehouse of Horror episodes tend to have higher ratings than the average rating for other episodes in the season. They certainly are some of the most memorable shows.</p>
+<pre class="r"><code># ratings of ToH over time
+simpsons %&gt;% 
+  mutate(toh_episode = str_detect(title, &quot;Treehouse&quot;)) %&gt;% 
+  group_by(season, toh_episode) %&gt;% 
+  mutate(avg_rating = mean(rating), 
+         avg_votes = mean(votes)) %&gt;% 
+  select(show:season, toh_episode, avg_rating, avg_votes) %&gt;% 
+  distinct() %&gt;% 
+  
+  ggplot(aes(season, avg_rating, color = toh_episode)) +
+    geom_smooth(aes(group = toh_episode), se=FALSE, color = &quot;#eeeeee&quot;) +
+    geom_line() +
+    scale_x_continuous(breaks = seq(1,31,2)) +
+    scale_color_manual(values = c(&quot;#009EDC&quot;, &quot;#F14E28&quot;)) +
+    labs(
+      title = &quot;Television! Teacher, Mother, Secret Lover.&quot;,
+      subtitle = &quot;IMDb Ratings for Regular and Treehouse of Horror Simpsons Episodes&quot;,
+      color = &quot;ToH Episode&quot;,
+      x = &quot;Season&quot;,
+      y = &quot;Average Episode Rating&quot;,
+      caption = plot_caption
+    )</code></pre>
+<p><img src="/post/2020-09-03-treehouse-of-horror/index_files/figure-html/unnamed-chunk-3-1.png" width="768" /></p>
+<p>Notes:</p>
+<ul>
+<li>There was no Treehouse of Horror in the first season so the red line has no value there</li>
+<li>Most ToH episodes are rated higher than the average rating for the other episodes in the season. It doesn’t start dipping till season eighteen.</li>
+<li>That peak is <a href="https://en.wikipedia.org/wiki/Treehouse_of_Horror_V">Treehouse of Horror V</a>, the third-highest-rated episode in the dataset.</li>
+</ul>
+</div>
+<div id="do-they-always-fall-near-halloween" class="section level2">
+<h2>Do They Always Fall Near Halloween?</h2>
+<p>I wrote a little earlier on that these episodes are “October favorites”. However, that often is not the case. Many Halloween specials aired at the start of November, after Halloween. Given that the show airs on Sundays and Halloween doesn’t always fall on that day, there can be some wiggle room. For the first two decades, the Halloween special always fell within a week of the actual holiday. However, in later years the special is a little more variable, sometimes airing at the start of the month, a full twenty-five days early.</p>
+<pre class="r"><code># how close to Halloween?
+simpsons %&gt;% 
+  filter(str_detect(title, &quot;Treehouse&quot;)) %&gt;% 
+  # convert dates to just month/date
+  mutate(month_day = as.Date(paste(&quot;2000-&quot;, format(air_date, &quot;%m-%d&quot;))),
+         halloween_diff = as.numeric(abs(month_day - as.Date(&quot;2000-10-31&quot;)))) %&gt;% 
+  
+  ggplot(aes(season, month_day, color = halloween_diff)) +
+    geom_hline(yintercept = as.Date(&quot;2000-10-31&quot;), color = &quot;red&quot;, alpha = 0.4) +
+    geom_hline(yintercept = as.Date(&quot;2000-10-24&quot;), color = &quot;red&quot;, alpha = 0.4, linetype = &quot;dashed&quot;) +
+    geom_hline(yintercept = as.Date(&quot;2000-11-07&quot;), color = &quot;red&quot;, alpha = 0.4, linetype = &quot;dashed&quot;) +
+    geom_point() +
+    labs(
+      title = &quot;They&#39;re Showing a Halloween Episode...In November!&quot;,
+      subtitle = &quot;Treehouse of Horror Episodes by Date Aired&quot;,
+      x = &quot;Season&quot;,
+      y = &quot;Episode Air Date&quot;,
+      color = &quot;Days ± Oct 31st&quot;,
+      caption = plot_caption
+    )</code></pre>
+<p><img src="/post/2020-09-03-treehouse-of-horror/index_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
+<!--Section on Learning (general notes that came up)-->
+</div>
+<div id="learning" class="section level2">
+<h2>Learning</h2>
+<ul>
+<li>Factoring out the code from the work with <code>rvest</code> into a separate R script made it easier to work with. Calling it with <code>source</code> was a cinch.</li>
+<li>Getting <code>ggplot</code> to just plot the month and day as a pair was a little finicky. Did some date conversion and such to get it to work.</li>
+<li>Tried to use <code>geom_ribbon</code> for one week gap around Oct 31st, but ran into challenges. Was easier to just make two lines.</li>
+</ul>
+<!--Noun Image Credit-->
+<div id="image-credit" class="section level4">
+<h4>Image Credit</h4>
+<p><a href="https://thenounproject.com/search/?creator=4129988&amp;q=halloween&amp;i=2136276">pumpkin</a> by Zach Bogart from <a href="https://thenounproject.com/">the Noun Project</a></p>
+</div>
+</div>
+</div>
