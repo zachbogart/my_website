@@ -22,13 +22,13 @@ editor_options:
 
 # Koji Button
 # YAML language example from https://yaml.org/spec/1.2/spec.html#id2772075
-# The trick: have to nake the link something like "koji_button" to put it inside a group
+# The trick: have to nake the link something like "named_button" to put it inside a group
 links:
-  koji_button:
-    icon: mug-hot
+  donate_button:
+    icon: seedling
     icon_pack: fas
-    name: Give a Coffee
-    url: https://ko-fi.com/zachbogart
+    name: Ways to Support
+    url: /support/
 ---
 
 <!--Starting Blurb-->

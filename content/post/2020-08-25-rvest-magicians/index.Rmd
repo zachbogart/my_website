@@ -12,10 +12,11 @@ slug: "rvest-wizardry"
 image:
   preview_only: FALSE 
 links:
-- icon: mug-hot
-  icon_pack: fas
-  name: Give a Coffee
-  url: https://ko-fi.com/zachbogart
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
 output: html_document
 editor_options: 
   chunk_output_type: inline

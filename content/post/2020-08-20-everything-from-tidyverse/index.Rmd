@@ -11,14 +11,16 @@ slug: "everything"
 image:
   preview_only: FALSE
 links:
-- icon: mug-hot
-  icon_pack: fas
-  name: Give a Coffee
-  url: https://ko-fi.com/zachbogart
-- icon: tshirt
-  icon_pack: fas
-  name: I need a hex heart tee in my life
-  url: https://teespring.com/cool-hex-heart?pid=2&cid=578
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+  shurt_button:
+    icon: tshirt
+    icon_pack: fas
+    name: I need a hex heart tee in my life
+    url: https://teespring.com/cool-hex-heart?pid=2&cid=578
 output: html_document
 editor_options: 
   chunk_output_type: console
