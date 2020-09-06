@@ -9,6 +9,7 @@ tags:
   - rvest
   - tidyverse
 subtitle: "The Halloween Specials, Visualized"
+summary: "Told ya I wasn't done with The Simpsons just yet."
 image:
   caption: ''
   focal_point: ''

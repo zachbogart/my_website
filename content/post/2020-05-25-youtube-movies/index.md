@@ -11,6 +11,7 @@ tags:
   - seaborn
   - matplotlib
 slug: "youtube-movies"
+summary: "You get what you (don't) pay for"
 image:
   preview_only: true
 links:

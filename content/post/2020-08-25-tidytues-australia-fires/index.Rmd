@@ -6,6 +6,7 @@ categories:
 tags:  
   - tidytuesday
 slug: "tt-aus-fires"  
+summary: "Looking at temperature data in Australia from tidytuesday."
 image:
   preview_only: true
 links:

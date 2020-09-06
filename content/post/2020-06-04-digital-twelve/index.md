@@ -8,6 +8,7 @@ categories:
 tags: 
   - pandas
 slug: "twelve-clock"
+summary: "Whenever I see a digital clock, I do a little math in my head."
 image:
   caption: ''
   focal_point: ''
