@@ -8,7 +8,7 @@ tags:
   - ggplot
 slug: "learning-r-polar-coords"  
 image:
-  preview_only: FALSE
+  preview_only: true
 links:
   donate_button:
     icon: seedling
@@ -19,6 +19,9 @@ output: html_document
 editor_options: 
   chunk_output_type: console
 ---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

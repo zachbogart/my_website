@@ -32,6 +32,9 @@ links:
     url: /support/
 ---
 
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
 <!--Starting Blurb-->
 TODO
 

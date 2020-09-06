@@ -10,7 +10,7 @@ tags:
   - tidyverse
 slug: "cartoonies"  
 image:
-  preview_only: FALSE 
+  preview_only: true 
 links:
   donate_button:
     icon: seedling
@@ -22,6 +22,9 @@ editor_options:
   chunk_output_type: console
 draft: false
 ---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 

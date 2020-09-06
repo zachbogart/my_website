@@ -7,12 +7,21 @@ categories:
 tags:  
   - pandas  
 slug: "pandas-grouping-data"  
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 links:
-- icon: mug-hot
-  icon_pack: fas
-  name: Give a Coffee
-  url: https://ko-fi.com/zachbogart
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+
 ---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
 
 I find I have to do a lot of grouping in pandas and I reach for [this blog post by Shane Lynn](https://www.shanelynn.ie/summarising-aggregation-and-grouping-data-in-python-pandas/) all the  time to remind me how to get it done. I've found grouping things in pandas difficult sometimes, usually when  I want to create a column in the original dataframe by grouping stuff. This technique solves that and I'm super grateful to it.
 

@@ -11,7 +11,7 @@ subtitle: "Data on Cracking (Bad) Passwords"
 image:
   caption: ''
   focal_point: ''
-  preview_only: no
+  preview_only: yes
 output: html_document
 editor_options:
   chunk_output_type: console
@@ -22,6 +22,9 @@ links:
     name: Ways to Support
     url: /support/
 ---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/>
 
 <!--Starting Blurb-->
 A quick exploration, looking at password data from [TidyTuesday](https://github.com/rfordatascience/tidytuesday).

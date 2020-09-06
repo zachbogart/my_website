@@ -5,8 +5,15 @@ categories:
   - R
 tags: 
   - news
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 slug: "hello-world"
 ---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/>  
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)

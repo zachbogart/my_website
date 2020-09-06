@@ -7,7 +7,7 @@ tags:
   - tidytuesday
 slug: "tt-aus-fires"  
 image:
-  preview_only: FALSE
+  preview_only: true
 links:
   donate_button:
     icon: seedling
@@ -18,6 +18,9 @@ output: html_document
 editor_options: 
   chunk_output_type: console
 ---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/>
 
 Looking at temperature data in Australia from tidytuesday.
 

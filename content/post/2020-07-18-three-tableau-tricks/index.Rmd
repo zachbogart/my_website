@@ -5,7 +5,11 @@ categories:
   - Tableau
 tags:  
   - tricks
-slug: "two-tableau-tricks"  
+slug: "three-tableau-tricks"  
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 links:
   donate_button:
     icon: seedling
@@ -13,6 +17,9 @@ links:
     name: Ways to Support
     url: /support/
 ---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

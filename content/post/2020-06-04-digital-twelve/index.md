@@ -8,17 +8,26 @@ categories:
 tags: 
   - pandas
 slug: "twelve-clock"
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 links:
-- icon: external-link-alt
-  icon_pack: fas
-  name: Jupyter Notebook
-  url: https://github.com/zachbogart/my_website/blob/master/content/post/2020-06-04-digital-twelve/2020-06-04-digital-twelve.ipynb
-- icon: mug-hot
-  icon_pack: fas
-  name: Give a Coffee
-  url: https://ko-fi.com/zachbogart
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+  jupyter_button:
+    icon: external-link-alt
+    icon_pack: fas
+    name: Jupyter Notebook
+    url: https://github.com/zachbogart/my_website/blob/master/content/post/2020-06-04-digital-twelve/2020-06-04-digital-twelve.ipynb
             
 ---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
 
 ## ...What?
 Whenever I see a digital clock, I do a little math in my head. I try to take the numbers and, using only addition, subtraction, multiplication and division, get them to come out to twelve. I thought I'd try to get an exhaustive list of times that this trick applies to. Let's figure it out!
