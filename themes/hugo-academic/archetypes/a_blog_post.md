@@ -3,6 +3,7 @@
 
 title: "{{ replace .Name "-" " " | title }}"
 subtitle: "TODO"
+summary: "TODO"
 tags: []
 categories: []
 date: {{ .Date }}
