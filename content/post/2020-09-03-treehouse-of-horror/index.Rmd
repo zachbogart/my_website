@@ -12,7 +12,7 @@ subtitle: "The Halloween Specials, Visualized"
 image:
   caption: ''
   focal_point: ''
-  preview_only: no
+  preview_only: yes
 output: html_document
 editor_options:
   chunk_output_type: console
@@ -23,6 +23,8 @@ links:
     name: Ways to Support
     url: /support/
 ---
+
+<img src="featured.png" width="100"/> 
 
 <!--Starting Blurb-->
 Told ya I wasn't done with The Simpsons just yet. After [comparing them to other animated shows](https://zachbogart.com/post/cartoonies/), there is still more to tell. Here's a quick look at the Treehouse of Horror episodes.
