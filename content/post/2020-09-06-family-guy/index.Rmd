@@ -1,0 +1,56 @@
+---
+title: Family Guy
+author: Zach Bogart
+date: '2020-09-06'
+slug: family-guy
+categories:
+  - R
+tags:
+  - ggplot
+subtitle: TODO
+summary: TODO
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
+<!--Starting Blurb-->
+TODO
+
+<!--Put actual work here-->
+
+TODO
+```{r}
+library(tidyverse)
+source("../2020-08-28-simpsons/rvest_scraper.R")
+```
+
+```{r}
+fg <- grab_imdb_ratings("tt0182576", c(1:18))
+```
+
+```{r}
+simpsons <- grab_imdb_ratings("tt0096697", c(1:31))
+```
+
+
+<!--Section on Learning (general notes that came up)-->
+## Learning
+TODO
+
+<!--Noun Image Credit-->
+#### Image Credit
+[TODO](TODO) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
