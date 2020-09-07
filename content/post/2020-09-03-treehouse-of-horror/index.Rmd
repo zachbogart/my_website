@@ -40,7 +40,7 @@ knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE)
 ```
 
-# Setup
+## Setup
 
 Using an R script file, I can reference the rvest scraper I made earlier without copy/pasting.
 
