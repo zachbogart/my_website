@@ -39,8 +39,14 @@ links:
 TODO
 
 <!--Put actual work here-->
-
 TODO
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
+```
 
 
 <!--Section on Learning (general notes that came up)-->
