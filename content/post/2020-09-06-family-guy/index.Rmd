@@ -1,5 +1,5 @@
 ---
-title: Family Guy
+title: Family Guy 'Road to' Episodes
 author: Zach Bogart
 date: '2020-09-06'
 slug: family-guy
@@ -7,12 +7,12 @@ categories:
   - R
 tags:
   - ggplot
-subtitle: TODO
-summary: TODO
+subtitle: Brian & Stewie get up to several (highly-rated) adventures
+summary: '"I must admit there have been some moments that were...dare I say, fun?"'
 image:
   caption: ''
   focal_point: ''
-  preview_only: no
+  preview_only: yes
 output: html_document
 editor_options:
   chunk_output_type: console
@@ -28,29 +28,94 @@ links:
 <img src="featured.png" width="100"/> 
 
 <!--Starting Blurb-->
-TODO
+Let's look at the "Road To" episodes of Family guy, where Brian and Stewie go on adventures together. How do they compare to the rest of the episodes aired?
 
 <!--Put actual work here-->
 
-TODO
-```{r}
-library(tidyverse)
-source("../2020-08-28-simpsons/rvest_scraper.R")
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
 ```
 
-```{r}
+
+```{r include = FALSE}
+library(tidyverse)
+source("../2020-08-28-simpsons/rvest_scraper.R")
+
+theme_set(theme_light())
+
+plot_caption <- "zachbogart.com\nSource: IMDb"
+```
+
+Using the [scraper I made](/post/cartoonies/), we can get the episode ratings for Family Guy.
+```{r cache=TRUE}
 fg <- grab_imdb_ratings("tt0182576", c(1:18))
 ```
 
+## They Make Quite a Pair
+
+Below we plot the ratings, this time highlighting the "Road to" episodes. 
 ```{r}
-simpsons <- grab_imdb_ratings("tt0096697", c(1:31))
+# just the "road to" episodes
+roads <- fg %>% 
+  filter(str_detect(title, "Road"))
+
+# all other episodes
+rest <- fg %>% 
+  filter(!str_detect(title, "Road"))
+
+y_text = 6.8
+point_color = "#999999"
+road_color = "#008080"
+  
+ggplot(data = roads, aes(air_date, rating)) +
+  # other episodes
+  geom_point(data = rest, aes(air_date, rating, size = votes), 
+             color = point_color, alpha = 0.2, stroke = 0) +
+  # line for highlighted episodes
+  geom_line(color = road_color) +
+  # "road to" episodes
+  geom_point(aes(size=votes), color = road_color) +
+  # labels
+  geom_text(aes(y = y_text, 
+                label = title,
+                hjust = "left"), angle = -45, color = road_color) +
+  # label lines
+  geom_segment(aes(x = air_date, y = rating, 
+                   xend = air_date, yend = y_text),
+               linetype = "longdash", color = road_color) +
+  labs(title = "We're Off on the Road to High Ratings",
+       subtitle = "'Road to' Family Guy episodes over time",
+       x = "", 
+       y = "IMDb Rating",
+       size = "# Votes", 
+       caption = plot_caption)
 ```
 
+Results:
+
+- The "Road To" episodes are usually highly rated in relation to episodes aired during a similar time
+- The ratings for the "Road To" episodes are based on more votes than other episodes (more users gave their opinion for these specific episodes).
+- Highest-rated episode for all seasons of Family Guy is "Road to the Multiverse". I explored the best and worst further in [this post](/post/cartoonies/), which includes other shows as well.
+
+Till next time!
+
+![](https://media.giphy.com/media/l0HlNcircjaT2VT2M/giphy.gif)
 
 <!--Section on Learning (general notes that came up)-->
 ## Learning
-TODO
+
+- `geom_segment()` was helpful to get the dotted lines for the labels
+
+## Some Links
+
+- [Using `hjust` to align text](https://stackoverflow.com/questions/26684023/how-to-left-align-text-in-annotate-from-ggplot2): was helpful to get at altering position of text.
+- [`geom_segment()` R Documentation](https://www.rdocumentation.org/packages/ggplot2/versions/0.9.0/topics/geom_segment)
+- [ggplot2 Quick Reference: linetype](http://sape.inf.usi.ch/quick-reference/ggplot2/linetype): from Software and Programmer Efficiency Research Group
 
 <!--Noun Image Credit-->
 #### Image Credit
-[TODO](TODO) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+[wandering path](https://thenounproject.com/search/?creator=4129988&q=path&i=3169538) by Zach Bogart from [the Noun Project](https://thenounproject.com/)

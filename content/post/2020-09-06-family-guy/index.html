@@ -1,0 +1,102 @@
+---
+title: Family Guy 'Road to' Episodes
+author: Zach Bogart
+date: '2020-09-06'
+slug: family-guy
+categories:
+  - R
+tags:
+  - ggplot
+subtitle: Brian & Stewie get up to several (highly-rated) adventures
+summary: '"I must admit there have been some moments that were...dare I say, fun?"'
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+
+
+<!-- Icon Image: Small -->
+<p><img src="featured.png" width="100"/></p>
+<!--Starting Blurb-->
+<p>Let’s look at the “Road To” episodes of Family guy, where Brian and Stewie go on adventures together. How do they compare to the rest of the episodes aired?</p>
+<!--Put actual work here-->
+<p>Using the <a href="/post/cartoonies/">scraper I made</a>, we can get the episode ratings for Family Guy.</p>
+<pre class="r"><code>fg &lt;- grab_imdb_ratings(&quot;tt0182576&quot;, c(1:18))</code></pre>
+<div id="they-make-quite-a-pair" class="section level2">
+<h2>They Make Quite a Pair</h2>
+<p>Below we plot the ratings, this time highlighting the “Road to” episodes.</p>
+<pre class="r"><code># just the &quot;road to&quot; episodes
+roads &lt;- fg %&gt;% 
+  filter(str_detect(title, &quot;Road&quot;))
+
+# all other episodes
+rest &lt;- fg %&gt;% 
+  filter(!str_detect(title, &quot;Road&quot;))
+
+y_text = 6.8
+point_color = &quot;#999999&quot;
+road_color = &quot;#008080&quot;
+  
+ggplot(data = roads, aes(air_date, rating)) +
+  # other episodes
+  geom_point(data = rest, aes(air_date, rating, size = votes), 
+             color = point_color, alpha = 0.2, stroke = 0) +
+  # line for highlighted episodes
+  geom_line(color = road_color) +
+  # &quot;road to&quot; episodes
+  geom_point(aes(size=votes), color = road_color) +
+  # labels
+  geom_text(aes(y = y_text, 
+                label = title,
+                hjust = &quot;left&quot;), angle = -45, color = road_color) +
+  # label lines
+  geom_segment(aes(x = air_date, y = rating, 
+                   xend = air_date, yend = y_text),
+               linetype = &quot;longdash&quot;, color = road_color) +
+  labs(title = &quot;We&#39;re Off on the Road to High Ratings&quot;,
+       subtitle = &quot;&#39;Road to&#39; Family Guy episodes over time&quot;,
+       x = &quot;&quot;, 
+       y = &quot;IMDb Rating&quot;,
+       size = &quot;# Votes&quot;, 
+       caption = plot_caption)</code></pre>
+<p><img src="/post/2020-09-06-family-guy/index_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
+<p>Results:</p>
+<ul>
+<li>The “Road To” episodes are usually highly rated in relation to episodes aired during a similar time</li>
+<li>The ratings for the “Road To” episodes are based on more votes than other episodes (more users gave their opinion for these specific episodes).</li>
+<li>Highest-rated episode for all seasons of Family Guy is “Road to the Multiverse”. I explored the best and worst further in <a href="/post/cartoonies/">this post</a>, which includes other shows as well.</li>
+</ul>
+<p>Till next time!</p>
+<p><img src="https://media.giphy.com/media/l0HlNcircjaT2VT2M/giphy.gif" /></p>
+<!--Section on Learning (general notes that came up)-->
+</div>
+<div id="learning" class="section level2">
+<h2>Learning</h2>
+<ul>
+<li><code>geom_segment()</code> was helpful to get the dotted lines for the labels</li>
+</ul>
+</div>
+<div id="some-links" class="section level2">
+<h2>Some Links</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/26684023/how-to-left-align-text-in-annotate-from-ggplot2">Using <code>hjust</code> to align text</a>: was helpful to get at altering position of text.</li>
+<li><a href="https://www.rdocumentation.org/packages/ggplot2/versions/0.9.0/topics/geom_segment"><code>geom_segment()</code> R Documentation</a></li>
+<li><a href="http://sape.inf.usi.ch/quick-reference/ggplot2/linetype">ggplot2 Quick Reference: linetype</a>: from Software and Programmer Efficiency Research Group</li>
+</ul>
+<!--Noun Image Credit-->
+<div id="image-credit" class="section level4">
+<h4>Image Credit</h4>
+<p><a href="https://thenounproject.com/search/?creator=4129988&amp;q=path&amp;i=3169538">wandering path</a> by Zach Bogart from <a href="https://thenounproject.com/">the Noun Project</a></p>
+</div>
+</div>
