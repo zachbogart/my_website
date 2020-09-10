@@ -14,7 +14,7 @@ date: {{ .Date }}
 image:
   caption: ""
   focal_point: ""
-  preview_only: false
+  preview_only: yes
 
 # Output and Chunk Output in Console
 output: html_document
