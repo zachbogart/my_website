@@ -1,0 +1,161 @@
+---
+title: Top Nouns, Two Years Later
+author: Zach Bogart
+date: '2020-09-12'
+slug: top-nouns-two-years-later
+categories:
+  - Python
+tags:
+  - news
+  - design_project
+  - matplotlib
+  - pandas
+subtitle: 100K+ downloads. Just getting started.
+summary: 100K+ downloads. Just getting started.
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
+<!--Starting Blurb-->
+I've been making nouns and sharing them on [Noun Project](/nouns) for about two years now. I was interested in seeing which nouns were the most popular, so I collected data on which nouns people downloaded. Here are the results.
+
+## Top 100, 2018-2020
+These are the hundred most-downloaded icons I have made (Aug 2018-Aug 2020). 
+
+![](hundred01.png)
+
+Notes:
+
+- The most popular icon is also one of the simplest: [paint stroke](https://thenounproject.com/browse/?i=2352019). With over 10K downloads, it is by far my most downloaded icon.
+- Most of the popular icons have very simple names (heart, gas, cat, search)
+- A few popular ones I'm particularly proud of:
+  28. [Package](https://thenounproject.com/browse/?i=2082419)
+  35. [Lotus Pose](https://thenounproject.com/browse/?i=3098225)
+  49. [Coffee Drinker](https://thenounproject.com/browse/?i=2937161)
+  53. [Gas Mask](https://thenounproject.com/browse/?i=2664507)
+  89. [Gas](https://thenounproject.com/browse/?i=1988082)
+  
+Thanks for two great years of icons. More to come...
+
+![](https://media.giphy.com/media/IoMkSXKHQIDVm/giphy.gif)
+
+<!--Noun Image Credit-->
+#### Image Credits
+Big list this time :black_heart:
+
+- [star medal](https://thenounproject.com/search/?creator=4129988&q=medal&i=1988208) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+
+1. [Paint Stroke](https://thenounproject.com/browse/?i=2352019) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+2. [Heart](https://thenounproject.com/browse/?i=2087564) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+3. [Stripes](https://thenounproject.com/browse/?i=2098710) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+4. [Circle](https://thenounproject.com/browse/?i=2052870) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+5. [Verified](https://thenounproject.com/browse/?i=1983696) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+6. [Grid](https://thenounproject.com/browse/?i=2188240) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+7. [Imperial Japanese Army](https://thenounproject.com/browse/?i=2469993) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+8. [Sunglasses](https://thenounproject.com/browse/?i=2188207) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+9. [Scribble](https://thenounproject.com/browse/?i=2539081) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+10. [Half](https://thenounproject.com/browse/?i=2181182) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+11. [Scribble](https://thenounproject.com/browse/?i=2352017) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+12. [Connected](https://thenounproject.com/browse/?i=2486392) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+13. [50%](https://thenounproject.com/browse/?i=2072952) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+14. [Square](https://thenounproject.com/browse/?i=2202242) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+15. [Heart](https://thenounproject.com/browse/?i=2181172) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+16. [Metal Plate](https://thenounproject.com/browse/?i=2066017) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+17. [Search](https://thenounproject.com/browse/?i=1974616) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+18. [Exclamation Point](https://thenounproject.com/browse/?i=2009949) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+19. [Texas Flag](https://thenounproject.com/browse/?i=2810236) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+20. [Fabric](https://thenounproject.com/browse/?i=2068373) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+21. [Bouncing Ball](https://thenounproject.com/browse/?i=2636361) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+22. [Power Lines](https://thenounproject.com/browse/?i=2937151) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+23. [Speed](https://thenounproject.com/browse/?i=2312635) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+24. [Yin And Yang](https://thenounproject.com/browse/?i=1988077) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+25. [Dots](https://thenounproject.com/browse/?i=2098711) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+26. [Curve](https://thenounproject.com/browse/?i=2386664) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+27. [Pencil Stroke](https://thenounproject.com/browse/?i=2352018) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+28. [Package](https://thenounproject.com/browse/?i=2082419) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+29. [Dot Triangle](https://thenounproject.com/browse/?i=3169836) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+30. [Database](https://thenounproject.com/browse/?i=1976604) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+31. [Alert](https://thenounproject.com/browse/?i=2181177) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+32. [Weave](https://thenounproject.com/browse/?i=3169890) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+33. [Spring](https://thenounproject.com/browse/?i=2161668) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+34. [75%](https://thenounproject.com/browse/?i=2072965) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+35. [Lotus Pose](https://thenounproject.com/browse/?i=3098225) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+36. [Charging](https://thenounproject.com/browse/?i=1976054) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+37. [Emperor's Chrysanthemum](https://thenounproject.com/browse/?i=2469996) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+38. [Vote](https://thenounproject.com/browse/?i=2098706) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+39. [Open](https://thenounproject.com/browse/?i=2392341) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+40. [25%](https://thenounproject.com/browse/?i=2072954) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+41. [Stacked Cubes](https://thenounproject.com/browse/?i=2173724) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+42. [Container](https://thenounproject.com/browse/?i=2072335) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+43. [Tally](https://thenounproject.com/browse/?i=2098704) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+44. [Lightbulb](https://thenounproject.com/browse/?i=2000923) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+45. [Fabric](https://thenounproject.com/browse/?i=2068369) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+46. [Cross](https://thenounproject.com/browse/?i=1988078) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+47. [Ellipses](https://thenounproject.com/browse/?i=2042557) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+48. [Knitted Fabric](https://thenounproject.com/browse/?i=3169595) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+49. [Coffee Drinker](https://thenounproject.com/browse/?i=2937161) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+50. [Five Stars](https://thenounproject.com/browse/?i=2188235) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+51. [Glue](https://thenounproject.com/browse/?i=2612225) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+52. [Line Graph](https://thenounproject.com/browse/?i=2196104) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+53. [Gas Mask](https://thenounproject.com/browse/?i=2664507) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+54. [Vote](https://thenounproject.com/browse/?i=2098703) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+55. [Smoking](https://thenounproject.com/browse/?i=1988084) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+56. [Teardrop](https://thenounproject.com/browse/?i=2294437) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+57. [Slash](https://thenounproject.com/browse/?i=1895930) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+58. [Module](https://thenounproject.com/browse/?i=2196098) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+59. [Golden Spiral](https://thenounproject.com/browse/?i=2436979) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+60. [Line Graph](https://thenounproject.com/browse/?i=2196096) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+61. [Wandering Path](https://thenounproject.com/browse/?i=3169538) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+62. [Snowflake](https://thenounproject.com/browse/?i=2202268) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+63. [Transgender](https://thenounproject.com/browse/?i=2431636) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+64. [Stack](https://thenounproject.com/browse/?i=1895927) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+65. [Diamond Of Diamonds](https://thenounproject.com/browse/?i=2006982) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+66. [Gears](https://thenounproject.com/browse/?i=2611445) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+67. [Electrocardiogram](https://thenounproject.com/browse/?i=2971630) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+68. [Barber Pole](https://thenounproject.com/browse/?i=2072340) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+69. [One](https://thenounproject.com/browse/?i=1976079) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+70. [Target](https://thenounproject.com/browse/?i=2094080) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+71. [Person](https://thenounproject.com/browse/?i=2098705) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+72. [Hex Grid](https://thenounproject.com/browse/?i=2176359) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+73. [Slash](https://thenounproject.com/browse/?i=2202257) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+74. [Database](https://thenounproject.com/browse/?i=2085931) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+75. [Talons](https://thenounproject.com/browse/?i=2312649) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+76. [Year](https://thenounproject.com/browse/?i=2612190) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+77. [Stack](https://thenounproject.com/browse/?i=1976608) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+78. [Japan](https://thenounproject.com/browse/?i=2181178) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+79. [Slash](https://thenounproject.com/browse/?i=2312648) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+80. [Music](https://thenounproject.com/browse/?i=3097968) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+81. [Laser](https://thenounproject.com/browse/?i=2072331) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+82. [Rounded Knot](https://thenounproject.com/browse/?i=2294439) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+83. [100%](https://thenounproject.com/browse/?i=2072980) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+84. [Package](https://thenounproject.com/browse/?i=2082418) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+85. [Pitchfork](https://thenounproject.com/browse/?i=2131892) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+86. [Starfish](https://thenounproject.com/browse/?i=1986089) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+87. [Cat](https://thenounproject.com/browse/?i=2072325) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+88. [Six Piece Burr](https://thenounproject.com/browse/?i=2833217) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+89. [Gas](https://thenounproject.com/browse/?i=1988082) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+90. [Female](https://thenounproject.com/browse/?i=2128410) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+91. [Four Split Tree](https://thenounproject.com/browse/?i=2012519) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+92. [Home Plate](https://thenounproject.com/browse/?i=2277825) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+93. [Amsterdam](https://thenounproject.com/browse/?i=2161634) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+94. [Synapse](https://thenounproject.com/browse/?i=2713923) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+95. [Overlap](https://thenounproject.com/browse/?i=2094083) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+96. [Eye](https://thenounproject.com/browse/?i=1894385) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+97. [Peace](https://thenounproject.com/browse/?i=2176345) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+98. [Dial](https://thenounproject.com/browse/?i=2161646) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+99. [Wall](https://thenounproject.com/browse/?i=1984917) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+100. [Scratch](https://thenounproject.com/browse/?i=2488364) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
