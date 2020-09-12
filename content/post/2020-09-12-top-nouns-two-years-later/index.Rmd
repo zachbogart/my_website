@@ -43,11 +43,11 @@ Notes:
 - The most popular icon is also one of the simplest: [paint stroke](https://thenounproject.com/browse/?i=2352019). With over 10K downloads, it is by far my most downloaded icon.
 - Most of the popular icons have very simple names (heart, gas, cat, search)
 - A few popular ones I'm particularly proud of:
-  28. [Package](https://thenounproject.com/browse/?i=2082419)
-  35. [Lotus Pose](https://thenounproject.com/browse/?i=3098225)
-  49. [Coffee Drinker](https://thenounproject.com/browse/?i=2937161)
-  53. [Gas Mask](https://thenounproject.com/browse/?i=2664507)
-  89. [Gas](https://thenounproject.com/browse/?i=1988082)
+  - #28 [Package](https://thenounproject.com/browse/?i=2082419)
+  - #35 [Lotus Pose](https://thenounproject.com/browse/?i=3098225)
+  - #49 [Coffee Drinker](https://thenounproject.com/browse/?i=2937161)
+  - #53 [Gas Mask](https://thenounproject.com/browse/?i=2664507)
+  - #89 [Gas](https://thenounproject.com/browse/?i=1988082)
   
 Thanks for two great years of icons. More to come...
 
