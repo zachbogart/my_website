@@ -1,0 +1,62 @@
+<!-- 
+This doesn't work right now since the rendering function isn't being called for the embedded cell
+-->
+
+---
+title: Testing D3 Embed
+author: Zach Bogart
+date: '2020-09-13'
+slug: testing-d3-embed
+categories:
+  - JavaScript
+tags:
+  - D3
+subtitle: TODO
+summary: TODO
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
+<!--Starting Blurb-->
+TODO
+
+<!--Put actual work here-->
+TODO
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
+```
+
+<!-- D3 Example -->
+<div id="observablehq-8fb35ee5"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@zachbogart/mirror-neuron-1-lunch-in-the-d3-kitchen.js?v=3";
+const inspect = Inspector.into("#observablehq-8fb35ee5");
+(new Runtime).module(define, name => name === "mySVG" ? inspect() : undefined);
+</script>
+
+<!--Section on Learning (general notes that came up)-->
+## Learning
+TODO
+
+<!--Noun Image Credit-->
+#### Image Credit
+[TODO](TODO) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
