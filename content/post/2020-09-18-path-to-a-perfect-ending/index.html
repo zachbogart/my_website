@@ -242,6 +242,13 @@ last_episodes_bad %&gt;%
 <li>Game of Thrones has four perfectly-rated episodes in the collection, with Breaking Bad also scoring high with three.</li>
 <li>Breaking Bad is the only show with an episode rated a perfect ten (data collected cuts off at tenth decimal). Interestingly, it is the antepenultimate episode, two from the last (and yeah, this post might be one big excuse to use that word in context).</li>
 </ul>
+</div>
+<div id="wield-the-remote" class="section level2">
+<h2>Wield the Remote</h2>
+<p>Quit hoggin’ the remote, I wanna choose! You got it.</p>
+<p>Here’s a look at the final episode progression for all the shows collected.</p>
+<iframe width="100%" height="400px" scrolling="no" frameborder="no" src="https://zachbogart.shinyapps.io/shiny-app-tv-endings/">
+</iframe>
 <p>Now, if you’ll excuse me, I have to go watch some TV (strictly research, you understand).</p>
 <p>Till next time!</p>
 <p><img src="https://media.giphy.com/media/7DzlajZNY5D0I/giphy.gif" /></p>
@@ -256,10 +263,12 @@ last_episodes_bad %&gt;%
 <li>Creating a list to then filter on with <code>%in%</code> was a useful trick. A little wrangling required to get it down just to a vector.</li>
 <li>Started <code>dplyr</code> work to get the final episodes with some grouping and other stuff. But <code>top_n</code> came in to save the day, fit the bill perfectly.</li>
 <li>The scraper I made “breaks” when a show has an episode with no ratings, which happens for a variety of reasons (pilot, duplication, etc.). Would be nice to somehow ignore these entries, since right now the best I can do is ignore the offending season entirely.</li>
+<li>Getting the Shiny app up and running was painless. <a href="https://www.brettory.com/2018/02/embedding-a-shiny-app-in-blogdown/">Brett Ory’s post on the topic</a> was super helpful. Am a little disappointed the layout is a little wonky, will have to learn how to fill the page better or move things around with more control. But gettin something on the screen is a win in my book.</li>
 </ul>
 <!--Noun Image Credit-->
 <div id="image-credit" class="section level4">
 <h4>Image Credit</h4>
 <p><a href="https://thenounproject.com/search/?creator=4129988&amp;q=star&amp;i=2120457">starstruck</a> by Zach Bogart from <a href="https://thenounproject.com/">the Noun Project</a></p>
+<!-- Work for Saving off Data for Shiny App -->
 </div>
 </div>
