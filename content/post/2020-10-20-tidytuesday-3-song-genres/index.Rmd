@@ -1,0 +1,55 @@
+---
+title: 'Tidytuesday #3: Song Genres'
+author: Zach Bogart
+date: '2020-10-20'
+slug: tidytuesday-3-song-genres
+categories:
+  - R
+tags:
+  - tidytuesday
+subtitle: TODO
+summary: TODO
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
+<!--Starting Blurb-->
+TODO
+
+<!--Put actual work here-->
+TODO
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
+```
+
+```{r}
+# reading in data
+spotify_songs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-21/spotify_songs.csv')
+```
+
+
+<!--Section on Learning (general notes that came up)-->
+## Learning 
+TODO
+
+<!--Noun Image Credit-->
+#### Image Credit
+[TODO](TODO) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
