@@ -7,8 +7,8 @@ categories:
   - R
 tags:
   - tidytuesday
-subtitle: TODO
-summary: TODO
+subtitle: Rip the Knob Off
+summary: TidyTuesday on Spotify Data
 image:
   caption: ''
   focal_point: ''
@@ -28,10 +28,9 @@ links:
 <img src="featured.png" width="100"/> 
 
 <!--Starting Blurb-->
-TODO
+Working with TidyTuesday data, this time some Spotify info. Always was interested in seeing the introduction of lowercase in song titles, so this accomplished that.
 
 <!--Put actual work here-->
-TODO
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 
                       cache.lazy = FALSE,
@@ -41,15 +40,114 @@ knitr::opts_chunk$set(echo = TRUE,
 ```
 
 ```{r}
-# reading in data
-spotify_songs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-21/spotify_songs.csv')
+library(tidyverse)
+library(scales)
+
+theme_set(theme_light())
+
+plot_caption = "zachbogart.com\nSource: Spotify"
 ```
 
 
-<!--Section on Learning (general notes that came up)-->
-## Learning 
-TODO
+```{r}
+# reading in data
+df <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-21/spotify_songs.csv')
+```
+
+## What are the Playlist Genres Present?
+
+```{r}
+df %>% 
+  ggplot(aes(playlist_genre, fill=playlist_genre)) +
+    geom_bar(show.legend = FALSE) +
+    
+    labs(x = "Genre",
+         y = "# Songs",
+         title = "Pretty Even Split Between Genres",
+         subtitle = "Spotify Playlist Genres by count",
+         caption = plot_caption)
+```
+
+## What is the distribution of tempos for each genre?
+
+```{r}
+avg_tempos = df %>% 
+  group_by(playlist_genre) %>% 
+  summarise(avg_tempo = mean(tempo)) %>% 
+  mutate(row = as.numeric(row.names(.))) %>% 
+  arrange(desc(avg_tempo))
+```
+
+```{r}
+df %>% 
+  ggplot(aes(tempo)) +
+    geom_freqpoly(aes(color = playlist_genre)) +
+    geom_text(data = avg_tempos, aes(y = 2500 - (row * 100), 
+                                     label = round(avg_tempo),
+                                     color = playlist_genre), x = 245) +
+    facet_grid(playlist_genre~.) +
+    
+    labs(title = "EDM Has a Preference",
+         subtitle = "Tempos (bpm) for different music genres",
+         x = "Tempo (bpm)",
+         y = "# Songs",
+         color = "Genre",
+         caption = plot_caption)
+```
+
+## when did song titles start being in lowercase?
+
+```{r}
+spotify = df %>% 
+  mutate(track_album_release_date = as.Date(track_album_release_date))
+
+spotify = spotify %>% 
+  select(-starts_with("play")) %>% 
+  distinct() %>% 
+  filter(
+      (!is.na(track_name)) &
+      (!is.na(track_album_release_date))
+    ) %>%
+  mutate(lowercase =  str_detect(track_name, '^[a-z]'))
+```
+
+```{r}
+upper = spotify %>% 
+  filter(lowercase == FALSE)
+
+lower = spotify %>% 
+  filter(lowercase)
+```
+
+Can see that some artists put out several tracks (albums for some) using lowercase track names.
+
+```{r}
+lower %>% 
+  group_by(track_artist) %>% 
+  summarise(lowercase_songs = n()) %>% 
+  arrange(desc(lowercase_songs))
+```
+
+```{r}
+
+ggplot(data = upper, aes(track_album_release_date, duration_ms, color = lowercase)) +
+  geom_point(alpha = 0.8) +
+  geom_point(data = lower, alpha = 0.8) +
+  
+  scale_color_manual(values = c("#191414", "#1DB954")) +
+  scale_y_continuous(labels = label_number(scale = 1/1000)) +
+  
+  labs(title = "Lowercase Track Titles is a New Thing",
+       subtitle = "Song Length, by whether track starts with a lowercase letter",
+       color = "Lowercase?",
+       x = "Release Date",
+       y = "Song Length (seconds)",
+       caption = plot_caption)
+  
+```
+
+- It's a relatively new phenomenon to use lowercase in a track title. It is a good way to stand out from the crowd.
 
 <!--Noun Image Credit-->
 #### Image Credit
-[TODO](TODO) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+[music notes](https://thenounproject.com/search/?creator=4129988&q=music&i=2937158) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
