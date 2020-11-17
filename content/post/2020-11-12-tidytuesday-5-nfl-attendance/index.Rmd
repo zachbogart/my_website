@@ -1,0 +1,195 @@
+---
+title: 'Tidytuesday #5: NFL Attendance'
+author: Zach Bogart
+date: '2020-11-12'
+slug: tidytuesday-5-nfl-attendance
+categories:
+  - R
+tags:
+  - tidytuesday
+subtitle: "Win one for the home team"
+summary: "TidyTuesday plotting with NFL attendance data"
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
+Doing a quick pass at another TidyTuesday dataset, this time about the NFL. Let's play ball!
+
+<!--Put actual work here-->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
+```
+
+- Source: [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-04/readme.md)
+
+```{r include=FALSE}
+library(tidyverse)
+
+theme_set(theme_light())
+```
+
+
+```{r}
+attendance <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-04/attendance.csv')
+standings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-04/standings.csv')
+games <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-04/games.csv')
+```
+
+## Ask Some Questions of the Data
+
+### How Many Teams? 
+
+```{r}
+# how many teams?
+attendance %>% 
+  count(team, sort=TRUE)
+# --> 32 teams, each with 340 rows (gotta love consistency!)
+```
+
+### Year Range?
+
+```{r}
+# what is the year range?
+attendance %>% 
+  count(year)
+# --> spans 2000 to 2019
+```
+
+- So we have the attendance data for 32 teams for 2000 to 2019
+- The README mentions that there is a week each year where no game is played by each team
+
+```{r}
+# extent of each team's year span
+attendance %>% 
+  group_by(team) %>% 
+  summarise(max_year = max(year),
+            min_year = min(year))
+# --> most teams seem to have a span from 2000 to 2019, with a few being shorter (2016-2019, for example for LA)
+```
+
+## Home vs Away
+
+Looking at the difference between home and away attendance.
+```{r}
+home_and_away = attendance %>% 
+  # filter(team == "Arizona") %>% 
+  
+  pivot_longer(cols = home:away,
+               names_to = "location",
+               values_to = "attendance")
+
+attendance %>% 
+  select(!week:weekly_attendance) %>% 
+  distinct() %>% 
+  
+  ggplot(aes(year)) +
+    geom_line(aes(y = home)) +
+    geom_line(aes(y = away), linetype = "dotted") +
+    scale_y_continuous(labels = scales::comma) +
+    facet_wrap(~team) +
+    labs(
+      title = "Home and Away NFL Attendance",
+      subtitle = "Attendance for NFL games by team, Home (solid) and Away (dotted)",
+      x = "",
+      y = "Number of People")
+```
+
+Went down a big rabbit hole of trying to plot the difference between the two lines and conditionally color the area. But it's a challenge to get the complete area to shade in when the crossings don't happen at data points. Some things tried:
+
+```{r}
+# Big rabbit hole of not being able to fill between two curves
+
+test = attendance %>% 
+  select(!week:weekly_attendance) %>% 
+  distinct() %>% 
+  filter(team %in% c("Dallas", "Miami")) 
+
+test %>%   
+  ggplot(aes(year)) +
+    geom_ribbon(aes(ymin = home, ymax = away, fill = home > away)) +
+    geom_line(data = test, aes(year, home)) +
+    geom_line(data = test, aes(year, away)) +
+    facet_wrap(~team) +
+    labs(
+      title = "Example of Trying to Shade Between Lines",
+      subtitle = "Not completely shaded in. Bad artifacts for multiple crossings"
+    )
+```
+
+Someone did it online, but I don't fully understand how it works. I'm surprised how challenging it is to find the difference between two `geom_line()`'s. Will have to try it out some other time. Would be interested in getting more comfortable at quickly making a conditional line chart with the areas shaded.
+
+- [Two-Color XY Combo Chart](https://learnr.wordpress.com/2009/10/22/ggplot2-two-color-xy-area-combo-chart/)
+
+## What day of the week do games happen?
+
+```{r}
+games %>% 
+  ggplot(aes(factor(day, c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")),
+             fill = day)) +
+    geom_bar() +
+    scale_fill_brewer(palette = "Set3") +
+    labs(title = "Sunday, Sunday, SUNDAY!",
+         subtitle = "NFL Games by Date Played",
+         x = "",
+         y = "# Games") +
+    guides(fill = FALSE)
+
+```
+
+## What are the scores?
+
+```{r}
+games %>% 
+  select(year, pts_win, pts_loss) %>% 
+  pivot_longer(cols = pts_win:pts_loss,
+               names_to = "win_lose",
+               values_to = "points") %>% 
+  
+  ggplot(aes(points, color = win_lose)) +
+    geom_freqpoly(bins = 20) +
+    labs(title = "Winning and Losing Scores",
+         subtitle = "Distribution of points scored for winning/losing teams",
+         color = "",
+         x = "Points Scored",
+         y = "# Games")
+```
+
+## How are teams doing over time?
+
+```{r}
+standings %>% 
+  ggplot(aes(x = year)) +
+    geom_line(aes(y = wins), color = "seagreen") +
+    geom_line(aes(y = loss), color = "firebrick") +
+    facet_wrap(~team) +
+    labs(title = "You Win Some, You Lose Some",
+         subtitle = "Win/Loss for each NFL team over time",
+         x = "",
+         y = "Games")
+```
+
+Till next time!
+
+![](https://media.giphy.com/media/Ou18ZgE49Fss0/giphy.gif)
+
+<!--Noun Image Credit-->
+#### Image Credit
+[Football](https://thenounproject.com/search/?creator=4129988&q=football&i=3169884) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
