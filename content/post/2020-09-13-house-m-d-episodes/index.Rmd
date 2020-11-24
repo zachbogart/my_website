@@ -84,17 +84,6 @@ got %>%
   ggplot(aes(day_of_year, rating, color = factor(season))) +
     geom_line(aes(group = season)) +
     geom_point(aes(size = votes), alpha = 0.5) 
-
-got %>% 
-  mutate(month_day = format(air_date, "%m-%d")) %>% 
-  ggplot(aes(month_day, rating, color = factor(season))) +
-    geom_line(aes(group = season)) +
-    geom_point(aes(size = votes), alpha = 0.5) 
-
-got %>% 
-  ggplot(aes(episode, rating, color = factor(season))) +
-    geom_line(aes(group = season)) +
-    geom_point(aes(size = votes), alpha = 0.5) 
 ```
 
 ## Both
@@ -197,29 +186,6 @@ simpsons %>%
   
     ylim(0, 10)
 ```
-
-## Top Shows
-
-- Rick and Morty
-- Breaking Bad
-- The Wire
-- Avatar
-- The Sopranos
-- The Office
-- Last Week Tonight 
-  - other late shows
-- Friends
-- Gravity Falls
-- Seinfeld
-- House of Cards
-
-## Ideas
-
-- Breaking Bad and The Wire
-
-<!--Section on Learning (general notes that came up)-->
-## Learning
-TODO
 
 <!--Noun Image Credit-->
 #### Image Credit
