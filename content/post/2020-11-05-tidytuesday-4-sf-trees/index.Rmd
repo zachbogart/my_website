@@ -1,0 +1,204 @@
+---
+title: 'Tidytuesday #4: Trees in San Francisco'
+author: Zach Bogart
+date: '2020-11-06'
+slug: tidytuesday-4-sf-trees
+categories:
+  - R
+tags:
+  - tidytuesday
+subtitle: Reveal the City, Just Through Trees
+summary: Learning to Map in R through TidyTuesday
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: inline
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
+<!--Starting Blurb-->
+For this edition of TidyTuesday exploration, I'm going to give map data in R a go. Let's look at some [trees in San Francisco](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-28/readme.md) and see if we can plot them geographically.
+
+<!--Put actual work here-->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
+```
+
+```{r include=FALSE}
+library(tidyverse)
+
+theme_set(theme_light())
+```
+
+Let's see if we can plot all of the trees on a map.
+
+```{r include=FALSE}
+trees = readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-28/sf_trees.csv')
+```
+
+## Trying A County Overlay
+
+Let's try plotting things overlaid on the county lines of San Francisco. Here I'm helped by a great tutorial from [Eric Anderson](https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html). Going to get the state and plot the San Francisco County.
+
+```{r}
+states = map_data("state")
+
+ca_df = states %>% 
+  filter(region == 'california')
+
+ca_base = ca_df %>% 
+  ggplot(aes(long, lat, group = group)) +
+    coord_fixed(1.2) +
+    geom_polygon(color = 'grey', fill = NA)
+```
+
+```{r}
+counties = map_data("county")
+
+san_fran = counties %>% 
+  filter(str_detect(subregion, "fran") & str_detect(region, "califor"))
+```
+
+Here's where San Francisco County is.
+
+```{r}
+with_san_fran = ca_base +
+  geom_polygon(data = san_fran, fill = NA, color = "red")
+
+with_san_fran
+```
+
+We can do some zooming in to get a closer look.
+
+```{r}
+with_san_fran +
+  coord_fixed(xlim = c(-122.55, -122.3), 
+              ylim = c(37.68, 37.83),
+              ratio = 1.3)
+```
+
+And if we add in the trees, we see they don't line up very nicely. Not sure why this is happening. After checking Google Maps, looks like the tree locations make sense in relation to other landmarks, but the county lines seems to be off. They may be a little less accurate or I'm doing something wrong plotting.
+
+```{r warning=FALSE}
+with_san_fran +
+  geom_point(data = trees, aes(longitude, latitude), group = NA,
+             alpha=0.1, color = "seagreen") +
+  coord_fixed(xlim = c(-122.55, -122.3), 
+              ylim = c(37.68, 37.83),
+              ratio = 1.3)
+```
+
+## New Approach: Just the Trees
+
+Let's ditch the county overlay and just plot the trees that makeup the majority of the region. Making the circles smaller helps to reveal the detail.
+
+```{r}
+sf_trees = trees %>% 
+  filter(between(longitude, -122.525, -122.35) &
+         between(latitude, 37, 38))
+
+sf_trees %>% 
+  ggplot(aes(longitude, latitude)) +
+  geom_point(alpha=0.1, color = "seagreen", size = 0.2) +
+  coord_fixed(xlim = c(-122.525, -122.35), 
+              ylim = c(37.7, 37.82),
+              ratio = 1.3) +
+  theme_void()
+```
+
+Simply gorgeous!
+
+## Let's Paint Some Happy Little Trees
+
+Let's see if we can color in the trees based on something. Let's do their `legal_status`
+
+```{r}
+sf_trees %>% 
+  count(legal_status, sort = TRUE)
+```
+
+Slim things down a bit to limit colors.
+
+```{r}
+sf_trees %>% 
+  mutate(legal_status_simple = if_else(legal_status %in% c("DPW Maintained", "Permitted Site"), legal_status, "Other")) %>% 
+  
+  ggplot(aes(longitude, latitude)) +
+  geom_point(aes(color = legal_status_simple), alpha=0.4, size = 0.1) +
+  coord_fixed(xlim = c(-122.525, -122.35), 
+              ylim = c(37.7, 37.82),
+              ratio = 1.3) +
+  scale_color_manual(values = c("seagreen", "grey", "indianred")) +
+  theme_void() +
+  labs(title = "San Francisco's Trees",
+       color = "Legal Status",
+       caption = "zachbogart.com\nSource: TidyTuesday") +
+  guides(color = guide_legend(override.aes = list(alpha=1, size = 3)))
+```
+
+Let's try coloring by the type of tree, too.
+
+```{r}
+sf_trees %>% 
+  count(species, sort=TRUE)
+```
+
+```{r}
+sf_trees %>% 
+  mutate(species_simple = if_else(species %in% c("Platanus x hispanica :: Sycamore: London Plane", 
+                                                 "Metrosideros excelsa :: New Zealand Xmas Tree",
+                                                 "Lophostemon confertus :: Brisbane Box",
+                                                 "Tristaniopsis laurina :: Swamp Myrtle",
+                                                 "Pittosporum undulatum :: Victorian Box",
+                                                 "Prunus cerasifera :: Cherry Plum"), species, "Other")) %>% 
+  
+  ggplot(aes(longitude, latitude)) +
+  geom_point(aes(color = species_simple), alpha=0.2, size = 0.1) +
+  coord_fixed(xlim = c(-122.525, -122.35), 
+              ylim = c(37.7, 37.82),
+              ratio = 1.3) +
+  scale_color_manual(values = c("seagreen", "indianred", "grey", "sandybrown",
+                                "limegreen", "firebrick", "palevioletred")) +
+  theme_void() +
+  labs(title = "San Francisco's Trees",
+       color = "Tree Type",
+       caption = "zachbogart.com\nSource: TidyTuesday") +
+  guides(color = guide_legend(override.aes = list(alpha=1, size = 3)))
+
+```
+
+
+
+Schweet. There seems to be some interesting concentrations like along Sunset Parkway (vertical line on the left). Also some well-known parks are not present, such as the Presidio or Golden Gate Park (a single dot in the center of the big blank rectangle). Either way, a gorgeous result of the complexity of a busy city just looking at the trees that dot the landscape.
+
+Till next time!
+
+![](https://media.giphy.com/media/TgKHZ51jQsNQmLpejG/giphy.gif)
+
+<!--Section on Learning (general notes that came up)-->
+## Learning
+- Haven't done map work before in R. `coord_fixed()` is important to get preserve the representation of the data visually. Will need further understanding since mostly going off of online tutorials.
+- When working with map data, it is helpful to compare with [another source](https://www.google.com/maps/place/San+Francisco,+CA/@37.7523168,-122.4673369,13z/data=!4m5!3m4!1s0x80859a6d00690021:0x4a501367f076adff!8m2!3d37.7749295!4d-122.4194155) to confirm things are the right way round.
+- Didn't trip me up this time but was reminded as I worked that people say "lat/long", but plotting in x/y space, the phrase is the reverse: "Long/Lat"
+- I skimmed [Eric Anderson's tutorial](https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html) on mapping in R to get me started. A helpful guide.
+- Interesting problem: When plotting so many points, the desire is to crank down the opacity, but coloring points means the legend will be super faded. Learned that the legend aesthetics [can be overritten](https://stackoverflow.com/questions/19764968/remove-point-transparency-in-ggplot2-legend), allowing for large opaque circles to be used to define the legend. Will be helpful in the future.
+- Always looking for nice hex colors that are named, so [this color site](https://htmlcolorcodes.com/color-names/) was helpful
+
+<!--Noun Image Credit-->
+#### Image Credit
+[twig](https://thenounproject.com/search/?creator=4129988&q=tree&i=3070560) by Zach Bogart from [the Noun Project](https://thenounproject.com/)

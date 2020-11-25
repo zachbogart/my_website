@@ -1,0 +1,202 @@
+---
+title: 'Tidytuesday #6: Food Consumption and CO2 Emissions'
+author: Zach Bogart
+date: '2020-11-23'
+slug: tidytuesday-6-food-co2
+categories:
+  - R
+tags:
+  - tidytuesday
+subtitle: "Simple Linear Regression with ggplot small multiples"
+summary: "Where's the beef? Off the charts."
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: inline
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/>
+
+<!--Starting Blurb-->
+Example of using simple linear regression for some data from [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-18/readme.md). Can checkout the [original source](https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018) too.
+
+<!--Put actual work here-->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
+```
+
+```{r include=FALSE}
+library(tidyverse)
+library(plyr)
+library(janitor)
+
+theme_set(theme_light())
+plot_caption = "Source: TidyTuesday\nzachbogart.com"
+```
+
+## Setup
+
+This week, looking at "Food Consumption and CO2 Emissions". Let's get dig in...get it? Anyone? Just me? Fine.
+
+```{r}
+# read in raw data
+food_consumption <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-18/food_consumption.csv')
+
+head(food_consumption)
+```
+
+So from the raw data we see that we have four columns. We have the country, the category of the food consumed, how much is consumed, and how much CO2 is emitted. Some important units provided in the README:
+
+- `consumption`: kg/person/year (kilograms of food consumed per person per year)
+- `co2_emission`: kg CO2/person/year (kilograms of CO2 emitted per person per year)
+
+Note: the people aren't emitting the CO2. The whole food system is in order to produce the food product.
+
+So the data provided is by weight and it is split into one person's effect.
+
+Let's get a better sense of the extent of each of these variables.
+
+## Variable Extent
+
+```{r}
+# how many countries?
+food_consumption %>% 
+  dplyr::count(country, sort=TRUE)
+# --> 130 countries, 11 food categories each
+
+# extent of continuous values
+# --> under thousands for most values
+```
+
+130 countries with 11 food categories. No missing data for any categories!
+
+## Plotting Stuff
+
+Let's look at the relationship between consuming food and emitting CO2.
+
+```{r}
+# consumption versus co2 emission
+food_consumption %>% 
+  ggplot(aes(consumption, co2_emmission)) +
+    geom_point(color = "seagreen", alpha = 0.5) +
+    labs(title = "CO2 vs Food Consumption",
+         x = "Food Consumption (kg/person/year)",
+         y = "CO2 Emission (kg/person/year)",
+         caption = plot_caption)
+```
+There's a nice linear relationship between food consumption and CO2 emissions. And it seems to vary based on the type of food being consumed. Let's split it up to see the differences.
+
+```{r}
+# consumption versus co2 emission
+food_consumption %>% 
+  ggplot(aes(consumption, co2_emmission)) +
+    geom_point(color = "seagreen", alpha = 0.5) +
+    # geom_smooth(method = "lm") +
+    labs(title = "CO2 vs Food Consumption",
+         x = "Food Consumption (kg/person/year)",
+         y = "CO2 Emission (kg/person/year)",
+         caption = "Source: TidyTuesday\nzachbogart.com") +
+    facet_wrap(~food_category)
+```
+Small multiples show drastically different slopes for different types of foods, with beef, lamb, and goat being the most severe. Also see different types of food are consumed at different rates. For example, wheat and milk products have a much wider distribution of consumption rates compared to eggs or poultry. Now let's see if we can put some numbers to these lines.
+
+## Trying just one category manually
+
+For a test, going to make a model for the beef category. What is its relationship?
+
+```{r}
+beef = food_consumption %>% 
+  filter(food_category == "Beef")
+
+regressor = lm(formula = co2_emmission ~ consumption, data = beef)
+
+summary(regressor)
+```
+
+There's a bunch of gobbledy-gook, but the point of interest above is the **coefficients**. The "3.086e+01" is the slope of the linear model (it also happens to have a really low p-value, which people tell me is good to have). So, for beef, we have a slope of about thirty. So, for every extra kilogram of beef consumed per person per year, there is about thirty kilograms emitted (per person per year). So that's neat.
+
+```{r}
+# consumption versus co2 emission
+food_consumption %>% 
+  filter(food_category == "Beef") %>% 
+  ggplot(aes(consumption, co2_emmission)) +
+    geom_point(color = "firebrick", alpha = 0.5, size = 5) +
+    geom_abline(slope = 3.086e+01, intercept = -4.549e-04) +
+    labs(title = "CO2 vs Food Consumption for Beef",
+         x = "Food Consumption (kg/person/year)",
+         y = "CO2 Emission (kg/person/year)") 
+```
+Let's do this for all of the categories.
+
+## Loop through Each Small Multiple
+
+Here I want to apply the linear model to every food category. For this, I gotta thank Hadley for this [SO post](https://stackoverflow.com/a/1214432). Super helpful. Will have to find ways to work with `dlply` and `ldply` more often.
+
+```{r}
+# make a list of models from a dataframe
+models = dlply(food_consumption, "food_category", function(df) {
+  lm(co2_emmission ~ consumption, data = df)
+})
+
+# make a dataframe of the coefficients
+regression_lines = ldply(models, coef) %>% 
+  clean_names() %>% 
+  dplyr::rename(slope = consumption)
+
+head(regression_lines)
+```
+
+```{r}
+# merge together
+food_relationships = left_join(food_consumption, regression_lines, 
+                               by = "food_category")
+```
+
+```{r}
+# consumption versus co2 emission
+food_relationships %>% 
+  ggplot(aes(consumption, co2_emmission)) +
+    geom_abline(data = regression_lines, 
+                aes(slope = slope, intercept = intercept),
+                alpha = 0.8, linetype = "dotted", size = 0.5) +
+    geom_point(color = "seagreen", alpha = 0.5, size = 1) +
+    geom_text(data = regression_lines, 
+              aes(x = 450, y = 1500, label = round(slope, digits = 2)),
+              size = 6, hjust = 1, color = "seagreen") +
+    labs(title = "CO2 vs Food Consumption",
+         subtitle = "Includes kilograms CO2 emitted per kilogram of food consumed (per person per year)",
+         x = "Food Consumption (kg/person/year)",
+         y = "CO2 Emission (kg/person/year)",
+         caption = plot_caption) +
+    facet_wrap(~fct_reorder(food_category, desc(slope)))
+```
+Schweeet. Can see that food consumption and CO2 emission are linearly correlated, and each type of food has a different slope, showing kilograms of CO2 emitted for every kilogram of food consumed (per person per year). Beef and other meats like lamb and goat are off the charts, with huge levels emitted per kilogram consumed (~30 kg). It's interesting that pork is not as severe on CO2 emissions, with only a tenth of other meats (~3 kg). And fish are on par with nuts and dairy (~1.5 kg). Also interesting that rice has such a large emission of CO2 compared to other grains like soybeans and wheat. 
+
+<!--Section on Learning (general notes that came up)-->
+## Learning
+
+- Using `plyr` was helpful, but led to some problems with functions being overwritten. Had to explicitly call `dplyr::count` for example. 
+- Accomplished small multiple reordering by merging data, but wonder if there is a way to do this keeping the dataframes separate.
+- Running a linear model is really approachable, but like a lot of data science, a lot is packed into a few lines of code. Helpful but requires both knowledge and understanding.
+
+Till next time!
+
+![](https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif)
+
+<!--Noun Image Credit-->
+#### Image Credit
+[large pot](https://thenounproject.com/zachbogart/collection/strolling-through-ikea/?i=3169402) by Zach Bogart from [the Noun Project](https://thenounproject.com/)

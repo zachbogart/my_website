@@ -1,7 +1,7 @@
 ---
 authors:
 - zach
-bio: Science, Design, & Data
+bio: Science, Design, & Data. I'll know it when I see it.
 # education:
 #   courses:
 #   - course: MS in Data Science
