@@ -1,21 +1,14 @@
-<!--Notes
-this is turning into an interesting exploration of a popular show
-- got sidetracked by Game of Thrones, with their near-perfect ratings with their very low-rated last season
-- Interested in exploring the progression of a show as on continuous line
-
--->
-
 ---
-title: House M.D. Episodes
+title: IMDb Plots on the Cutting Room Floor
 author: Zach Bogart
 date: '2020-09-13'
-slug: house-m-d-episodes
+slug: cutting-room-floor-imdb
 categories:
   - R
 tags:
   - ggplot
-subtitle: TODO
-summary: TODO
+subtitle: "Testing out some plots for rvest scraping"
+summary: "Trying out ideas"
 image:
   caption: ''
   focal_point: ''
@@ -35,7 +28,7 @@ links:
 <img src="featured.png" width="100"/> 
 
 <!--Starting Blurb-->
-TODO
+Here are some rough drafts on the cutting room floor from exploring IMDb data with the [rvest scraper](https://zachbogart.com/post/rvest-wizardry/).
 
 <!--Put actual work here-->
 ```{r setup, include=FALSE}
@@ -46,9 +39,10 @@ knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE)
 ```
 
-```{r}
+```{r include = FALSE}
 library(tidyverse)
 source("../2020-08-28-simpsons/rvest_scraper.R")
+theme_set(theme_light())
 ```
 
 ## House M.D.
@@ -57,46 +51,54 @@ source("../2020-08-28-simpsons/rvest_scraper.R")
 house <- grab_imdb_ratings("tt0412142", c(1:8))
 ```
 
+Show data by season.
 ```{r}
+# Facet by season
 house %>% 
   ggplot(aes(air_date, rating)) +
     geom_line() +
     geom_point(aes(size = votes), alpha = 0.5) +
-    facet_wrap(~ season, scales = "free_x")
-
-house %>% 
-  ggplot(aes(air_date, rating)) +
-    geom_point(aes(size = votes), alpha = 0.2)
+    facet_wrap(~ season, scales = "free_x") +
+    labs(title = "House M.D. by Season",
+         x = "Air Date",
+         y = "Rating")
 ```
 
 ## Game of Thrones
 
 ```{r}
 got <- grab_imdb_ratings("tt0944947", c(1:8))
-
-got %>% 
-  mutate(month_day = format(air_date, "%m-%d"))
 ```
 
+Trying to show multiple seasons in one chart. Using "Day of the Year" to plot on a common axis.
 ```{r}
+# Color by season
 got %>% 
   mutate(day_of_year = as.integer(format(air_date, "%j"))) %>% 
   ggplot(aes(day_of_year, rating, color = factor(season))) +
     geom_line(aes(group = season)) +
-    geom_point(aes(size = votes), alpha = 0.5) 
+    geom_point(aes(size = votes), alpha = 0.5) +
+    labs(title = "Game of Thrones",
+         x = "Day of the Year",
+         y = "Rating",
+         size = "# Votes",
+         color = "Season")
 ```
 
-## Both
+## Both GOT and House
 
+Group scatter for multiple shows.
 ```{r}
+# Two show scatter
 bind_rows(house, got) %>% 
   ggplot(aes(episode, rating, color=show)) +
-    geom_point()
+    geom_point() +
+    labs(title = "Two Show Scatterplot")
 ```
-
 
 ## House As One Line
 
+Plotting a show as a single line.
 ```{r}
 house %>% 
   mutate(id = seq.int(nrow(house))) %>% 
@@ -104,17 +106,18 @@ house %>%
   ggplot(aes(id, rating)) +
     geom_line() +
     geom_point(aes(size = votes)) +
-    ylim(5, 10)
+    ylim(5, 10) +
+    labs(title = "House M.D.")
 ```
 
-## Several Shows
+## Show Combos
 
 ```{r}
 simpsons <- grab_imdb_ratings("tt0096697", c(1:31))
 regular_show <- grab_imdb_ratings("tt1710308", c(1:8))
 ```
 
-
+Looking at the end of two shows, split by small multiples.
 ```{r}
 bind_rows(got, regular_show) %>% 
   filter(season >= 7) %>% 
@@ -125,7 +128,7 @@ bind_rows(got, regular_show) %>%
     
 ```
 
-
+Big scatterplot of multiple shows by episode count.
 ```{r}
 bind_rows(house, got, simpsons) %>% 
   group_by(show) %>% 
@@ -134,11 +137,13 @@ bind_rows(house, got, simpsons) %>%
   ggplot(aes(ep_id, rating, color = show, alpha = 0.4)) +
     # geom_line() +
     geom_point(aes(size = votes)) +
-    ylim(5, 10)
+    ylim(5, 10) +
+    labs(title = "Three Shows of Very Different Length")
 ```
 
 ## Breaking Bad
 
+Showing season progression in a flipped way. Every line is a season.
 ```{r}
 bb <- grab_imdb_ratings("tt0903747", c(1:5))
 
@@ -153,6 +158,8 @@ bb %>%
 ```
 
 ## BB and the Wire
+
+Combining multiple shows with smoothing.
 ```{r}
 # with the wire
 wire <- grab_imdb_ratings("tt0306414", c(1:5))
@@ -174,6 +181,7 @@ bind_rows(wire, bb) %>%
 
 ## Simpsons, One Line
 
+Showing one show as a rough and smooth form.
 ```{r}
 simpsons %>% 
   mutate(show_count = seq.int(nrow(.))) %>% 
@@ -189,4 +197,4 @@ simpsons %>%
 
 <!--Noun Image Credit-->
 #### Image Credit
-[TODO](TODO) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+[Pencil Stroke](https://thenounproject.com/search/?creator=4129988&q=sketch&i=2352018) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
