@@ -66,8 +66,9 @@ fields = input %&gt;%
   filter(f %in% required)</code></pre>
 <p>Simply Gorgeous 🤩</p>
 <p>But…it is kinda complex so let’s break it down.</p>
-<div id="breakdown" class="section level3">
-<h3>Breakdown</h3>
+</div>
+<div id="breakdown" class="section level2">
+<h2>Breakdown</h2>
 <ol style="list-style-type: decimal">
 <li>First, we need a way to distinguish the passports from each other. <code>cumsum</code> (cumulative sum) can keep a running tally of how many blank lines are seen. Since we know each entry is split with a blank line, this means we can create an id for every passport.</li>
 </ol>
@@ -118,8 +119,8 @@ v</code></pre>
 <p>We are left with a super clean dataset. Let’s start checking passports!</p>
 </div>
 </div>
-<div id="part-1" class="section level2">
-<h2>Part 1</h2>
+<div id="part-1" class="section level1">
+<h1>Part 1</h1>
 <p>The first part asks how many valid passports there are. Since we have each passport broken down by <code>field:value</code>, we can just check each one has the correct number of fields, which is told to be seven (“cid” is optional).</p>
 <pre class="r"><code>fields %&gt;% 
   count(passport) %&gt;% 
@@ -130,8 +131,8 @@ v</code></pre>
 ## 1    239</code></pre>
 <p>Here <code>count</code> groups every value in the passport column, creating a new column with a default name of <code>n</code>. We then use that in a <code>summarise</code> call, looking just at rows where <code>n == 7</code>. This actually gives a column of bools, which we can sum up to give the answer, which we name <code>answer</code> to make it nice and clean.</p>
 </div>
-<div id="part-2" class="section level2">
-<h2>Part 2</h2>
+<div id="part-2" class="section level1">
+<h1>Part 2</h1>
 <p>The second part adds some data validation, which is a little fiddly, but since our data is so crispy clean, we can make easy work of it.</p>
 <pre class="r"><code>fields %&gt;% 
   extract(v, c(&quot;height&quot;, &quot;unit&quot;), &quot;(\\d+)(cm|in)&quot;, convert = TRUE, remove = FALSE) %&gt;% 
@@ -153,8 +154,8 @@ v</code></pre>
 ## 1    188</code></pre>
 <p>Again…lovely code, David 🤩</p>
 <p>Let’s understand what’s going on.</p>
-<div id="breakdown-1" class="section level3">
-<h3>Breakdown</h3>
+<div id="breakdown-1" class="section level2">
+<h2>Breakdown</h2>
 <p>We are pretty much ready to handle each validation separately, except for the <code>hgt</code> field. Here we need to split up the value we have to get at each part.</p>
 <pre class="r"><code>wrangle3 = fields %&gt;% 
   extract(v, c(&quot;height&quot;, &quot;unit&quot;), &quot;(\\d+)(cm|in)&quot;, convert = TRUE, remove = FALSE)</code></pre>
@@ -246,12 +247,14 @@ v</code></pre>
   count(passport) %&gt;%
   summarise(answer = sum(n == 7))</code></pre>
 <p>We do a similar trick to part 1. First <code>filter</code> on the valid entries only. Then use <code>count</code> and <code>summarise</code> to get the number of passports with the correct number of (valid) entries. Again, <code>n</code> is the default name of <code>count</code> and we can look for seven since <code>cid</code> was optional and we left it out.</p>
+</div>
+<div id="tidyverse-for-the-win" class="section level2">
+<h2>Tidyverse for the win!</h2>
 <p>And there we have it! We processed some passports in the tidyverse!</p>
 <p>Hope you found this educational. I know I did.</p>
 <p>Till next time!</p>
 <p><img src="https://media.giphy.com/media/AC0oYA3RcRri/giphy.gif" /></p>
 <!--Section on Learning (general notes that came up)-->
-</div>
 </div>
 <div id="learning" class="section level2">
 <h2>Learning</h2>

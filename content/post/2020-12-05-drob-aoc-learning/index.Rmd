@@ -93,7 +93,7 @@ Simply Gorgeous 🤩
 
 But...it is kinda complex so let's break it down.
 
-### Breakdown
+## Breakdown
 
 1. First, we need a way to distinguish the passports from each other. `cumsum` (cumulative sum) can keep a running tally of how many blank lines are seen. Since we know each entry is split with a blank line, this means we can create an id for every passport.
 - This came into my head, but I didn't know how to accomplish it. `cumsum` keeping a running tally is super helpful.
@@ -146,7 +146,7 @@ Unnesting leaves a tibble we can work with: every row is a value, specified by i
 
 We are left with a super clean dataset. Let's start checking passports!
 
-## Part 1
+# Part 1
 
 The first part asks how many valid passports there are. Since we have each passport broken down by `field:value`, we can just check each one has the correct number of fields, which is told to be seven ("cid" is optional).
 
@@ -158,7 +158,7 @@ fields %>%
 
 Here `count` groups every value in the passport column, creating a new column with a default name of `n`. We then use that in a `summarise` call, looking just at rows where `n == 7`. This actually gives a column of bools, which we can sum up to give the answer, which we name `answer` to make it nice and clean.
 
-## Part 2
+# Part 2
 
 The second part adds some data validation, which is a little fiddly, but since our data is so crispy clean, we can make easy work of it. 
 
@@ -183,7 +183,7 @@ Again...lovely code, David 🤩
 
 Let's understand what's going on.
 
-### Breakdown
+## Breakdown
 
 We are pretty much ready to handle each validation separately, except for the `hgt` field. Here we need to split up the value we have to get at each part.
 
@@ -265,6 +265,8 @@ wrangle5 = fields %>%
 ```
 
 We do a similar trick to part 1. First `filter` on the valid entries only. Then use `count` and `summarise` to get the number of passports with the correct number of (valid) entries. Again, `n` is the default name of `count` and we can look for seven since `cid` was optional and we left it out. 
+
+## Tidyverse for the win!
 
 And there we have it! We processed some passports in the tidyverse!
 
