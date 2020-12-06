@@ -8,8 +8,9 @@ tags:
 date: "2018-08-18T00:00:00Z"
 
 image:
-  placement: 1
-  focal_point: Smart
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 
 links:
 - icon: search
@@ -25,6 +26,9 @@ aliases:
 - /nouns
 ---
 
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
 Noun Project is a site that provides icons for everything. I have [a collection of my own icon designs on Noun Project](https://thenounproject.com/zachbogart/uploads/) that you can choose from to spice up your own projects. I add new designs often, so check back to see what's available.
 
 Checkout all of my icon designs over at [my Noun Project profile page](https://thenounproject.com/zachbogart/).
@@ -38,3 +42,7 @@ For more information about how Noun Project works, checkout [their About page](h
 Here's a look at some of [my favorite creations](https://thenounproject.com/zachbogart/kit/favorites/):
 
 <div align="center">{{< gallery album="images_nouns" >}}</div>
+
+<!--Noun Image Credit-->
+#### Image Credit
+[happy octopus](https://thenounproject.com/zachbogart/collection/adorable-octopus/) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
