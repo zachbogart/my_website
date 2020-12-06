@@ -1,6 +1,6 @@
 ---
 title: Noun Project Icon Design
-subtitle: 3000+ icons and counting
+subtitle: Thousands of icons and counting
 summary: Hand-crafted, small-batch icons to spice up your projects.
 tags:
 - featured_project
@@ -20,14 +20,6 @@ links:
   icon_pack: fas
   name: My Favorites
   url: https://thenounproject.com/zachbogart/kit/favorites/
-- icon: tshirt
-  icon_pack: fas
-  name: Merch
-  url: https://teespring.com/stores/imakenouns
-- icon: twitter
-  icon_pack: fab
-  name: '@imakenouns'
-  url: http://www.twitter.com/imakenouns
 
 aliases:
 - /nouns
