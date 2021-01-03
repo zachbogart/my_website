@@ -21,7 +21,7 @@ links:
 output: html_document
 editor_options: 
   chunk_output_type: console
-draft: false
+draft: true
 ---
 
 <!-- Icon Image: Small -->

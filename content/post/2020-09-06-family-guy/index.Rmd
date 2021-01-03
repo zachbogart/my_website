@@ -22,6 +22,7 @@ links:
     icon_pack: fas
     name: Ways to Support
     url: /support/
+draft: true
 ---
 
 <!-- Icon Image: Small -->
