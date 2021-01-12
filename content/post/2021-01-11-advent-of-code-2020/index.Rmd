@@ -1,0 +1,58 @@
+---
+title: Advent of Code 2020
+author: Zach Bogart
+date: '2021-01-11'
+slug: advent-of-code-2020
+categories:
+  - R
+tags:
+  - tidyverse
+subtitle: TODO
+summary: TODO
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
+<!--Starting Blurb-->
+This year I made a bigger dent in the [Advent of Code](https://adventofcode.com/) challenges. It was an interesting experience because this year I tried to do them as they came out. Was able to keep up for a while, but they started to pile up and I made it through the first ten. Regardless, it was good exposure to some common processes of manipulating data in R.
+
+[Advent of Code work for 2020](https://github.com/zachbogart/advent_of_code/tree/master/2020) is available on my GitHub as well as [some attempts for previous years](https://github.com/zachbogart/advent_of_code/tree/master/older_years).
+
+<!--Put actual work here-->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
+```
+
+
+
+<!--Section on Learning (general notes that came up)-->
+## Learning
+
+- After doing a few days, got into a rhythm for setting up a script to read and manipulate the data.
+- For most of these things, whether it is data viz, ML, etc., one of the hardest things for me is the first step of setup. Where are the files, how are they executed, how are we ingesting, exporting. Improves with practice.
+
+Till next time!
+
+![](https://media.giphy.com/media/35EsMpEfGHkVoHbNTU/giphy.gif)
+
+<!--Noun Image Credit-->
+#### Image Credit
+[pinecone](https://thenounproject.com/search/?creator=4129988&q=christmas&i=3644765) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
