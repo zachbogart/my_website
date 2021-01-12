@@ -7,8 +7,8 @@ categories:
   - R
 tags:
   - tidyverse
-subtitle: TODO
-summary: TODO
+subtitle: The nerdiest advent calendar
+summary: Coding work over the holidays
 image:
   caption: ''
   focal_point: ''
