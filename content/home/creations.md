@@ -33,13 +33,17 @@ subtitle = "Various little projects."
     name = "Design"
     tag = "design_project"
     
-  [[content.filter_button]]
-    name = "Science"
-    tag = "science_project"
+  # [[content.filter_button]]
+  #   name = "Science"
+  #   tag = "science_project"
   
   [[content.filter_button]]
     name = "etc."
     tag = "other_project"
+    
+  [[content.filter_button]]
+    name = "Archived"
+    tag = "archived_project"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.

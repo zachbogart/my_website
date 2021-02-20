@@ -4,19 +4,24 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-  name = "Recently"
+  name = "Worker Bee"
   url = "/post"
   weight = 10
   
-[[main]]
-  name = "Broadly"
-  url = "/categories"
-  weight = 20
+#[[main]]
+#  name = "Broadly"
+#  url = "/categories"
+#  weight = 20
   
+#[[main]]
+#  name = "Specifically"
+#  url = "/tags"
+#  weight = 30
+
 [[main]]
-  name = "Specifically"
-  url = "/tags"
-  weight = 30
+  name = "Other Creations"
+  url = "/about"
+  weight = 35
   
 [[main]]
   name = "Me"

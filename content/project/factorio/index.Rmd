@@ -3,7 +3,7 @@ title: "Factorio Recipe Network"
 subtitle: "Mapping what you can build in Factorio" 
 summary: "Visualization of the crazy connections of a complicated video game"
 tags:
-- data_project
+- archived_project
 date: "2019-09-05T00:00:00Z" 
 
 image:
