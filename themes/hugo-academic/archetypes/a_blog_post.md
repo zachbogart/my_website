@@ -32,16 +32,6 @@ links:
     url: /support/
 ---
 
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('zachbogart', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': '',
-    'floating-chat.donateButton.background-color': '#ffffff',
-    'floating-chat.donateButton.text-color': '#fc6c5f'
-  });
-</script>
-
 <!-- Icon Image: Small -->
 <img src="featured.png" width="100"/> 
 

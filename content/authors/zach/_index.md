@@ -36,14 +36,4 @@ If you enjoy your stay, consider supporting me in a [variety of different ways](
 
 Hope you're having a great day on the internet. Thanks for stopping by!
 
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('zachbogart', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': '',
-    'floating-chat.donateButton.background-color': '#ffffff',
-    'floating-chat.donateButton.text-color': '#fc6c5f'
-  });
-</script>
-
 [Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)
