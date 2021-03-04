@@ -50,7 +50,7 @@ subtitle = "Working with Data (and other adventures)"
   
   # Background gradient.
   gradient_start = "#ffffff"
-  gradient_end = "#eeeeee"
+  gradient_end = "#ffffff"
   
   # Background image.
   # image = "background.jpg"  # Name of image in `static/img/`.
