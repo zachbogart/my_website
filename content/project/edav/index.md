@@ -26,6 +26,10 @@ links:
   url: https://teespring.com/stores/edav
 ---
 
+>When will course notes follow the Wikipedia model?
+>
+>[Yihui Xie](https://community.rstudio.com/t/announcing-winners-of-the-1st-bookdown-contest/16394)
+
 Over the summer, I worked with [Joyce Robbins](http://www.joyce-robbins.com/about/) on an online resource for a course at Columbia University called "Exploratory Data Analysis and Visualization", or EDAV for short. The course covers how to visualize/work with data using R. We wanted to make a resource for students that had all the information about how to get started as well as examples to learn by doing.
 
 The result is [edav.info/](https://edav.info/), a resource combining examples, advice, and other things to help students start visualizing/working with R. There are several pages on the basics, pretty examples of different plot types, and helpful discussions on how to get the most out of the course and of R itself. Also, we ensured the resource was easy to modify so students could propose changes and help the quality continuously improve. As an added touch, we created a custom logo for the resource and custom icons for each chapter. We are very excited with the result and hope students enjoy exploring the resource and its examples.
