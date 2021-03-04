@@ -21,6 +21,10 @@ links:
   url: podcast-postcard-notes.pdf
 ---
 
+>Zach’s visualization includes every possible element — there’s color, symbols, lines, space — but it still feels elegant and minimalist. We also admire that he listens to so many podcasts while lying down.
+>
+> [FiveThirtyEight](https://fivethirtyeight.com/features/we-asked-you-to-visualize-your-podcast-listening-and-wow-did-you-deliver/)
+
 I was listening to an episode of [What’s The Point?](https://fivethirtyeight.com/tag/whats-the-point/), a podcast about data from [FiveThirtyEight](https://fivethirtyeight.com/), and getting excited. [Giorgia Lupi](http://giorgialupi.com/) and [Stefanie Posavec](http://www.stefanieposavec.co.uk/) were on the show talking about [DearData](http://www.dear-data.com/), their yearlong exploration of data visualization through personal correspondence. For fifty-two weeks, the pair of data visualization experts sent postcards to each other, but these were not your average Hallmark cards. Every postcard was a hand-made figure concerning something they tracked in their lives for that week. Themes ranged from [clocks](http://www.dear-data.com/by-week/#/week-01/) to [swearing](http://www.dear-data.com/week-37-a-week-of-swearing/) to [privacy](http://www.dear-data.com/week-51-a-week-of-privacy/) and the resulting postcards embodied their personal style of telling stories with data. I loved listening to their project and was intrigued when the podcast ended with a challenge: [try it for yourself, dear listener](https://fivethirtyeight.com/features/dear-data-and-fivethirtyeight-want-you-to-visualize-your-podcast-habits/). The podcast asked its audience to have a go and make their own postcard with the theme of 'podcasts' and send it in. I had been interested in data visualization for some time and here was a great excuse to play around with data and inject some creative flair. So I gave it a try.
 
 <div align="center">{{< gallery album="images_postcard" >}}</div>
