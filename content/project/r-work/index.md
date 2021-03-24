@@ -1,10 +1,10 @@
 ---
-title: R Work (mostly)
+title: Archived Data Posts (R mostly)
 subtitle: 
-summary: Work done in R (and a little JS)
+summary: Past posts in R (a little python crossover and some observable stuff)
 tags:
 - data_project
-date: "2021-03-23T00:00:00Z"
+date: "2021-03-22T00:00:00Z"
 
 image:
   placement: 1
