@@ -4,8 +4,8 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-  name = "Worker Bee"
-  url = "/post"
+  name = "Worker Bee ↗️"
+  url = "https://zachbogart.github.io/data-silience/"
   weight = 10
   
 #[[main]]
@@ -19,7 +19,7 @@
 #  weight = 30
 
 [[main]]
-  name = "Other Creations"
+  name = "Creations"
   url = "/project"
   weight = 35
   
