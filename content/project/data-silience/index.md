@@ -1,6 +1,6 @@
 ---
 title: Data Silience
-subtitle: 
+subtitle: "A place to code up things"
 summary: "A \"blog\" made out of (mostly) jupyter notebooks. Thanks, fastpages."
 tags:
 - data_project
@@ -11,5 +11,7 @@ image:
   placement: 1
   focal_point: Smart
   
-external_link: /post
+external_link: https://zachbogart.github.io/data-silience
+
+aliases: [/blog, /silience]
 ---
