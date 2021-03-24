@@ -1,7 +1,7 @@
 ---
 title: Data Silience
 subtitle: 
-summary: A place to code up things
+summary: "A \"blog\" made out of (mostly) jupyter notebooks. Thanks, fastpages."
 tags:
 - data_project
 - featured_project
