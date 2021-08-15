@@ -1,6 +1,6 @@
 ---
 title: Designed By A Nerd
-subtitle: Making things so people might walk up to you and say "hey, I like your shirt."
+subtitle: Making people come up to you and say "hey, i like your shirt."
 summary: Fun shirt designs
 tags:
 - design_project
