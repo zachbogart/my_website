@@ -3,10 +3,10 @@
 #     desired widget in your `content/home/` folder.
 #   The weight parameter defines the order that the links will appear in.
 
-[[main]]
-  name = "Data Silience ↗️"
-  url = "https://zachbogart.github.io/data-silience/"
-  weight = 10
+#[[main]]
+#  name = "Data Silience ↗️"
+#  url = "https://zachbogart.github.io/data-silience/"
+#  weight = 10
   
 #[[main]]
 #  name = "Broadly"
