@@ -28,7 +28,7 @@ aliases:
 
 [Designed By A Nerd](https://www.instagram.com/designedbyanerd/) is a t-shirt shop where I post fun little designs I have created in my spare time. This was born out of a desire to keep making things, however small, as often as I can. If you enjoy any of the designs, please consider sharing this shop with friends or purchasing an item that piques your interest. Hope you enjoy the results!
 
-[Purchase designs at the storefront](https://designed-by-a-nerd.creator-spring.com), or do the millennial thing and [peruse the instagram feed](https://www.instagram.com/designedbyanerd/https://www.instagram.com/designedbyanerd/).
+[Purchase designs at the storefront](https://designed-by-a-nerd.creator-spring.com), or do the millennial thing and [peruse the instagram feed](https://www.instagram.com/designedbyanerd/).
 
 💖
 
