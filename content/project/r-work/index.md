@@ -1,7 +1,7 @@
 ---
-title: Archived Data Posts (R mostly)
+title: Posts on Data
 subtitle: 
-summary: Past posts in R (a little python crossover and some observable stuff)
+summary: Posts in R (a little python crossover and some observable stuff)
 tags:
 - data_project
 date: "2021-03-22T00:00:00Z"

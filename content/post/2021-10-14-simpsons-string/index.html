@@ -54,9 +54,11 @@ links:
 ##  9 Janey Powell   
 ## 10 Jessica Lovejoy
 ## # … with 20 more rows</code></pre>
-<p>Let’s do the calculations.
-- Split up a string into two parts by spaces (“Milhouse Van Houten” → “Milhouse” “Van Houten”), take the last item
-- Split up the last name, make sure it is lowercase, <a href="https://github.com/tidyverse/stringr/issues/149">deal with accents</a>, use base <code>letters</code> to get the number of the alphabet, and reduce the whole thing together.</p>
+<p>Let’s do the calculations:</p>
+<ul>
+<li>Split up a string into two parts by spaces (“Milhouse Van Houten” → “Milhouse” “Van Houten”), take the last item</li>
+<li>Split up the last name, make sure it is lowercase, <a href="https://github.com/tidyverse/stringr/issues/149">deal with accents</a>, use base <code>letters</code> to get the number of the alphabet, and reduce the whole thing together.</li>
+</ul>
 <pre class="r"><code># split up name, get last name
 get_last_name = function(name) {
   splt = str_split(name, pattern = &quot; &quot;, n=2)
