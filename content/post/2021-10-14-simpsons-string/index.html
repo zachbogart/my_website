@@ -1,0 +1,98 @@
+---
+title: Simpsons String
+author: Zach Bogart
+date: '2021-10-14'
+slug: simpsons-string
+categories:
+  - R
+tags:
+  - tidyverse
+subtitle: "Quickly now!"
+summary: "Ordering data like in the simpsons"
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+output: html_document
+editor_options:
+  chunk_output_type: console
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<!-- Icon Image: Small -->
+<p><img src="featured.png" width="100"/></p>
+<!--Starting Blurb-->
+<blockquote>
+<p>Time for a head count. Children line up according to height.</p>
+<p>Uh, no wait! No, the sum total of the letters in your last name if each letter is assigned a numeric value according to its place in the alphabet, quickly now!</p>
+<ul>
+<li>Principal Skinner</li>
+</ul>
+</blockquote>
+<!--Put actual work here-->
+<pre class="r"><code>springfield_elementary</code></pre>
+<pre><code>## # A tibble: 30 × 1
+##    name           
+##    &lt;chr&gt;          
+##  1 Allison Taylor 
+##  2 Bart Simpson   
+##  3 Cosine Tangent 
+##  4 Database       
+##  5 Dolph Starbeam 
+##  6 Dubya Spuckler 
+##  7 Erik           
+##  8 Jake Boyman    
+##  9 Janey Powell   
+## 10 Jessica Lovejoy
+## # … with 20 more rows</code></pre>
+<pre class="r"><code># split up name, get last name
+get_last_name = function(name) {
+  splt = str_split(name, pattern = &quot; &quot;, n=2)
+  result = tail(splt[[1]], n = 1)
+  return(result)
+}
+
+# split up last name, parse, and sum result 
+letter_to_number_place &lt;- function(input) {
+  unpacked_name &lt;- str_split(input, pattern = &quot;&quot;)
+  lowercase &lt;- map(unpacked_name[[1]], tolower)
+  letter_places &lt;- map(lowercase, ~match(stringi::stri_trans_general(., &quot;Latin-ASCII&quot;), letters, nomatch = 0)) # Uter!
+  total &lt;- reduce(letter_places, sum)
+  return(total)
+}</code></pre>
+<pre class="r"><code># quickly now!
+ordering &lt;- springfield_elementary %&gt;% 
+  filter(str_detect(name, &quot; &quot;)) %&gt;% 
+  select(name) %&gt;% 
+  mutate(last_name = map_chr(name, get_last_name)) %&gt;% 
+  mutate(total = map_dbl(last_name, letter_to_number_place))
+
+ordering %&gt;% 
+  arrange(total)</code></pre>
+<pre><code>## # A tibble: 28 × 3
+##    name            last_name total
+##    &lt;chr&gt;           &lt;chr&gt;     &lt;dbl&gt;
+##  1 Report Card     Card         26
+##  2 Lewis Clark     Clark        45
+##  3 Michael D&#39;Amico D&#39;Amico      45
+##  4 Nikki McKenna   McKenna      61
+##  5 Jimbo Jones     Jones        63
+##  6 Martin Prince   Prince       65
+##  7 Jake Boyman     Boyman       70
+##  8 Dolph Starbeam  Starbeam     79
+##  9 Rod Flanders    Flanders     79
+## 10 Todd Flanders   Flanders     79
+## # … with 18 more rows</code></pre>
+<!--Noun Image Credit-->
+<div id="image-credit" class="section level4">
+<h4>Image Credit</h4>
+<p><a href="https://thenounproject.com/search/?creator=4129988&amp;name=Zach+Bogart&amp;q=school&amp;i=3644756">building</a> by Zach Bogart from <a href="https://thenounproject.com/">the Noun Project</a></p>
+</div>
