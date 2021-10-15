@@ -63,9 +63,15 @@ springfield_elementary <- as_tibble(matrix(raw_vector, ncol = 3, byrow = TRUE), 
 
 ```
 
+Here are the students:
+
 ```{r}
 springfield_elementary
 ```
+
+Let's do the calculations. 
+- Split up a string into two parts by spaces ("Milhouse Van Houten" → "Milhouse" "Van Houten"), take the last item
+- Split up the last name, make sure it is lowercase, [deal with accents](https://github.com/tidyverse/stringr/issues/149), use base `letters` to get the number of the alphabet, and reduce the whole thing together.
 
 ```{r}
 # split up name, get last name
@@ -97,6 +103,10 @@ ordering <- springfield_elementary %>%
 ordering %>% 
   arrange(total)
 ```
+
+Till next time!
+
+![](https://media.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif)
 
 <!--Noun Image Credit-->
 
