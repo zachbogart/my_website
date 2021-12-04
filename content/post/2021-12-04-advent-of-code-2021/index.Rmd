@@ -28,7 +28,6 @@ links:
     icon_pack: fas
     name: "AoC Work, 2021"
     url: "https://zachbogart.github.io/advent_of_code/2021/"
-draft: true
 ---
 
 <!-- Icon Image: Small -->
