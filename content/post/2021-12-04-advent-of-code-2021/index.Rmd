@@ -1,15 +1,14 @@
 ---
 title: Advent of Code 2021
 author: Zach Bogart
-date: '2021-12-04'
+date: '2021-01-11'
 slug: advent-of-code-2021
 categories:
   - R
 tags:
   - tidyverse
-  - holidays
-subtitle: Tis the season
-summary: Annual advent event for 2021
+subtitle: The nerdiest advent calendar
+summary: Coding work over the holidays
 image:
   caption: ''
   focal_point: ''
@@ -28,21 +27,31 @@ links:
 <!-- Icon Image: Small -->
 <img src="featured.png" width="100"/> 
 
-```{r include=FALSE, message=FALSE}
-library(emo)
+<!--Starting Blurb-->
+This year I made a bigger dent in the [Advent of Code](https://adventofcode.com/) challenges. It was an interesting experience because this year I tried to do them as they came out. Was able to keep up for a while, but they started to pile up and I made it through the first ten. Regardless, it was good exposure to some common processes of manipulating data in R.
+
+[Advent of Code work for 2020](https://github.com/zachbogart/advent_of_code/tree/master/2020) is available on my GitHub as well as [some attempts for previous years](https://github.com/zachbogart/advent_of_code/tree/master/older_years).
+
+<!--Put actual work here-->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      cache.lazy = FALSE,
+                      fig.width = 8,
+                      fig.height = 5,
+                      message = FALSE)
 ```
 
 
-## Happy holidays!
-Here's [what I ended up finishing](https://zachbogart.github.io/advent_of_code/2021/) for [this year's Advent of Code](https://adventofcode.com/2021)
 
-Hope you enjoy, learn something, or whatever. And hope you're having a good holiday. Or if you're reading this some other time, just "day", I guess.
+<!--Section on Learning (general notes that came up)-->
+## Learning
+
+- After doing a few days, got into a rhythm for setting up a script to read and manipulate the data.
+- For most of these things, whether it is data viz, ML, etc., one of the hardest things for me is the first step of setup. Where are the files, how are they executed, how are we ingesting, exporting. Improves with practice.
 
 Till next time!
 
-`r emo::ji("christmas_tree")`
-
-![](https://media.giphy.com/media/PcKgXgisPwieA/giphy-downsized-large.gif)
+![](https://media.giphy.com/media/35EsMpEfGHkVoHbNTU/giphy.gif)
 
 <!--Noun Image Credit-->
 #### Image Credit
