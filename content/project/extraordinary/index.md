@@ -3,7 +3,7 @@ title: (Extra)ordinary
 summary: Twitter account of what's interesting in the ordinary
 subtitle: Trying to write down curiosities
 tags:
-- other_project
+- archived_project
 date: "2015-06-18"
 
 image:

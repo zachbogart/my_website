@@ -3,8 +3,7 @@ title: "Bookworm: What I'm Reading"
 subtitle: "All the readies"
 summary: "Keeping track of what I'm reading"
 tags:
-- featured_project
-- other_project
+- archived_project
 date: "2021-02-20T00:00:00Z"
 
 image:
