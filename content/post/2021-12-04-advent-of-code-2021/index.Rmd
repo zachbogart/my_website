@@ -1,0 +1,51 @@
+---
+title: Advent of Code 2021
+author: Zach Bogart
+date: '2021-12-04'
+slug: advent-of-code-2021
+categories:
+  - R
+tags:
+  - tidyverse
+  - holidays
+subtitle: 'Tis the season'
+summary: 'Annual advent event 2021, for nerds, by nerds'
+authors: []
+lastmod: '2021-12-04T10:35:53-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+projects: []
+links:
+  donate_button:
+    icon: seedling
+    icon_pack: fas
+    name: Ways to Support
+    url: /support/
+  aoc_2021:
+    icon: code
+    icon_pack: fas
+    name: "AoC Work, 2021"
+    url: "https://zachbogart.github.io/advent_of_code/2021/"
+---
+
+<!-- Icon Image: Small -->
+<img src="featured.png" width="100"/> 
+
+```{r include=FALSE, message=FALSE}
+library(emo)
+```
+
+
+## Happy holidays!
+Here's [what I ended up finishing](https://zachbogart.github.io/advent_of_code/2021/) for [this year's Advent of Code](https://adventofcode.com/2021)
+
+Hope you enjoy, learn something, or whatever. And hope you're having a good holiday. Or if you're reading this some other time, just "day", I guess.
+
+Till next time!
+
+`r emo::ji("christmas_tree")`
+
+![](https://media.giphy.com/media/PcKgXgisPwieA/giphy-downsized-large.gif)
