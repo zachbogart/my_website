@@ -8,8 +8,8 @@ categories:
 tags:
   - tidyverse
   - holidays
-subtitle: 'Tis the season'
-summary: 'Annual advent event 2021, for nerds, by nerds'
+subtitle: Tis the season
+summary: Annual advent event for 2021
 image:
   caption: ''
   focal_point: ''
@@ -43,3 +43,7 @@ Till next time!
 `r emo::ji("christmas_tree")`
 
 ![](https://media.giphy.com/media/PcKgXgisPwieA/giphy-downsized-large.gif)
+
+<!--Noun Image Credit-->
+#### Image Credit
+[pinecone](https://thenounproject.com/search/?creator=4129988&q=christmas&i=3644765) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
