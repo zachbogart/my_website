@@ -13,14 +13,14 @@ image:
   preview_only: yes
 
 links:
-- icon: search
+- icon: dice-d6
   icon_pack: fas
   name: Explore My Icons
   url: https://thenounproject.com/zachbogart/uploads/
-- icon: star
+- icon: dice-d20
   icon_pack: fas
-  name: My Favorites
-  url: https://thenounproject.com/zachbogart/kit/favorites/
+  name: Explore My Collections
+  url: https://thenounproject.com/browse/creator/zachbogart/icon-collections
 
 aliases:
 - /nouns
@@ -29,7 +29,7 @@ aliases:
 <!-- Icon Image: Small -->
 <img src="featured.png" width="100"/> 
 
-Noun Project is a site that provides icons for everything. I have [a collection of my own icon designs on Noun Project](https://thenounproject.com/zachbogart/uploads/) that you can choose from to spice up your own projects. I add new designs often, so check back to see what's available.
+Noun Project is "building a global visual language that unites us" and provides icons for everything. I have a bunch of [my own icon designs](https://thenounproject.com/zachbogart/uploads/) and [my own bespoke icon collections](https://thenounproject.com/browse/creator/zachbogart/icon-collections) on Noun Project that you can choose from to spice up your own projects. I add new designs often, so check back to see what's available.
 
 Checkout all of my icon designs over at [my Noun Project profile page](https://thenounproject.com/zachbogart/).
 
@@ -39,9 +39,7 @@ For more information about how Noun Project works, checkout [their About page](h
 
 :black_heart:
 
-Here's a look at some of [my favorite creations](https://thenounproject.com/zachbogart/kit/favorites/):
-
-<div align="center">{{< gallery album="images_nouns" >}}</div>
+<!--<div align="center">{{< gallery album="images_nouns" >}}</div>-->
 
 <!--Noun Image Credit-->
 #### Image Credit
