@@ -3,7 +3,6 @@ title: Koji Typeface
 subtitle: A crack at transforming collegiate marginalia into an actual font.
 summary: Hand-Made Typeface
 tags:
-- featured_project
 - design_project
 date: "2019-01-02T00:00:00Z"
 
