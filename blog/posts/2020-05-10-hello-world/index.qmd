@@ -1,0 +1,20 @@
+---
+title: Using Callouts
+subtitle: Use callouts to draw attention to important complementary content without interupting the document flow
+categories:
+  - Features
+  - Authoring
+date: 2/13/2022
+---
+
+<!-- Icon Image: Small -->
+<img src="/images/making_nouns.png" width="100"/>  
+
+## Look, a coding website!
+
+I got this website up and running! Looking forward to being able to work on honing my skills and making is easy to post progress on that fact.
+
+Okay, byeeeeeee...
+ 
+#### Image Credit
+[waving hello]((https://thenounproject.com/search/?q=hello&creator=4129988&i=3169895)) by Zach Bogart from [the Noun Project](https://thenounproject.com) 

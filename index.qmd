@@ -1,0 +1,16 @@
+---
+title: "I'll know it when I see it"
+format:
+    html:
+        fontcolor: "#e4e4e4"
+        sidebar: false
+---
+
+- I tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It's called [Koji, a highly geometric typeface](projects/koji.qmd) I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.
+- I started [<i class="bi bi-bezier"></i> making icons for Noun Project](projects/nouns.qmd) after wanting some icon headers for a project I worked on over the summer in grad school. Turned into a fun hobby.
+- 
+- 
+- 
+- 
+- 
+- [<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)

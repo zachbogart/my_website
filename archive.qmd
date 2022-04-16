@@ -1,0 +1,13 @@
+---
+title: "(I knew it when I saw it)"
+format:
+    html:
+        fontcolor: "#e4e4e4"
+        sidebar: false
+---
+
+*These are archived notes*
+
+-   
+-
+-

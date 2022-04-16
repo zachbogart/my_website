@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Zach Bogart"
+  page-navigation: true
+  navbar:
+    background: light
+    left:
+        - text: "Blog"
+          href: blog/index.qmd
+        - text: Other Stuff
+          menu:
+            - text: A Bit About Me
+              icon: info-circle-fill
+              href:  about.qmd
+            - text: "-"
+            - text: Making Nouns
+              icon: bezier
+              href:  projects/nouns.qmd
+            - text: "-"
+            - text: Archival List
+              icon: archive
+              href:  archive.qmd
+  # sidebar: 
+  #   - id: "creations"
+  #     contents: 
+  #       - section: "Creations"
+  #         contents:
+  #           - projects/nouns.qmd
+  #           - projects/bookworm.qmd
+  page-footer: 
+    left: 
+      - icon: heart-fill
+        href: http://ko-fi.com/zachbogart
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/ 
+        
+
+format:
+  html:
+    theme: 
+      light: 
+        - zephyr
+        - theme.scss
+      dark: 
+        -  cyborg
+    css: styles.css
+    toc: true
+
+
+
