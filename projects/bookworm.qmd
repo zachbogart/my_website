@@ -2,6 +2,10 @@
 title: "Bookworm"
 ---
 
+<!-- ObservableHQ Button -->
+<a class="btn btn-dark" href="https://observablehq.com/@zachbogart/bookworm" role="button"><i class="bi bi-arrow-up-right-square-fill"></i> View on Observable</a>
+<br>
+
 This is an Observable Notebook of things I'm reading. 
 
 It's embedded below, though it's easier to [view on Observable](https://observablehq.com/@zachbogart/bookworm).
