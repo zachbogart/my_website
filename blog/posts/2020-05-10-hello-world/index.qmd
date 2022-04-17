@@ -1,20 +1,14 @@
 ---
-title: Using Callouts
-subtitle: Use callouts to draw attention to important complementary content without interupting the document flow
-categories:
-  - Features
-  - Authoring
-date: 2/13/2022
+title: Hello, Quarto Site
+subtitle: Making a site using Quarto, with few problems
+date: 2022-04-16
 ---
 
-<!-- Icon Image: Small -->
-<img src="/images/making_nouns.png" width="100"/>  
+Callouts are an excellent way to draw extra attention to certain concepts, or to more clearly indicate that certain content is supplemental or applicable to only some scenarios.
 
-## Look, a coding website!
+![Coder](big-image.png){width=100}
 
-I got this website up and running! Looking forward to being able to work on honing my skills and making is easy to post progress on that fact.
+## Navigation Idea
 
-Okay, byeeeeeee...
- 
-#### Image Credit
-[waving hello]((https://thenounproject.com/search/?q=hello&creator=4129988&i=3169895)) by Zach Bogart from [the Noun Project](https://thenounproject.com) 
+- Wanted the links to be more conversational, a lot of description, but have it somewhat hidden. 
+

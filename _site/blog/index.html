@@ -20,6 +20,7 @@
   <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
+  <link href="../favicon.png" rel="icon" type="image/png">
   <script src="../site_libs/quarto-listing/list.min.js"></script>
   <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
   <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -62,9 +63,9 @@
       }
 
       const options = {
-        valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+        valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
         
-        searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-description","listing-categories"],
+        searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
       };
 
       window['quarto-listings'] = window['quarto-listings'] || {};
@@ -79,7 +80,12 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
   <link rel="stylesheet" href="../styles.css">
-</head>
+<link rel="alternate" type="application/rss+xml" title="Zach Bogart" href="index.xml"><style>
+  .quarto-title-banner {
+
+    background-color: #EDF3F9;
+  
+}</style></head>
 <body class="nav-fixed">
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -100,21 +106,9 @@
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-other-stuff" role="button" data-bs-toggle="dropdown" aria-expanded="false">Other Stuff</a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-other-stuff">    
         <li>
-    <a class="dropdown-item" href="../about.html"><i class="bi bi-info-circle-fill" role="img">
-</i> 
- <span class="dropdown-text">A Bit About Me</span></a>
-  </li>  
-        <li><hr class="dropdown-divider"></li>
-        <li>
     <a class="dropdown-item" href="../projects/nouns.html"><i class="bi bi-bezier" role="img">
 </i> 
  <span class="dropdown-text">Making Nouns</span></a>
-  </li>  
-        <li><hr class="dropdown-divider"></li>
-        <li>
-    <a class="dropdown-item" href="../archive.html"><i class="bi bi-archive" role="img">
-</i> 
- <span class="dropdown-text">Archival List</span></a>
   </li>  
     </ul>
   </li>
@@ -128,53 +122,45 @@
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+
+
+<div class="quarto-title-banner color-body page-columns page-full"><div class="quarto-title column-body"><h1 class="title display-7">Blog</h1><p class="subtitle lead">Always Learning</p></div></div></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Authoring">Authoring <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Features">Features <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-<header id="title-block-header" class="quarto-title-block default">
-
-
-<div class="quarto-title"><h1 class="title display-7">Blog</h1><p class="subtitle lead">What I’ve been up to</p></div></header>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing" data-sidebar-align="true">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Features,Authoring" data-listing-date-sort="1644739200000" data-listing-file-modified-sort="1649986994803" data-listing-reading-time-sort="0.245">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1650092400000" data-listing-file-modified-sort="1650235931416" data-listing-reading-time-sort="0.225">
+<div class="thumbnail">
+<p><a href="../blog/posts/2020-05-10-hello-world/index.html"> <img src="../blog/posts/2020-05-10-hello-world/big-image.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="../blog/posts/2020-05-10-hello-world/index.html">
 <h3 class="no-anchor listing-title">
-Using Callouts
+Hello, Quarto Site
 </h3>
 <div class="listing-subtitle">
-Use callouts to draw attention to important complementary content without interupting the document flow
+Making a site using Quarto, with few problems
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Features'); return false;">
-Features
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Authoring'); return false;">
-Authoring
-</div>
-</div>
-<a href="../blog/posts/2020-05-10-hello-world/index.html">
 <div class="listing-description">
-<!-- Icon Image: Small -->
-<p></p>
+<p>Callouts are an excellent way to draw extra attention to certain concepts, or to more clearly indicate that certain content is supplemental or applicable to only some scenarios.</p>
 </div>
 </a>
 </div>
 <div class="metadata">
 <a href="../blog/posts/2020-05-10-hello-world/index.html">
 <div class="listing-date">
-Feb 13, 2022
+Apr 16, 2022
 </div>
 </a>
 </div>

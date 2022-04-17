@@ -1,18 +1,18 @@
 ---
-title: "I'll know it when I see it"
+pagetitle: "Zach Bogart"
+title: "\"I'll know it when I see it\""
+subtitle: A selection of things I've gotten up to
 format:
     html:
         fontcolor: "#e4e4e4"
-        sidebar: false
 ---
 
-- I have made a T-shirt shop called Designed By a Nerd, full of some fun ideas I wanted for myself. Made with love by an outgoing introvert.
-- I made [<i class="bi bi-book"></i> Bookworm](projects/bookworm.qmd), a way to keep track of what I'm reading using a big 'ol Google Sheet, spruced up with Observable.
-- I tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It's called [<i class="bi bi-blockquote-left"></i> Koji, a highly geometric typeface](projects/koji.qmd) I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.
+
+
+- I made [<i class="bi bi-book"></i> Bookworm, a way to keep track of what I'm reading](projects/bookworm.qmd) using a big 'ol Google Sheet, spruced up with Observable.
+- While in grad school at Columbia, I worked on [<i class="bi bi-bar-chart-line-fill"></i> an online resource for data visualization called edav.info](projects/edav.qmd). It's a helpful resource for learning about working and presenting data with R, all the while being generated and improved by the students.
 - I started [<i class="bi bi-bezier"></i> making icons for Noun Project](projects/nouns.qmd) after wanting some icon headers for a project I worked on over the summer in grad school. Turned into a fun hobby.
-- 
-- 
-- 
-- 
-- 
-- [<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)
+- I have made [<i class="bi bi-shop"></i> a T-shirt shop called Designed By a Nerd](projects/designedbyanerd.qmd), full of some fun ideas I wanted for myself, the kinds of things where I would want to say “hey, i like your shirt”. Made with love by an outgoing introvert.
+- I tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It's called [<i class="bi bi-blockquote-left"></i> Koji, a highly geometric typeface](projects/koji.qmd) I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.
+- I sent [<i class="bi bi-envelope-heart"></i> a physical postcard of my podcast listening](projects/podcast-postcard.qmd) to FiveThirtyEight, and they had some nice things to say.
+- And that's not all! There are [<i class="bi bi-archive"></i> other things I've gotten up to](archive.qmd) in the archival list.

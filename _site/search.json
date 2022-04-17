@@ -1,10 +1,24 @@
 [
   {
+    "objectID": "projects/edav.html",
+    "href": "projects/edav.html",
+    "title": "edav.info",
+    "section": "",
+    "text": "Note\n\n\n\n2022: I worked on the first version of edav.info back in the Summer of 2018 and that version has since been archived. It has now undergone a renovation but it is still proving useful. Very cool to see!\n\n\n\nWhen will course notes follow the Wikipedia model?\nYihui Xie\n\nOver the summer, I worked with Joyce Robbins on an online resource for a course at Columbia University called “Exploratory Data Analysis and Visualization”, or EDAV for short. The course covers how to visualize/work with data using R. We wanted to make a resource for students that had all the information about how to get started as well as examples to learn by doing.\nThe result is edav.info/, a resource combining examples, advice, and other things to help students start visualizing/working with R. There are several pages on the basics, pretty examples of different plot types, and helpful discussions on how to get the most out of the course and of R itself. Also, we ensured the resource was easy to modify so students could propose changes and help the quality continuously improve. As an added touch, we created a custom logo for the resource and custom icons for each chapter. We are very excited with the result and hope students enjoy exploring the resource and its examples.\nWe are excited to say that edav.info/ received an honorable mention prize in the 1st Bookdown Contest hosted by the package’s author, Yihui Xie, and RStudio. Feel free to checkout our submission for a more formal explanation of the resource."
+  },
+  {
     "objectID": "projects/nouns.html",
     "href": "projects/nouns.html",
     "title": "Noun Project Icon Design",
     "section": "",
-    "text": "Noun Project is “building a global visual language that unites us” and provides icons for everything. I have a bunch of my own icon designs and my own bespoke icon collections on Noun Project that you can choose from to spice up your own projects. I add new designs often, so check back to see what’s available.\nCheckout all of my icon designs over at my Noun Project profile page.\nNoun Project supports creators when people download their icons. Whether you choose to buy one of my designs individually (fully customizable), sign up to their NounPro subscription service (full-access, in-app integration, and more), or just do a free basic download of my designs in black (with attribution), you directly support my work and allow me to continue creating great icons. I appreciate it immensely and hope you enjoy my designs.\nFor more information about how Noun Project works, checkout their About page.\n\n\nImage Credit\nhappy octopus by Zach Bogart from the Noun Project"
+    "text": "Explore My Icons  Explore My Icon Collections \n\n\nNoun Project is “building a global visual language that unites us” and provides icons for everything. I have a bunch of my own icon designs and my own bespoke icon collections on Noun Project that you can choose from to spice up your own projects. I add new designs often, so check back to see what’s available.\nCheckout all of my icon designs over at my Noun Project profile page.\nNoun Project supports creators when people download their icons. Whether you choose to buy one of my designs individually (fully customizable), sign up to their NounPro subscription service (full-access, in-app integration, and more), or just do a free basic download of my designs in black (with attribution), you directly support my work and allow me to continue creating great icons. I appreciate it immensely and hope you enjoy my designs.\nFor more information about how Noun Project works, checkout their About page.\n\n\nImage Credit\nhappy octopus by Zach Bogart from the Noun Project"
+  },
+  {
+    "objectID": "projects/podcast-postcard.html",
+    "href": "projects/podcast-postcard.html",
+    "title": "Podcast Postcard",
+    "section": "",
+    "text": "Zach’s visualization includes every possible element — there’s color, symbols, lines, space — but it still feels elegant and minimalist. We also admire that he listens to so many podcasts while lying down.\nFiveThirtyEight\n\nI was listening to an episode of What’s The Point?, a podcast about data from FiveThirtyEight, and getting excited. Giorgia Lupi and Stefanie Posavec were on the show talking about DearData, their yearlong exploration of data visualization through personal correspondence. For fifty-two weeks, the pair of data visualization experts sent postcards to each other, but these were not your average Hallmark cards. Every postcard was a hand-made figure concerning something they tracked in their lives for that week. Themes ranged from clocks to swearing to privacy and the resulting postcards embodied their personal style of telling stories with data. I loved listening to their project and was intrigued when the podcast ended with a challenge: try it for yourself, dear listener. The podcast asked its audience to have a go and make their own postcard with the theme of ‘podcasts’ and send it in. I had been interested in data visualization for some time and here was a great excuse to play around with data and inject some creative flair. So I gave it a try.\nI decided to track WHEN and HOW I listened to podcasts. I recorded the time of day, my listening position (standing, sitting, etc.), and whether I used speakers or headphones. After a week, I had a collection of data points that described my week in podcasts. I made a simple grid and used a light table to fill in the correct cells. The result was an eye-catching postcard that has a lot of hidden data if you look closely.\nIt was a lot of fun tracking my behavior and making the postcard. I encourage you to check out DearData. Also, if you have the desire to track things but aren’t sure how to keep it organized, check out Feltron’s apps, Daytum and Reporter, which make it easy to record anything you want to track. Have fun!\n:star: FiveThirtyEight has posted the collection of postcards they received, totaling seventy-seven. I was excited to see my entry was among their five favorites. I encourage you to explore them all. It’s incredible to see what people can do with data when you let them loose.\n\nDataset & Findings\n\nOverview\n\n20 Podcasts\n15 Hours\nDate Range: March 14–20, 2016\n\n\n\nBreakdown\n\nMost Popular Position: Standing Up\nStanding Up: 43.96%\nSitting: 25.27%\nDriving: 16.48%\nLying Down: 14.29%\nMost Popular Delivery: Speakers\nSpeakers: 52.75%\nHeadphones: 47.25%"
   },
   {
     "objectID": "projects/koji.html",
@@ -56,25 +70,25 @@
     "text": "This is an Observable Notebook of things I’m reading.\nIt’s embedded below, though it’s easier to view on Observable.\n\n\nIf you enjoy this, feel free to fork it and track your own reading habits (or whatever else). And if you think this little project deserves a coffee, I’d welcome the gesture. It’s most likely going towards a hot cocoa or a tea, but it’ll certainly be paired with whatever happens to be my current readie. Much appreciated. ☕\nHappy reading…\n📚\n\n\nImage Credit\nReading by Zach Bogart from the Noun Project"
   },
   {
+    "objectID": "projects/designedbyanerd.html",
+    "href": "projects/designedbyanerd.html",
+    "title": "Designed By A Nerd",
+    "section": "",
+    "text": "Storefront \nDesigned By A Nerd is a t-shirt shop where I post fun little designs I have created in my spare time. This was born out of a desire to keep making things, however small, as often as I can. If you enjoy any of the designs, please consider sharing this shop with friends or purchasing an item that piques your interest. Hope you enjoy the results!\nPurchase designs at the storefront, or do the millennial thing and peruse the instagram feed.\n💖\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nView this post on Instagram\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA post shared by Designed By A Nerd (@designedbyanerd)"
+  },
+  {
     "objectID": "archive.html",
     "href": "archive.html",
-    "title": "(I knew it when I saw it)",
+    "title": "Other Things",
     "section": "",
-    "text": "These are archived notes"
+    "text": "I’m definitely more of a cat person. And I’d say I’m a film fan. So I made  a Twitter account that posts clips of cats in movies, called FilmCats. It’s a manual process, but I wanted the clips all in one place, hence a feed devoted to films that have cats in them. Meow!\nData is everywhere…even in candy. Made  a real-life pie chart and histogram out of M&Ms, grouped by color…I’m not OCD, you’re OCD!\nSkittles do this neat color-bleed when they sit in water. Which means you can make  a pie chart from the Skittles candy color bleed. And throw in a histogram for good measure.\n Darn! That’s the end!"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "I’ll know it when I see it",
+    "title": "“I’ll know it when I see it”",
     "section": "",
-    "text": "I have made a T-shirt shop called Designed By a Nerd, full of some fun ideas I wanted for myself. Made with love by an outgoing introvert.\nI made  Bookworm, a way to keep track of what I’m reading using a big ’ol Google Sheet, spruced up with Observable.\nI tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It’s called  Koji, a highly geometric typeface I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.\nI started  making icons for Noun Project after wanting some icon headers for a project I worked on over the summer in grad school. Turned into a fun hobby.\n\n\n\n\n\n Darn! That’s the end!"
-  },
-  {
-    "objectID": "blog/posts/2020-05-10-hello-world/index.html#look-a-coding-website",
-    "href": "blog/posts/2020-05-10-hello-world/index.html#look-a-coding-website",
-    "title": "Using Callouts",
-    "section": "Look, a coding website!",
-    "text": "Look, a coding website!\nI got this website up and running! Looking forward to being able to work on honing my skills and making is easy to post progress on that fact.\nOkay, byeeeeeee…\n\nImage Credit\nwaving hello by Zach Bogart from the Noun Project"
+    "text": "I made  Bookworm, a way to keep track of what I’m reading using a big ’ol Google Sheet, spruced up with Observable.\nWhile in grad school at Columbia, I worked on  an online resource for data visualization called edav.info. It’s a helpful resource for learning about working and presenting data with R, all the while being generated and improved by the students.\nI started  making icons for Noun Project after wanting some icon headers for a project I worked on over the summer in grad school. Turned into a fun hobby.\nI have made  a T-shirt shop called Designed By a Nerd, full of some fun ideas I wanted for myself, the kinds of things where I would want to say “hey, i like your shirt”. Made with love by an outgoing introvert.\nI tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It’s called  Koji, a highly geometric typeface I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.\nI sent  a physical postcard of my podcast listening to FiveThirtyEight, and they had some nice things to say.\nAnd that’s not all! There are  other things I’ve gotten up to in the archival list."
   },
   {
     "objectID": "about.html",

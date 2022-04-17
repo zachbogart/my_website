@@ -1,10 +1,11 @@
 ---
 title: "Noun Project Icon Design"
 subtitle: Thousands of icons and counting
-date: "2018-08-18"
 aliases: 
   - /nouns
 ---
+
+*Making Nouns since 2018-08*
 
 <!-- Noun Link Buttons -->
 <a class="btn btn-success" href="https://thenounproject.com/zachbogart/uploads/" role="button"><i class="bi bi-heart-fill"></i> Explore My Icons</a>

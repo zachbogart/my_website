@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Zach Bogart</title>
+<link>https://www.zachbogart.com/blog/index.html</link>
+<atom:link href="https://www.zachbogart.com/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-0.9.227</generator>
+<lastBuildDate>Sat, 16 Apr 2022 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hello, Quarto Site</title>
+  <link>https://www.zachbogart.com/blog/posts/2020-05-10-hello-world/index.html</link>
+  <description><![CDATA[ 
+
+
+<p data-sidebar-align="true">Callouts are an excellent way to draw extra attention to certain concepts, or to more clearly indicate that certain content is supplemental or applicable to only some scenarios.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.zachbogart.com/blog/posts/2020-05-10-hello-world/big-image.png" class="img-fluid figure-img" width="100"></p>
+<p></p><p></p>
+</figure>
+</div>
+<section id="navigation-idea" class="level2">
+<h2 class="anchored" data-anchor-id="navigation-idea">Navigation Idea</h2>
+<ul>
+<li>Wanted the links to be more conversational, a lot of description, but have it somewhat hidden.</li>
+</ul>
+
+
+
+</section>
+ ]]></description>
+  <guid>https://www.zachbogart.com/blog/posts/2020-05-10-hello-world/index.html</guid>
+  <pubDate>Sat, 16 Apr 2022 07:00:00 GMT</pubDate>
+  <media:content url="https://www.zachbogart.com//blog/posts/2020-05-10-hello-world/big-image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+</channel>
+</rss>

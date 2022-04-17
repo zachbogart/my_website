@@ -1,6 +1,6 @@
 ---
 title: Blog
-subtitle: What I've been up to
+subtitle: Always Learning
 listing:
   sort: "date desc"
   contents: "posts"
@@ -9,7 +9,8 @@ listing:
   categories: true
   feed: true
 page-layout: full
-# title-block-banner: "#EDF3F9"
+title-block-banner: "#EDF3F9"
 title-block-banner-color: body
 search: false
+sidebar: false
 ---

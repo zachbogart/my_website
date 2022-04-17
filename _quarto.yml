@@ -4,7 +4,9 @@ project:
 
 website:
   title: "Zach Bogart"
-  page-navigation: true
+  favicon: "favicon.png"
+  site-url: "https://www.zachbogart.com"
+  page-navigation: false # can loop through sections in sidebar (arrows at bottom)
   navbar:
     background: light
     left:
@@ -12,24 +14,18 @@ website:
           href: blog/index.qmd
         - text: Other Stuff
           menu:
-            - text: A Bit About Me
-              icon: info-circle-fill
-              href:  about.qmd
-            - text: "-"
             - text: Making Nouns
               icon: bezier
               href:  projects/nouns.qmd
-            - text: "-"
-            - text: Archival List
-              icon: archive
-              href:  archive.qmd
-  # sidebar: 
-  #   - id: "creations"
-  #     contents: 
-  #       - section: "Creations"
-  #         contents:
-  #           - projects/nouns.qmd
-  #           - projects/bookworm.qmd
+  sidebar:
+    - id: "sidebar-nav"
+      contents:
+        - text: <i class="bi bi-info-circle-fill"></i> A Bit About Me
+          href:  about.qmd
+        - text: <i class="bi bi-check2-square"></i> Selected Things
+          href: index.qmd
+        - text: <i class="bi bi-archive"></i> Other Things
+          href:  archive.qmd
   page-footer: 
     left: 
       - icon: heart-fill

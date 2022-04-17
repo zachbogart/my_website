@@ -1,0 +1,15 @@
+# options apply to all posts in this folder
+
+# freeze computational output
+freeze: true
+
+comments:
+  giscus:
+    repo: quarto-dev/quarto-web
+    category: Blog
+title-block-banner: "#EDF3F9"
+title-block-banner-color: body
+toc-location: left
+search: false
+
+sidebar: false
