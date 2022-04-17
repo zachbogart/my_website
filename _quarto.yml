@@ -32,11 +32,10 @@ website:
         href: http://ko-fi.com/zachbogart
     right: 
       - icon: github
-        href: https://github.com/
+        href: https://github.com/zachbogart/my_website
       - icon: twitter 
         href: https://twitter.com/ 
         
-
 format:
   html:
     theme: 
