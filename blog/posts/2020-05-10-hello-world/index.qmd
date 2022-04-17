@@ -1,14 +1,25 @@
 ---
 title: Hello, Quarto Site
-subtitle: Making a site using Quarto, with few problems
+subtitle: Making a site using Quarto, with only a few problems
 date: 2022-04-16
 ---
 
-Callouts are an excellent way to draw extra attention to certain concepts, or to more clearly indicate that certain content is supplemental or applicable to only some scenarios.
+![](big-image.png){fig-align="center" width=100}
 
-![Coder](big-image.png){width=100}
+I'm digging Quarto. It was pretty easy to make this into a website, plus it makes adding in plots really seamless.
 
-## Navigation Idea
+## Challenges
 
-- Wanted the links to be more conversational, a lot of description, but have it somewhat hidden. 
+Pretty painlessly, was able to revamp my website using Quarto. Some challenges encountered:
 
+- The navbars and sidebars are independent. I'm not using them to their full potential at the moment.
+- I can't seem to get the blog title banner to show up on smaller screens. Even had some troubles seeing it when forking the quarto-web repo and looking at their blog. Will have to look into this. 
+
+Overall, looking forward to using Quarto more often.
+
+Always learning, 
+
+Zach
+
+#### Image Credit
+[Coder](https://thenounproject.com/browse/collection-icon/coders-154740/?p=1) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
