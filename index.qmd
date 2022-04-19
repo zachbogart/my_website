@@ -4,7 +4,7 @@ title: "\"I'll know it when I see it\""
 subtitle: A selection of things I've gotten up to
 format:
   html:
-    css: styles.css # styling, light text
+    css: light.css # styling, light text
 ---
 
 
