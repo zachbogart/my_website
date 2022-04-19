@@ -5,7 +5,7 @@ project:
 website:
   title: "Zach Bogart"
   favicon: "favicon.png"
-  site-url: "https://www.zachbogart.com"
+  site-url: "https://www.zachbogart.com/"
   page-navigation: false # can loop through sections in sidebar (arrows at bottom)
   navbar:
     background: light
