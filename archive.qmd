@@ -3,7 +3,7 @@ title: "Other Things"
 subtitle: A loose archive of things I've gotten up to.
 format:
     html:
-        fontcolor: "#e4e4e4"
+        css: light.css
 ---
 
 - I'm definitely more of a cat person. And I'd say I'm a film fan. So I made [<i class="bi bi-film"></i> a Twitter account that posts clips of cats in movies, called FilmCats](https://twitter.com/filmcats). It's a manual process, but I wanted the clips all in one place, hence a feed devoted to films that have cats in them. Meow!
