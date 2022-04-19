@@ -15,4 +15,4 @@ format:
 - I have made [<i class="bi bi-shop"></i> a T-shirt shop called Designed By a Nerd](projects/designedbyanerd.qmd), full of some fun ideas I wanted for myself, the kinds of things where I would want to say “hey, i like your shirt”. Made with love by an outgoing introvert.
 - I tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It's called [<i class="bi bi-blockquote-left"></i> Koji, a highly geometric typeface](projects/koji.qmd) I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.
 - I sent [<i class="bi bi-envelope-heart"></i> a physical postcard of my podcast listening](projects/podcast-postcard.qmd) to FiveThirtyEight, and they had some nice things to say.
-- And that's not all! There are [<i class="bi bi-archive"></i> other things I've gotten up to](archive.qmd) in the archival list.
+- And that's not all! There are [<i class="bi bi-archive"></i> other things I've gotten up to](archive.qmd) as an archival list.
