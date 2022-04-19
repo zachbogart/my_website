@@ -3,8 +3,8 @@ pagetitle: "Zach Bogart"
 title: "\"I'll know it when I see it\""
 subtitle: A selection of things I've gotten up to
 format:
-    html:
-        fontcolor: "#e4e4e4"
+  html:
+    css: styles.css # styling, light text
 ---
 
 
