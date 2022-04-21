@@ -10,6 +10,8 @@ website:
   navbar:
     background: light
     left:
+        - text: "A Bit About Me"
+          href: about.qmd
         - text: "Blog"
           href: blog/index.qmd
         - text: Other Stuff
@@ -20,8 +22,6 @@ website:
   sidebar:
     - id: "sidebar-nav"
       contents:
-        - text: <i class="bi bi-info-circle-fill"></i> A Bit About Me
-          href:  about.qmd
         - text: <i class="bi bi-check2-square"></i> Selected Things
           href: index.qmd
         - text: <i class="bi bi-archive"></i> Other Things
