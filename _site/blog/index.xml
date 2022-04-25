@@ -10,7 +10,23 @@
 <atom:link href="https://www.zachbogart.com//blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-0.9.227</generator>
-<lastBuildDate>Sat, 16 Apr 2022 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 24 Apr 2022 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>RTFM Readme</title>
+  <link>https://www.zachbogart.com//blog/posts/2022-04-24-rtfm-readme/index.html</link>
+  <description><![CDATA[ 
+
+<p>I end up making the same searches over and over. These posts are little notes to myself in the future with things I do a lot in different programs.</p>
+<p><a href="https://thenounproject.com/browse/collection-icon/coders-154740/?p=1">Coder</a> by Zach Bogart from <a href="https://thenounproject.com/zachbogart">the Noun Project</a></p>
+
+
+
+ ]]></description>
+  <category>rtfm</category>
+  <category>readme</category>
+  <guid>https://www.zachbogart.com//blog/posts/2022-04-24-rtfm-readme/index.html</guid>
+  <pubDate>Sun, 24 Apr 2022 07:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Hello, Quarto Site</title>
   <link>https://www.zachbogart.com//blog/posts/2022-04-16-hello-world/index.html</link>
@@ -55,7 +71,7 @@ Note
 </section>
 </section>
  ]]></description>
-  <category>News</category>
+  <category>news</category>
   <guid>https://www.zachbogart.com//blog/posts/2022-04-16-hello-world/index.html</guid>
   <pubDate>Sat, 16 Apr 2022 07:00:00 GMT</pubDate>
   <media:content url="https://www.zachbogart.com///blog/posts/2022-04-16-hello-world/big-image.png" medium="image" type="image/png" height="144" width="144"/>
