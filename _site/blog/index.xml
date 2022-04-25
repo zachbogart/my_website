@@ -13,13 +13,13 @@
 <lastBuildDate>Sat, 16 Apr 2022 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Hello, Quarto Site</title>
-  <link>https://www.zachbogart.com//blog/posts/2020-05-10-hello-world/index.html</link>
+  <link>https://www.zachbogart.com//blog/posts/2022-04-16-hello-world/index.html</link>
   <description><![CDATA[ 
 
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://www.zachbogart.com//blog/posts/2020-05-10-hello-world/big-image.png" class="img-fluid figure-img" width="100"></p>
+<p><img src="https://www.zachbogart.com//blog/posts/2022-04-16-hello-world/big-image.png" class="img-fluid figure-img" width="100"></p>
 </figure>
 </div>
 <p>I’m digging Quarto. It was pretty easy to make this into a website, plus it makes adding in plots really seamless.</p>
@@ -56,9 +56,9 @@ Note
 </section>
  ]]></description>
   <category>News</category>
-  <guid>https://www.zachbogart.com//blog/posts/2020-05-10-hello-world/index.html</guid>
+  <guid>https://www.zachbogart.com//blog/posts/2022-04-16-hello-world/index.html</guid>
   <pubDate>Sat, 16 Apr 2022 07:00:00 GMT</pubDate>
-  <media:content url="https://www.zachbogart.com///blog/posts/2020-05-10-hello-world/big-image.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://www.zachbogart.com///blog/posts/2022-04-16-hello-world/big-image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
