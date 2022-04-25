@@ -17,7 +17,7 @@
   <description><![CDATA[ 
 
 
-<div class="quarto-figure quarto-figure-center" data-sidebar-align="true">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.zachbogart.com//blog/posts/2020-05-10-hello-world/big-image.png" class="img-fluid figure-img" width="100"></p>
 </figure>
@@ -33,6 +33,19 @@
 <p>Overall, looking forward to using Quarto more often.</p>
 <p>Always learning,</p>
 <p>Zach</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2022-04-24: I ended up getting the title and subtitle to appear in blog posts on smaller screens by copying the <a href="https://github.com/quarto-dev/quarto-web">quarto-web repo</a> more closely. It still feels finicky, though, like it could break if the text banner color is altered. Ongoing and will have to keep in mind when fiddling with things.</p>
+</div>
+</div>
 <section id="image-credit" class="level4">
 <h4 class="anchored" data-anchor-id="image-credit">Image Credit</h4>
 <p><a href="https://thenounproject.com/browse/collection-icon/coders-154740/?p=1">Coder</a> by Zach Bogart from <a href="https://thenounproject.com/zachbogart">the Noun Project</a></p>
@@ -42,6 +55,7 @@
 </section>
 </section>
  ]]></description>
+  <category>News</category>
   <guid>https://www.zachbogart.com//blog/posts/2020-05-10-hello-world/index.html</guid>
   <pubDate>Sat, 16 Apr 2022 07:00:00 GMT</pubDate>
   <media:content url="https://www.zachbogart.com///blog/posts/2020-05-10-hello-world/big-image.png" medium="image" type="image/png" height="144" width="144"/>

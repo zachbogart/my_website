@@ -2,14 +2,9 @@
 
 # freeze computational output
 freeze: true
-
 comments:
   giscus:
-    repo: quarto-dev/quarto-web
+    repo: zachbogart/my_website
     category: Blog
-title-block-banner: "#FED8D5"
-title-block-banner-color: body
 toc-location: left
 search: false
-
-sidebar: false
