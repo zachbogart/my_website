@@ -1,0 +1,12 @@
+---
+title: RTFM Readme
+subtitle: Putting little things I do all the time in one place.
+date: 2022-04-24
+categories:
+  - rtfm
+  - readme
+---
+
+I end up making the same searches over and over. These posts are little notes to myself in the future with things I do a lot in different programs. 
+
+[Coder](https://thenounproject.com/browse/collection-icon/coders-154740/?p=1) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
