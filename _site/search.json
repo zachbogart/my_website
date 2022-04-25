@@ -103,5 +103,12 @@
     "title": "👋 Hi, there!",
     "section": "",
     "text": "Hope you’re having a great day on the internet. Thanks for stopping by!"
+  },
+  {
+    "objectID": "help.html",
+    "href": "help.html",
+    "title": "✨ Help Page",
+    "section": "",
+    "text": "I thought it’d be neat to use a light font color for the majority of the text on the Selected Things and Other Things pages, letting the links draw your eye and allow you to read more if you’re interested. However, that does make the text inherently harder to read and more inaccessible to some readers. If you have trouble reading the text, there’s a dark mode toggle in the navigation bar that should help make the body text more legible (top-right)."
   }
 ]

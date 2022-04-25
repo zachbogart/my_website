@@ -13,3 +13,5 @@ format:
 - Skittles do this neat color-bleed when they sit in water. Which means you can make [<i class="bi bi-droplet-half"></i> a pie chart from the Skittles candy color bleed](https://twitter.com/zachbogart/status/939647709253955584). And throw in a histogram for good measure.
 - Grad school will make you do wacky things. Like [<i class="bi bi-stickies"></i> cover a dorm room wall-to-wall in hundreds of Post-It's](projects/postit-wall.html) just for the fun of it. In ~~prison~~ *grad school*, a man'll do most anything to keep his mind occupied.
 - [<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)
+
+[<i class="bi bi-question-octagon-fill" style="font-size: 16pt;"></i>](help.qmd#legibility)
