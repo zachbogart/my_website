@@ -1,5 +1,5 @@
 ---
-title: "Hi, there!"
+title: "👋 Hi, there!"
 ---
 
 My name is Zach and I am interested in the connections between science, design, and data. I enjoy making things and sharing knowledge.
