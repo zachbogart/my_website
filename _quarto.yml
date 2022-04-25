@@ -30,6 +30,9 @@ website:
     left: 
       - icon: heart-fill
         href: http://ko-fi.com/zachbogart
+    center: 
+      - text: "data.start.page"
+        href: https://data.start.page
     right: 
       - icon: github
         href: https://github.com/zachbogart/my_website
