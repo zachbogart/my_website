@@ -14,4 +14,6 @@ format:
 - Grad school will make you do wacky things. Like [<i class="bi bi-stickies"></i> cover a dorm room wall-to-wall in hundreds of Post-It's](projects/postit-wall.html) just for the fun of it. In ~~prison~~ *grad school*, a man'll do most anything to keep his mind occupied.
 - [<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)
 
-[<i class="bi bi-question-octagon-fill" style="font-size: 16pt;"></i>](help.qmd#legibility)
+***
+
+<div style="text-align: center;">[<i class="bi bi-question-octagon-fill" style="font-size: 16pt;"></i>](help.qmd#legibility)</div>
