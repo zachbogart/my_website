@@ -7,6 +7,27 @@
     "text": "Note\n\n\n\n2022: I worked on the first version of edav.info back in the Summer of 2018 and that version has since been archived. It has now undergone a renovation but it is still proving useful. Very cool to see!\n\n\n\nWhen will course notes follow the Wikipedia model?\nYihui Xie\n\nOver the summer, I worked with Joyce Robbins on an online resource for a course at Columbia University called “Exploratory Data Analysis and Visualization”, or EDAV for short. The course covers how to visualize/work with data using R. We wanted to make a resource for students that had all the information about how to get started as well as examples to learn by doing.\nThe result is edav.info/, a resource combining examples, advice, and other things to help students start visualizing/working with R. There are several pages on the basics, pretty examples of different plot types, and helpful discussions on how to get the most out of the course and of R itself. Also, we ensured the resource was easy to modify so students could propose changes and help the quality continuously improve. As an added touch, we created a custom logo for the resource and custom icons for each chapter. We are very excited with the result and hope students enjoy exploring the resource and its examples.\nWe are excited to say that edav.info/ received an honorable mention prize in the 1st Bookdown Contest hosted by the package’s author, Yihui Xie, and RStudio. Feel free to checkout our submission for a more formal explanation of the resource."
   },
   {
+    "objectID": "projects/directed-study.html#in-briefapproachable",
+    "href": "projects/directed-study.html#in-briefapproachable",
+    "title": "BU Directed Study",
+    "section": "In Brief/Approachable",
+    "text": "In Brief/Approachable\nI “put hats on rats”, building implants that we installed to the roof of the animal’s skull to record neural activity so the lab could study the effects of compounds on learning and memory. Involved a lot of machining the pieces and ensuring the parts worked together, like building a mechanical watch (each implant was built from scratch). I put up a sign where we built the implants that said “travailler comme l’horloger” or “work like a watchmaker”. It was finicky work, but cool to see the neural activity blip to life once we got it implanted. Ended up creating a manual for how to make the implants and mentored several high-school students in how to manufacture them. In addition to building the implants, I also helped install them, doing several implant surgeries to attach the devices to the animals."
+  },
+  {
+    "objectID": "projects/directed-study.html#explained-implant-manual",
+    "href": "projects/directed-study.html#explained-implant-manual",
+    "title": "BU Directed Study",
+    "section": "Explained: Implant Manual",
+    "text": "Explained: Implant Manual\nWhile I was working at the Laboratory of Molecular Neurobiology at Boston University School of Medicine, I spent most of my time building implants. These implants were used to record neuronal firing in rats and allowed the lab to perform experiments that explored the effects of cognitive enhancers. In short, the lab needed to get data from the brains of rats and these implants allowed that data to be acquired in real-time. Think of it like a USB port for a brain: with these implants, we could plug an animal into a computer and get data from it!\nNaturally, these devices are very time-consuming to make; they are made up of dozens of parts that all need to be manufactured to high tolerances. Because of this, a lot of my time in the lab was getting these implants to work properly. I would take notes about how to make each piece and how to put them together. Soon I had amassed a large collection of notes that started to resemble a manual for how to build these implants. I talked with my manager and decided to work on combining my notes into a comprehensive implant manual specifically geared towards undergraduate researchers.\nWhen I started out in the lab, I relied on the senior undergraduate researcher as well as my manager. There was a protocol written up by a graduate student, but it was written for researchers more experienced than I was at the time. I wanted to make something any upcoming scientist could use. My goal was to make a reference that would be approachable to any incoming undergraduate, allowing them to start building implants quickly and efficiently.\nThe result was a 54-page manual that covered all aspects of building the implants. It was built off of my experiences in implant manufacturing as well as working with incoming undergraduates. The act of documenting the manufacturing process helped me better understand the implants as well as give back a useful tool to the lab. It makes me proud to think that even now my manual may be helping new researchers grasp the implant manufacturing process."
+  },
+  {
+    "objectID": "projects/directed-study.html#jargon-y",
+    "href": "projects/directed-study.html#jargon-y",
+    "title": "BU Directed Study",
+    "section": "Jargon-y",
+    "text": "Jargon-y\nIn my junior year of college I did a two-semester-long directed study in the Laboratory of Molecular Neurobiology within the Department of Experimental Therapeutics at Boston University’s School of Medicine. Under the supervision of Dr. Marcia H. Ratner and Dr. David H. Farb, I studied how endogenous neurosteroids like pregnenolone sulfate affect learning and memory and how they may be used as cognitive enhancers. I learned how electrophysiological methods could be used to record from the CA1 region of the hippocampus in rats and allow neural activity data to be extracted in response to effects of cognitive enhancers. I manufactured custom-made neural recording devices, performed several surgeries on the animals to attach the implants, and gained a basic understanding of how the neural activity data can be interpreted and analyzed. In addition, I used the BU Engineering Product Innovation Center to explore how the neural implants could be made more efficiently using 3D-printing technology, which resulted in adoption of a unibody core designed by Dr. Matthew Wilson at the Department of Brain and Cognitive Sciences at Massachusetts Institute of Technology and produced using stereolithography."
+  },
+  {
     "objectID": "projects/nouns.html",
     "href": "projects/nouns.html",
     "title": "Noun Project Icon Design",
@@ -91,18 +112,39 @@
     "text": "“Prison Grad school time is slow time. So ya do what ya can to keep going. Some fellas collect stamps. Others build matchstick houses. Andy Zach built a library mostly paid video games and ate good food. Now he needed a new project. Tommy Decorating was it. It was the same reason he spent years shaping and polishing those rocks doodling ideas in his notebooks. The same reason he hung his fantasy girlies on the wall …no comment. In prison grad school, a man’ll do most anything to keep his mind occupied. By 1966 2018, right about the time Tommy he was getting ready to take his exams, it was Lovely Raquel putting Post-It’s all over the walls.”\n– The Shawshank Redemption (edited)"
   },
   {
-    "objectID": "archive.html",
-    "href": "archive.html",
-    "title": "Other Things",
-    "section": "",
-    "text": "I’m definitely more of a cat person. And I’d say I’m a film fan. So I made  a Twitter account that posts clips of cats in movies, called FilmCats. It’s a manual process, but I wanted the clips all in one place, hence a feed devoted to films that have cats in them. Meow!\nData is everywhere…even in candy. Made  a real-life pie chart and histogram out of M&Ms, grouped by color…I’m not OCD, you’re OCD!\nSkittles do this neat color-bleed when they sit in water. Which means you can make  a pie chart from the Skittles candy color bleed. And throw in a histogram for good measure.\nGrad school will make you do wacky things. Like  cover a dorm room wall-to-wall in hundreds of Post-It’s just for the fun of it. In prison grad school, a man’ll do most anything to keep his mind occupied.\n Darn! That’s the end!\nIn college, everything you printed through the universty came with a full-page receipt. So I  collected a bunch of print receipts, folded them into origami art, and would leave them around campus."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "“I’ll know it when I see it”",
     "section": "",
-    "text": "I made  Bookworm, a way to keep track of what I’m reading using a big ’ol Google Sheet, spruced up with Observable.\nWhile in grad school at Columbia, I worked on  an online resource for data visualization called edav.info. It’s a helpful resource for learning about working and presenting data with R, all the while being generated and improved by the students.\nI started  making icons for Noun Project after wanting some icon headers for a project I worked on over the summer in grad school. Turned into a fun hobby.\nI have made  a T-shirt shop called Designed By a Nerd, full of some fun ideas I wanted for myself, the kinds of things where I would want to say “hey, i like your shirt”. Made with love by an outgoing introvert.\nI tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It’s called  Koji, a highly geometric typeface I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.\nI sent  a physical postcard of my podcast listening to FiveThirtyEight, and they had some nice things to say.\nAnd that’s not all! There are  other things I’ve gotten up to as an archival list."
+    "text": "Hard to Read? Use Dark Mode"
+  },
+  {
+    "objectID": "index.html#hobbies",
+    "href": "index.html#hobbies",
+    "title": "“I’ll know it when I see it”",
+    "section": "Hobbies",
+    "text": "Hobbies\n\nI work with data, but I also play with data. I’m  making Observable Notebooks, which are interactive javascript notebooks that make it easy to start exploring while still allowing for amazing possibilities. Looking into these in an effort to better communicate data findings/understanding and spark curiosity. And to just have some fun.\nI started  making icons for Noun Project after wanting some icon headers for a project I worked on over the summer in grad school. Turned into a fun hobby.\nI have made  a T-shirt shop called Designed By a Nerd, full of some fun ideas I wanted for myself, the kinds of things where I would want to say “hey, i like your shirt”. Made with love by an outgoing introvert."
+  },
+  {
+    "objectID": "index.html#other-creations",
+    "href": "index.html#other-creations",
+    "title": "“I’ll know it when I see it”",
+    "section": "Other Creations",
+    "text": "Other Creations\n\nWhile in grad school at Columbia, I worked on  an online resource for data visualization called edav.info. It’s a helpful resource for learning about working and presenting data with R, all the while being generated and improved by the students.\nI made  Bookworm, a way to keep track of what I’m reading using a big ’ol Google Sheet, spruced up with Observable.\nI tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It’s called  Koji, a highly geometric typeface I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much."
+  },
+  {
+    "objectID": "index.html#randomness",
+    "href": "index.html#randomness",
+    "title": "“I’ll know it when I see it”",
+    "section": "Randomness",
+    "text": "Randomness\n\nI’m definitely more of a cat person. And I’d say I’m a film fan. So I made  a Twitter account that posts clips of cats in movies, called FilmCats. It’s a manual process, but I wanted the clips all in one place, hence a feed devoted to films that have cats in them. Meow!\nData is everywhere…even in candy. Made  a real-life pie chart and histogram out of M&Ms, grouped by color…I’m not OCD, you’re OCD!\nSkittles do this neat color-bleed when they sit in water. Which means you can make  a pie chart from the Skittles candy color bleed. And throw in a histogram for good measure.\nGrad school will make you do wacky things. Like  cover a dorm room wall-to-wall in hundreds of Post-It’s just for the fun of it. In prison grad school, a man’ll do most anything to keep his mind occupied.\nIn college, everything you printed through the university came with a full-page receipt. So I  collected a bunch of print receipts, folded them into origami art, and would leave them around campus."
+  },
+  {
+    "objectID": "index.html#archive",
+    "href": "index.html#archive",
+    "title": "“I’ll know it when I see it”",
+    "section": "Archive",
+    "text": "Archive\n\nI sent  a physical postcard of my podcast listening to FiveThirtyEight, and they had some nice things to say.\nIn college, I “put hats on rats”,  building implants that stuck electrodes into the brain to record neural activity. Unlike the common saying, it actually WAS brain surgery.\n\n\n\n Darn! That’s the end!"
   },
   {
     "objectID": "about.html",
@@ -116,6 +158,13 @@
     "href": "help.html",
     "title": "✨ Help Page",
     "section": "",
-    "text": "I thought it’d be neat to use a light font color for the majority of the text on the Selected Things and Other Things pages, letting the links draw your eye and allow you to read more if you’re interested. However, that does make the text inherently harder to read and more inaccessible to some readers. If you have trouble reading the text, there’s a dark mode toggle in the navigation bar that should help make the body text more legible (top-right)."
+    "text": "I thought it’d be neat to use a light font color for the majority of the text on the main page, letting the links draw your eye and allow you to read more if you’re interested. However, that does make the text inherently harder to read and more inaccessible to some readers. If you have trouble reading the text, there’s a dark mode toggle in the navigation bar that should help make the body text more legible (top-right)."
+  },
+  {
+    "objectID": "index.html#work",
+    "href": "index.html#work",
+    "title": "“I’ll know it when I see it”",
+    "section": "Work",
+    "text": "Work\n\nI work on the data team at  Periscopic, a socially conscious data visualization firm, where we try to do good with data."
   }
 ]
