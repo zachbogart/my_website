@@ -9,11 +9,15 @@ format:
 
 <!-- For icons, see https://icons.getbootstrap.com/ -->
 
+***
+
+<div style="text-align: center;">[<i class="bi bi-question-octagon-fill" style="font-size: 16pt;"></i> Hard to Read? Use Dark Mode](help.qmd#legibility)</div>
+
 ## Work
 - I work on the data team at [<i class="bi bi-bar-chart-fill"></i> Periscopic, a socially conscious data visualization firm](https://periscopic.com), where we try to do good with data.
 
 ## Hobbies
-- I work with data, but I also play with data. I'm [<i class="bi bi-eye-fill"></i> making Observable Notebooks](https://observablehq.com/@zachbogart?tab=profile), a new tool I'm really enjoying. They are interactive javascript notebooks that make it easy to start exploring while still allowing for amazing possibilities. Looking into these in an effort to better communicate data findings/understanding and spark curiosity. And to just have some fun.
+- I work with data, but I also play with data. I'm [<i class="bi bi-eye-fill"></i> making Observable Notebooks](https://observablehq.com/@zachbogart?tab=profile), which are interactive javascript notebooks that make it easy to start exploring while still allowing for amazing possibilities. Looking into these in an effort to better communicate data findings/understanding and spark curiosity. And to just have some fun.
 - I started [<i class="bi bi-bezier"></i> making icons for Noun Project](projects/nouns.qmd) after wanting some icon headers for a project I worked on over the summer in grad school. Turned into a fun hobby.
 -   I have made [<i class="bi bi-shop"></i> a T-shirt shop called Designed By a Nerd](projects/designedbyanerd.qmd), full of some fun ideas I wanted for myself, the kinds of things where I would want to say "hey, i like your shirt". Made with love by an outgoing introvert.
 
@@ -21,7 +25,6 @@ format:
 -   While in grad school at Columbia, I worked on [<i class="bi bi-bar-chart-line-fill"></i> an online resource for data visualization called edav.info](projects/edav.qmd). It's a helpful resource for learning about working and presenting data with R, all the while being generated and improved by the students.
 -   I made [<i class="bi bi-book"></i> Bookworm, a way to keep track of what I'm reading](projects/bookworm.qmd) using a big 'ol Google Sheet, spruced up with Observable.
 -   I tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It's called [<i class="bi bi-blockquote-left"></i> Koji, a highly geometric typeface](projects/koji.qmd) I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.
--   I sent [<i class="bi bi-envelope-heart"></i> a physical postcard of my podcast listening](projects/podcast-postcard.qmd) to FiveThirtyEight, and they had some nice things to say.
 
 ## Randomness
 - I'm definitely more of a cat person. And I'd say I'm a film fan. So I made [<i class="bi bi-film"></i> a Twitter account that posts clips of cats in movies, called FilmCats](https://twitter.com/filmcats). It's a manual process, but I wanted the clips all in one place, hence a feed devoted to films that have cats in them. Meow!
@@ -31,10 +34,9 @@ format:
 - In college, everything you printed through the university came with a full-page receipt. So I [<i class="bi bi-file-break"></i> collected a bunch of print receipts, folded them into origami art](projects/origami.qmd), and would leave them around campus.
 
 ## Archive
+-   I sent [<i class="bi bi-envelope-heart"></i> a physical postcard of my podcast listening](projects/podcast-postcard.qmd) to FiveThirtyEight, and they had some nice things to say.
 - In college, I "put hats on rats", [<i class="bi bi-wrench-adjustable"></i> building implants that stuck electrodes into the brain to record neural activity](projects/directed-study.qmd). Unlike the common saying, it actually WAS brain surgery.
 
 ***
 
-- [<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)
-
-<div style="text-align: center;">[<i class="bi bi-question-octagon-fill" style="font-size: 16pt;"></i> Hard to Read? Use Dark Mode](help.qmd#legibility)</div>
+<div style="text-align: center;">[<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)</div>
