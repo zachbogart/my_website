@@ -21,7 +21,7 @@ format:
 - I started [<i class="bi bi-bezier"></i> making icons for Noun Project](projects/nouns.qmd) after wanting some icon headers for a project I worked on over the summer in grad school. Turned into a fun hobby.
 -   I have made [<i class="bi bi-shop"></i> a T-shirt shop called Designed By a Nerd](projects/designedbyanerd.qmd), full of some fun ideas I wanted for myself, the kinds of things where I would want to say "hey, i like your shirt". Made with love by an outgoing introvert.
 
-## Other Creations
+## Selected Creations
 -   While in grad school at Columbia, I worked on [<i class="bi bi-bar-chart-line-fill"></i> an online resource for data visualization called edav.info](projects/edav.qmd). It's a helpful resource for learning about working and presenting data with R, all the while being generated and improved by the students.
 -   I made [<i class="bi bi-book"></i> Bookworm, a way to keep track of what I'm reading](projects/bookworm.qmd) using a big 'ol Google Sheet, spruced up with Observable.
 -   I tried making some collegiate notebook marginalia into a typeface, and it actually worked and you can try it. It's called [<i class="bi bi-blockquote-left"></i> Koji, a highly geometric typeface](projects/koji.qmd) I made by hand. Crazy respect for the crazy people who devote themselves to this. Also, I hate kerning sooo much.
