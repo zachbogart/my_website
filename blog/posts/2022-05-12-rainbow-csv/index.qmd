@@ -1,0 +1,13 @@
+---
+title: "Rainbow CSV: Useful Opening of CSV in VSCode"
+subtitle: See CSV in VSCode
+date: 2022-04-24
+categories:
+  - VSCode
+  - rtfm
+draft: false
+---
+
+"Looking" at data can take many forms, but opening a CSV in Excel feels a little like poor form. I found [Rainbow CSV for VSCode](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) helpful for seeing the columns in a CSV. Totally an example of seeing this in the wild and going "I want that."
+
+![Color Columns, header on highlight](rainbow-csv.png)
