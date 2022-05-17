@@ -2,6 +2,8 @@
 title: "👋 Hi, there!"
 ---
 
+![](images/profile.png){width="200"}
+
 My name is Zach and I am interested in the connections between science, design, and data. I enjoy making things and sharing knowledge.
 
 Hope you’re having a great day on the internet. Thanks for stopping by!
