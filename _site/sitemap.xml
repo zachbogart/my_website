@@ -2,66 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.zachbogart.com/projects/edav.html</loc>
-    <lastmod>2022-05-15T23:07:23.189Z</lastmod>
+    <lastmod>2022-05-17T17:59:53.496Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/projects/directed-study.html</loc>
-    <lastmod>2022-05-15T23:07:23.530Z</lastmod>
+    <lastmod>2022-05-17T17:59:53.820Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/projects/nouns.html</loc>
-    <lastmod>2022-05-15T23:07:23.846Z</lastmod>
+    <lastmod>2022-05-17T17:59:54.142Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/projects/podcast-postcard.html</loc>
-    <lastmod>2022-05-15T23:07:24.188Z</lastmod>
+    <lastmod>2022-05-17T17:59:54.499Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/projects/koji.html</loc>
-    <lastmod>2022-05-15T23:07:24.485Z</lastmod>
+    <lastmod>2022-05-17T17:59:54.800Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/projects/bookworm.html</loc>
-    <lastmod>2022-05-15T23:07:24.778Z</lastmod>
+    <lastmod>2022-05-17T17:59:55.090Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/projects/designedbyanerd.html</loc>
-    <lastmod>2022-05-15T23:07:25.075Z</lastmod>
+    <lastmod>2022-05-17T17:59:55.404Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/projects/origami.html</loc>
-    <lastmod>2022-05-15T23:07:25.353Z</lastmod>
+    <lastmod>2022-05-17T17:59:55.721Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/projects/postit-wall.html</loc>
-    <lastmod>2022-05-15T23:07:25.627Z</lastmod>
+    <lastmod>2022-05-17T17:59:56.019Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/index.html</loc>
-    <lastmod>2022-05-15T23:07:25.962Z</lastmod>
+    <lastmod>2022-05-17T17:59:56.331Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.zachbogart.com/blog/posts/2022-05-12-vscode-data/index.html</loc>
+    <lastmod>2022-05-17T17:59:57.473Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/blog/posts/2022-04-16-hello-world/index.html</loc>
-    <lastmod>2022-05-15T23:07:27.840Z</lastmod>
+    <lastmod>2022-05-17T17:59:59.022Z</lastmod>
   </url>
   <url>
-    <loc>https://www.zachbogart.com/blog/posts/2022-05-12-rainbow-csv/index.html</loc>
-    <lastmod>2022-05-15T23:07:28.542Z</lastmod>
+    <loc>https://www.zachbogart.com/blog/posts/2022-05-17-git-things/index.html</loc>
+    <lastmod>2022-05-17T17:59:59.841Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/blog/posts/2022-04-24-rtfm-readme/index.html</loc>
-    <lastmod>2022-05-15T23:07:30.238Z</lastmod>
+    <lastmod>2022-05-17T18:00:02.277Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/blog/index.html</loc>
-    <lastmod>2022-05-15T23:07:30.576Z</lastmod>
+    <lastmod>2022-05-17T18:00:02.621Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/about.html</loc>
-    <lastmod>2022-05-15T23:07:30.867Z</lastmod>
+    <lastmod>2022-05-17T18:00:02.925Z</lastmod>
   </url>
   <url>
     <loc>https://www.zachbogart.com/help.html</loc>
-    <lastmod>2022-05-15T23:07:31.133Z</lastmod>
+    <lastmod>2022-05-17T18:00:03.220Z</lastmod>
   </url>
 </urlset>

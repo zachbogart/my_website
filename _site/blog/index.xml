@@ -10,28 +10,76 @@
 <atom:link href="https://www.zachbogart.com//blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-0.9.227</generator>
-<lastBuildDate>Sun, 24 Apr 2022 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 17 May 2022 07:00:00 GMT</lastBuildDate>
 <item>
-  <title>Rainbow CSV: Useful Opening of CSV in VSCode</title>
-  <link>https://www.zachbogart.com//blog/posts/2022-05-12-rainbow-csv/index.html</link>
+  <title>Working with Git</title>
+  <link>https://www.zachbogart.com//blog/posts/2022-05-17-git-things/index.html</link>
   <description><![CDATA[ 
 
-<p>“Looking” at data can take many forms, but opening a CSV in Excel feels a little like poor form. I found <a href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv">Rainbow CSV for VSCode</a> helpful for seeing the columns in a CSV. Totally an example of seeing this in the wild and going “I want that.”</p>
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://www.zachbogart.com//blog/posts/2022-05-12-rainbow-csv/rainbow-csv.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.zachbogart.com//blog/posts/2022-05-17-git-things/conflict.svg" class="img-fluid figure-img" width="100"></p>
+</figure>
+</div>
+<section id="sourcetree" class="level2">
+<h2 class="anchored" data-anchor-id="sourcetree">Sourcetree</h2>
+<p>There was some complex git stuff that I had to do at work and <a href="https://www.sourcetreeapp.com/">Sourcetree</a> helped show what was going on. It’s one of those intimidating apps that does it all, but it is hepful for seeing what is happening and I like the <a href="https://confluence.atlassian.com/sourcetreekb/viewing-file-status-of-a-repository-785616002.html">staging options</a> that include nesting, which I find more intuitive than RStudio’s output.</p>
+<section id="amend-previous-commit-in-sourcetree" class="level3">
+<h3 class="anchored" data-anchor-id="amend-previous-commit-in-sourcetree">Amend Previous Commit in Sourcetree</h3>
+<p>I use this often in RStudio, but was not sure where it lived in Sourcetree. It’s essentially the “no wait, but also” button, adding in a little more to the recent commit. In RStudio, it is a prominent checkbox, but in Sourcetree, <strong>it is under “Commit Options…” in the commit dialogue</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.zachbogart.com//blog/posts/2022-05-17-git-things/sourcetree-amend-commit.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
+<section id="image-credit" class="level4">
+<h4 class="anchored" data-anchor-id="image-credit">Image Credit</h4>
+<p><a href="https://thenounproject.com/browse/collection-icon/working-with-git-137906/?p=1">Conflict</a> by Zach Bogart from <a href="https://thenounproject.com/zachbogart">the Noun Project</a></p>
 
 
 
+</section>
+</section>
+</section>
+ ]]></description>
+  <category>rtfm</category>
+  <category>git</category>
+  <category>Sourcetree</category>
+  <guid>https://www.zachbogart.com//blog/posts/2022-05-17-git-things/index.html</guid>
+  <pubDate>Tue, 17 May 2022 07:00:00 GMT</pubDate>
+  <media:content url="https://www.zachbogart.com///blog/posts/2022-05-17-git-things/conflict.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>Some VSCode Data Things</title>
+  <link>https://www.zachbogart.com//blog/posts/2022-05-12-vscode-data/index.html</link>
+  <description><![CDATA[ 
+
+
+<section id="rainbow-csv" class="level2">
+<h2 class="anchored" data-anchor-id="rainbow-csv">Rainbow CSV</h2>
+<p>“Looking” at data can take many forms, but opening a CSV in Excel feels a little like poor form. I found <a href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv">Rainbow CSV for VSCode</a> helpful for seeing the columns in a CSV. Totally an example of seeing this in the wild and going “I want that.”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.zachbogart.com//blog/posts/2022-05-12-vscode-data/rainbow-csv.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+</section>
+<section id="format-document" class="level2">
+<h2 class="anchored" data-anchor-id="format-document">Format Document</h2>
+<p>Working with a lot of JSON, there are a lot of cases where the data is not pretty, instead wrapped onto one line. <a href="https://code.visualstudio.com/docs/editor/codebasics#_formatting">Format document</a> is quite useful and I wish there was an analog in RStudio.</p>
+
+
+
+</section>
  ]]></description>
   <category>VSCode</category>
   <category>rtfm</category>
-  <guid>https://www.zachbogart.com//blog/posts/2022-05-12-rainbow-csv/index.html</guid>
+  <guid>https://www.zachbogart.com//blog/posts/2022-05-12-vscode-data/index.html</guid>
   <pubDate>Sun, 24 Apr 2022 07:00:00 GMT</pubDate>
-  <media:content url="https://www.zachbogart.com///blog/posts/2022-05-12-rainbow-csv/rainbow-csv.png" medium="image" type="image/png" height="47" width="144"/>
+  <media:content url="https://www.zachbogart.com///blog/posts/2022-05-12-vscode-data/rainbow-csv.png" medium="image" type="image/png" height="47" width="144"/>
 </item>
 <item>
   <title>RTFM Readme</title>
