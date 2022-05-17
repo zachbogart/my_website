@@ -8,6 +8,7 @@ categories:
 draft: false
 ---
 
+![](flower.svg){fig-align="center" width="100"}
 
 ## Rainbow CSV
 
