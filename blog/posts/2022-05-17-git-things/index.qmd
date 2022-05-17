@@ -1,0 +1,26 @@
+---
+title: "Working with Git"
+subtitle: "It's helpful till something goes wrong"
+date: 2022-05-17
+categories:
+  - rtfm
+  - git
+  - Sourcetree
+draft: false
+---
+
+![](conflict.svg){fig-align="center" width="100"}
+
+## Sourcetree
+
+There was some complex git stuff that I had to do at work and [Sourcetree](https://www.sourcetreeapp.com/) helped show what was going on. It's one of those intimidating apps that does it all, but it is hepful for seeing what is happening and I like the [staging options](https://confluence.atlassian.com/sourcetreekb/viewing-file-status-of-a-repository-785616002.html) that include nesting, which I find more intuitive than RStudio's output.
+
+### Amend Previous Commit in Sourcetree
+
+I use this often in RStudio, but was not sure where it lived in Sourcetree. It's essentially the "no wait, but also" button, adding in a little more to the recent commit. In RStudio, it is a prominent checkbox, but in Sourcetree, **it is under "Commit Options..." in the commit dialogue**.
+
+![Amend Commit in Sourcetree](sourcetree-amend-commit.png)
+
+#### Image Credit
+
+[Conflict](https://thenounproject.com/browse/collection-icon/working-with-git-137906/?p=1) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
