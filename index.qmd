@@ -34,8 +34,10 @@ format:
 - In college, everything you printed through the university came with a full-page receipt. So I [<i class="bi bi-file-break"></i> collected a bunch of print receipts, folded them into origami art](projects/origami.qmd), and would leave them around campus.
 
 ## Archive
--   I sent [<i class="bi bi-envelope-heart"></i> a physical postcard of my podcast listening](projects/podcast-postcard.qmd) to FiveThirtyEight, and they had some nice things to say.
 - In college, I "put hats on rats", [<i class="bi bi-wrench-adjustable"></i> building implants that stuck electrodes into rodent brains to record neural activity](projects/directed-study.qmd). Unlike the common saying, it actually WAS brain surgery.
+-   I sent [<i class="bi bi-envelope-heart"></i> a physical postcard of my podcast listening](projects/podcast-postcard.qmd) to FiveThirtyEight, and they had some nice things to say.
+- I wanted to stay curious so I [<i class="bi bi-gem"></i> made a Twitter account posting about what is interesting and extraordinary about ordinary things](projects/extraordinary.qmd). My hope was that these tweets, in some small way, could keep you feeling interested and excited about the world we live in. Also gave some longer posts a try about nerdy things. Stay curious.
+
 
 ***
 <div style="text-align: center;">[<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)</div>
