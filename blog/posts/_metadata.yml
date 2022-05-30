@@ -1,0 +1,10 @@
+# options apply to all posts in this folder
+
+# freeze computational output
+freeze: true
+comments:
+  giscus:
+    repo: zachbogart/my_website
+    category: Blog
+toc-location: left
+search: false

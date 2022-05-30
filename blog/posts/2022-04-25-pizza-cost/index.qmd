@@ -1,0 +1,60 @@
+---
+title: Pizza Cost
+subtitle: Cost of pies
+date: 2022-04-24
+categories:
+  - r
+  - observable
+  - analysis
+draft: true
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+# manually make the dataframe
+pizza <- tribble(
+    ~name, ~kind, ~cost,
+    "The Degenerate", "sm", 20,
+    "The Degenerate", "lg", 30,
+    "The Degenerate", "gf", 26,
+    "Waldorf", "sm", 20,
+    "Waldorf", "lg", 26,
+    "Waldorf", "gf", 30,
+    "Cheese", "sm", 15,
+    "Cheese", "lg", 25,
+    
+    
+)
+
+pizza <- tribble(
+    ~raw,
+    'The Degenerate 20/30/26',
+    'Waldorf 20/26/30',
+    'Cheese 15/25/19',
+    'Brooklyn 20/30/26',
+    'Pepperoni 18/28/22',
+    'Margherita 18/28/22',
+    "Mama Lil's Marinara 14/23/18",
+    'Hot Coppa 20/30/26',
+    'Roasted Vegetable 20/30/26',
+    'Santorini 20/30/26',
+    'Hot Italian Sausage 20/30/26',
+    'Prosciutto di Parma 20/30/26',
+    'Truffle 20/30/26',
+    'Potato-Ricotta 20/30/26'
+) %>% 
+    extract(raw, 
+            into = c("name", "size"),
+            regex = "([A-Za-z ']+) ([0-9/]+)") %>% 
+    separate(size, 
+             sep = "/", 
+             into = c("sm", "lg", "gf"),
+             convert = T) %>% 
+    pivot_longer(cols = -name, names_to = "kind", values_to = "cost")
+
+pizza
+```
+

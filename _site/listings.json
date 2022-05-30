@@ -1,0 +1,11 @@
+[
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/2022-05-17-git-things/index.html",
+      "/blog/posts/2022-05-12-vscode-data/index.html",
+      "/blog/posts/2022-04-24-rtfm-readme/index.html",
+      "/blog/posts/2022-04-16-hello-world/index.html"
+    ]
+  }
+]

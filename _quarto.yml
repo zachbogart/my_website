@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Zach Bogart"
+  favicon: "favicon.png"
+  site-url: "https://www.zachbogart.com/"
+  page-navigation: false # can loop through sections in sidebar (arrows at bottom)
+  navbar:
+    background: light
+    left:
+        - text: "A Bit About Me"
+          href: about.qmd
+        - text: "Blog"
+          href: blog/index.qmd
+        # - text: Other Stuff
+        #   menu:
+        #     - text: Making Nouns
+        #       icon: bezier
+        #       href:  projects/nouns.qmd
+  # sidebar:
+  #   - id: "sidebar-nav"
+  #     contents:
+  #       - text: <i class="bi bi-check2-square"></i> Selected Things
+  #         href: index.qmd
+  page-footer: 
+    left: 
+      - icon: heart-fill
+        href: http://ko-fi.com/zachbogart
+    center: 
+      - text: "data.start.page"
+        href: https://data.start.page
+    right: 
+      - icon: github
+        href: https://github.com/zachbogart/my_website
+      - icon: twitter 
+        href: https://twitter.com/ 
+        
+format:
+  html:
+    theme: 
+      light: 
+        - zephyr
+        - theme.scss
+      dark: 
+        -  cyborg
+    css: styles.css
+    toc: true
+
+
+

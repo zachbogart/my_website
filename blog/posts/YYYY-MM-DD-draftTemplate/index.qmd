@@ -1,0 +1,31 @@
+---
+title: "Title: Blog Post"
+subtitle: "Subtitle can go here"
+date: 1900-01-01
+categories:
+  - rtfm
+draft: true
+---
+
+![](exampleIcon.svg){fig-align="center" width="100"}
+
+This is a draft blog post. You can copy the folder to make a new post:
+
+1. Copy/rename the folder
+2. Build post, can render on save to see while running `quarto preview` in an external Terminal. Have it render with no preview, use localhost
+
+You need to turn the draft to false for the post to be visible.
+
+### Example Image Link
+
+- This is an image link
+
+![Color Columns, header on highlight](exampleImage.png)
+
+### On Using Nouns
+
+- Add sound as an inline SVG
+
+#### Image Credit
+
+[NounName](https://thenounproject.com/zachbogart) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)

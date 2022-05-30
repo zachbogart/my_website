@@ -1,0 +1,32 @@
+---
+title: Hello, Quarto Site
+subtitle: Making a site using Quarto, with only a few problems
+date: 2022-04-16
+categories:
+  - news
+---
+
+![](big-image.png){fig-align="center" width="100"}
+
+I'm digging Quarto. It was pretty easy to make this into a website, plus it makes adding in plots really seamless.
+
+## Challenges
+
+Pretty painlessly, was able to revamp my website using Quarto. Some challenges encountered:
+
+-   The navbars and sidebars are independent. I'm not using them to their full potential at the moment.
+-   I can't seem to get the blog title banner to show up on smaller screens. Even had some troubles seeing it when forking the quarto-web repo and looking at their blog. Will have to look into this.
+
+Overall, looking forward to using Quarto more often.
+
+Always learning,
+
+Zach
+
+::: callout-note
+2022-04-24: I ended up getting the title and subtitle to appear in blog posts on smaller screens by copying the [quarto-web repo](https://github.com/quarto-dev/quarto-web) more closely. It still feels finicky, though, like it could break if the text banner color is altered. Ongoing and will have to keep in mind when fiddling with things.
+:::
+
+#### Image Credit
+
+[Coder](https://thenounproject.com/browse/collection-icon/coders-154740/?p=1) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)

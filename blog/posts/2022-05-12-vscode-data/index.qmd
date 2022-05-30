@@ -1,0 +1,21 @@
+---
+title: "Some VSCode Data Things"
+subtitle: See CSV in VSCode
+date: 2022-04-24
+categories:
+  - VSCode
+  - rtfm
+draft: false
+---
+
+![](flower.svg){fig-align="center" width="100"}
+
+## Rainbow CSV
+
+"Looking" at data can take many forms, but opening a CSV in Excel feels a little like poor form. I found [Rainbow CSV for VSCode](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) helpful for seeing the columns in a CSV. Totally an example of seeing this in the wild and going "I want that."
+
+![Color Columns, header on highlight](rainbow-csv.png)
+
+## Format Document
+
+Working with a lot of JSON, there are a lot of cases where the data is not pretty, instead wrapped onto one line. [Format document](https://code.visualstudio.com/docs/editor/codebasics#_formatting) is quite useful and I wish there was an analog in RStudio.
