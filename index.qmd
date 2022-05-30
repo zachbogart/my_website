@@ -37,7 +37,7 @@ format:
 ## Hard to Read?
 I thought it'd be neat to use a light font color for the majority of the text on this page, letting the links draw your eye and allow you to read more if you're interested. However, that does make the text inherently harder to read and more inaccessible to some readers.
 
-<span style="color: black">**If you have trouble reading the text, there's a dark mode toggle at the top-right**</span> of the navigation bar that should help make the body text more legible.
+<span style="color: #FC6E61">**If you have trouble reading the text, there's a dark mode toggle at the top-right**</span> of the navigation bar that should help make the body text more legible.
 
 ***
 <div style="text-align: center;">[<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)</div>
