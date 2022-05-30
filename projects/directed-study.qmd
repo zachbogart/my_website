@@ -4,7 +4,7 @@ subtitle: Putting hats on rats
 date: "2013-12-12"
 ---
 
-![](images/directed_study_implant.jpg)
+![For some scale, the green disk on top with all the brass pins is about the size of a US Quarter](images/directed_study_implant.jpg)
 
 ## In Brief/Approachable
 I "put hats on rats", building implants that we installed to the roof of the animal's skull to record neural activity so the lab could study the effects of compounds on learning and memory. Involved a lot of machining the pieces and ensuring the parts worked together, like building a mechanical watch (each implant was built from scratch). I put up a sign where we built the implants that said "travailler comme l'horloger" or "work like a watchmaker". It was finicky work, but cool to see the neural activity blip to life once we got it implanted. Ended up creating a manual for how to make the implants and mentored several high-school students in how to manufacture them. In addition to building the implants, I also helped install them, doing several implant surgeries to attach the devices to the animals.
