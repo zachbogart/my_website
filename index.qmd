@@ -9,10 +9,6 @@ format:
 
 <!-- For icons, see https://icons.getbootstrap.com/ -->
 
-***
-
-<div style="text-align: center;">[<i class="bi bi-question-octagon-fill" style="font-size: 16pt;"></i> Hard to Read? Use Dark Mode](help.qmd#legibility)</div>
-
 ## Work
 - I work on the data team at [<i class="bi bi-bar-chart-fill"></i> Periscopic, a socially conscious data visualization firm](https://periscopic.com), where we try to do good with data.
 
@@ -38,6 +34,10 @@ format:
 -   I sent [<i class="bi bi-envelope-heart"></i> a physical postcard of my podcast listening](projects/podcast-postcard.qmd) to FiveThirtyEight, and they had some nice things to say.
 - I wanted to stay curious so I [<i class="bi bi-gem"></i> made a Twitter account posting about what is interesting and extraordinary about ordinary things](projects/extraordinary.qmd). My hope was that these tweets, in some small way, could keep you feeling interested and excited about the world we live in. Also gave some longer posts a try about nerdy things. Stay curious.
 
+## Hard to Read?
+I thought it'd be neat to use a light font color for the majority of the text on this page, letting the links draw your eye and allow you to read more if you're interested. However, that does make the text inherently harder to read and more inaccessible to some readers.
+
+<span style="color: black">**If you have trouble reading the text, there's a dark mode toggle at the top-right**</span> of the navigation bar that should help make the body text more legible.
 
 ***
 <div style="text-align: center;">[<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)</div>

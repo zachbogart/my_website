@@ -1,9 +1,0 @@
----
-title: "✨ Help Page"
-aliases: 
-  - /help
----
-
-## <i class="bi bi-question-octagon-fill"></i> Hard to Read? Use Dark Mode {#legibility}
-
-I thought it'd be neat to use a light font color for the majority of the text on the [main page](index.qmd), letting the links draw your eye and allow you to read more if you're interested. However, that does make the text inherently harder to read and more inaccessible to some readers. **If you have trouble reading the text, there's a dark mode toggle in the navigation bar** that should help make the body text more legible (top-right).
