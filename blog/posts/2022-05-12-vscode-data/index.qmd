@@ -19,3 +19,7 @@ draft: false
 ## Format Document
 
 Working with a lot of JSON, there are a lot of cases where the data is not pretty, instead wrapped onto one line. [Format document](https://code.visualstudio.com/docs/editor/codebasics#_formatting) is quite useful and I wish there was an analog in RStudio.
+
+#### Image Credit
+
+[Loopy Flowers](https://thenounproject.com/browse/collection-icon/loopy-flowers-154743/?p=1) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
