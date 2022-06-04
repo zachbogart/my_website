@@ -75,9 +75,13 @@
 <section id="format-document" class="level2">
 <h2 class="anchored" data-anchor-id="format-document">Format Document</h2>
 <p>Working with a lot of JSON, there are a lot of cases where the data is not pretty, instead wrapped onto one line. <a href="https://code.visualstudio.com/docs/editor/codebasics#_formatting">Format document</a> is quite useful and I wish there was an analog in RStudio.</p>
+<section id="image-credit" class="level4">
+<h4 class="anchored" data-anchor-id="image-credit">Image Credit</h4>
+<p><a href="https://thenounproject.com/browse/collection-icon/loopy-flowers-154743/?p=1">Loopy Flowers</a> by Zach Bogart from <a href="https://thenounproject.com/zachbogart">the Noun Project</a></p>
 
 
 
+</section>
 </section>
  ]]></description>
   <category>VSCode</category>

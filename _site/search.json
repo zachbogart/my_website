@@ -7,6 +7,13 @@
     "text": "Note\n\n\n\n2022: I worked on the first version of edav.info back in the Summer of 2018 and that version has since been archived. It has now undergone a renovation but it is still proving useful. Very cool to see!\n\n\n\nWhen will course notes follow the Wikipedia model?\nYihui Xie\n\nOver the summer, I worked with Joyce Robbins on an online resource for a course at Columbia University called “Exploratory Data Analysis and Visualization”, or EDAV for short. The course covers how to visualize/work with data using R. We wanted to make a resource for students that had all the information about how to get started as well as examples to learn by doing.\nThe result is edav.info/, a resource combining examples, advice, and other things to help students start visualizing/working with R. There are several pages on the basics, pretty examples of different plot types, and helpful discussions on how to get the most out of the course and of R itself. Also, we ensured the resource was easy to modify so students could propose changes and help the quality continuously improve. As an added touch, we created a custom logo for the resource and custom icons for each chapter. We are very excited with the result and hope students enjoy exploring the resource and its examples.\nWe are excited to say that edav.info/ received an honorable mention prize in the 1st Bookdown Contest hosted by the package’s author, Yihui Xie, and RStudio. Feel free to checkout our submission for a more formal explanation of the resource."
   },
   {
+    "objectID": "projects/directed-study.html",
+    "href": "projects/directed-study.html",
+    "title": "BU Directed Study",
+    "section": "",
+    "text": "For some scale, the green disk on top with all the brass pins is about the size of a US Quarter"
+  },
+  {
     "objectID": "projects/directed-study.html#in-briefapproachable",
     "href": "projects/directed-study.html#in-briefapproachable",
     "title": "BU Directed Study",
@@ -154,6 +161,20 @@
     "text": "“Prison Grad school time is slow time. So ya do what ya can to keep going. Some fellas collect stamps. Others build matchstick houses. Andy Zach built a library mostly paid video games and ate good food. Now he needed a new project. Tommy Decorating was it. It was the same reason he spent years shaping and polishing those rocks doodling ideas in his notebooks. The same reason he hung his fantasy girlies on the wall …no comment. In prison grad school, a man’ll do most anything to keep his mind occupied. By 1966 2018, right about the time Tommy he was getting ready to take his exams, it was Lovely Raquel putting Post-It’s all over the walls.”\n– The Shawshank Redemption (edited)"
   },
   {
+    "objectID": "projects/ninja.html",
+    "href": "projects/ninja.html",
+    "title": "Ninja, 24 Elim Solo",
+    "section": "",
+    "text": "This is a visualization of one of Ninja’s Fortnite runs. I plotted his eliminations with a game map overlay and connected them with smooth curves, creating an approximate movement path you can follow from start to finish. Accented with audio blurb annotations, you can get a good sense of his progression through the run.\nI’ve wanted to do something with Fortnite for a while now, so this serves as a toe in the water. This was a manual creation, but it has got me thinking how it would be lovely to auto-generate these kinds of plots for streamers in the future. Someday."
+  },
+  {
+    "objectID": "projects/ninja.html#visualization-notes",
+    "href": "projects/ninja.html#visualization-notes",
+    "title": "Ninja, 24 Elim Solo",
+    "section": "Visualization Notes",
+    "text": "Visualization Notes\nThe yellow dots represent the approximate locations of the eliminated players. The locations were found by watching Ninja’s YouTube video, “Ninja Destroys The Entire Lobby!! 24 Elim Solo”, and taking screenshots when eliminations were made. The mini map in each screenshot was then used to place a point on the visualization.\nThe light blue path is created by drawing a line between the twenty-four yellow elimination points and applying smooth curves. Because of this, the light blue path is only an approximation of Ninja’s movements and is taking liberties at certain spots, particularly with sniper eliminations. For example, the top-most yellow dot in the visualization is far from the preceding elims, implying Ninja walked over to that player to get the elimination. In actuality, Ninja sniped that player from far away rather than going up a large mountain to attack at close range. It would be interesting in the future to try a more accurate recreation of player movement, but I think this approximation tells a compelling story.\nThe dotted-line portion of the path approximates the initial descent from the bus. The video does not include the bus’s transit path, so it is omitted (it would have made things a little crowded, anyway).\nThe blue dots signify when Ninja started using a mech and when he transitioned into a new mech (where “mech” is the B.R.U.T.E. vehicle). Not all eliminations after those points were made in mechs. For example, up at Salty Springs, he exits the mech to acquire four eliminations before reentering to cover more ground. In general, it would be interesting to further explore how the type of elimination could be better displayed without overloading the viewer (color by weapon used, use of vehicle, etc.).\nThe annotations were taken from Ninja’s stream audio after the elimination occurred. They are lightly edited.\nThe dark blue squiggly line defines the border of the southwest corner of the game map. Initially I was going to include the entire outline of the map, but it served no purpose. The location names are placed where they appear on the game map. This causes some overlap of paths, points, and text (particularly at Salty Springs and Fatal Fields), but the intention was to go for accuracy with regards to the game map placement.\nThe text was typeset in Arial; apologies, type-lovers.\nThe color palette was chosen to compliment Ninja’s logo identity as of September 2019.\n\nFortnite Context\nThis run’s landing site was Pandora, a crossover event with Borderlands (termed “Mayhem” in-game). This limited-time rift zone gave players regenerative shields.\nThis run was recorded shortly after changes were made to the turbo build feature, which were later reverted. More info on changes to the game can be found in the Fortnite patch notes."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "“I’ll know it when I see it”",
@@ -186,14 +207,14 @@
     "href": "index.html#archive",
     "title": "“I’ll know it when I see it”",
     "section": "Archive",
-    "text": "Archive\n\nIn college, I “put hats on rats”,  building implants that stuck electrodes into rodent brains to record neural activity. Unlike the common saying, it actually WAS brain surgery.\nI sent  a physical postcard of my podcast listening to FiveThirtyEight, and they had some nice things to say.\nI wanted to stay curious so I  made a Twitter account posting about what is interesting and extraordinary about ordinary things. My hope was that these tweets, in some small way, could keep you feeling interested and excited about the world we live in. Also gave some longer posts a try about nerdy things. Stay curious."
+    "text": "Archive\n\nIn college, I “put hats on rats”,  building implants that stuck electrodes into rodent brains to record neural activity. Unlike the common saying, it actually WAS brain surgery.\nI sent  a physical postcard of my podcast listening to FiveThirtyEight, and they had some nice things to say.\nI wanted to stay curious so I  made a Twitter account posting about what is interesting and extraordinary about ordinary things. My hope was that these tweets, in some small way, could keep you feeling interested and excited about the world we live in. Also gave some longer posts a try about nerdy things. Stay curious.\nI like video games, and that’s good fodder for dataviz. I  made a viz of a Fortnite run from Ninja, a streamer you probably have heard of with electric-blue hair. Was a fun early experiment using manual methods and Illustrator."
   },
   {
     "objectID": "index.html#hard-to-read",
     "href": "index.html#hard-to-read",
     "title": "“I’ll know it when I see it”",
     "section": "Hard to Read?",
-    "text": "Hard to Read?\nI thought it’d be neat to use a light font color for the majority of the text on this page, letting the links draw your eye and allow you to read more if you’re interested. However, that does make the text inherently harder to read and more inaccessible to some readers.\nIf you have trouble reading the text, there’s a dark mode toggle at the top-right of the navigation bar that should help make the body text more legible.\n\n\n Darn! That’s the end!"
+    "text": "Hard to Read?\nIf you have trouble reading the text, there’s a dark mode toggle at the top-right of the navigation bar that should help make the body text more legible.\nI thought it’d be neat to use a light font color for the majority of the text on this page, letting the links draw your eye and allow you to read more if you’re interested. However, that does make the text inherently harder to read and more inaccessible to some readers.\n\n\n Darn! That’s the end!"
   },
   {
     "objectID": "about.html",
