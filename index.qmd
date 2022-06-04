@@ -36,9 +36,9 @@ format:
 - I like video games, and that's good fodder for dataviz. I [<i class="bi bi-joystick"></i> made a viz of a Fortnite run from Ninja](projects/ninja.qmd), a streamer you probably have heard of with electric-blue hair. Was a fun early experiment using manual methods and Illustrator.
 
 ## Hard to Read?
-I thought it'd be neat to use a light font color for the majority of the text on this page, letting the links draw your eye and allow you to read more if you're interested. However, that does make the text inherently harder to read and more inaccessible to some readers.
+<span style="color: #000000">**If you have trouble reading the text, there's a dark mode toggle at the top-right**</span> of the navigation bar that should help make the body text more legible.
 
-<span style="color: #FC6E61">**If you have trouble reading the text, there's a dark mode toggle at the top-right**</span> of the navigation bar that should help make the body text more legible.
+I thought it'd be neat to use a light font color for the majority of the text on this page, letting the links draw your eye and allow you to read more if you're interested. However, that does make the text inherently harder to read and more inaccessible to some readers.
 
 ***
 <div style="text-align: center;">[<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)</div>
