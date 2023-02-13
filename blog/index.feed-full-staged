@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Zach Bogart</title>
+<link>https://www.zachbogart.com/blog/index.html</link>
+<atom:link href="https://www.zachbogart.com/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.2.269</generator>
+<lastBuildDate>Sun, 12 Feb 2023 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>{B4F502887207:/blog/posts/2023-02-12-noun-phases/index.html}</title>
+  <link>https://www.zachbogart.com/blog/posts/2023-02-12-noun-phases/index.html</link>
+  <description>{B4F502887207:/blog/posts/2023-02-12-noun-phases/index.html}</description>
+  <category>nouns</category>
+  <guid>https://www.zachbogart.com/blog/posts/2023-02-12-noun-phases/index.html</guid>
+  <pubDate>Sun, 12 Feb 2023 08:00:00 GMT</pubDate>
+  <media:content url="https://www.zachbogart.com/blog/posts/2023-02-12-noun-phases/49 - wave.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>{B4F502887207:/blog/posts/2022-05-17-git-things/index.html}</title>
+  <link>https://www.zachbogart.com/blog/posts/2022-05-17-git-things/index.html</link>
+  <description>{B4F502887207:/blog/posts/2022-05-17-git-things/index.html}</description>
+  <category>rtfm</category>
+  <category>git</category>
+  <category>Sourcetree</category>
+  <guid>https://www.zachbogart.com/blog/posts/2022-05-17-git-things/index.html</guid>
+  <pubDate>Tue, 17 May 2022 07:00:00 GMT</pubDate>
+  <media:content url="https://www.zachbogart.com/blog/posts/2022-05-17-git-things/conflict.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>{B4F502887207:/blog/posts/2022-05-12-vscode-data/index.html}</title>
+  <link>https://www.zachbogart.com/blog/posts/2022-05-12-vscode-data/index.html</link>
+  <description>{B4F502887207:/blog/posts/2022-05-12-vscode-data/index.html}</description>
+  <category>VSCode</category>
+  <category>rtfm</category>
+  <guid>https://www.zachbogart.com/blog/posts/2022-05-12-vscode-data/index.html</guid>
+  <pubDate>Sun, 24 Apr 2022 07:00:00 GMT</pubDate>
+  <media:content url="https://www.zachbogart.com/blog/posts/2022-05-12-vscode-data/flower.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>{B4F502887207:/blog/posts/2022-04-24-rtfm-readme/index.html}</title>
+  <link>https://www.zachbogart.com/blog/posts/2022-04-24-rtfm-readme/index.html</link>
+  <description>{B4F502887207:/blog/posts/2022-04-24-rtfm-readme/index.html}</description>
+  <category>rtfm</category>
+  <category>readme</category>
+  <guid>https://www.zachbogart.com/blog/posts/2022-04-24-rtfm-readme/index.html</guid>
+  <pubDate>Sun, 24 Apr 2022 07:00:00 GMT</pubDate>
+  <media:content url="https://www.zachbogart.com/blog/posts/2022-04-24-rtfm-readme/61 - dazed and confused.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>{B4F502887207:/blog/posts/2022-04-16-hello-world/index.html}</title>
+  <link>https://www.zachbogart.com/blog/posts/2022-04-16-hello-world/index.html</link>
+  <description>{B4F502887207:/blog/posts/2022-04-16-hello-world/index.html}</description>
+  <category>news</category>
+  <guid>https://www.zachbogart.com/blog/posts/2022-04-16-hello-world/index.html</guid>
+  <pubDate>Sat, 16 Apr 2022 07:00:00 GMT</pubDate>
+  <media:content url="https://www.zachbogart.com/blog/posts/2022-04-16-hello-world/big-image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+</channel>
+</rss>

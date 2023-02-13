@@ -1,6 +1,6 @@
 ---
-title: "Test"
-subtitle: "Subtitle can go here"
+title: "Phases of Making Nouns"
+subtitle: "Fostering creativity takes different forms of mind"
 date: 2023-02-12
 categories:
   - nouns
@@ -9,23 +9,72 @@ draft: false
 
 ![](49 - wave.svg){fig-align="center" width="100"}
 
-This is a draft blog post. You can copy the folder to make a new post:
+I like making nouns, but the reason behind it has changed a lot over time. The main reason I am still doing it is that it's fun, but here are some of the approaches I have taken in the past. I think it's important to acknowledge these because **they serve as ways to get something creative out into the world**.
 
-1. Copy/rename the folder
-2. Build post, can render on save to see while running `quarto preview` in an external Terminal. Have it render with no preview, use localhost
+### Ways I've Approached Making Nouns
 
-You need to turn the draft to false for the post to be visible.
+![](05 - joystick.svg){fig-align="center" width="100"}
 
-### Example Image Link
+- **Game the sytem**: This approach can help to generate content, but it isn't very fun long-term. This takes the form of making nouns that I think people will use often, with usage as the main goal. While this can make a lot of nouns, I've tried to move away from this approach. Having a exploitive goal drive your creativity will work, but it can be draining and will not lead to a happy experience.
 
-- This is an image link
+![](20 - sparkling heart.svg){fig-align="center" width="100"} 
 
-![Color Columns, header on highlight](exampleImage.png)
+- **Immediate gratification**: This was how I started out, where I happened to post a heart in an early batch and people used it immediately. Seeing reactions (here in terms of usage spikes) is a good motivator, but it can alter as usage trends change. This is like the gateway to learning/presenting a new thing. Getting feedback that is supportive or constructive can help motivate future work.
 
-### On Using Nouns
+![](64 - calendar.svg){fig-align="center" width="100"} 
 
-- Add sound as an inline SVG
+- **Dailies**: I have often used this approach for icon generation: make something every day. Of course life comes up, but trying to make a creative pursuit a routine can help when external factors show up. More importantly, it can make it easier to make something when you're short on ideas: just try something to "fufill the daily". I can find this approach helpful when I'm second-guessing myself.
+
+![](29 - graphics card.svg){fig-align="center" width="100"} 
+
+- **Technical Challenge**: I did this a lot starting out, trying new things for the express purpose of flexing my technical skills, using the design tool more effectively. Making something where the goal is to better learn the tool helps me better understand my creative limitations and how I can work to expand them.
+
+![](64 - snap to grid.svg){fig-align="center" width="100"} 
+
+- **Complete the set**: For nouns, I will have some subject matters that I want to do "all of", or try a bunch of. The [Japan town symbols](https://thenounproject.com/browse/collection-icon/japanese-towns-136265/?p=1) definitely fall under this. There are a bunch of them and it also overlapped with the technical challenge approach, trying to figure out how to make something match the actual symbol.
+
+![](16 - scroll.svg){fig-align="center" width="100"} 
+
+- **Follow a recipe**: The [Nepal flag](https://thenounproject.com/icon/flag-of-nepal-3653123/), [biohazard](https://thenounproject.com/icon/biohazard-2440740/), and [Euro](https://thenounproject.com/icon/euro-4449842/) symbols are other examples of this, all of which have defined standards for how they should be drawn. Following a recipe can be a helpful starting point, and can open it up to trying new things (how to make the recipe your own).
+
+![](29 - world.svg){fig-align="center" width="100"} 
+
+- **Iconify the world**: I'll be walking around and see something out in the world and want to iconify it. Finding times where the real world can be the starting point for your creative passion is super rewarding.
+
+![](56 - cozy cat.svg){fig-align="center" width="100"} 
+
+- **Copy Cat**: I'll see other design work and want to borrow principles or approaches. You can see sometimes that it's obvious I've been watching a show recently in my icon submissions. Using other creative work and mixing it around and making it your own is a helpful tool to get your own creative juices flowing.
+
+![](68 - wonder.svg){fig-align="center" width="100"} 
+
+- **Capture an interesting idea**: This is probably my favorite state of mind to be in for nouns. Iconify-ing an idea that is tough to express feels really cool. When you get it just right, it's a great feeling. Translating a new and interesting idea into your creative medium is the best feeling. Some of my favorite interesting ideas:
+
+    - [The avid bibliophile](https://thenounproject.com/icon/reader-4656580/)
+    - [Hiding a heart in loving couple](https://thenounproject.com/icon/love-4609033/)
+    - [Simple lines make a calming yoga pose](https://thenounproject.com/icon/lotus-pose-3098225/)
+    - [The seasons, with crops](https://thenounproject.com/icon/seasons-2700671/)
+    - [Leaving someone hanging in a text chain](https://thenounproject.com/icon/ghosted-5478561/)
+
+### Conlusion
+
+Overall, I like making icons, however I can manage it. It's a fun process, and it takes many forms. But the idea of making something, to look at that blank page and try to fill it in...it can be daunting. So, these groupings can help to think about the creative process in different ways.
+
+Often I get lost in my head and find reasons not to make things. Of course it's easier not to make things, but after getting over the hump, it's always cool to see the results on the page. When it starts to snowball, one can really see the development. So, future me...keep making things. Find ways to do so, however you swing it. But keep making things. It's more fun that way.
+
+
 
 #### Image Credit
 
-[wave](https://thenounproject.com/icon/wave-4449445/) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
+Icons by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
+
+- [wave](https://thenounproject.com/icon/wave-4449445/)
+- [joystick](https://thenounproject.com/icon/joystick-4449841/)
+- [sparkling heart](https://thenounproject.com/icon/sparkling-heart-4449582/)
+- [calendar](https://thenounproject.com/icon/calendar-3644643/)
+- [graphics card](https://thenounproject.com/icon/graphics-card-2732978/)
+- [snap to grid](https://thenounproject.com/icon/snap-to-grid-3169921/)
+- [scroll](https://thenounproject.com/icon/scroll-4963290/)
+- [world](https://thenounproject.com/icon/world-5323889/)
+- [cozy cat](https://thenounproject.com/icon/cozy-cat-3644628/)
+- [wonder](https://thenounproject.com/icon/wonder-4181236/)
+    
