@@ -7,15 +7,15 @@ categories:
 draft: false
 ---
 
-![](49 - wave.svg){fig-align="center" width="100"}
+![](49 - wave.svg){fig-align="center" width="100"} 
 
-I like making nouns, but the reason behind it has changed a lot over time. The main reason I am still doing it is that it's fun, but here are some of the approaches I have taken in the past. I think it's important to acknowledge these because **they serve as ways to get something creative out into the world**.
+I like [making nouns](/nouns), but the reason behind it has changed a lot over time. The main reason I am still doing it is that it's fun, but here are some of the approaches I have taken in the past. I think it's important to acknowledge these because **they serve as ways to get something creative out into the world**.
 
 ### Ways I've Approached Making Nouns
 
 ![](05 - joystick.svg){fig-align="center" width="100"}
 
-- **Game the sytem**: This approach can help to generate content, but it isn't very fun long-term. This takes the form of making nouns that I think people will use often, with usage as the main goal. While this can make a lot of nouns, I've tried to move away from this approach. Having a exploitive goal drive your creativity will work, but it can be draining and will not lead to a happy experience.
+- **Game the system**: This approach can help to generate content, but it isn't very fun long-term. This takes the form of making nouns that I think people will use often, with usage as the main goal. While this can make a lot of nouns, I've tried to move away from this approach. Having a exploitive goal drive your creativity will work, but it can be draining and will not lead to a happy experience.
 
 ![](20 - sparkling heart.svg){fig-align="center" width="100"} 
 
