@@ -15,7 +15,7 @@ I like [making nouns](/nouns), but the reason behind it has changed a lot over t
 
 ![](05 - joystick.svg){fig-align="center" width="100"}
 
-- **Game the system**: This approach can help to generate content, but it isn't very fun long-term. This takes the form of making nouns that I think people will use often, with usage as the main goal. While this can make a lot of nouns, I've tried to move away from this approach. Having a exploitive goal drive your creativity will work, but it can be draining and will not lead to a happy experience.
+- **Game the system**: This approach can help to generate content, but it isn't very fun long-term. This takes the form of making nouns that I think people will use often, with usage as the main goal. While this can make a lot of nouns, I've tried to move away from this approach. Having a exploitative goal drive your creativity will work, but it can be draining and will not lead to a happy experience.
 
 ![](20 - sparkling heart.svg){fig-align="center" width="100"} 
 
@@ -23,7 +23,7 @@ I like [making nouns](/nouns), but the reason behind it has changed a lot over t
 
 ![](64 - calendar.svg){fig-align="center" width="100"} 
 
-- **Dailies**: I have often used this approach for icon generation: make something every day. Of course life comes up, but trying to make a creative pursuit a routine can help when external factors show up. More importantly, it can make it easier to make something when you're short on ideas: just try something to "fufill the daily". I can find this approach helpful when I'm second-guessing myself.
+- **Dailies**: I have often used this approach for icon generation: make something every day. Of course life comes up, but trying to make a creative pursuit a routine can help when external factors show up. More importantly, it can make it easier to make something when you're short on ideas: just try something to "fulfill the daily". I can find this approach helpful when I'm second-guessing myself.
 
 ![](29 - graphics card.svg){fig-align="center" width="100"} 
 
@@ -55,7 +55,7 @@ I like [making nouns](/nouns), but the reason behind it has changed a lot over t
     - [The seasons, with crops](https://thenounproject.com/icon/seasons-2700671/)
     - [Leaving someone hanging in a text chain](https://thenounproject.com/icon/ghosted-5478561/)
 
-### Conlusion
+### Conclusion
 
 Overall, I like making icons, however I can manage it. It's a fun process, and it takes many forms. But the idea of making something, to look at that blank page and try to fill it in...it can be daunting. So, these groupings can help to think about the creative process in different ways.
 
