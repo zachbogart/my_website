@@ -1,0 +1,24 @@
+---
+title: "Describing the vibe of some podcasts"
+subtitle: "'But first, a quick word from our sponsor'"
+date: 2023-03-26
+categories:
+  - writing
+  - random
+draft: false
+---
+
+![](16 - audiophile.svg){fig-align="center" width="100"}
+
+I like listening to podcasts biking around town. Here are some thoughts on some shows in terms of the kinds of feelings their hosts evoke. Happy listening.
+
+- [99% Invisible](https://99percentinvisible.org/): The deep calming voice of Roman Mars is a nice thing to listen to. His voice has a nice default chipper quality, like he's always excited about whatever he's discussing, or at least smiling as he's talking.
+- [Criminal](https://thisiscriminal.com/): Phoebe Judge's voice is very steady and calm, speaking softly and clearly on topics that can get quite heavy with a precise journalistic tone, but in a way that is very human.
+- [The Heart](https://www.theheartradio.org/): This show sounds like you have snuck under the covers and Kaitlin Prest is whispering stories right into your ear.
+- [The Daily](https://www.nytimes.com/column/the-daily): All the news that's fit to listen to. Strong journalistic desire to get to the bottom of things, with little moments that reveal they are real people just trying to understand what's happening. Michael Barbaro will most likely see you tomorrow.
+- [Playdate Podcast](https://podcast.play.date/): An unapologetically small team making a quirky game console with a crank. Christa Mrgan is really good at jumping in with all the info you'd ever need about the discussion. And I love how the full theme song caps out every episode (dig that desert-rune-level section).
+
+
+#### Image Credit
+
+[audiophile](https://thenounproject.com/icon/audiophile-4449881/) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)

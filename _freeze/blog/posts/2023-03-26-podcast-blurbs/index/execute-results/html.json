@@ -1,0 +1,14 @@
+{
+  "hash": "cc689151a0243df707e8219d59a4f980",
+  "result": {
+    "markdown": "---\ntitle: \"Describing the vibe of some podcasts\"\nsubtitle: \"'But first, a quick word from our sponsor'\"\ndate: 2023-03-26\ncategories:\n  - writing\n  - random\ndraft: true\n---\n\n\n![](16 - audiophile.svg){fig-align=\"center\" width=\"100\"}\n\nI like listening to podcasts biking around town. Here are some thoughts on some shows in terms of the kinds of feelings their hosts evoke. Happy listening.\n\n\n::: {.cell}\n\n```{.r .cell-code}\npodcasts <- c(\n    \n    \n    \"Playdate Podcast\",\n    \"Revisionist History\",\n    \"The Secrets Hotline\",\n    \"Song Exploder\"\n)\n\nsort(podcasts)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"Playdate Podcast\"    \"Revisionist History\" \"Song Exploder\"      \n[4] \"The Secrets Hotline\"\n```\n:::\n:::\n\n\n- [99% Invisible](): The deep calming voice of Roman Mars is a nice thing to listen to. His voice has a nice default chipper quality, like he's always excited about whatever he's discussing, or at least smiling as he's talking.\n- [Criminal](): Phoebe Judge's voice is very steady and calm, speaking sofly and clearly on topics that can get quite heavy with a precise journalistic tone, but in a way that is very human.\n- [The Heart](): This show sounds like you have snuck under the covers and Kaitlin Prest is whispering stories right into your ear.\n- [The Daily](): All the news that's fit to listen to. Strong journalistic desire to get to the bottom of things, with little moments that reveal they are real people just trying to understand what's happening. Michael Barbaro will most likely see you tomorrow.\n- [Playdate Podcast](): An unapologetically small team making a quirky game console with a crank. Christa Mrgan is really good at jumping in with all the info you'd ever need about the discussion. And I love how the full theme song caps out every episode (dig that desert-rune-level section).\n\n\n#### Image Credit\n\n[audiophile](https://thenounproject.com/icon/audiophile-4449881/) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
