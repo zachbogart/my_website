@@ -1,0 +1,20 @@
+---
+title: "Working in Observable"
+subtitle: Testing out Public Team
+aliases: 
+  - /showme
+---
+
+<!-- Noun Link Buttons -->
+<a class="btn btn-success" href="https://observablehq.com/@huh?tab=profile" role="button"><i class="bi bi-stars"></i> ObservableHQ Profile</a>
+<a class="btn btn-primary" href="https://github.com/zachbogart/huh-data" role="button"><i class="bi bi-github"></i> GitHub Repo</a>
+<br>
+
+<!-- Icon Image: Small -->
+![](images/showme0.svg){fig-align="left" width="100"}
+
+Wanting to get better at [Observable](https://observablehq.com/@huh?tab=profile), so thought I'd get a little more regimented about it. Created a public team and posting updates as I go. Excited to see this grow. 🌱
+
+<!--Noun Image Credit-->
+#### Image Credit
+[curious](https://thenounproject.com/icon/curious-4181217/) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
