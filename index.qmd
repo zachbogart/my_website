@@ -9,6 +9,10 @@ format:
 
 <!-- For icons, see https://icons.getbootstrap.com/ -->
 
+::: callout-note
+Trying out using [Notion](https://zachbogart.notion.site/zachbogart/Zach-Bogart-7262bf4695ab4585b53743507e94d9be) for website, check it out!
+:::
+
 ## Work
 - I work on the data team at [<i class="bi bi-bar-chart-fill"></i> Periscopic, a socially conscious data visualization firm](https://periscopic.com), where we try to do good with data.
 
