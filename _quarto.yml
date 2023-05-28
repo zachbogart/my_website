@@ -43,8 +43,6 @@ format:
       light: 
         - zephyr
         - theme.scss
-      dark: 
-        -  cyborg
     css: styles.css
     toc: true
 
