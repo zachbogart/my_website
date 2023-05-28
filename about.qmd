@@ -7,3 +7,7 @@ title: "👋 Hi, there!"
 My name is Zach and I am interested in the connections between science, design, and data. I enjoy making things and sharing knowledge.
 
 Hope you’re having a great day on the internet. Thanks for stopping by!
+
+::: callout-note
+Trying out using [Notion](https://zachbogart.notion.site/zachbogart/Zach-Bogart-7262bf4695ab4585b53743507e94d9be) for website, check it out!
+:::
