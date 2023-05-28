@@ -12,7 +12,7 @@ website:
     left:
         - text: "A Bit About Me"
           href: about.qmd
-        - text: "Blog"
+        - text: "Everything Else"
           href: blog/index.qmd
         # - text: Other Stuff
         #   menu:

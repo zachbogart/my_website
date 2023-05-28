@@ -1,15 +1,15 @@
 ---
-title: Blog
-subtitle: Always learning
+title: Everything Else
+subtitle: A bunch of thoughts and things
 listing:
   sort: "date desc"
   contents: "posts"
-  sort-ui: false
-  filter-ui: false
+  sort-ui: true
+  filter-ui: true
   categories: true
   feed: true
 page-layout: full
-title-block-banner: "#EDF3F9"
+title-block-banner: "#fff"
 title-block-banner-color: body
 search: true
 ---
