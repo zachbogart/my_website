@@ -1,13 +1,45 @@
 ---
 pagetitle: Whoops...(404)
-title: Page Not Found
+title: Whoops...(404)
 sidebar: false
 ---
 
 ![](images/error_guy.png){width=300}
 
-<p style="color: #FC6E61">The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p style="color: #FC6E61">The page you requested <span style="font-weight: bold">cannot be found.</span></p>
 
-<p style="color: #FC6E61">You may want to try searching to find what you're looking for.</p>
+<p style="color: #FC6E61">It may have been moved or renamed.</p>
 
-<p style="color: #FC6E61">Deep breath. It'll all be okay.</p>
+<p style="color: #FC6E61">Searching for the info might help.</p>
+
+<p style="color: #FC6E61"><span style="font-weight: bold">Deep breath</span>. It'll all be okay.</p>
+
+***
+
+The following is a response from ChatGPT to the query: 
+
+> _Write me a one-sided conversation like you are on the phone with someone. They have encountered an 404 error and are not taking it well. Try to keep it light hearted._
+
+Hey there, my friend! How's the adventure in the land of the internet going today? Ah, I see a 404 error has snuck its way into your browsing experience. Well, fret not! Let's dive into this virtual puzzle together and see if we can crack it.
+
+Now, let's rewind a bit and try to uncover the mysterious origins of this 404 error. Imagine you were on a quest for the Holy Grail of internet knowledge, searching for that one elusive article that would enlighten you about the history of cheese. Yes, cheese! Because who doesn't want to know the fascinating journey of curds and whey?
+
+So, there you were, fingers poised over the keyboard, anticipation building, and then... boom! The dreaded 404 error reared its pixelated head. It's like trying to find a needle in a haystack, only to discover that the needle is playing hide-and-seek with you.
+
+But hey, let's roll up our sleeves and get to the bottom of this. First things first, have you tried performing a simple page refresh? It's like giving the internet a little nudge, saying, "Hey there, we're not giving up that easily!" Sometimes all it takes is a friendly tap on the shoulder to make things right again.
+
+If the refresh didn't do the trick, let's up our game. Have you heard of the magical combination known as Ctrl+F5? Ah, yes, the ultimate power move in the world of browsers. It's like shaking the virtual snow globe and watching the digital flakes settle into place. Give it a try and let's see if we can shake that 404 error right out of existence.
+
+Now, if we're still in 404-land, it's time to bring out the big guns. Have you considered clearing your browser cache? It's like spring cleaning for your internet history, a chance to wipe away the digital cobwebs and start fresh. Trust me, sometimes a good cache-clearing session can work wonders and make that 404 error vanish like a magician's assistant.
+
+But what if, despite all our efforts, the 404 error still stands tall? Fear not, my friend! We're about to embark on a grand adventure. Prepare yourself... we're going to switch browsers! Yes, it's like stepping into a parallel universe where different codes and algorithms reign supreme. You might discover a browser that laughs in the face of 404 errors and dances to the beat of a different digital drum.
+
+Oh, and while we're on this troubleshooting quest, why not embrace the opportunity for a mini digital detox? Take a break from the internet's clutches and explore the wonders of the offline world. You can go for a leisurely walk, create some artwork, or even engage in a good old-fashioned conversation with another human being. Who knows, by the time we conquer that 404 error, you might become a champion painter or a master conversationalist!
+
+Remember, my friend, every 404 error is just a tiny detour in the vast landscape of the internet. Behind it lies a treasure trove of knowledge, entertainment, and endless possibilities. So, keep your spirits high, your mouse clicking, and your browser hopping. Together, we'll conquer this digital beast and bring back the joy of seamless browsing!
+
+Alright, my fellow adventurer, it's time to get back into the virtual fray. Remember, I'm right here with you, cheering you on. Stay positive, keep exploring, and let's show that 404 error who's boss! You've got this!
+
+***
+
+Yes you do. You've got this.
