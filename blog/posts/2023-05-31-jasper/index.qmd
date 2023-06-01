@@ -1,0 +1,98 @@
+---
+title: "Jasper the Fox Visits the City"
+subtitle: "Writing out a large language model story on a piece of tape"
+date: 2023-05-31
+categories:
+  - writing
+  - random
+draft: false
+---
+
+![](19 - ticket.svg){fig-align="center" width="100"}
+
+Was playing around with ChatGPT and got interested in making a story and writing it out by hand. Seeded things with an idea of a fox named Jasper who goes into the city. This became an little tale of going somethwere and finding more.
+
+It was interesting to write it out by hand on one big strip of tape and wrap it around a room. It put me in the mind of a very manual test generator, copying one word after another. While each qord and sentence made sense as I went, colelctivley there were some points that were a little odd.
+
+In general the story is pretty mediocre, but it was fun to explore text generation and create something in the real world. And it was fun to play with it so many ways.
+
+---
+
+Here's me reading the prompt I gave the language model:
+
+<audio controls>
+  <source src="Jasper prompt.m4a" type="audio/mpeg">
+  <p>
+    Download <a href="Jasper prompt.m4a">MP3</a>
+  </p>
+ </audio>
+ 
+>Write a story about a young fox named Jasper, enamored with going and checking out the city. He likes to read, but wants to see a city for real, not just in a book. He takes the train into town.  He becomes  overwhelmed by the pace of it all. He tries to find a place to eat, but gets turned around. He tries to ask for directions but is tossed aside. He ends up alone and scared at a train platform and resigns himself to heading back home. As he boards, he sees a beautiful white fox on the other side of the platform. He watches her leave and they catch eyes and she smiles. She turns her head to leave toward the city and his train leaves the station. He ends up back home. He keeps his train ticket and uses it as a bookmark. 
+
+Here's me reading the full story that was generated:
+
+<audio controls>
+  <source src="jasper_fox.m4a" type="audio/mpeg" />
+  <p>
+    Download <a href="jasper_fox.m4a">MP3</a>
+  </p>
+</audio>
+
+And here's the tape wrapped around my room:
+
+{{< video https://youtu.be/prJNsHT62Hk >}}
+
+This is the story it generated written out:
+
+> Once upon a time, in a peaceful forest, there lived a young fox named Jasper. Jasper was an adventurous and curious fox who had always been enamored with the idea of visiting the city. He loved reading books about bustling streets, towering buildings, and the vibrant energy that filled urban landscapes. But he longed to experience it for himself, to see the city with his own eyes.
+>
+> One bright morning, Jasper made up his mind and decided to embark on his grand adventure. He hopped onto the train that traveled from the countryside to the heart of the city. As the train chugged along the tracks, excitement bubbled within him, and his tail wagged furiously.
+>
+> As Jasper stepped off the train onto the bustling platform, he was instantly overwhelmed. The city was a flurry of movement, with animals rushing in every direction. Cars honked, sirens wailed, and towering buildings seemed to touch the sky. Jasper's eyes widened as he took in the sights and sounds, realizing that the city was far more vibrant and alive than any book could ever portray.
+> 
+> Feeling hungry after his journey, Jasper's stomach growled, and he decided to find a place to eat. However, the winding streets and busy intersections confused him. He trotted through the bustling crowds, trying to ask for directions, but everyone hurried past him, paying him no mind.
+> 
+> Disheartened and feeling lost, Jasper found himself alone and scared on a train platform. The noise and rush of the city overwhelmed him, and tears welled up in his eyes. He felt defeated, thinking that maybe the city wasn't meant for a bookish fox like him.
+> 
+> As he resigned himself to heading back home, he wiped away his tears and stepped onto the next train that arrived. As the train pulled away from the station, Jasper gazed out the window with a heavy heart. Suddenly, his eyes caught a glimpse of something magical on the other side of the platform—a beautiful white fox.
+> 
+> Time seemed to slow down as their eyes met, and a warm smile spread across the white fox's face. Jasper's heart skipped a beat, and he knew in that moment that the city held more surprises than he had ever imagined. The white fox turned her head, gracefully disappearing into the crowd, her tail flicking in the air as if beckoning Jasper to follow.
+> 
+> With a surge of determination, Jasper clutched onto his train ticket, and got off at the next station, heading back into the city. He knew he had to find her, to discover what adventures awaited him alongside this mysterious white fox.
+> 
+> Days turned into weeks, and weeks into months as Jasper explored the city, following clues and searching for the white fox. Along the way, he encountered friendly faces who offered him directions, shared stories, and helped him navigate the busy streets.
+> 
+> One day, while sitting in a cozy cafe, Jasper stumbled upon a book with a familiar cover—a novel about a young raccoon’s journey through space exploring an uncharted solar system. With a smile, he realized that his own tale was still unfolding, and every day was just another chapter.
+> 
+> As he turned the pages, a soft breeze blew through the cafe, ruffling the pages of the book. Jasper looked up and caught a glimpse of white fur out of the corner of his eye. He turned to see the beautiful white fox standing at the entrance of the cafe, her eyes sparkling with joy.
+> 
+> Their eyes met once again, and this time, Jasper didn't need to chase after her. He knew that his adventure had led him to something even more extraordinary—the connection and friendship of a kindred spirit.
+> 
+> Jasper and the white fox spent countless hours exploring the city together, discovering hidden corners, sharing stories, and embracing the magic that could be found amidst the urban chaos. And though their paths had crossed on a train platform that day, they realized that their journey together was just beginning. Jasper and the white fox formed an unbreakable bond, supporting and encouraging each other through every new experience they encountered.
+> 
+> Together, they explored vibrant parks and gardens, attended captivating art exhibitions, and savored delicious treats from diverse cuisines. Jasper learned about the city's history, culture, and the myriad of opportunities it offered.
+> 
+> As time went on, Jasper's initial feeling of being overwhelmed transformed into a sense of belonging. The city no longer felt daunting, but rather like a tapestry of possibilities waiting to be explored. Jasper's newfound confidence radiated as he interacted with the city's inhabitants, sharing his own stories and listening intently to others'.
+> 
+> Through their adventures, Jasper discovered that the city held not only the rush of its busy streets but also pockets of tranquility. He and the white fox found solace in quiet corners, breathing in the city's unique blend of fragrances and watching the sunset paint the skyline in hues of gold and crimson.
+> 
+> The white fox became Jasper's guiding light, leading him to places he never would have discovered on his own. Her grace and wisdom filled his heart with joy, and he found himself falling deeper in love with both the city and his newfound friend.
+> 
+> But just like any tale, their journey had its challenges. They faced obstacles, encountered closed doors, and weathered storms together. Yet, their unwavering determination and mutual support propelled them forward.
+> 
+> One evening, as they stood atop a tall building, overlooking the city's glittering lights, Jasper shared his secret. He pulled out the train ticket he had kept as a bookmark, confessing that he had initially believed his adventure was at an end on that train platform, that he had glimpsed the city and would return home. But meeting the white fox had changed everything.
+> 
+> The white fox listened attentively, her eyes filled with warmth and understanding. With a gentle smile, she revealed that she, too, had been searching for a companion to share her love of the city. Fate had brought them together that day on the train platform, and their connection was meant to be.
+> 
+> From that moment on, Jasper and the white fox knew that their place was in the city, side by side, embracing every experience and weaving their stories into the rich tapestry of urban life. Together, they continued to explore, inspire, and create memories that would last a lifetime.
+> 
+> As years passed, Jasper's adventures expanded beyond the city limits. They journeyed to faraway lands, mountains, and seas, always returning to the city they loved. And with every return, Jasper would place his train ticket, now weathered and treasured, back in his favorite book—a symbol of where it all began and a reminder of the beautiful connection he found that day.
+
+And here's me taking it down:
+
+{{< video https://youtu.be/KxXjAMWYV54 >}}
+
+---
+#### Image Credit
+
+[ticket](https://thenounproject.com/icon/ticket-5178881/) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
