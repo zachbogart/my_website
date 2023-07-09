@@ -9,12 +9,11 @@ draft: true
 
 ![](exampleIcon.svg){fig-align="center" width="100"}
 
-This is a draft blog post. You can copy the folder to make a new post:
+This is a draft blog post. Here are some directions to help out:
 
-1. Copy/rename the folder
-2. Build post, can render on save to see while running `quarto preview` in an external Terminal. Have it render with no preview, use localhost
-
-You need to turn the draft to false for the post to be visible.
+1. **Copy over**: copy/rename the folder
+2. **Work on post**: you can render on save to see while running. You can use the `Render` button to start it up (Settings gear has options for where to display rendering).
+3. **Setup YAML**: Add in title, date, tags, etc. You can look at what other tags have been used, or feel free to make your own. *Note: You must set `draft` to `false` for the post to be visible.* For example, this template is set as a draft, so doesn't get rendered.
 
 ### Example Image Link
 
@@ -24,7 +23,7 @@ You need to turn the draft to false for the post to be visible.
 
 ### On Using Nouns
 
-- Add sound as an inline SVG
+- Add noun as an inline SVG with info about centering and sizing.
 
 #### Image Credit
 
