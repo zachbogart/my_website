@@ -25,6 +25,8 @@ This is a draft blog post. Here are some directions to help out:
 
 - Add noun as an inline SVG with info about centering and sizing.
 
+
+---
 #### Image Credit
 
-[NounName](https://thenounproject.com/zachbogart) by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
+*NounName* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
