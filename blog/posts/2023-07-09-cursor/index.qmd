@@ -1,0 +1,32 @@
+---
+title: "Stop Blinking!"
+subtitle: "Fixing a small annoyance, larger lesson of making things your own."
+date: 2023-07-09
+categories:
+  - quick
+  - writing
+  - coding
+draft: false
+---
+
+![](64 - code.svg){fig-align="center" width="100"}
+
+Real quick fix that bugged me: stopping the cursor from blinking in VSCode.
+
+- `Code > Settings > "Search for cursor"`
+
+![Fixing the blinking](vscode-settings.png)
+
+### Larger point
+At least in the developer's world, people want to have full control over their setup. This can often become a situation where the custom arrangement becomes very far from the defaults. While this is beneficial, it can also mean a lot of effort to maintain. Still, **identifying the small annoyances** when working within an application can help you find changes that work for you and make a big difference in your overall experience.
+
+For me, and for today, that is reducing the blinking on a cursor that is on my screen a lot of the time. My personal feeling is I'd prefer things to move if they need attention, but the cursor does not need to advertise itself as often as this. I'm staring right at it.
+
+Might seem like a frivolous change, but these little alterations make your experience of a product the best it can be.
+
+Till next time.
+
+---
+#### Image Credit
+
+*code* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
