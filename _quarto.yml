@@ -26,6 +26,8 @@ website:
         href: https://github.com/zachbogart/my_website
       - icon: twitter 
         href: https://twitter.com/zachbogart
+      - icon: at 
+        href: https://www.threads.net/@zbnerd
         
 format:
   html:
