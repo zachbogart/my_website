@@ -1,0 +1,55 @@
+---
+title: "New Window, Anywhere"
+subtitle: "Making a keyboard shortcut for a new Chrome window with AppleScript and Automator"
+date: 2023-07-22
+categories:
+  - quick
+  - work
+draft: false
+---
+
+![](98 - robot.svg){fig-align="center" width="100"}
+
+## Your Own Shortcut
+
+Here is a helpful tool that a large language model was able to guide me towards: **making custom keyboard shortcuts with AppleScript and Automator**.
+
+I use Chrome and wanted to have a way to get a new window from anywhere on my computer, in any application. While I could use Alfred to search the web, it will open a tab in a current window, often sending me to a different Desktop. Boo...
+
+Instead, I can use Automator to make a script that is run when a keyboard shortcut is executed. For example, this is one I made to make a new Chrome window:
+
+```
+on run {input, parameters}
+	tell application "Google Chrome"
+		make new window
+		activate
+	end tell
+end run
+```
+
+I can then make this into a Quick Action in Automator called `New Chrome Window`:
+
+![Making a Quick Action in Automator that runs an AppleScript to open Chrome Window](automator-script.png)
+
+Then, in `System Preferences > Keyboard`, I can make an app shortcut that runs the Quick Action. Make sure that the shortcut name matches the name of the Automator Quick Action:
+
+![Setting Keyboard Shortcut to run Quick Action](automator-pref.png)
+
+With this, I can run ⌃⌥⇧⌘C (which is easy to do with [my keyboard](https://observablehq.com/@zachbogart/i-dont-know-how-to-type?collection=@zachbogart/blog)) and I will get a new window to work with.
+
+Hope this helps you with your own workflows. What little mods have you come up with?
+
+Till next time!
+
+![Leela perfoming some quick actions](https://media.giphy.com/media/snA2OVsg9sMRW/giphy.gif)
+
+---
+
+*Note: applications will ask you for permission to exeucte the AppleScript; this is a one-time occurance for each application.*
+
+![Your Mac will notify you that you are running an AppleScript, but this only happens once per application.](automator-note.png){width="200"}
+
+---
+#### Image Credit
+
+*robot* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
