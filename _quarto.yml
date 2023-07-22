@@ -6,7 +6,6 @@ website:
   title: "Zach Bogart"
   favicon: "favicon.png"
   site-url: "https://www.zachbogart.com/"
-  page-navigation: false # can loop through sections in sidebar (arrows at bottom)
   navbar:
     background: light
     left:
@@ -14,13 +13,29 @@ website:
           href: about.qmd
         - text: "Everything Else"
           href: blog/index.qmd
+    right:
+        - icon: arrow-up-right-square
+          text: Externals
+          menu:
+            - text: Code
+            - icon: github
+              text: Website Repo
+              href: https://github.com/zachbogart/my_website
+            - text: Socials
+            - icon: at
+              text: Threads
+              href: https://www.threads.net/@zbnerd
+            - icon: twitter 
+              text: Twitter
+              href: https://twitter.com/zachbogart
+            - text: Thanks
+            - icon: heart-fill
+              text: Give a Coffee
+              href: http://ko-fi.com/zachbogart
   page-footer: 
     left: 
       - icon: heart-fill
         href: http://ko-fi.com/zachbogart
-    center:
-      - text: "data.start.page"
-        href: https://data.start.page
     right: 
       - icon: github
         href: https://github.com/zachbogart/my_website
