@@ -52,10 +52,10 @@ website:
             - icon: twitter 
               text: Twitter ↗️
               href: https://twitter.com/zachbogart
-            - text: Thanks
-            - icon: cup-hot-fill
-              text: Give a Coffee ↗️
-              href: http://ko-fi.com/zachbogart
+  page-footer: 
+    right:
+      - icon: cup-hot-fill
+        href: http://ko-fi.com/zachbogart
 
 
 
