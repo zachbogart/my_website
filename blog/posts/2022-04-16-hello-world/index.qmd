@@ -6,7 +6,7 @@ categories:
   - news
 ---
 
-![](big-image.png){fig-align="center" width="100"}
+![](92 - coder.svg){fig-align="center" width="100"}
 
 I'm digging Quarto. It was pretty easy to make this into a website, plus it makes adding in plots really seamless.
 
