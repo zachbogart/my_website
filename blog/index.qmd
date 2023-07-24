@@ -2,12 +2,16 @@
 title: Everything Else
 subtitle: A bunch of thoughts and things
 listing:
-  sort: "date desc"
+  type: table
   contents: "posts"
+  sort: "date desc"
+  table-hover: true
   sort-ui: true
   filter-ui: true
   categories: true
   feed: true
+  fields: [image, date, title, reading-time]
+  date-format: YYYY-MM-DD
 page-layout: full
 title-block-banner: "#fff"
 title-block-banner-color: body

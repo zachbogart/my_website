@@ -23,14 +23,14 @@ website:
               text: Home
               href: index.qmd
             - icon: emoji-smile
-              text: A Bit About Me
+              text: A bit about me
               href: about.qmd
-            - icon: pencil-square
-              text: Everything Else (blog)
-              href: blog/index.qmd
             - icon: box
               text: Projects
               href: projects/index.qmd
+            - icon: pencil-square
+              text: Everything Else
+              href: blog/index.qmd
         - icon: globe-americas
           text: Externally
           menu:

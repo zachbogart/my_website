@@ -2,13 +2,38 @@
 pagetitle: "Zach Bogart"
 title: "\"I'll know it when I see it\""
 subtitle: You've found Zach Bogart's website!
+listing: 
+  id: recent-ramblings
+  contents: blog/posts
+  type: table
+  table-hover: true
+  fields: [image, date, title, reading-time]
+  sort: "date desc"
+  date-format: YYYY-MM-DD
+  sort-ui: false
+  filter-ui: false
+  max-items: 4
 ---
 
 <!-- For icons, see https://icons.getbootstrap.com/ -->
 
-Hello, 
+## A bit about me
 
-My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you have stumbled upon my website. **Locally**, on this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. I also like to [<i class="bi bi-pencil-square"></i> write about everything else](blog) on my mind. **Externally**, out on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making doodles️](nouns) (they are all over this site as well), [<i class="bi bi-eye-fill"></i> coding up things↗️️](https://observablehq.com/@zachbogart), or attempting to be social. Thanks for stopping by. Hope you enjoy your stay!
+My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you have stumbled upon my website. Hiya!
+
+## Locally
+
+On this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. 
+
+I also like to write about things on my mind. These are my recent ramblings. For a longer list, checkout [<i class="bi bi-pencil-square"></i> everything else](blog).
+
+::: {#recent-ramblings}
+:::
+
+## Externally
+
+Out on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making doodles️](nouns), [<i class="bi bi-eye-fill"></i> coding up things↗️️](https://observablehq.com/@zachbogart), or attempting to be social. 
+
+Thanks for stopping by. Hope you enjoy your stay!
 
 Zach
-
