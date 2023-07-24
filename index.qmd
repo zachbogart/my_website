@@ -8,7 +8,7 @@ subtitle: You've found Zach Bogart's website!
 
 Hello, 
 
-My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you have stumbled upon my website. **Locally**, on this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. I also like to [<i class="bi bi-pencil-square"></i> write about everything else](blog) on my mind. **Externally**, out on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making doodles️](nouns) (they are all over this site as well), [<i class="bi bi-eye-fill"></i> coding up things️](https://observablehq.com/@zachbogart), or attempting to be social. Thanks for stopping by. Hope you enjoy your stay!
+My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you have stumbled upon my website. **Locally**, on this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. I also like to [<i class="bi bi-pencil-square"></i> write about everything else](blog) on my mind. **Externally**, out on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making doodles️](nouns) (they are all over this site as well), [<i class="bi bi-eye-fill"></i> coding up things↗️️](https://observablehq.com/@zachbogart), or attempting to be social. Thanks for stopping by. Hope you enjoy your stay!
 
 Zach
 

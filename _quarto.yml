@@ -9,9 +9,6 @@ format:
         - theme.scss
     css: styles.css
     toc: true
-    link-external-icon: true
-    link-external-newwindow: true
-    link-external-filter: ^(?:http:|https:)\/\/www\.zachbogart\.com\/
 website:
   title: "Zach Bogart"
   favicon: "favicon.png"
