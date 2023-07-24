@@ -2,9 +2,6 @@
 pagetitle: "Zach Bogart"
 title: "\"I'll know it when I see it\""
 subtitle: You've found Zach Bogart's website!
-format: 
-  html: 
-    link-external-icon: true
 ---
 
 <!-- For icons, see https://icons.getbootstrap.com/ -->

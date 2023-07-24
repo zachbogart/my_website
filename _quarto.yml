@@ -1,7 +1,16 @@
 project:
   type: website
   output-dir: _site
-
+format:
+  html:
+    theme: 
+      light: 
+        - zephyr
+        - theme.scss
+    css: styles.css
+    toc: true
+    link-external-icon: true
+    link-external-newwindow: true
 website:
   title: "Zach Bogart"
   favicon: "favicon.png"
@@ -49,15 +58,6 @@ website:
             - icon: cup-hot-fill
               text: Give a Coffee ↗️
               href: http://ko-fi.com/zachbogart
-        
-format:
-  html:
-    theme: 
-      light: 
-        - zephyr
-        - theme.scss
-    css: styles.css
-    toc: true
 
 
 
