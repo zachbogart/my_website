@@ -3,6 +3,7 @@ title: "Noun Project Icon Design"
 subtitle: Thousands of icons and counting
 aliases: 
   - /nouns
+date: "2018-08-01"
 ---
 
 *Making Nouns since 2018-08*

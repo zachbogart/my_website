@@ -1,0 +1,10 @@
+---
+title: "Projects"
+subtitle: Some fun things I've made
+listing:
+  type: default
+  sort: "date desc"
+  sort-ui: true
+  filter-ui: true
+search: true
+---
