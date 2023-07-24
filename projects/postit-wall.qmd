@@ -3,6 +3,9 @@ title: "Post-It Wallpaper"
 subtitle: Grad school will make you do wacky things. Like cover a dorm room wall-to-wall in hundreds of Post-It's just for the fun of it.
 ---
 
+<!-- Icon Image: Small -->
+<img src="images/note.svg" width="100"/> 
+
 > "~~Prison~~ *Grad school* time is slow time. So ya do what ya can to keep going. Some fellas collect stamps. Others build matchstick houses. ~~Andy~~ *Zach* ~~built a library~~ *mostly paid video games and ate good food*. Now he needed a new project. ~~Tommy~~ *Decorating* was it. It was the same reason he spent years ~~shaping and polishing those rocks~~ *doodling ideas in his notebooks*. The same reason he ~~hung his fantasy girlies on the wall~~ *...no comment*. In ~~prison~~ *grad school*, a man'll do most anything to keep his mind occupied. By ~~1966~~ *2018*, right about the time ~~Tommy~~ *he* was getting ready to take his exams, it was ~~Lovely Raquel~~ **putting Post-It's all over the walls**." 
 >
 > -- The Shawshank Redemption (edited)
@@ -10,3 +13,8 @@ subtitle: Grad school will make you do wacky things. Like cover a dorm room wall
 ![](images/postit1.jpg)
 
 ![](images/postit2.jpg)
+
+---
+#### Image Credit
+
+*note* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)

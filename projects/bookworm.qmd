@@ -1,10 +1,14 @@
 ---
 title: "Bookworm"
+date: "2021-11-03"
 ---
 
 <!-- ObservableHQ Button -->
 <a class="btn btn-dark" href="https://observablehq.com/@zachbogart/bookworm" role="button"><i class="bi bi-arrow-up-right-square-fill"></i> View on Observable</a>
 <br>
+
+<!-- Icon Image: Small -->
+<img src="images/reader.svg" width="100"/> 
 
 This is an Observable Notebook of things I'm reading. 
 
@@ -19,6 +23,7 @@ Happy reading...
 
 📚
 
-<!--Noun Image Credit-->
+---
 #### Image Credit
-[Reading](https://thenounproject.com/search/?creator=4129988&q=book&i=3169936) by Zach Bogart from [the Noun Project](https://thenounproject.com/)
+
+*reader* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)

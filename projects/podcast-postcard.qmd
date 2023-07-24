@@ -8,6 +8,9 @@ date: "2016-03-05"
 <a class="btn btn-success" href="https://fivethirtyeight.com/features/we-asked-you-to-visualize-your-podcast-listening-and-wow-did-you-deliver/" role="button"><i class="bi bi-star-fill"></i> Picked as a Favorite on FiveThirtyEight</a>
 <br>
 
+<!-- Icon Image: Small -->
+<img src="images/mail.svg" width="100"/> 
+
 >Zach’s visualization includes every possible element — there’s color, symbols, lines, space — but it still feels elegant and minimalist. We also admire that he listens to so many podcasts while lying down.
 >
 > [FiveThirtyEight](https://fivethirtyeight.com/features/we-asked-you-to-visualize-your-podcast-listening-and-wow-did-you-deliver/)
@@ -36,3 +39,8 @@ It was a lot of fun tracking my behavior and making the postcard. I encourage yo
 - Most Popular Delivery: Speakers
 - Speakers: 52.75%
 - Headphones: 47.25%
+
+---
+#### Image Credit
+
+*mail* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)

@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-subtitle: Some fun things I've made
+subtitle: Some things I've made, big and small
 listing:
   type: default
   sort: "date desc"

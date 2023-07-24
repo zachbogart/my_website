@@ -8,6 +8,9 @@ date: "2018-08-18"
 <a class="btn btn-success" href="https://edav.info/" role="button"><i class="bi bi-stars"></i> edav.info/</a>
 <br>
 
+<!-- Icon Image: Small -->
+<img src="images/graph.svg" width="100"/> 
+
 ::: callout-note
 2022: I worked on [the first version of edav.info](https://jtr13.github.io/EDAV/) back in the Summer of 2018 and that version has since been archived. It has now undergone a renovation but it is still proving useful. Very cool to see!
 :::
@@ -21,3 +24,8 @@ Over the summer, I worked with [Joyce Robbins](http://www.joyce-robbins.com/abou
 The result is [edav.info/](https://edav.info/), a resource combining examples, advice, and other things to help students start visualizing/working with R. There are several pages on the basics, pretty examples of different plot types, and helpful discussions on how to get the most out of the course and of R itself. Also, we ensured the resource was easy to modify so students could propose changes and help the quality continuously improve. As an added touch, we created a custom logo for the resource and custom icons for each chapter. We are very excited with the result and hope students enjoy exploring the resource and its examples.
 
 We are excited to say that edav.info/ [received an honorable mention prize](https://community.rstudio.com/t/announcing-winners-of-the-1st-bookdown-contest/16394) in the [1st Bookdown Contest](https://blog.rstudio.com/2018/07/27/first-bookdown-contest/) hosted by the package's author, [Yihui Xie](https://twitter.com/xieyihui), and RStudio. Feel free to checkout [our submission](https://community.rstudio.com/t/bookdown-contest-submission-creating-a-course-companion-website-with-bookdown/15168) for a more formal explanation of the resource.
+
+---
+#### Image Credit
+
+*graph* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
