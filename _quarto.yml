@@ -40,7 +40,7 @@ website:
               href: https://thenounproject.com/zachbogart/
             - icon: eye-fill
               text: Observable Profile ↗️
-              href: https://observablehq.com/@zachbogart
+              href: https://observablehq.com/@zachbogart?tab=profile
             - text: Code
             - icon: github
               text: Website Repo ↗️
