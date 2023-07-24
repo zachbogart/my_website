@@ -10,7 +10,7 @@ website:
     background: light
     left:
         - icon: circle
-          text: Local
+          text: Locally
           menu:
             - icon: house-heart
               text: Home
@@ -25,7 +25,7 @@ website:
               text: Projects
               href: projects/index.qmd
         - icon: globe-americas
-          text: Externals
+          text: Externally
           menu:
             - text: Projects
             - icon: heart-fill
