@@ -1,6 +1,7 @@
 ---
 title: "Post-It Wallpaper"
 subtitle: Grad school will make you do wacky things. Like cover a dorm room wall-to-wall in hundreds of Post-It's just for the fun of it.
+date: "2018-04-14"
 ---
 
 <!-- Icon Image: Small -->

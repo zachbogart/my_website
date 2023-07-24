@@ -3,6 +3,7 @@ title: "Working in Observable"
 subtitle: Testing out Public Team
 aliases: 
   - /showme
+date: "2023-04-03"
 ---
 
 <!-- Noun Link Buttons -->
