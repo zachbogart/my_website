@@ -17,11 +17,9 @@ listing:
 
 <!-- For icons, see https://icons.getbootstrap.com/ -->
 
-## A bit about me
-
 My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you have stumbled upon my website. Hiya!
 
-## Locally
+## <i class="bi bi-circle"></i> Locally
 
 On this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. 
 
@@ -30,10 +28,11 @@ I also like to write about things on my mind. These are my recent ramblings. For
 ::: {#recent-ramblings}
 :::
 
-## Externally
+## <i class="bi bi-globe-americas"></i> Externally
 
 Out on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making doodles️](nouns), [<i class="bi bi-eye-fill"></i> coding up things↗️️](https://observablehq.com/@zachbogart), or attempting to be social. 
 
+---
 Thanks for stopping by. Hope you enjoy your stay!
 
 Zach
