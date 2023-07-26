@@ -19,9 +19,6 @@ website:
         - icon: circle
           text: Locally
           menu:
-            - icon: house-heart
-              text: Home
-              href: index.qmd
             - icon: emoji-smile
               text: A bit about me
               href: about.qmd
