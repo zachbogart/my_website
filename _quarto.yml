@@ -36,7 +36,7 @@ website:
           menu:
             - text: Projects
             - icon: heart-fill
-              text: Noun Project Icons ↗️
+              text: Noun Project Icons ↗
               href: https://thenounproject.com/zachbogart/
             - icon: eye-fill
               text: Observable Profile ↗
