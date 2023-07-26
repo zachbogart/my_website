@@ -10,8 +10,9 @@ listing:
   filter-ui: true
   categories: true
   feed: true
-  fields: [image, date, title, reading-time]
-  date-format: YYYY-MM-DD
+  fields: [image, date, title, subtitle]
+  date-format: YYYY_MM_DD
+  image-height: "50px"
 page-layout: full
 title-block-banner: "#fff"
 title-block-banner-color: body
