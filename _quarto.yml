@@ -39,14 +39,14 @@ website:
               text: Noun Project Icons ↗️
               href: https://thenounproject.com/zachbogart/
             - icon: eye-fill
-              text: Observable Profile ↗️
+              text: Observable Profile ↗
               href: https://observablehq.com/@zachbogart?tab=profile
             - text: Socials
             - icon: at
-              text: Threads ↗️
+              text: Threads ↗
               href: https://www.threads.net/@zbnerd
-            - icon: twitter 
-              text: Twitter ↗️
+            - icon: twitter
+              text: Twitter ↗
               href: https://twitter.com/zachbogart
   page-footer: 
     left: 
