@@ -41,10 +41,6 @@ website:
             - icon: eye-fill
               text: Observable Profile ↗️
               href: https://observablehq.com/@zachbogart?tab=profile
-            - text: Code
-            - icon: github
-              text: Website Repo ↗️
-              href: https://github.com/zachbogart/my_website
             - text: Socials
             - icon: at
               text: Threads ↗️
@@ -56,6 +52,9 @@ website:
     left: 
       - text: License
         href: https://creativecommons.org/licenses/by-sa/4.0/
+    center:
+      - icon: github
+        href: https://github.com/zachbogart/my_website
     right:
       - icon: cup-hot-fill
         href: http://ko-fi.com/zachbogart
