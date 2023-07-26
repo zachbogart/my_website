@@ -1,20 +1,22 @@
 ---
 title: "Working in Observable"
-subtitle: Testing out Public Team
+subtitle: Making notebooks
 aliases: 
   - /showme
 date: "2023-04-03"
 ---
 
-<!-- Noun Link Buttons -->
-<a class="btn btn-success" href="https://observablehq.com/@huh?tab=profile" role="button"><i class="bi bi-stars"></i> ObservableHQ Profile</a>
-<a class="btn btn-primary" href="https://github.com/zachbogart/huh-data" role="button"><i class="bi bi-github"></i> GitHub Repo</a>
+<a class="btn btn-success" href="https://observablehq.com/@zachbogart?tab=profile" role="button"><i class="bi bi-stars"></i> ObservableHQ Profile</a>
 <br>
 
 <!-- Icon Image: Small -->
 ![](images/showme0.svg){fig-align="left" width="100"}
 
-Wanting to get better at [Observable](https://observablehq.com/@huh?tab=profile), so thought I'd get a little more regimented about it. Created a public team and posting updates as I go. Excited to see this grow. 🌱
+I enjoy working in Observable, it is a super cool platform. Trying to post some ideas there.
+
+Wanting to get better at Observable, so thought I'd get a little more regimented about it. Created a [public team called @huh](https://observablehq.com/@huh?tab=profile) and posting updates as I go. Excited to see this grow. 🌱
+
+And checkout the [@huh github repo](https://github.com/zachbogart/huh-data) if you are interested in seeing progress. Trying to post issues there to track ideas.
 
 <!--Noun Image Credit-->
 #### Image Credit
