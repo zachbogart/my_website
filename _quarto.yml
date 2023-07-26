@@ -53,6 +53,9 @@ website:
               text: Twitter ↗️
               href: https://twitter.com/zachbogart
   page-footer: 
+    left: 
+      - text: License
+        href: https://creativecommons.org/licenses/by-sa/4.0/
     right:
       - icon: cup-hot-fill
         href: http://ko-fi.com/zachbogart
