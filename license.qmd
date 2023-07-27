@@ -1,0 +1,6 @@
+---
+pagetitle: Zach Bogart - License
+title: "License: CC BY-SA"
+---
+
+Writings and such are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)

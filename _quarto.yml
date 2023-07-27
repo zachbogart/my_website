@@ -48,7 +48,7 @@ website:
   page-footer: 
     left: 
       - text: License
-        href: https://creativecommons.org/licenses/by-sa/4.0/
+        href: license.qmd
     center:
       - icon: github
         href: https://github.com/zachbogart/my_website
