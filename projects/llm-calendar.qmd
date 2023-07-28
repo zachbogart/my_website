@@ -1,0 +1,39 @@
+---
+title: LLM Icon Calendar
+subtitle: Making a calendar from icons and large language model ramblings
+date: 2023-05-22
+
+---
+
+![](images/llmCalendar1.jpeg){height=500}
+
+The main goal was to make something useful with some LLM wramblings. Or at least that became the goal, paired with trying to use a bunch of my [<i class="bi bi-heart-fill"></i> nouns](/nouns). So it became a calendar, where every day has an icon and a generated blurb that referenced that icon.
+
+Pretty manual process for this one: just put on some tunes and asked ChatGPT a bunch of times for a blurb with different words as the focus. Once that was done, I did some wrangling to get it all into a big document with Affinity Publisher.
+
+At the time, I had found that a store in town left out a big cart labeled "free wood", filled with wood cut scraps. That worked well as a backing, then with some hardware, I could make it into a physical calendar. This turned into one of those errands with a strange list of items:
+
+- power drill
+- bolt
+- hole punch
+
+Construction went quite smoothly. Although I do now have a small hole divot in my foldable particle board table that served as my workbench. A craftsman's scar I spose. 
+
+I mounted the final result in my bathroom. Now I start my morning with a kinda-weird quote and a nice icon. Good way to begin each day. And it worked so nicely that I made another one sans-calendar-days as a wall hook with the leftover pieces I had (always try to have leftovers!).
+
+![](images/llmCalendar2.jpg){height=300}
+
+![](images/llmCalendar3.jpg){height=300}
+
+![](images/llmCalendar4.jpg){height=300}
+
+## Materials
+
+For those interested in building your own or at least seeing all the blurbs, here's a list of materials:
+
+<!-- Noun Link Buttons -->
+<a class="btn btn-success" href="assets/icon_calendar/icon_calendar.pdf" role="button"><i class="bi bi-calendar-heart"></i> PDF of Calendar Days</a>
+
+- half-threaded hex bolt (7/16" x 2.5") 
+- scrap wood (3" x 9")
+- 3M Command strips
