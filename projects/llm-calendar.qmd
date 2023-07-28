@@ -5,7 +5,7 @@ date: 2023-05-22
 
 ---
 
-![](images/llmCalendar1.jpeg){height=500}
+![May 22: "In the canvas of nature's palette, behold the vibrant ORANGE that paints the sunset's fiery embrace."](images/llmCalendar1.jpeg){height=500 fig-align="left"}
 
 The main goal was to make something useful with some LLM wramblings. Or at least that became the goal, paired with trying to use a bunch of my [<i class="bi bi-heart-fill"></i> nouns](/nouns). So it became a calendar, where every day has an icon and a generated blurb that referenced that icon.
 
@@ -37,3 +37,5 @@ For those interested in building your own or at least seeing all the blurbs, her
 - half-threaded hex bolt (7/16" x 2.5") 
 - scrap wood (3" x 9")
 - 3M Command strips
+
+![July 17: "In a world of data, let the BAR CHART reveal the hidden story, one towering column at a time."](images/llmCalendar5.jpg){height=400 fig-align="left"}
