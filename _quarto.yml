@@ -40,11 +40,11 @@ website:
               href: https://observablehq.com/@zachbogart?tab=profile
             - text: Socials
             - icon: at
+              text: ~~Twitter~~ X ↗
+              href: https://twitter.com/zachbogart
+            - icon: at
               text: Threads ↗
               href: https://www.threads.net/@zbnerd
-            - icon: twitter
-              text: Twitter ↗
-              href: https://twitter.com/zachbogart
   page-footer: 
     left: 
       - text: License
