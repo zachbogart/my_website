@@ -7,6 +7,9 @@ date: 2023-05-22
 
 ![May 22: "In the canvas of nature's palette, behold the vibrant ORANGE that paints the sunset's fiery embrace."](images/llmCalendar1.jpeg){height=500 fig-align="left"}
 
+<!-- Noun Link Buttons -->
+<a class="btn btn-warning" href="https://zachbogart.gumroad.com/l/icon-calendar" role="button"><i class="bi bi-calendar-heart"></i> Get PDF of Calendar Sheets</a>
+
 The main goal was to make something useful with some LLM wramblings. Or at least that became the goal, paired with trying to use a bunch of my [<i class="bi bi-heart-fill"></i> nouns](/nouns). So it became a calendar, where every day has an icon and a generated blurb that referenced that icon.
 
 Pretty manual process for this one: just put on some tunes and asked ChatGPT a bunch of times for a blurb with different words as the focus. Once that was done, I did some wrangling to get it all into a big document with Affinity Publisher.
@@ -32,7 +35,7 @@ I mounted the final result in my bathroom. Now I start my morning with a kinda-w
 For those interested in building your own or at least seeing all the blurbs, here's a list of materials:
 
 <!-- Noun Link Buttons -->
-<a class="btn btn-success" href="assets/icon_calendar/icon_calendar.pdf" role="button"><i class="bi bi-calendar-heart"></i> PDF of Calendar Days</a>
+<a class="btn btn-warning" href="https://zachbogart.gumroad.com/l/icon-calendar" role="button"><i class="bi bi-calendar-heart"></i> Get PDF of Calendar Sheets</a>
 
 - half-threaded hex bolt (7/16" x 2.5") 
 - scrap wood (3" x 9")

@@ -45,6 +45,10 @@ website:
             - icon: at
               text: Threads ↗
               href: https://www.threads.net/@zbnerd
+            - text: Other
+            - icon: bag-heart-fill
+              text: Store ↗
+              href: https://zachbogart.gumroad.com/
   page-footer: 
     left: 
       - text: License
