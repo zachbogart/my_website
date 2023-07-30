@@ -1,0 +1,26 @@
+---
+title: "Some archived Observable Plot notes"
+subtitle: "Some old notes I found while learning a charting library"
+date: 2023-07-30
+categories:
+  - writing
+  - notes
+draft: true
+---
+
+![](54 - pencil.svg){fig-align="center" width="100"}
+
+These are some notes I found in a notebook from a several months ago, when I wanted to go through the [Observable Plot](https://observablehq.com/plot/) documentation. Since then, they have updated heavily, with a more standalone documentation site. thought I'd share these as some notes showing me getting my head around a new charting library.
+
+- Covering concepts like marks and transforms
+- Tried a pass-through to color things in
+
+![Page one of some notes I found in a notebook on Observable Plot](notes1.jpg)
+
+<!-- Noun Link Buttons -->
+<a class="btn btn-success" href="https://zachbogart.gumroad.com/l/icon-calendar" role="button"><i class="bi bi-pencil-fill"></i> PDF of Observable Notes</a>
+
+---
+#### Image Credit
+
+*pencil* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
