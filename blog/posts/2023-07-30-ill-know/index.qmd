@@ -1,10 +1,10 @@
 ---
 title: "What does 'I'll know it when I see it' mean to me?"
 subtitle: "Explaining a phrase"
-date: 1900-01-01
+date: 2023-07-30
 categories:
   - writing
-draft: true
+draft: false
 ---
 
 ![](99 - brainstorm.svg){fig-align="center" width="100"}
