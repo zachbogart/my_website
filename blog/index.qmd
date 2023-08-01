@@ -8,14 +8,7 @@ listing:
   table-hover: true
   sort-ui: true
   filter-ui: true
-  categories: true
   feed: true
-  fields: [date, title, subtitle, description, categories]
-  date-format: YYYY-MM-DD
-  image-height: "280px"
-  image-align: left
-page-layout: full
-title-block-banner: "#fff"
-title-block-banner-color: body
+  fields: [image, date, title, subtitle, description, categories]
 search: true
 ---
