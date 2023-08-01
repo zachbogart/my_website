@@ -7,13 +7,15 @@ listing:
   contents: blog/posts
   type: table
   table-hover: true
-  fields: [image, date, title, subtitle]
-  date-format: YYYY_MM_DD
+  fields: [title]
+  date-format: YYYY-MM-DD
   sort: "date desc"
   sort-ui: false
   filter-ui: false
   max-items: 3
-  image-height: "100px"
+  image-align: left
+  field-display-names:
+    title: "Most Recent"
 ---
 
 <!-- For icons, see https://icons.getbootstrap.com/ -->
@@ -24,14 +26,14 @@ My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you h
 
 On this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. 
 
-I also like to write about things on my mind. These are my recent ramblings. For a longer list, checkout [<i class="bi bi-pencil-square"></i> everything else](blog).
+I also like to write about things on my mind. This is the most recent rambling. For a longer list, checkout [<i class="bi bi-pencil-square"></i> everything else](blog).
 
 ::: {#recent-ramblings}
 :::
 
 ## <i class="bi bi-globe-americas"></i> Externally
 
-Out on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making doodles️](nouns), [<i class="bi bi-eye-fill"></i> coding up things️️↗](https://observablehq.com/@zachbogart), or attempting to be social. 
+Out there on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making some doodles️](nouns), [<i class="bi bi-eye-fill"></i> coding up things️️↗](https://observablehq.com/@zachbogart), or attempting to be social. 
 
 ---
 Thanks for stopping by. Hope you enjoy your stay!

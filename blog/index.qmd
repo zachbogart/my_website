@@ -2,7 +2,7 @@
 title: Everything Else
 subtitle: A bunch of thoughts and things
 listing:
-  type: table
+  type: default
   contents: "posts"
   sort: "date desc"
   table-hover: true
@@ -10,9 +10,10 @@ listing:
   filter-ui: true
   categories: true
   feed: true
-  fields: [image, date, title, subtitle]
-  date-format: YYYY_MM_DD
-  image-height: "50px"
+  fields: [date, title, subtitle, description, categories]
+  date-format: YYYY-MM-DD
+  image-height: "280px"
+  image-align: left
 page-layout: full
 title-block-banner: "#fff"
 title-block-banner-color: body
