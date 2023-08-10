@@ -1,0 +1,51 @@
+---
+title: "Explaining thoughts that come to mind when I hear the TED intro sound"
+subtitle: "Synthesizing audio memories to a common audio identity"
+date: 2023-08-09
+categories:
+  - writing
+draft: false
+---
+
+![](32 - sound wave.svg){fig-align="center" width="100"}
+
+Here are some notes that came about when listening to the recent TED animation intro.
+
+## Newer Intro
+
+### Bright and Crisp
+
+{{< video https://www.youtube.com/embed/2XuXC3_pLGg >}}
+
+- The initial hit is like a [Tennis Volley in an echoey room](https://www.youtube.com/shorts/L2Rcu_7ZzNc)
+- Drone reminds of [2001 Space Odyssey](https://youtu.be/QwxYiVXYyVs)
+
+## Past intros
+
+The older ones are noticably longer.
+
+### Sharp inhale, relax out
+
+{{< video https://www.youtube.com/watch?v=UMMxvmGlkyM&pp=ygUTdGVkIGFuaW1hdGlvbiBpbnRybw%3D%3D >}}
+
+- Intro is like a sharp inhale into an exhale
+- [Paper rubbing together](https://www.youtube.com/watch?v=3N8XJQMRhMQ&pp=ygUNcGFwZXIgcnViYmluZw%3D%3D)
+- Big hit like in [A Day in the Life](https://youtu.be/usNsCeOV4GM?t=238). Wait for it...
+- Shimmer during the long note
+- Choral ending
+
+### Made from intruments
+
+{{< video https://youtu.be/WZYbT7ONkeI >}}
+
+- [Finger bells](https://www.youtube.com/watch?v=kfimeikEi20&pp=ygUMZmluZ2VyIGJlbGxz)
+- [Water drop](https://www.youtube.com/shorts/yBZPhi47rUs)
+- [Timpani](https://youtu.be/PRTxPJfCKhY)
+- [Taiko Drums](https://www.youtube.com/watch?v=C7HL5wYqAbU&pp=ygULdGFpa28gZHJ1bXM%3D)
+- [Strings](https://youtu.be/MP2_6OLummA)
+- [Flutier end hold](https://www.youtube.com/shorts/CFVAMelYL74)
+
+---
+#### Image Credit
+
+*NounName* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
