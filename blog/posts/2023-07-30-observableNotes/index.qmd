@@ -18,7 +18,7 @@ These are some notes I found in a notebook from a several months ago, when I wan
 ![Page one of some notes I found in a notebook on Observable Plot](notes1.jpg)
 
 <!-- Noun Link Buttons -->
-<a class="btn btn-success" href="old-observable-notes.pdf" role="button"><i class="bi bi-pencil-fill"></i> PDF of Observable Notes</a>
+<a class="btn btn-success" href="observable-notes-preview.pdf" role="button"><i class="bi bi-pencil-fill"></i> PDF of Observable Notes</a>
 
 ---
 #### Image Credit
