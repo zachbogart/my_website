@@ -1,0 +1,18 @@
+---
+title: "Title: Blog Post"
+subtitle: "Subtitle can go here"
+date: 1900-01-01
+categories:
+  - writing
+draft: true
+---
+
+![](exampleIcon.svg){fig-align="center" width="100"}
+
+Text goes here.
+
+
+---
+#### Image Credit
+
+*NounName* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
