@@ -3,7 +3,7 @@ title: "Title: Blog Post"
 subtitle: "Subtitle can go here"
 date: 1900-01-01
 categories:
-  - rtfm
+  - writing
 draft: true
 ---
 
