@@ -3,8 +3,7 @@ title: RTFM Readme
 subtitle: Putting little things I do all the time in one place.
 date: 2022-04-24
 categories:
-  - rtfm
-  - readme
+  - random
 ---
 
 ![](61 - dazed and confused.svg){fig-align="center" width="100"}

@@ -3,8 +3,7 @@ title: "New Window, Anywhere"
 subtitle: "Making a keyboard shortcut for a new Chrome window with AppleScript and Automator"
 date: 2023-07-22
 categories:
-  - quick
-  - work
+  - coding
 draft: false
 ---
 

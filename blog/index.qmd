@@ -8,6 +8,7 @@ listing:
   table-hover: true
   sort-ui: true
   filter-ui: true
+  categories: true
   feed: true
   fields: [image, date, title, subtitle, description, categories]
 search: true

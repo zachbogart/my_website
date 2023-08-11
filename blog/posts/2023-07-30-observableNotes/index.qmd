@@ -4,7 +4,7 @@ subtitle: "Some old notes I found while learning a charting library"
 date: 2023-07-30
 categories:
   - writing
-  - notes
+  - viz
 draft: false
 ---
 

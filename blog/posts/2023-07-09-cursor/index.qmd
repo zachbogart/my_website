@@ -3,8 +3,6 @@ title: "Stop Blinking!"
 subtitle: "Fixing a small annoyance, larger lesson of making things your own."
 date: 2023-07-09
 categories:
-  - quick
-  - writing
   - coding
 draft: false
 ---

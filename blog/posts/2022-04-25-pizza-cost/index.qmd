@@ -3,9 +3,7 @@ title: Pizza Cost
 subtitle: Cost of pies
 date: 2022-04-24
 categories:
-  - r
-  - observable
-  - analysis
+  - coding
 draft: true
 ---
 
