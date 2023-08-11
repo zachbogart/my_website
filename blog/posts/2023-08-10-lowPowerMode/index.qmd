@@ -1,0 +1,39 @@
+---
+title: "Low-Powered Sign"
+subtitle: "Making a spatial helper to curb a dumb daily addiction"
+date: 2023-08-10
+categories:
+  - writing
+  - viz
+draft: false
+aliases: 
+  - /low-powered
+---
+
+![](23 - battery.svg){fig-align="center" width="100"}
+
+I have a dumb daily addition: watching screens till I fall asleep. By this I mean having my phone in bed at night and watching random videos till my eyes can't stay open and then I fall asleep. Usually have to re-watch whatever I was "watching" later, anyways.
+
+It's a bad habit and a dumb addiction because I can feel the effects of that choice in the morning. I end up groggy and irritable, and I didn't get much out of experience of staying up late. And then that bad feeling can compound, which is no fun for anyone.
+
+I have tried to restrict my usage: set timers and remove apps only to snooze each one and download them all once more. I've usually approached it as a limitation, to set a threshold for acceptable usage. But I thought I'd try another approach that is more spatial: **setting a room to be low-powered**.
+
+Simple idea, in theory: make a room at home that uses no screens. No checking/using backlit devices. It can sound silly, but I have found it helps my mental approach toward the problem. It's not that I have a threshold that I can go over, rather it removes the behavior entirely from a space.
+
+Granted, this doesn't eliminate the possibility. It's just a sign. I still bring my phone into my low-powered room (maybe I'll go hard-core one day), but I hope that by creating an external space—my own personal quiet car—it can train me to avoid the behavior and make time for other things. I get good value out of my phone and I don't think I would want to join "Team Flip", but I do need to set some guardrails, and a physical guardrail has helped me.
+
+We will see how it goes. I am sure I will go back to my old ways from time to time. But so far, I am enjoying the physical low-powered space in my home, one that has a literal sign saying so on the door.
+
+***
+
+You can get a version of this low-powered sign as a PDF if you want. Hope it serves you well.
+
+<!-- Gumroad PDF -->
+<a class="btn btn-success" href="https://zachbogart.gumroad.com/l/low-powered" role="button"><i class="bi bi-battery-half"></i> Get a Low-Powered Sign</a>
+
+![An actual sign helps me signal and adopt a behavior within a physical space](low-power-sign-door.jpg){fig-align="center" width="500"}
+
+---
+#### Image Credit
+
+*battery* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
