@@ -28,11 +28,10 @@ Out there on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> ma
 
 ## <i class="bi bi-circle"></i> Locally
 
-On this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. 
-
-I also like to write here about things on my mind. Below are the recent ramblings ([full list](blog)).
+On this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. I also like [<i class="bi bi-pencil"></i>writing about everything else](blog). Below are my most recent ramblings.
 
 ::: {#recent-ramblings}
 :::
 
 ---
+You're still here? Aww, thanks for scrolling all this way.
