@@ -16,18 +16,6 @@ website:
   navbar:
     background: light
     left:
-        - icon: circle
-          text: Locally
-          menu:
-            - icon: emoji-smile
-              text: A bit about me
-              href: about.qmd
-            - icon: box
-              text: Projects
-              href: projects/index.qmd
-            - icon: pencil-square
-              text: Everything Else
-              href: blog/index.qmd
         - icon: globe-americas
           text: Externally
           menu:
@@ -49,6 +37,18 @@ website:
             - icon: bag-heart-fill
               text: Store ↗
               href: https://zachbogart.gumroad.com/
+        - icon: circle
+          text: Locally
+          menu:
+            - icon: emoji-smile
+              text: A bit about me
+              href: about.qmd
+            - icon: box
+              text: Projects
+              href: projects/index.qmd
+            - icon: pencil-square
+              text: Writing about everything else
+              href: blog/index.qmd
   page-footer: 
     left: 
       - text: License
