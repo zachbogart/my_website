@@ -12,30 +12,27 @@ listing:
   sort: "date desc"
   sort-ui: false
   filter-ui: false
-  max-items: 3
   image-align: left
   field-display-names:
-    title: "Most Recent"
+    title: "Recent Ramblings"
 ---
 
 <!-- For icons, see https://icons.getbootstrap.com/ -->
 
-My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you have stumbled upon my website. Hiya!
+My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you have stumbled upon my website. Hiya! Thanks for stopping by. Hope you enjoy your stay!
+
+## <i class="bi bi-globe-americas"></i> Externally
+
+Out there on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making some doodles️](nouns), [<i class="bi bi-eye-fill"></i> coding up things️️↗](https://observablehq.com/@zachbogart), or attempting to be social in a digital age. 
+
 
 ## <i class="bi bi-circle"></i> Locally
 
 On this site, there are some [<i class="bi bi-box"></i> projects both big and small](projects), you can explore. 
 
-I also like to write about things on my mind. This is the most recent rambling. For a longer list, checkout [<i class="bi bi-pencil-square"></i> everything else](blog).
+I also like to write here about things on my mind. Below are the recent ramblings ([full list](blog)).
 
 ::: {#recent-ramblings}
 :::
 
-## <i class="bi bi-globe-americas"></i> Externally
-
-Out there on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making some doodles️](nouns), [<i class="bi bi-eye-fill"></i> coding up things️️↗](https://observablehq.com/@zachbogart), or attempting to be social. 
-
 ---
-Thanks for stopping by. Hope you enjoy your stay!
-
-Zach
