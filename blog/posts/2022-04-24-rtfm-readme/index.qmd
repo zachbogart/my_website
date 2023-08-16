@@ -4,6 +4,7 @@ subtitle: Putting little things I do all the time in one place.
 date: 2022-04-24
 categories:
   - random
+draft: true
 ---
 
 ![](61 - dazed and confused.svg){fig-align="center" width="100"}

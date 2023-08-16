@@ -1,5 +1,5 @@
 ---
-title: "Working with Git"
+title: "Working with Git 🐙🐱"
 subtitle: "It's helpful till something goes wrong"
 date: 2022-05-17
 categories:

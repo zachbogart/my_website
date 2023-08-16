@@ -1,5 +1,5 @@
 ---
-title: "Some VSCode Data Things"
+title: "Some VSCode Data Things 👨‍💻"
 subtitle: See CSV in VSCode
 date: 2022-04-24
 categories:

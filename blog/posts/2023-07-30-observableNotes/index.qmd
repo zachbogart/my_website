@@ -1,5 +1,5 @@
 ---
-title: "Some archived Observable Plot notes"
+title: "Some archived Observable Plot notes 📊"
 subtitle: "Some old notes I found while learning a charting library"
 date: 2023-07-30
 categories:

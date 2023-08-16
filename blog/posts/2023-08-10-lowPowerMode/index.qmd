@@ -1,5 +1,5 @@
 ---
-title: "Low-Powered Sign"
+title: "Low-Powered Sign 🔋"
 subtitle: "Making a spatial helper to curb a dumb daily addiction"
 date: 2023-08-10
 categories:

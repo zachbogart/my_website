@@ -1,5 +1,5 @@
 ---
-title: "Jasper the Fox Visits the City"
+title: "Jasper the Fox Visits the City 🦊"
 subtitle: "Writing out a large language model story on a piece of tape"
 date: 2023-05-31
 categories:

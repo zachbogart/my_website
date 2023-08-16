@@ -1,5 +1,5 @@
 ---
-title: Hello, Quarto Site
+title: Hello, Quarto Site 👋
 subtitle: Making a site using Quarto, with only a few problems
 date: 2022-04-16
 categories:
