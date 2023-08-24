@@ -34,5 +34,7 @@ On this site, there are some [<i class="bi bi-box"></i> projects both big and sm
 ::: {#recent-ramblings}
 :::
 
+Checkout the [<i class="bi bi-pencil"></i>full archive of ramblings](blog) for a more complete list.
+
 ---
 You're still here? Aww, thanks for scrolling all this way.
