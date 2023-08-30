@@ -1,0 +1,39 @@
+---
+title: "Against Beautiful: Magnet Set, Sorted 🔤🧲"
+subtitle: "Organizing a fridge magnet set...cause I had to."
+date: 2023-08-29
+categories:
+  - viz
+  - random
+draft: false
+---
+
+![](73 - sort.svg){fig-align="center" width="100"}
+
+When you give a fridge magnet set to a data person, some wrangling may occur.
+
+This is a little magnet set I got, sorted by starting letter. Every letter is sorted by the word length then alphabetized. 
+
+![](fridge1.jpg){fig-align="left" width="600"}
+
+There were too many words to lay it out horizontally. Here it is turned around, with a few annotations:
+
+![](fridge3.jpg){fig-align="left" width="800"}
+
+Some quick reactions:
+
+- You don't get any J's, X's, or Z's
+- Most magnets start with A, S, or T
+
+[Future explorations](https://github.com/zachbogart/huh-data/issues/34) abound.
+
+### Notes
+- Started by left-aligning all vertical rows, but got skewed
+- Since all magnets have the same height, could do easy comparison across letters
+
+![](fridge2.jpg){fig-align="center" width="600"}
+
+---
+#### Image Credit
+
+*sort* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
