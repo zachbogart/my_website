@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 101 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-337,-450)">
+        <g id="_43---sunset" serif:id="43 - sunset" transform="matrix(1,0,0,1,337.5,450)">
+            <rect x="0" y="0" width="100" height="100" style="fill:none;"/>
+            <g id="icons">
+                <g transform="matrix(1,0,0,1,79.7681,88.5521)">
+                    <path d="M0,-45C0,-28.431 -13.431,-15 -30,-15C-46.569,-15 -60,-28.431 -60,-45L-75,-45L-75,0L15,0L15,-45L0,-45Z" style="fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,49.7681,43.5521)">
+                    <path d="M0,-30C-16.569,-30 -30,-16.569 -30,0L30,0C30,-16.569 16.569,-30 0,-30" style="fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
