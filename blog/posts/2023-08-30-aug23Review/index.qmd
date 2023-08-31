@@ -6,7 +6,7 @@ categories:
   - writing
 draft: false
 aliases: 
-  - review_2023_08
+  - "/review-2023-08"
 ---
 
 ![](43 - sunset.svg){fig-align="center" width="100"}
