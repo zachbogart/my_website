@@ -38,3 +38,5 @@ Checkout the [<i class="bi bi-pencil"></i>full archive of ramblings](blog) for a
 
 ---
 You're still here? Aww, thanks for scrolling all this way.
+
+![](images/up-smile.png){fig-align="left" width="400"}

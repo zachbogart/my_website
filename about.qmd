@@ -2,7 +2,7 @@
 title: "Hi, there!"
 ---
 
-![](images/profile.png){width="200"}
+![](images/side-smile.png){fig-align="left" width="400"}
 
 My name is Zach and I am interested in the connections between science, design, and data. I enjoy making things and sharing knowledge.
 
