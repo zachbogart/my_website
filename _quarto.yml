@@ -27,12 +27,15 @@ website:
               text: Observable Profile ↗
               href: https://observablehq.com/@zachbogart?tab=profile
             - text: Socials
-            - icon: at
-              text: ~~Twitter~~ X ↗
-              href: https://twitter.com/zachbogart
+            - icon: instagram
+              text: Instagram ↗
+              href: https://www.instagram.com/zbnerd/
             - icon: at
               text: Threads ↗
               href: https://www.threads.net/@zbnerd
+            - icon: hash
+              text: ~~Twitter~~ X ↗
+              href: https://twitter.com/zachbogart
             - text: Other
             - icon: bag-heart-fill
               text: Store ↗
