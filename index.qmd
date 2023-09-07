@@ -24,7 +24,11 @@ My name is [<i class="bi bi-emoji-smile"></i> Zach Bogart](about.html) and you h
 
 ## <i class="bi bi-globe-americas"></i> Externally
 
-Out there on the interwebs, you can find me [<i class="bi bi-heart-fill"></i> making some doodles️](nouns), [<i class="bi bi-eye-fill"></i> coding up things️️↗](https://observablehq.com/@zachbogart), or attempting to be social in a digital age. 
+Out there on the interwebs, you can find me:
+
+- [<i class="bi bi-heart-fill"></i> making some doodles️](nouns)
+- [<i class="bi bi-eye-fill"></i> coding up things️️↗](https://observablehq.com/@zachbogart)
+- [<i class="bi bi-chat-text-fill"></i> using different socials](socials)
 
 
 ## <i class="bi bi-circle"></i> Locally
