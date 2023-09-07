@@ -1,0 +1,39 @@
+---
+title: "Approach toward socials: 2023-09 💬"
+subtitle: "Zoom in, blah blah, communicate status"
+date: 2023-09-06
+categories:
+  - writing
+aliases: 
+  - /socials
+draft: false
+---
+
+![](30 - chat.svg){fig-align="center" width="100"}
+
+Here is my current approach toward different social platforms, ordered by the ones that I'm most excited by first.
+
+## Instagram
+**Eyeball Benders** *[Instagram ↗](https://www.instagram.com/zbnerd/)*
+
+- If you ever got a Games Magazine in the mail, you may remember a section they had called Eyeball Benders, a visual puzzle where you try to identify the images of zoomed-in objects. I really enjoy that style and have been liking it as a way to communicate visual things that have happened to me recently.
+- Expect images of recent activity, usually food, with spare descriptions. Reminders of what I got up to.
+- In general, my approach is if you pulled up an image, and you asked me about it, I would be able to tell you a little story about that situation (what was going on if you zoomed out).
+
+## Threads
+**Random Blurbs** *[Threads ↗](https://www.threads.net/@zbnerd)*
+
+- This goes for Instagram too, but I like Threads as a feed for random thoughts and musings. My guess is that this will not be used much, but we will see.
+
+## ~~Twitter~~ X
+**Statuses** *[~~Twitter~~ X ↗](https://twitter.com/zachbogart)*
+
+- I have never been a devoted user to social media, but I have found ~~Twitter~~ X useful in that you can get the status on what people are working on. Posts here will likely be about work and such.
+
+---
+#### Language Model Use
+- This post did not use a language model
+
+#### Image Credit
+
+*chat* by Zach Bogart from [the Noun Project](https://thenounproject.com/zachbogart)
