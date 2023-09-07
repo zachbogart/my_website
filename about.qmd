@@ -43,4 +43,4 @@ Here are some things about me.
 ***
 Hope you’re having a great day on the internet. Thanks for stopping by!
 
-<div style="text-align: center;">[<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)</div>
+<div style="text-align: left;">[<i class="bi bi-play-btn-fill"></i> Darn! That's the end!](https://youtu.be/YkAX7Vk3JEw?t=2m52s)</div>
