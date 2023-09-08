@@ -56,13 +56,14 @@ website:
     left: 
       - text: License
         href: license.qmd
-      - text: GitHub
-        href: https://github.com/zachbogart
-      - text: Activity for Nerds
-        href: https://observablehq.com/@zachbogart/website-activity
-    right:
+    center:
       - icon: cup-hot-fill
         href: http://ko-fi.com/zachbogart
+    right:
+      - icon: github
+        href: https://github.com/zachbogart
+      - icon: git
+        href: https://observablehq.com/@zachbogart/website-activity
 
 
 
